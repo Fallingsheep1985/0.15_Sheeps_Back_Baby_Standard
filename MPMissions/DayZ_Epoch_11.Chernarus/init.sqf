@@ -84,3 +84,8 @@ if(WaterMarkScript)then{
 	  };
 	};
 };
+
+if(ServerWelcomeCreditsScript)then{
+	//Welcome Credits
+	 execVM "scripts\ServerWelcomeCredits.sqf";
+};

@@ -1,6 +1,7 @@
 //Script Control - Allows you to customize the repack by turning certain scripts on or off - true = on /false = off
 
 // DayZ Epoch config
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // Default = 1500
 
@@ -43,10 +44,8 @@ DZE_BuildingLimit = 400;//how many items can a player build
 DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
 DZE_LootSpawnTimer = 10;// in minutes
 DZE_MissionLootTable = true; //Custom Loot Tables
+DZE_ConfigTrader = true;//Config based traders
 DZE_selfTransfuse = true; //Self blood bag
-//Config based traders
-DZE_ConfigTrader = true;
-
 DZE_selfTransfuse_Values = [
 6000, //Blood amount
  10,  // Chance of Infection
@@ -55,10 +54,15 @@ DZE_selfTransfuse_Values = [
 
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Admin Lists
 WG_adminBuild = ["","","",""]; //Fill with player UID's
 
+//////////////////////SCRIPTS////////////////////
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text
+
+//Welcome Credits
+ServerWelcomeCreditsScript = true;
