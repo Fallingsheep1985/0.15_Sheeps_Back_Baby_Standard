@@ -56,6 +56,9 @@ DZE_selfTransfuse_Values = [
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 
-
+//Admin Lists
 WG_adminBuild = ["","","",""]; //Fill with player UID's
 
+//Server watermark
+WaterMarkScript = true; //Watermark on/off
+server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text

@@ -72,3 +72,15 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+
+	//DayZ Watermark
+if(WaterMarkScript)then{
+	if (!isNil "server_name") then {
+	  [] spawn {
+		  waitUntil {(!isNull Player) and (alive Player) and (player == player)};
+		  waituntil {!(isNull (findDisplay 46))};
+		  5 cutRsc ["wm_disp","PLAIN"];
+		  ((uiNamespace getVariable "wm_disp") displayCtrl 1) ctrlSetText server_name;
+	  };
+	};
+};
