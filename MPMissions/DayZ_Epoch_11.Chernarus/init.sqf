@@ -44,6 +44,32 @@ DynamicVehicleDamageHigh = 100; // Default: 100
 
 DZE_BuildOnRoads = true; // Default: False
 
+DZE_requireplot = 1;
+DZE_teleport = [14000,14000,14000,14000,14000];
+DZE_StaticConstructionCount = 1;
+DZE_FriendlySaving = true;
+DZE_TRADER_SPAWNMODE = false;
+DZE_DeathMsgGlobal = true;
+DZE_DeathMsgTitleText = true;
+DZE_DeathMsgSide = true;
+DZE_BackpackGuard = false; //Default = true, true to enable, false to disable - wipes backpack on combat/ALT+F4 logging
+DZE_ForceNameTagsOff = false;
+DZE_R3F_WEIGHT = false; //use weight system
+DZE_PlotPole = [100,115];	
+DZE_BuildingLimit = 400;//how many items can a player build
+DZE_PlayerZed = false; // should players have chance of becoming a ZOMBIE when they respawn after death
+DZE_LootSpawnTimer = 10;// in minutes
+DZE_MissionLootTable = true; //Custom Loot Tables
+DZE_selfTransfuse = true; //Self blood bag
+//Config based traders
+DZE_ConfigTrader = true;
+
+DZE_selfTransfuse_Values = [
+6000, //Blood amount
+ 10,  // Chance of Infection
+300 //Cooldown Timer
+];
+
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 
