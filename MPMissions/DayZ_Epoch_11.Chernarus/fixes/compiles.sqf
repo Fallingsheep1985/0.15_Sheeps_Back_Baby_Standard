@@ -13,6 +13,8 @@ if (!isDedicated) then {
 	player_updateGui =			compile preprocessFileLineNumbers "scripts\PlotForLifev2\player_updateGui.sqf";
 	player_tentPitch =			compile preprocessFileLineNumbers "scripts\PlotForLifev2\tent_pitch.sqf";
 	player_vaultPitch =			compile preprocessFileLineNumbers "scripts\PlotForLifev2\vault_pitch.sqf";
+	player_death =                compile preprocessFileLineNumbers "fixes\player_death.sqf";
+	
 };
 
 initialized = true;

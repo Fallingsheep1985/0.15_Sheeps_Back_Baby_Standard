@@ -18,6 +18,31 @@ debriefing = 0;
 onPauseScript = "";
 loadScreen = "pictures\loadscreen.paa";
 
+class RscTitles
+{
+titles[] = {"DeathScr"};
+class DeathScr {
+  idd = -1;
+  movingEnable = 0;
+  duration = 10;
+  fadein = 2;
+  fadeout = 2;
+  name="DeathScr";
+  controls[]={"Picture"};
+  class Picture {
+    x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
+    text="DeathScr.paa";
+    sizeEx = -1;
+    type=0;
+    idc=-1;
+    style=48;
+    colorBackground[]={0,0,0,0};
+    colorText[]={1,1,1,1};
+    font="Bitstream";
+  };
+};
+};
+
 class Header
 {
  gameType = COOP;            //DM, Team, Coop, ...
