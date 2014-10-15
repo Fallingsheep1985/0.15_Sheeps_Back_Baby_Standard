@@ -57,7 +57,24 @@ DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Admin Lists
-WG_adminBuild = ["","","",""]; //Fill with player UID's
+SuperAdminList = [
+"111111111", // <Your In-Game Name here>
+"999999999" // <S-Admin In-Game Name>
+];
+AdminList = [
+"999999999", // <Admin In-Game Name>
+"999999999" // <Admin In-Game Name>
+];
+ModList = [
+"999999999", // <Moderator In-Game Name>
+"999999999" // <Moderator In-Game Name>
+];
+
+//DO NOT EDIT START
+AdminList = AdminList + SuperAdminList;
+WG_adminBuild = AdminList; //Fill with player UID's
+//DO NOT EDIT END
+
 
 //////////////////////SCRIPTS////////////////////
 //Server watermark
@@ -66,3 +83,6 @@ server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text
 
 //Welcome Credits
 ServerWelcomeCreditsScript = true;
+
+//Admin Tools
+AdmintoolsScript = true;

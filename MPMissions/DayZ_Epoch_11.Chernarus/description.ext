@@ -177,5 +177,8 @@ class DayZ_loadingScreen
 		};
 	};
 };
+//Admin Tools
+#include "admintools\dialog.hpp"
 
+//Snap Pro
 #include "custom\snap_pro\snappoints.hpp"
