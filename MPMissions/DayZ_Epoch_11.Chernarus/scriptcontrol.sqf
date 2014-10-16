@@ -59,7 +59,8 @@ DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 //Admin build
 WG_adminBuild = [
 "111111111", // <Your In-Game Name here>
-"76561198087015545"// <Fallingsheep>
+"999999999999"
+//"76561198087015545"// <Fallingsheep>
 ];
 
 //////////////////////SCRIPTS////////////////////
