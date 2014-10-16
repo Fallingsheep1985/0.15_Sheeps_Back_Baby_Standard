@@ -29,10 +29,24 @@ broadcastToolUse = false;
 	logMinorTool = true;
 
 
+//Admin Lists
+SuperAdminList = [
+"111111111", // <Your In-Game Name here>
+"76561198087015545" // <Fallingsheep>
+];
+AdminList = [
+"999999999", // <Admin In-Game Name>
+"999999999" // <Admin In-Game Name>
+];
+ModList = [
+"999999999", // <Moderator In-Game Name>
+"999999999" // <Moderator In-Game Name>
+];
 
 
 // DO NOT MODIFY ANYTHING BEYOND THIS POINT
-
+AdminList = AdminList + SuperAdminList;
+WG_adminBuild = AdminList;
 tempList = [];
 
 /*
