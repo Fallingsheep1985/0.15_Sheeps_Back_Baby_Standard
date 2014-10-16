@@ -35,10 +35,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";	
 call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
-
-if (AdmintoolsScript) then {
-	call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
-};
+call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
 progressLoadingScreen 1.0;
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -62,14 +59,10 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	
-	if (AdmintoolsScript) then {
-		if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
+	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
 		{
 		  [] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
 		};
-	} else {
-		//anti Hack
-		[] execVM "\z\addons\dayz_code\system\antihack.sqf";
 	};
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
@@ -100,6 +93,5 @@ if(ServerWelcomeCreditsScript)then{
 	//Welcome Credits
 	 execVM "scripts\ServerWelcomeCredits.sqf";
 };
-if (AdmintoolsScript) then {
-	[] execVM "admintools\Activate.sqf"; // Epoch admin tools
-};
+
+[] execVM "admintools\Activate.sqf"; // Epoch admin tools
