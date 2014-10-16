@@ -16,7 +16,7 @@ briefing = 0;
 debriefing = 0;
 
 onPauseScript = "";
-loadScreen = "pictures\loadscreen.paa";
+loadScreen = "pictures\loadscreen.jpg";
 
 class RscTitles
 {
