@@ -181,4 +181,4 @@ class DayZ_loadingScreen
 #include "admintools\dialog.hpp"
 
 //Snap Pro
-#include "custom\snap_pro\snappoints.hpp"
+#include "scripts\snap_pro\snappoints.hpp"
