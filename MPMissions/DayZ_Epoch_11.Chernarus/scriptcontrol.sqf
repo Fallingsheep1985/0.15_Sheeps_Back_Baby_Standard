@@ -2,7 +2,7 @@
 
 // DayZ Epoch config
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-spawnShoremode = 1; // Default = 1 (on shore)
+spawnShoremode = 0;
 spawnArea= 1500; // Default = 1500
 
 MaxVehicleLimit = 300; // Default = 50
@@ -12,6 +12,7 @@ dayz_maxLocalZombies = 30; // Default = 30
 
 dayz_fullMoonNights = true;
 
+dayz_spawnselection = 0;
 dayz_paraSpawn = false;
 
 dayz_minpos = -1; 

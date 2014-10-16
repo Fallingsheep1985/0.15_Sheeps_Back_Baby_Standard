@@ -807,6 +807,8 @@ dayz_recordLogin = {
 	_key call server_hiveWrite;
 };
 
+#include "ESSconfig.sqf"
+
 dayz_perform_purge = {
 	if(!isNull(_this)) then {
 		_group = group _this;
@@ -1122,3 +1124,5 @@ KK_fnc_positionToString = {
 		_this select 2 call KK_fnc_floatToString
 	]
 };
+
+execVM "\z\addons\dayz_server\init\ESSfloor.sqf";

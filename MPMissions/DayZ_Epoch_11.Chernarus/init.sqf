@@ -91,5 +91,12 @@ if(ServerWelcomeCreditsScript)then{
 	//Welcome Credits
 	 execVM "scripts\ServerWelcomeCredits.sqf";
 };
+//ESS
+espawn = compile preprocessFileLineNumbers "scripts\spawn\spawn.sqf";
+waitUntil {!isNil "PVDZE_plr_LoginRecord"};
+if (!isDedicated && (dayzPlayerLogin2 select 2)) then {[] spawn espawn;};
 
-[] execVM "admintools\Activate.sqf"; // Epoch admin tools
+//Admin Tools
+if(AdmintoolsScript)then{
+	[] execVM "admintools\Activate.sqf";
+};
