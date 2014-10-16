@@ -6,7 +6,7 @@ startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
 //Load Configs
-execVM "scriptcontrol.sqf";
+call compile preprocessFileLineNumbers "scriptcontrol.sqf";
 
 //REALLY IMPORTANT VALUES
 dayZ_instance =	11;					//The instance
@@ -35,6 +35,7 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";	
 call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+
 if (AdmintoolsScript) then {
 	call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
 };
