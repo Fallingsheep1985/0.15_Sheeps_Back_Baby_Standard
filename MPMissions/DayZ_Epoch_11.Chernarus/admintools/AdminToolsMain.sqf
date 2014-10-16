@@ -12,7 +12,6 @@ if ((getPlayerUID player) in AdminList) then { // Admins
 	["",true],
 		["-- Epoch Admin Tools (Level: Admin) --", [], "", -5, [["expression", ""]], "1", "0"],
 		["Admin Menu >>", [], "#USER:AdminMenu", -5, [["expression", ""]], "1", "1"],
-		["Sheeps Menu >>", [], "#USER:SheepsMenu", -5, [["expression", ""]], "1", "1"],
 		["Vehicle Menu >>",[],"#USER:VehicleMenu",-5,[["expression",""]],"1","1"],
 		["Crate Menu >>",[],"#USER:CrateMenu",-5,[["expression",""]],"1","1"],
 		["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"],
@@ -35,82 +34,6 @@ if ((getPlayerUID player) in AdminList) then { // Admins
 		];
 	};
 };
-SheepsMenu =
-[
-["",true],
-	["Building Kits Menu >>", [], "#USER:BuildingKitMenu", -5, [["expression", ""]], "1", "1"],	
-	["Materials Menu >>", [], "#USER:MaterialsMenu", -5, [["expression", ""]], "1", "1"],
-	["Gems Menu >>", [], "#USER:GemsMenu", -5, [["expression", ""]], "1", "1"],	
-	["Show Position", [],"", -5, [["expression", format[_EXECscript7,"showpostion.sqf"]]], "1", "1"],
-	["Show Position ATL", [],"", -5, [["expression", format[_EXECscript7,"showpostionATL.sqf"]]], "1", "1"],
-	["Add NOS", [],"", -5, [["expression", format[_EXECscript7,"addNOS.sqf"]]], "1", "1"],
-	["Add 100oz Briefcase", [],"", -5, [["expression", format[_EXECscript7,"add100ozbriefcase.sqf"]]], "1", "1"],
-	["Add Zombie Bait Parts", [],"", -5, [["expression", format[_EXECscript7,"addZombieBait.sqf"]]], "1", "1"],
-	["Add Zombie Bomb Parts", [],"", -5, [["expression", format[_EXECscript7,"addZombieBomb.sqf"]]], "1", "1"],
-	["Add Anti Zombie Emitter Parts", [],"", -5, [["expression", format[_EXECscript7,"addAntiZombieEmitter.sqf"]]], "1", "1"],	
-	["", [], "", -5, [["expression", ""]], "1", "0"],
-		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
-];
-GemsMenu =
-[
-["",true],
-	["All Gems", [],"", -5, [["expression", format[_EXECscript10,"allgems.sqf"]]], "1", "1"],	
-	["Amethyst", [],"", -5, [["expression", format[_EXECscript10,"amethyst.sqf"]]], "1", "1"],
-	["Citrine", [],"", -5, [["expression", format[_EXECscript10,"citrine.sqf"]]], "1", "1"],
-	["Emerald", [],"", -5, [["expression", format[_EXECscript10,"emerald.sqf"]]], "1", "1"],
-	["Obsidian", [],"", -5, [["expression", format[_EXECscript10,"obsidian.sqf"]]], "1", "1"],
-	["Ruby", [],"", -5, [["expression", format[_EXECscript10,"ruby.sqf"]]], "1", "1"],
-	["Sapphire", [],"", -5, [["expression", format[_EXECscript10,"sapphire.sqf"]]], "1", "1"],
-	["Topaz", [],"", -5, [["expression", format[_EXECscript10,"topaz.sqf"]]], "1", "1"],
-	["", [], "", -5, [["expression", ""]], "1", "0"],
-		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
-];
-MaterialsMenu =
-[
-["",true],	
-	["10 x Burlap", [],"", -5, [["expression", format[_EXECscript8,"10 x Burlap.sqf"]]], "1", "1"],
-	["10 x Canvas", [],"", -5, [["expression", format[_EXECscript8,"10 x Canvas.sqf"]]], "1", "1"],
-	["10 x CinderBlocks", [],"", -5, [["expression", format[_EXECscript8,"10 x CinderBlocks.sqf"]]], "1", "1"],
-	["10 x Combo Lock", [],"", -5, [["expression", format[_EXECscript8,"10 x Combo Lock.sqf"]]], "1", "1"],
-	["10 x Corrugated", [],"", -5, [["expression", format[_EXECscript8,"10 x Corrugated.sqf"]]], "1", "1"],
-	["10 x Empty Supply Crate", [],"", -5, [["expression", format[_EXECscript8,"10 x Empty Supply Crate.sqf"]]], "1", "1"],
-	["10 x Light Bulb", [],"", -5, [["expression", format[_EXECscript8,"10 x Light Bulb.sqf"]]], "1", "1"],
-	["10 x Lumber", [],"", -5, [["expression", format[_EXECscript8,"10 x Lumber.sqf"]]], "1", "1"],
-	["10 x Mortar Bucket", [],"", -5, [["expression", format[_EXECscript8,"10 x Mortar Bucket.sqf"]]], "1", "1"],
-	["10 x Plywood", [],"", -5, [["expression", format[_EXECscript8,"10 x Plywood.sqf"]]], "1", "1"],
-	["10 x Poles", [],"", -5, [["expression", format[_EXECscript8,"10 x Poles.sqf"]]], "1", "1"],
-	["10 x Sandbag Large", [],"", -5, [["expression", format[_EXECscript8,"10 x Sandbag Large.sqf"]]], "1", "1"],
-	["10 x Sandbag", [],"", -5, [["expression", format[_EXECscript8,"10 x Sandbag.sqf"]]], "1", "1"],
-	["10 x Scrap Metal", [],"", -5, [["expression", format[_EXECscript8,"10 x Scrap Metal.sqf"]]], "1", "1"],
-	["10 x Tank Trap", [],"", -5, [["expression", format[_EXECscript8,"10 x Tank Trap.sqf"]]], "1", "1"],
-	["10 x Wire", [],"", -5, [["expression", format[_EXECscript8,"10 x Wire.sqf"]]], "1", "1"],
-	["10 x Wood Pile", [],"", -5, [["expression", format[_EXECscript8,"10 x Wood Pile.sqf"]]], "1", "1"],	
-	["", [], "", -5, [["expression", ""]], "1", "0"],
-		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
-];
-BuildingKitMenu =
-[
-["",true],	
-	["Cinder Door", [],"", -5, [["expression", format[_EXECscript9,"cinder_door_kit.sqf"]]], "1", "1"],
-	["Cinder Garage", [],"", -5, [["expression", format[_EXECscript9,"cinder_garage_kit.sqf"]]], "1", "1"],	
-	["Cinder Wall", [],"", -5, [["expression", format[_EXECscript9,"cinder_wall_kit.sqf"]]], "1", "1"],	
-	["Deer Stand", [],"", -5, [["expression", format[_EXECscript9,"deer_stand_kit.sqf"]]], "1", "1"],	
-	["Fuel Pump", [],"", -5, [["expression", format[_EXECscript9,"fuel_pump_kit.sqf"]]], "1", "1"],	
-	["Fuel Barrel", [],"", -5, [["expression", format[_EXECscript9,"FuelBarrel.sqf"]]], "1", "1"],	
-	["Gun Rack Kit", [],"", -5, [["expression", format[_EXECscript9,"GunRackKit.sqf"]]], "1", "1"],	
-	["Light Pole", [],"", -5, [["expression", format[_EXECscript9,"light_pole_kit.sqf"]]], "1", "1"],	
-	["M240 Nest", [],"", -5, [["expression", format[_EXECscript9,"m240_nest_kit.sqf"]]], "1", "1"],	
-	["Metal Panel", [],"", -5, [["expression", format[_EXECscript9,"metal_panel_kit.sqf"]]], "1", "1"],	
-	["Oil Barrel", [],"", -5, [["expression", format[_EXECscript9,"OilBarrel.sqf"]]], "1", "1"],	
-	["Outhouse", [],"", -5, [["expression", format[_EXECscript9,"outhouse_kit.sqf"]]], "1", "1"],	
-	["Rusty Gate", [],"", -5, [["expression", format[_EXECscript9,"rusty_gate_kit.sqf"]]], "1", "1"],	
-	["Stick Fence", [],"", -5, [["expression", format[_EXECscript9,"stick_fence_kit.sqf"]]], "1", "1"],	
-	["Storage Shed", [],"", -5, [["expression", format[_EXECscript9,"storage_shed_kit.sqf"]]], "1", "1"],	
-	["Wooden Shed", [],"", -5, [["expression", format[_EXECscript9,"wooden_shed_kit.sqf"]]], "1", "1"],		
-	["", [], "", -5, [["expression", ""]], "1", "0"],
-		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
-];
-
 AdminMenu =
 [
 ["",true],
