@@ -59,10 +59,8 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
 	
-	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
-		{
+	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then {
 		  [] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
-		};
 	};
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
