@@ -56,6 +56,11 @@ DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultS
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//Admin build
+WG_adminBuild = [
+"111111111", // <Your In-Game Name here>
+"76561198087015545"// <Fallingsheep>
+];
 
 //////////////////////SCRIPTS////////////////////
 //Server watermark
