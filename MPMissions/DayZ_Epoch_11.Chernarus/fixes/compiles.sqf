@@ -15,8 +15,17 @@ if (!isDedicated) then {
 	player_vaultPitch =				compile preprocessFileLineNumbers "scripts\PlotForLifev2\vault_pitch.sqf";
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+
+	player_craftItem =			compile preprocessFileLineNumbers "fixes\player_craftItem.sqf";
 };
 
+//VASP
+// trader menu code
+	if (DZE_ConfigTrader) then {
+		call compile preprocessFileLineNumbers "scripts\VASP\player_traderMenuConfig.sqf";
+	}else{
+		call compile preprocessFileLineNumbers "scripts\VASP\player_traderMenuHive.sqf";
+	};
 zombie_findTargetAgent =    		compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
 
 initialized = true;
