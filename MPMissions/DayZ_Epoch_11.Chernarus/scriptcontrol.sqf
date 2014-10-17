@@ -122,3 +122,5 @@ FastropeScript = true;
 SafezoneScripts = true;
 //Harvest Hemp
 HarvestHempScript = true;
+//DZGM (Group Management)
+DZGMScript = true;

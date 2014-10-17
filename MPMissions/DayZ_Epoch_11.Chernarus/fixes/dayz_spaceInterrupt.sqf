@@ -194,6 +194,20 @@ if ((_dikCode == 0x21 and (!_alt and !_ctrl)) or (_dikCode in actionKeys "User6"
 	DZE_F = true;
 };
 
+if(DZGMScript)then{
+//DZGM
+if ((_dikCode == 0xDB) or (_dikCode == 0xDC)) then {
+	if (tagname) then {tagname = false;} else {tagname = true;};
+};
+if (_dikCode in actionKeys "TacticalView") then {
+    execVM "scripts\dzgm\noTactical.sqf";
+};
+
+if (_dikCode == 0x43) then {
+	if (dialog) then {closeDialog 0;groupManagementActive = false;} else {createGearDialog [player, "RscDisplayGear"];[] execVM "scripts\dzgm\loadGroupManagement.sqf";};
+	};
+};
+
 //Debug Monitor
 if (_dikCode == 0x44) then {
 	if (debugMonitor) then {

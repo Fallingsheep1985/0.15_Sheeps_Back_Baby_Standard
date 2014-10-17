@@ -72,6 +72,10 @@ if (!isDedicated) then {
 		//Community Safezones
 		execVM "scripts\CAGN\initiate.sqf";	
 	};
+		//DZGM
+	if(DZGMScript)then{
+		execVM "scripts\dzgm\init.sqf";
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"

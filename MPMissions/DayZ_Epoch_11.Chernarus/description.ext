@@ -18,8 +18,12 @@ debriefing = 0;
 onPauseScript = "";
 loadScreen = "pictures\loadscreen.jpg";
 
+//DZGM
+#include "scripts\dzgm\defines.hpp"
 class RscTitles
 {
+//DZGM
+#include "scripts\dzgm\icons.hpp"
 titles[] = {"DeathScr","wm_disp"};
 	class DeathScr {
 	  idd = -1;
@@ -215,6 +219,9 @@ class DayZ_loadingScreen
 
 //Snap Pro
 #include "scripts\snap_pro\snappoints.hpp"
+
+//DZGM
+#include "scripts\dzgm\groupManagement.hpp"
 
 //ESS
 #include "scripts\spawn\defines.hpp"
