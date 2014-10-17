@@ -1228,3 +1228,48 @@ if(DrinkWaterScript)then{
 		};
 	// ----------------------------- \ Drink water / ----------------------
 };
+
+if(AntiZombieEmitterScript)then{
+	// ZOMBIE SHIELD START
+	if (("TrashTinCan" in magazines player) && ("TrashJackDaniels" in magazines player) && ("PartEngine" in magazines player) && ("ItemJerrycan" in magazines player) && ("ItemToolbox" in items player)) then {
+		hasShield = true;
+	} else {
+		hasShield = false;
+	};
+	if (hasShield) then {
+		if (zombieShield < 0) then {
+		zombieShield = player addAction [("<t color=""#00c362"">" + ("Anti-Zombie Emitter") +"</t>"),"scripts\ZombieBait_Bomb_Shield\zombieshield.sqf","",5,false,true,"",""];
+		};
+	} else {
+		player removeAction zombieShield;
+		zombieShield = -1;
+	};
+	// ZOMBIE SHIELD END
+};
+if(ZombieBaitScript)then{
+	// Zombie Bait
+	if (("ItemBloodbag" in magazines player) && ("FoodbeefRaw" in magazines player)) then {
+		hasBait = true;
+	} else {
+		hasBait = false;
+	};
+	if (hasBait) then {
+		if (zombieBait < 0) then {
+	zombieBait = player addAction [("<t color=""#c30000"">" + ("Place Zombie Bait") +"</t>"),"scripts\ZombieBait_Bomb_Shield\zombiebait.sqf","",5,false,true,"",""];
+		};
+	} else {
+		player removeAction zombieBait;
+		zombieBait = -1;
+	};
+};
+if(ZombieBombScript)then{
+	// Exploding Zombie Bait
+	if ((hasBait) && ("HandGrenade_West" in magazines player)) then {
+		if (zombieBomb < 0) then {
+		zombieBomb = player addAction [("<t color=""#c30000"">" + ("Place Exploding Bait") +"</t>"),"scripts\ZombieBait_Bomb_Shield\zombiebomb.sqf","",5,false,true,"",""];
+		};
+	} else {
+		player removeAction zombieBomb;
+		zombieBomb = -1;
+	};
+};

@@ -17,4 +17,6 @@ if (!isDedicated) then {
 	player_switchModel = compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
 };
 
+zombie_findTargetAgent =    compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
+
 initialized = true;
