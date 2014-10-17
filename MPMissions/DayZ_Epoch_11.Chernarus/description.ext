@@ -31,7 +31,7 @@ titles[] = {"DeathScr","wm_disp"};
 	  controls[]={"Picture"};
 		class Picture {
 			x = safezoneX; y = safezoneY; w = safezoneW; h = safezoneH;
-			text="DeathScr.paa";
+			text="pictures\DeathScr.paa";
 			sizeEx = -1;
 			type=0;
 			idc=-1;
