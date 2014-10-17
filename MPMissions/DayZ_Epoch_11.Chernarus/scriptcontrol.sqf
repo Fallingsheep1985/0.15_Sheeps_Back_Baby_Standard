@@ -100,3 +100,9 @@ DeployBikeScript = true;
 
 //Burn Tents
 BurnTentsScript = true;
+
+//Crafting
+craftingScript = true;
+
+//Suicide
+SuicideScript = true;

@@ -12,12 +12,39 @@
 //  _condition  : compiled code evaluated to determine whether or not the option is displayed
 //                  (example = {true})
 //  EXAMPLE -- see below for some simple examples
-DZE_CLICK_ACTIONS = [
-	["ItemToolbox","Deploy Bike","[] execVM 'scripts\spawnbike\deploy_init.sqf';","true"],
+If(DeployBikeScript)then{
+	DEPLOY_BIKE = [
+		["ItemToolbox","Deploy Bike","[] execVM 'scripts\spawnbike\deploy_init.sqf';","true"]
+	];
+} else {
+	DEPLOY_BIKE = [];
+};
+If(craftingScript)then{
+	CRAFTING = [
 		["ItemMachete","Clear Grass","[] execVM 'scripts\crafting\clearbrush.sqf';","true"],
-	["ItemKnife","Make Arrows","[] execVM 'scripts\crafting\makearrow.sqf';","true"],
-	["ItemKnife","Make Bandage","[] execVM 'scripts\crafting\makebandage.sqf';","true"],
-	["ItemToolbox","Make Knife","[] execVM 'scripts\crafting\makeknife.sqf';","true"],
-	["ItemToolbox","Make Bow","[] execVM 'scripts\crafting\makebow.sqf';","true"],
-	["ItemToolbox","Make Hatchet","[] execVM 'scripts\crafting\makehatchet.sqf';","true"]
-];                                               
+		["ItemKnife","Make Arrows","[] execVM 'scripts\crafting\makearrow.sqf';","true"],
+		["ItemKnife","Make Bandage","[] execVM 'scripts\crafting\makebandage.sqf';","true"],
+		["ItemToolbox","Make Knife","[] execVM 'scripts\crafting\makeknife.sqf';","true"],
+		["ItemToolbox","Make Bow","[] execVM 'scripts\crafting\makebow.sqf';","true"],
+		["ItemToolbox","Make Hatchet","[] execVM 'scripts\crafting\makehatchet.sqf';","true"]
+	];
+} else {
+	CRAFTING = [];
+};
+If(SuicideScript)then{
+SUICIDE = [
+	["glock17_EP1","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["M9","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["M9SD","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["Makarov","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["MakarovSD","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["revolver_EP1","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["UZI_EP1","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["SA61_EP1","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"],
+	["Colt1911_EP1","Suicide","[] execVM 'scripts\suicide\suicide_init.sqf';","true"]
+];
+} else {
+	SUICIDE = [];
+};
+
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE;
