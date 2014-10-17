@@ -343,15 +343,15 @@ if (_hasRequiredTools && _hasbuilditem) then {
 	DZE_memForBack = 0;
 	DZE_memLeftRight = 0;
 	if !(_classname in DZE_noRotate) then{
-		s_player_setVectorsReset = player addaction ["Reset","custom\snap_pro\player_vectorChange.sqf","reset"];
-		s_player_setVectorsForward = player addaction ["Pitch Forward","custom\snap_pro\player_vectorChange.sqf","forward"];
-		s_player_setVectorsBack = player addaction ["Pitch Back","custom\snap_pro\player_vectorChange.sqf","back"];
-		s_player_setVectorsLeft = player addaction ["Bank Left","custom\snap_pro\player_vectorChange.sqf","left"];
-		s_player_setVectorsRight = player addaction ["Bank Right","custom\snap_pro\player_vectorChange.sqf","right"];
-		s_player_setVectors1 = player addaction ["Increment by 1 degree","custom\snap_pro\player_vectorChange.sqf","1"];
-		s_player_setVectors5 = player addaction ["Increment by 5 degrees","custom\snap_pro\player_vectorChange.sqf","5"];
-		s_player_setVectors45 = player addaction ["Increment by 45 degrees","custom\snap_pro\player_vectorChange.sqf","45"];
-		s_player_setVectors90 = player addaction ["Increment by 90 degrees","custom\snap_pro\player_vectorChange.sqf","90"];
+		s_player_setVectorsReset = player addaction ["Reset","scripts\snap_pro\player_vectorChange.sqf","reset"];
+		s_player_setVectorsForward = player addaction ["Pitch Forward","scripts\snap_pro\player_vectorChange.sqf","forward"];
+		s_player_setVectorsBack = player addaction ["Pitch Back","scripts\snap_pro\player_vectorChange.sqf","back"];
+		s_player_setVectorsLeft = player addaction ["Bank Left","scripts\snap_pro\player_vectorChange.sqf","left"];
+		s_player_setVectorsRight = player addaction ["Bank Right","scripts\snap_pro\player_vectorChange.sqf","right"];
+		s_player_setVectors1 = player addaction ["Increment by 1 degree","scripts\snap_pro\player_vectorChange.sqf","1"];
+		s_player_setVectors5 = player addaction ["Increment by 5 degrees","scripts\snap_pro\player_vectorChange.sqf","5"];
+		s_player_setVectors45 = player addaction ["Increment by 45 degrees","scripts\snap_pro\player_vectorChange.sqf","45"];
+		s_player_setVectors90 = player addaction ["Increment by 90 degrees","scripts\snap_pro\player_vectorChange.sqf","90"];
 	};
 	
 	
