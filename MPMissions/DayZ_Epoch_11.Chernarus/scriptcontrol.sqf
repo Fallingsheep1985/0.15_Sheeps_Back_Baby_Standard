@@ -124,3 +124,5 @@ SafezoneScripts = true;
 HarvestHempScript = true;
 //DZGM (Group Management)
 DZGMScript = true;
+//Drink Water
+DrinkWaterScript = true;
