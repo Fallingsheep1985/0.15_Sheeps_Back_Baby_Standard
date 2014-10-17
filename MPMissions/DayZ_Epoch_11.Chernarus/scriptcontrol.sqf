@@ -128,3 +128,5 @@ DZGMScript = true;
 DrinkWaterScript = true;
 //Tent Sleep Healing
 TentHealScript = true;
+//Arrest
+ArrestScript = true;

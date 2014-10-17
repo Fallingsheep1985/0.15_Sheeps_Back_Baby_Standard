@@ -980,7 +980,24 @@ if(TentHealScript)then{
 		{player removeAction _x} count s_player_parts;s_player_parts = [];
 		s_player_parts_crtl = -1;
 	};
+if(ArrestScript)then{
 
+	if(!canbuild)then{
+	_cantBuild = true;
+	};
+//--------------------------------------ARREST---------------------------------------------------------------- 
+		   if ((player getVariable"humanity") >= 5000 or (player getVariable"humanity") <= -5000 or (getPlayerUID player) in AdminList ) then {
+			if(_isMan && !_isZombie && _canDo && _isAlive && _cantBuild) then {
+				if (s_player_arrest < 0) then {
+					s_player_arrest = player addaction ['<t color="#0074E8">' + "Investigation Menu" + '</t>', "Scripts\Investigation\investigation.sqf","",100,false,true,"", ""];
+					};
+			} else {
+				player removeAction s_player_arrest;
+				s_player_arrest = -1;
+				};
+		};
+//-------------------------------------------------------------------------------------------------------------
+};  
 	
 	if(dayz_tameDogs) then {
 		
@@ -1125,6 +1142,14 @@ if(TentHealScript)then{
 	s_player_fuelauto = -1;
 	player removeAction s_player_fuelauto2;
 	s_player_fuelauto2 = -1;
+	player removeAction s_player_arrest;
+    s_player_arrest = -1;
+    player removeAction s_player_release;
+    s_player_release = -1;
+    player removeAction s_player_escort;
+    s_player_escort = -1;
+    player removeAction s_player_search;
+    s_player_search = -1;
 };
 
 

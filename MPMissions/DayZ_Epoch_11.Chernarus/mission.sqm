@@ -15,10 +15,17 @@ class Mission
 		"cacharacters_pmc",
 		"ca_modules_functions",
 		"glt_m300t",
+		"glt_bh_wreck",
+		"glt_bh_wreck_burned",
+		"aif_arma1buildings",
+		"mbg_african_buildings",
+		"mbg_buildings_3",
+		"mbg_killhouses",
 		"pook_h13",
 		"csj_gyroac",
 		"map_eu",
-		"jetskiyanahuiaddon"
+		"jetskiyanahuiaddon",
+		"buildings3"
 	};
 	addOnsAuto[]=
 	{
@@ -1172,7 +1179,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=17;
+		items=25;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1295,10 +1302,74 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
+		class Item17
+		{
+			position[]={7018.75,304.99265,7653.63};
+			name="NovyBank";
+			text="Central Bank of Novy Sobor";
+			type="mil_dot";
+			colorName="ColorOrange";
+		};
+		class Item18
+		{
+			position[]={6611.9756,304.99265,14201.991};
+			name="sectorfng";
+			text="Sector FNG";
+			type="mil_circle";
+			colorName="ColorRed";
+		};
+		class Item19
+		{
+			position[]={87.26,304.99265,1599.11};
+			name="kamenkamine";
+			text="Kamenka Mine";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item20
+		{
+			position[]={13376.6,304.99265,12000.2};
+			name="blacklakecastle";
+			text="Black Lake Castle";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item21
+		{
+			position[]={4847.68,304.99265,2297.24};
+			name="cdcbalota";
+			text="Centre For Disease Control";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item22
+		{
+			position[]={7469.71,304.99265,2713.64};
+			name="beachedcarrier";
+			text="Beached Carrier";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
+		class Item23
+		{
+			position[]={2143.53,304.99265,12834.1};
+			name="goldenrivermine";
+			text="Golden River Mine";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};	
+		class Item24
+		{
+			position[]={8137.84,304.99265,9180.96};
+			name="altarmilitarybase";
+			text="Altar Military Base";
+			type="mil_dot";
+			colorName="ColorBlack";
+		};
 	};
 	class Sensors
 	{
-		items=5;
+		items=12;
 		class Item0
 		{
 			position[]={6325.6772,304.99033,7807.7412};
@@ -1353,14 +1424,14 @@ class Mission
 		class Item3
 		{
 			position[]={1606.6443,289.70795,7803.5156};
-			a=100;
-			b=100;
+			a=25;
+			b=25;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonebandit";
-			expCond="(player distance zonebandit) < 100;";
+			expCond="(player distance zonebandit) < 25;";
 			expActiv="[""Bandit Trader"",false,""enter""] spawn player_traderCity;";
 			expDesactiv="[""Bandit Trader"",false,""leave""] spawn player_traderCity;";
 			class Effects
@@ -1369,17 +1440,136 @@ class Mission
 		};
 		class Item4
 		{
-			position[]={12944.227,210.19823,12766.889};
-			a=100;
-			b=100;
+			position[]={12944.227,0.00,12766.889};
+			a=25;
+			b=25;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			name="zonehero";
-			expCond="(player distance zonehero) < 100;";
+			expCond="(player distance zonehero) < 25;";
 			expActiv="[""Hero Trader"",false,""enter""] spawn player_traderCity;";
 			expDesactiv="[""Hero Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={22570.555, -44, 19610.85};
+			a=200;
+			b=200;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="zoneSectorFNG";
+			expCond="(player distance zoneSectorFNG) < 200;";
+			expActiv="canbuild = false;  titleText [""\n\nNow entering Sector FNG"", ""PLAIN DOWN"", 1];";
+			expDesactiv="canbuild = true; titleText [""\n\nNow leaving Sector FNG"", ""PLAIN DOWN"", 1];";
+			class Effects
+			{
+			};
+		};
+		class Item6
+		{
+			position[]={4361.4937,0.00,2259.9526};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="wholesaleSouthtrader";
+			expCond="(player distance wholesaleSouthtrader) < 25;";
+			expActiv="[""Wholesaler"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""Wholesaler"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item7
+		{
+			position[]={13532.614,0.00,6355.9497};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="boatTraderEast2";
+			expCond="(player distance boatTraderEast2) < 25;";
+			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item8
+		{
+			position[]={7989.3354,0.00,2900.9946};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="BoatDealerSouth2";
+			expCond="(player distance BoatDealerSouth2) < 25;";
+			expActiv="[""South Boat Trader"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""South Boat Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item9
+		{
+			position[]={12060.471,0.00,12638.533};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="AirTrader";
+			expCond="(player distance AirTrader) < 25;";
+			expActiv="[""Aircraft Dealer"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""Aircraft Dealer"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item10
+		{
+			position[]={13441.16,0.00,5429.3013};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="BoatDealerEast2";
+			expCond="(player distance BoatDealerEast2) < 25;";
+			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item11
+		{
+			position[]={4845.23,0.00,2294.78};
+			a=25;
+			b=25;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="CDCtrader";
+			expCond="(player distance CDCtrader) < 25;";
+			expActiv="[""CDC Balota"",false,""enter""] spawn player_traderCity;";
+			expDesactiv="[""CDC Balota"",false,""leave""] spawn player_traderCity;";
 			class Effects
 			{
 			};
