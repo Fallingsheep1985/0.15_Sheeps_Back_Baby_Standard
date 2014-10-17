@@ -57,7 +57,7 @@ DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultS
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Admin Build
+//Admin Build (Add all SuperAdmins/Admins)
 WG_adminBuild = [
 "11111111111",
 "76561198087015545"
@@ -79,7 +79,7 @@ ModList = [
 ];
 
 //set adminlist to be all admins
-AdminList = AdminList + SuperAdminList;
+AdminList = AdminList + SuperAdminList; // DONT CHANGE!!!
 
 //////////////////////SCRIPTS////////////////////
 //Server watermark
@@ -88,24 +88,21 @@ server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text
 
 //Welcome Credits
 ServerWelcomeCreditsScript = true;
-
 //Admin Tools
 AdmintoolsScript = true;
-
 //Debug Monitor
 DebugMonitorScript = true;
-
 //deploy Bike
 DeployBikeScript = true;
-
 //Burn Tents
 BurnTentsScript = true;
-
 //Crafting
 craftingScript = true;
-
 //Suicide
 SuicideScript = true;
-
 //Binocular Fog
 BinocularScript = true;
+//Carepackage on self
+carepackageSELFScript = true;
+//Carepackage on map
+carepackageMAPScript = true;
