@@ -1,17 +1,5 @@
 // Epoch Admin Tools
 //Replace 111111111 with your ID. 
-SuperAdminList = [
-"111111111", // <Your In-Game Name here>
-"76561198087015545" // <S-Admin In-Game Name>
-];
-AdminList = [
-"999999999", // <Admin In-Game Name>
-"999999999" // <Admin In-Game Name>
-];
-ModList = [
-"999999999", // <Moderator In-Game Name>
-"999999999" // <Moderator In-Game Name>
-];
 
 /*
 	Broadcasts a message to the super admins when the admin tools are used.
@@ -44,9 +32,7 @@ broadcastToolUse = false;
 
 
 
-
 // DO NOT MODIFY ANYTHING BEYOND THIS POINT
-AdminList = AdminList + SuperAdminList;
 tempList = [];
 
 /*
