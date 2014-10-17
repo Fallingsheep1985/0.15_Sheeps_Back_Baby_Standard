@@ -78,6 +78,9 @@ if (!isDedicated) then {
 	if(DZGMScript)then{
 		execVM "scripts\dzgm\init.sqf";
 	};
+	if(TradeFromVehicleScript)then{
+	ExecVM "scripts\TradeFromVehicle Version 2.0\setup\init.sqf";
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"
