@@ -126,3 +126,5 @@ HarvestHempScript = true;
 DZGMScript = true;
 //Drink Water
 DrinkWaterScript = true;
+//Tent Sleep Healing
+TentHealScript = true;

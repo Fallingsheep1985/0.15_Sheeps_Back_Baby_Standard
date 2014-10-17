@@ -896,7 +896,17 @@ if(NOSScript)then{
 	};
 	*/
 
-
+if(TentHealScript)then{
+    //Sleep
+	if(_isTent && _ownerID == _playerUID) then {
+		if ((s_player_sleep < 0) && (player distance _cursorTarget < 3)) then {
+			s_player_sleep = player addAction [localize "str_actions_self_sleep", "scripts\TentHealing\player_sleep.sqf",_cursorTarget, 0, false, true, "",""];
+		};
+	} else {
+		player removeAction s_player_sleep;
+		s_player_sleep = -1;
+	};
+} else {
     //Sleep
 	if(_isTent && _ownerID == _playerUID) then {
 		if ((s_player_sleep < 0) && (player distance _cursorTarget < 3)) then {
@@ -905,7 +915,8 @@ if(NOSScript)then{
 	} else {
 		player removeAction s_player_sleep;
 		s_player_sleep = -1;
-	};
+	};	
+};
 	
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != _cursorTarget) && _isVehicle && !_isMan && _hasToolbox && (damage _cursorTarget < 1) && !_isDisallowRepair) then {
