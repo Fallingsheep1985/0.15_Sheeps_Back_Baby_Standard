@@ -1296,7 +1296,7 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={12944.227,210.19823,12766.889};
+			position[]={12944.227,210.19823,12764.6};
 			name="HeroTrader";
 			text="Hero Camp";
 			type="mil_dot";
