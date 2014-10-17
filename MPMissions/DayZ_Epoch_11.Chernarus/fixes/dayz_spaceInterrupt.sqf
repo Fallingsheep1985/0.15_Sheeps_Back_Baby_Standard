@@ -194,4 +194,15 @@ if ((_dikCode == 0x21 and (!_alt and !_ctrl)) or (_dikCode in actionKeys "User6"
 	DZE_F = true;
 };
 
+//Debug Monitor
+if (_dikCode == 0x44) then {
+	if (debugMonitor) then {
+		debugMonitor = false;
+		hintSilent "";
+	} else {
+		debugMonitor = true;
+		[] spawn fnc_debug;
+	};
+};
+
 _handled

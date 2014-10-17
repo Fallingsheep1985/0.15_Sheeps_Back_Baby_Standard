@@ -91,3 +91,6 @@ ServerWelcomeCreditsScript = true;
 
 //Admin Tools
 AdmintoolsScript = true;
+
+//Debug Monitor
+DebugMonitorScript = true;

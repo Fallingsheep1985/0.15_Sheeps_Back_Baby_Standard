@@ -75,6 +75,13 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
 
+//Debug Monitor
+if(DebugMonitorScript)then{
+debugMonitor = true;//default on
+	if (!isDedicated) then {
+		execVM "scripts\DebugMonitor\debug_monitor.sqf";
+	};
+};
 	//DayZ Watermark
 if(WaterMarkScript)then{
 	if (!isNil "server_name") then {
