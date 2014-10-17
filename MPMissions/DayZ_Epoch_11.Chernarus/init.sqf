@@ -95,7 +95,10 @@ if(WaterMarkScript)then{
 	  };
 	};
 };
-
+if(RegenBloodScript)then{
+	//Regen Blood
+	 execVM "scripts\RegenBlood\regenblood.sqf";
+};
 if(ServerWelcomeCreditsScript)then{
 	//Welcome Credits
 	 execVM "scripts\ServerWelcomeCredits.sqf";

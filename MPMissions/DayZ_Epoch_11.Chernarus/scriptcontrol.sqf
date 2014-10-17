@@ -114,3 +114,5 @@ AnimateMV22script = true;
 AnimateSUVscript = true;
 //Nitro
 NOSScript = true;
+//Regen Blood
+RegenBloodScript = true;
