@@ -32,3 +32,6 @@ Arrest/Investigate
 Tent Sleep Healing
 Zombie Bait/Bomb
 Anti Zombie emitter
+VASP
+fast trade
+Trade from vehicle + Backpack
