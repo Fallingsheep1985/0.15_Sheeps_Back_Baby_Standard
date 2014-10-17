@@ -203,8 +203,8 @@ if (_dikCode in actionKeys "TacticalView") then {
     execVM "scripts\dzgm\noTactical.sqf";
 };
 
-if (_dikCode == 0x43) then {
-	if (dialog) then {closeDialog 0;groupManagementActive = false;} else {createGearDialog [player, "RscDisplayGear"];[] execVM "scripts\dzgm\loadGroupManagement.sqf";};
+if (_dikCode == 0x9D) then {
+	 if (dialog) then {closeDialog 0;groupManagementActive = false;} else {execVM "scripts\dzgm\loadGroupManagement.sqf";};
 	};
 };
 
