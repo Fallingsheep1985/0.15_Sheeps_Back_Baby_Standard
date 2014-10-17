@@ -130,3 +130,5 @@ DrinkWaterScript = true;
 TentHealScript = true;
 //Arrest
 ArrestScript = true;
+//Trade from Vehicles
+TradeFromVehicleScript = true;
