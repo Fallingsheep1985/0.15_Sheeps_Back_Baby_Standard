@@ -57,23 +57,29 @@ DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultS
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//Admin Build
+WG_adminBuild = [
+"11111111111",
+"76561198087015545"
+];
+//Super Admins
 SuperAdminList = [
 "111111111", // <Your In-Game Name here>
 "76561198087015545" // <S-Admin In-Game Name>
 ];
+//Admins
 AdminList = [
 "999999999", // <Admin In-Game Name>
 "999999999" // <Admin In-Game Name>
 ];
+//Mods
 ModList = [
 "999999999", // <Moderator In-Game Name>
 "999999999" // <Moderator In-Game Name>
 ];
-//Admin lists
-//add admins to admin build
-WG_adminBuild = AdminList + SuperAdminList;
+
 //set adminlist to be all admins
-AdminList = WG_adminBuild;
+AdminList = AdminList + SuperAdminList;
 
 //////////////////////SCRIPTS////////////////////
 //Server watermark
