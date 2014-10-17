@@ -65,7 +65,7 @@ if(DeployBikeScript)then{
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE END////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH  START////////////////////////////////////////////////////////////////////////////////////////////////////
-if(AnimatedSUVMV22)then{
+if(AnimateMV22script)then{
 	//animated mv22/suv hatch
 	if (_inVehicle and (_vehicle isKindOf "MV22")) then {
 	   if (isEngineOn _vehicle) then {[_vehicle,0] call mv22_pack;};
@@ -98,7 +98,8 @@ if(AnimatedSUVMV22)then{
 	   themv22 removeAction mv22_close;
 	   mv22_close = -1;
 	};
-
+};
+if(AnimateSUVscript)then{
 	if (_inVehicle and (_vehicle isKindOf "ArmoredSUV_Base_PMC")) then {
 	   if ((_vehicle animationPhase "HideGun_01") == 1) then {
 		 _unit = _vehicle turretUnit [0];
@@ -119,7 +120,26 @@ if(AnimatedSUVMV22)then{
 	   suv_open = -1;
 	};
 };
-/////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH START////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH END////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////SIRENS START////////////////////////////////////////////////////////////////////////////////////////////////////
+if(SirenScript)then{
+//Sirens
+_isCopcar = typeOf _vehicle in ["LadaLM","HMMWV_Ambulance","HMMWV_Ambulance_CZ_DES_EP1","S1203_ambulance_EP1","GAZ_Vodnik_MedEvac","policecar"];
+
+if (_inVehicle and _isCopcar and (driver _vehicle == player)) then {
+        dayz_addsirens = _vehicle;
+    if (s_player_sirens_on < 0) then {
+        s_player_sirens_on = dayz_addsirens addAction ["Sirens on","scripts\sirens\sirens_on.sqf",dayz_addsirens,2,false,true,"",""];
+        s_player_sirens_off = dayz_addsirens addAction ["Sirens off","scripts\sirens\sirens_off.sqf",dayz_addsirens,2,false,true,"",""];
+        };
+    } else {
+        dayz_addsirens removeAction s_player_sirens_on;
+        dayz_addsirens removeAction s_player_sirens_off;
+        s_player_sirens_on = -1;
+        s_player_sirens_off = -1;
+    };
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////SIRENS END////////////////////////////////////////////////////////////////////////////////////////////////////
 
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
@@ -630,29 +650,22 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				s_player_packtent = player addAction [localize "str_actions_self_07", "\z\addons\dayz_code\actions\tent_pack.sqf",_cursorTarget, 0, false, true, "",""];
 			};
 		} else {
-			if(("ItemJerrycan" in _magazinesPlayer) && ("ItemMatchbox_DZE" in weapons player)) then {
-				if (s_player_packtent < 0) then {
-					s_player_packtent = player addAction [localize "STR_EPOCH_ACTIONS_DESTROYTENT", "scripts\PlotForLifev2\remove.sqf",_cursorTarget, 1, true, true, "", ""];
+////////////////////////////////////////////////////////////////////////////////////////BURN TENT START/////////////////////////////////////////////////////////////////////////////////////////////////
+			if(BurnTentsScript)then{
+				if(("ItemJerrycan" in _magazinesPlayer) && _hasMatches) then {
+					if (s_player_packtent < 0) then {
+						s_player_packtent = player addAction [localize "STR_EPOCH_ACTIONS_DESTROYTENT", "scripts\BurnTents\burn_tent.sqf",_cursorTarget, 1, true, true, "", ""];
+					};
 				};
 			};
+/////////////////////////////////////////////////////////////////////////////////////////BURN TENT END////////////////////////////////////////////////////////////////////////////////////////////////
+
 		};
 	} else {
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;
 	};
-////////////////////////////////////////////////////////////////////////////////////////BURN TENT START/////////////////////////////////////////////////////////////////////////////////////////////////
-if(BurnTentsScript)then{
-	//BURN TENT
-	if(_isTent and _hasMatches and _canDo and !_isMan) then {
-        if (s_player_igniteTent < 0) then {
-            s_player_igniteTent = player addAction [format["Ignite Tent"], "scripts\BurnTents\burn_tent.sqf",cursorTarget, 1, true, true, "", ""];
-        };
-    } else {
-        player removeAction s_player_igniteTent;
-        s_player_igniteTent = -1;
-    };
-};
-/////////////////////////////////////////////////////////////////////////////////////////BURN TENT END////////////////////////////////////////////////////////////////////////////////////////////////
+
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _characterID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_unlockvault < 0) then {

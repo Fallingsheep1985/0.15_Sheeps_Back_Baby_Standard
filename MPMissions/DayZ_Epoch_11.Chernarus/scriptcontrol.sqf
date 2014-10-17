@@ -106,3 +106,9 @@ BinocularScript = true;
 carepackageSELFScript = true;
 //Carepackage on map
 carepackageMAPScript = true;
+//Sirens
+SirenScript = true;
+//Animate MV22 wings
+AnimateMV22script  = true;
+//Animate SUV Hatch
+AnimateSUVscript   = true;
