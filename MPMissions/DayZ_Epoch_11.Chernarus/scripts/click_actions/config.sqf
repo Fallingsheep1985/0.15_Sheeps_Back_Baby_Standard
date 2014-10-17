@@ -46,5 +46,23 @@ SUICIDE = [
 } else {
 	SUICIDE = [];
 };
+If(BinocularScript)then{
+BINOCULAR = [
+	["Binocular","Set Fog - 500","[] execVM 'scripts\BinocularFog\500.sqf';","true"],
+	["Binocular","Set Fog - 750","[] execVM 'scripts\BinocularFog\750.sqf';","true"],
+	["Binocular","Set Fog - 1000","[] execVM 'scripts\BinocularFog\1000.sqf';","true"],
+	["Binocular","Set Fog - 1250","[] execVM 'scripts\BinocularFog\1250.sqf';","true"],
+	["Binocular","Set Fog - 1500","[] execVM 'scripts\BinocularFog\1500.sqf';","true"],
+	["Binocular","Set Fog - 1750","[] execVM 'scripts\BinocularFog\1750.sqf';","true"],
+	["Binocular","Set Fog - 2000","[] execVM 'scripts\BinocularFog\2000.sqf';","true"],
+	["Binocular","Set Fog - 2500","[] execVM 'scripts\BinocularFog\2500.sqf';","true"],
+	["Binocular","Set Fog - 3000","[] execVM 'scripts\BinocularFog\3000.sqf';","true"],
+	["Binocular","Set Fog - 3500","[] execVM 'scripts\BinocularFog\3500.sqf';","true"],
+	["Binocular","Set Fog - 4000","[] execVM 'scripts\BinocularFog\4000.sqf';","true"],
+	["Binocular","Set Fog - 4500","[] execVM 'scripts\BinocularFog\4500.sqf';","true"],
+	["Binocular","Set Fog - 5000","[] execVM 'scripts\BinocularFog\5000.sqf';","true"],
+	} else {
+	BINOCULAR = [];
+};
 
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE;
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR;

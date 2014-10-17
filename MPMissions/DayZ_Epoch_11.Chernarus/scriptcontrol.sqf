@@ -106,3 +106,6 @@ craftingScript = true;
 
 //Suicide
 SuicideScript = true;
+
+//Binocular Fog
+BinocularScript = true;
