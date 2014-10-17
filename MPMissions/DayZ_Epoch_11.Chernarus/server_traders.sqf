@@ -44,7 +44,7 @@ menu_CIV_EuroMan02_EP1 = [
 ];
 // Neutral Building/Parts
 menu_TK_GUE_Soldier_5_EP1 = [
-	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509]],
+	[["Building Supplies",508],["Toolbelt Items",510],["Vehicle Parts",509],["Gems",900]],
 	[],
 	"neutral"
 ];
@@ -68,7 +68,7 @@ menu_Worker3 = [
 ];
 // Friendly Building/Parts
 menu_Woodlander1 = [
-	[["Building Supplies",530],["Toolbelt Items",532],["Vehicle Parts",531]],
+	[["Building Supplies",530],["Toolbelt Items",532],["Vehicle Parts",531],["Gems",900]],
 	[],
 	"friendly"
 ];
@@ -134,7 +134,7 @@ menu_RU_Profiteer4 = [
 ];
 // Neutral Building/Parts
 menu_Woodlander3 = [
-	[["Building Supplies",662],["Toolbelt Items",663],["Vehicle Parts",664]],
+	[["Building Supplies",662],["Toolbelt Items",663],["Vehicle Parts",664],["Gems",900]],
 	[],
 	"neutral"
 ];
