@@ -28,3 +28,5 @@ CAGN (safezones)
 Harvest Hemp
 DZGM ( Group Management)
 Drink Water
+Arrest/Investigate
+Tent Sleep Healing
