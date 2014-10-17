@@ -68,16 +68,24 @@ BINOCULAR = [
 
 If(carepackageSELFScript)then{
 CAREPACKAGESELF = [
-["ItemBriefcase100oz","Call Carepackage (On Self)","[] execVM 'scripts\Carepackage\carepackage.sqf';","true"]
+	["ItemBriefcase100oz","Call Carepackage (On Self)","[] execVM 'scripts\Carepackage\carepackage.sqf';","true"]
 	];
 } else {
 	CAREPACKAGESELF = [];
 };
 If(carepackageMAPScript)then{
 CAREPACKAGEMAP = [
-["ItemBriefcase100oz","Call Carepackage (On Map)","[] execVM 'scripts\Carepackage2\clickpackage.sqf';","true"]
+	["ItemBriefcase100oz","Call Carepackage (On Map)","[] execVM 'scripts\Carepackage2\clickpackage.sqf';","true"]
 	];
 } else {
 	CAREPACKAGEMAP = [];
 };
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP;
+If(HarvestHempScript)then{
+HARVEST = [
+	["ItemKiloHemp","Smoke Weed","[] execVM 'scripts\HarvestHemp\smokeweed.sqf';","true"],
+	["ItemKnife","Harvest Weed","[] execVM 'scripts\HarvestHemp\hemp.sqf';","true"]
+	];
+} else {
+	HARVEST = [];
+};
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST;

@@ -89,6 +89,12 @@ debugMonitor = true;//default on
 		execVM "scripts\DebugMonitor\debug_monitor.sqf";
 	};
 };
+if(HarvestHempScript)then{
+	if (isServer) then {
+	//Hemp
+	execVM "scripts\HarvestHemp\randomweedfarm.sqf";
+	};
+};
 	//DayZ Watermark
 if(WaterMarkScript)then{
 	if (!isNil "server_name") then {

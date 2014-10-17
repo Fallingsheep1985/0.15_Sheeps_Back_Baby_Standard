@@ -120,3 +120,5 @@ RegenBloodScript = true;
 FastropeScript = true;
 //Safezones
 SafezoneScripts = true;
+//Harvest Hemp
+HarvestHempScript = true;
