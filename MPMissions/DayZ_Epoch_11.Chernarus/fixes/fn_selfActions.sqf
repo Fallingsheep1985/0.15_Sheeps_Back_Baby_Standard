@@ -15,6 +15,56 @@ _inVehicle = (_vehicle != player);
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
 
+/////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE START////////////////////////////////////////////////////////////////////////////////////////////////////
+if(DeployBikeScript)then{
+	//Deploy Bike
+	if((speed player <= 1) && cursorTarget isKindOf "CSJ_GyroC" && _canDo) then {
+	if (s_player_deploybike6 < 0) then {
+			s_player_deploybike6 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack GyroCopter") +"</t>"),"scripts\spawnbike\bike6.sqf","",5,false,true,"", ""];
+		};
+	} else {
+		player removeAction s_player_deploybike6;
+		s_player_deploybike6 = -1;
+	};
+
+	if((speed player <= 1) && cursorTarget isKindOf "TT650_Civ" && _canDo) then {
+	if (s_player_deploybike5 < 0) then {
+			s_player_deploybike5 = player addaction[("<t color=""#007ab7"">" + ("Upgrade to GyroCopter") +"</t>"),"scripts\spawnbike\bike5.sqf","",5,false,true,"", ""];
+		};
+	} else {
+		player removeAction s_player_deploybike5;
+		s_player_deploybike5 = -1;
+	};
+
+	if((speed player <= 1) && cursorTarget isKindOf "TT650_Civ" && _canDo) then {
+	if (s_player_deploybike4 < 0) then {
+			s_player_deploybike4 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack Motorcycle") +"</t>"),"scripts\spawnbike\bike4.sqf","",5,false,true,"", ""];
+		};
+	} else {
+		player removeAction s_player_deploybike4;
+		s_player_deploybike4 = -1;
+	};
+
+	if((speed player <= 1) && cursorTarget isKindOf "Old_bike_TK_CIV_EP1" && _canDo) then {
+	if (s_player_deploybike3 < 0) then {
+			s_player_deploybike3 = player addaction[("<t color=""#007ab7"">" + ("Upgrade to Motorcycle") +"</t>"),"scripts\spawnbike\bike3.sqf","",5,false,true,"", ""];
+		};
+	} else {
+		player removeAction s_player_deploybike3;
+		s_player_deploybike3 = -1;
+	};
+
+	if((speed player <= 1) && cursorTarget isKindOf "Old_bike_TK_CIV_EP1" && _canDo) then {
+	if (s_player_deploybike2 < 0) then {
+			s_player_deploybike2 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack Bike") +"</t>"),"scripts\spawnbike\bike2.sqf","",5,false,true,"", ""];
+		};
+	} else {
+		player removeAction s_player_deploybike2;
+		s_player_deploybike2 = -1;
+	};
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE END////////////////////////////////////////////////////////////////////////////////////////////////////
+
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
 if (!isNull _nearLight) then {
@@ -534,7 +584,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;
 	};
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////BURN TENT START/////////////////////////////////////////////////////////////////////////////////////////////////
 if(BurnTentsScript)then{
 	//BURN TENT
 	if(_isTent and _hasMatches and _canDo and !_isMan) then {
@@ -546,7 +596,7 @@ if(BurnTentsScript)then{
         s_player_igniteTent = -1;
     };
 };
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////BURN TENT END////////////////////////////////////////////////////////////////////////////////////////////////
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _characterID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_unlockvault < 0) then {

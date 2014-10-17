@@ -94,3 +94,9 @@ AdmintoolsScript = true;
 
 //Debug Monitor
 DebugMonitorScript = true;
+
+//deploy Bike
+DeployBikeScript = true;
+
+//Burn Tents
+BurnTentsScript = true;
