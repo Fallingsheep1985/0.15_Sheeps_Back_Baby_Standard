@@ -66,8 +66,12 @@ if (!isDedicated) then {
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	
 	//Right Click Actions
-	call compile preprocessFileLineNumbers "scripts\click_actions\init.sqf";	
-	
+	call compile preprocessFileLineNumbers "scripts\click_actions\init.sqf";
+	//Safezone
+	if(SafezoneScripts)then{
+		//Community Safezones
+		execVM "scripts\CAGN\initiate.sqf";	
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"
@@ -76,6 +80,7 @@ if (!isDedicated) then {
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+
 
 //Debug Monitor
 if(DebugMonitorScript)then{

@@ -24,3 +24,4 @@ Sirens
 Nitro
 Regen Blood
 Fast Rope
+CAGN (safezones)

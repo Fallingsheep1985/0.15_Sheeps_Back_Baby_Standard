@@ -118,3 +118,5 @@ NOSScript = true;
 RegenBloodScript = true;
 //Fast Rope
 FastropeScript = true;
+//Safezones
+SafezoneScripts = true;
