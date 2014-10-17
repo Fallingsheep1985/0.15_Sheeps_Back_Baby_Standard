@@ -532,7 +532,19 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;
 	};
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if(BurnTentsScript)then{
+	//BURN TENT
+	if(_isTent and _hasMatches and _canDo and !_isMan) then {
+        if (s_player_igniteTent < 0) then {
+            s_player_igniteTent = player addAction [format["Ignite Tent"], "scripts\BurnTents\burn_tent.sqf",cursorTarget, 1, true, true, "", ""];
+        };
+    } else {
+        player removeAction s_player_igniteTent;
+        s_player_igniteTent = -1;
+    };
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _characterID != "0" && (player distance _cursorTarget < 3)) then {
 		if (s_player_unlockvault < 0) then {
