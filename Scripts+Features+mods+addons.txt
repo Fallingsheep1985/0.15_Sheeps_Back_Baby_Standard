@@ -30,3 +30,5 @@ DZGM ( Group Management)
 Drink Water
 Arrest/Investigate
 Tent Sleep Healing
+Zombie Bait/Bomb
+Anti Zombie emitter
