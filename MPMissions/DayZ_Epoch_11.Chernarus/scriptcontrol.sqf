@@ -109,6 +109,8 @@ carepackageMAPScript = true;
 //Sirens
 SirenScript = true;
 //Animate MV22 wings
-AnimateMV22script  = true;
+AnimateMV22script = true;
 //Animate SUV Hatch
-AnimateSUVscript   = true;
+AnimateSUVscript = true;
+//Nitro
+NOSScript = true;

@@ -14,7 +14,6 @@ _inVehicle = (_vehicle != player);
 
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
-
 /////////////////////////////////////////////////////////////////////////////////////////////////DEPLOY BIKE START////////////////////////////////////////////////////////////////////////////////////////////////////
 if(DeployBikeScript)then{
 	//Deploy Bike
@@ -395,6 +394,48 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		};
 	
 	};
+/////////////////////////////////////////////////////////////////////////////////////////////////NITRO START////////////////////////////////////////////////////////////////////////////////////////////////////
+if(NOSScript)then{
+ 	//Nitro action
+	_hasNOSinstalled = _vehicle getVariable["nitroinstalled",0];
+	if (_inVehicle and _vehicle isKindOf "Car" and speed _vehicle >= 1) then {
+		if (_inVehicle and _hasNOSinstalled == 1) then {
+			if (isnil("NITRO_Cond")) then {NITRO_Cond = false;};
+			if (s_player_nitrobooston <0) then {	
+				if (NITRO_Cond) then {
+					s_player_nitrobooston = _vehicle addAction [("<t color=""#39C1F3"">" + ("Nitro Off") + "</t>"),"scripts\NOS\nitro.sqf", [_vehicle], 999, false,true,"","driver _target == _this"]; 
+				} else {
+					s_player_nitrobooston = _vehicle addAction [("<t color=""#39C1F3"">" + ("Nitro On") + "</t>"),"scripts\NOS\nitro.sqf", [_vehicle], 999, false,true,"","driver _target == _this"]; 
+				};	
+			};
+		} else {
+			 _vehicle removeAction s_player_nitrobooston;
+			s_player_nitrobooston = -1;
+		};
+  } else {
+		 _vehicle removeAction s_player_nitrobooston;
+		s_player_nitrobooston = -1;
+		if (_hasNOSinstalled == 1) then {
+			 _vehicle setVariable ["nitroinstalled", 1, true];
+		};
+	}; 
+	_isaCar = _cursorTarget isKindOf "Car";
+	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
+	    _hasNOSitems = true;
+	} else {
+	    _hasNOSitems = false;
+	};
+	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
+	if (_isaCar and !locked _cursorTarget and _hasNOSitems and _isNOSinstalled == 0) then {
+		if (s_player_nitroInstall < 0) then {
+			s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+		};
+	} else {
+		player removeAction s_player_nitroInstall;
+		s_player_nitroInstall = -1;
+	};
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////NITRO END////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	if(_player_deleteBuild) then {
 		if (s_player_deleteBuild < 0) then {
@@ -659,7 +700,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				};
 			};
 /////////////////////////////////////////////////////////////////////////////////////////BURN TENT END////////////////////////////////////////////////////////////////////////////////////////////////
-
 		};
 	} else {
 		player removeAction s_player_packtent;
