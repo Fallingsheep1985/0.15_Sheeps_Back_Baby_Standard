@@ -159,6 +159,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 	_hasKnife = 	"ItemKnife" in _itemsPlayer;
 	_hasToolbox = 	"ItemToolbox" in _itemsPlayer;
+	_hasMatches = 	"ItemMatchbox_DZE" in _itemsPlayer;
+	_hasETool = "ItemEtool" in _itemsPlayer;
 
 	_playerUID = getPlayerUID player;
 	_isMan = _cursorTarget isKindOf "Man";
