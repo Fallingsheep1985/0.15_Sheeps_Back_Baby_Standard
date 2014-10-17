@@ -116,3 +116,5 @@ AnimateSUVscript = true;
 NOSScript = true;
 //Regen Blood
 RegenBloodScript = true;
+//Fast Rope
+FastropeScript = true;

@@ -95,6 +95,9 @@ if(WaterMarkScript)then{
 	  };
 	};
 };
+if(FastropeScript)then{
+	_fast_roping = [] execVM "scripts\Fastrope\BTC_fast_roping_init.sqf";
+};
 if(RegenBloodScript)then{
 	//Regen Blood
 	 execVM "scripts\RegenBlood\regenblood.sqf";
