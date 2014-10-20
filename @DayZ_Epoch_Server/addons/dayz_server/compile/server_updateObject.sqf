@@ -65,11 +65,18 @@ _object_position = {
 
 _object_inventory = {
 	private["_inventory","_previous","_key"];
-		_inventory = [
+		_isNormal = true;
+		if (typeOf (_object)in DZE_DoorsLocked) then{
+			_isNormal = false;
+			_inventory = _object getVariable ["doorfriends", []]; //We're replacing the inventory with UIDs for this item
+		};
+		if(_isNormal)then {
+			_inventory = [
 			getWeaponCargo _object,
 			getMagazineCargo _object,
 			getBackpackCargo _object
-		];
+			];
+		};
 		_previous = str(_object getVariable["lastInventory",[]]);
 		if (str(_inventory) != _previous) then {
 			_object setVariable["lastInventory",_inventory];

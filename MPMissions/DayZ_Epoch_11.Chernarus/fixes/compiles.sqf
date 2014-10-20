@@ -28,6 +28,18 @@ if (!isDedicated) then {
     horde_epeen_setText_stats_fnc = compile preProcessFile "scripts\journal\playerstats\epeen_setText_stats.sqf";
     horde_epeen_show_humanity_fnc = compile preProcessFile "scripts\journal\playerstats\show_humanity_fnc.sqf";
 
+/*DoorManagement Zupa*/
+DoorGetFriends 		= compile preprocessFileLineNumbers "scripts\doorManagement\doorGetFriends.sqf";
+DoorNearbyHumans 	= compile preprocessFileLineNumbers "scripts\doorManagement\doorNearbyHumans.sqf";
+DoorAddFriend 		= compile preprocessFileLineNumbers "scripts\doorManagement\doorAddFriend.sqf";
+DoorRemoveFriend 	= compile preprocessFileLineNumbers "scripts\doorManagement\doorRemoveFriend.sqf";
+player_unlockDoor       = compile preprocessFileLineNumbers "scripts\doorManagement\player_unlockDoor.sqf";
+player_unlockDoorCode = compile preprocessFileLineNumbers "scripts\doorManagement\player_unlockDoorCode.sqf";
+player_manageDoor       = compile preprocessFileLineNumbers "scripts\doorManagement\initDoorManagement.sqf";
+player_enterCode       = compile preprocessFileLineNumbers "scripts\doorManagement\player_enterCode.sqf";
+player_changeCombo = compile preprocessFileLineNumbers "scripts\doorManagement\player_changeCombo.sqf"; 
+/*DoorManagement End*/
+	
 //VASP
 // trader menu code
 	if (DZE_ConfigTrader) then {

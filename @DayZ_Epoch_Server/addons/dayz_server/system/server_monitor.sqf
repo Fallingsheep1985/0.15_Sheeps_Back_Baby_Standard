@@ -186,7 +186,9 @@ if (isServer && isNil "sm_done") then {
 			_object setVariable ["lastUpdate",time];
 			_object setVariable ["ObjectID", _idKey, true];
 			_object setVariable ["OwnerPUID", _ownerPUID, true];
-			
+			if (typeOf (_object) in  DZE_DoorsLocked) then {
+				_object setVariable ["doorfriends", _intentory, true];
+			};
 			_lockable = 0;
 			if(isNumber (configFile >> "CfgVehicles" >> _type >> "lockable")) then {
 				_lockable = getNumber(configFile >> "CfgVehicles" >> _type >> "lockable");
@@ -244,7 +246,8 @@ if (isServer && isNil "sm_done") then {
 				
 			};
 
-			if (count _intentory > 0) then {
+			//if (count _intentory > 0) then {
+			 if ((count _intentory > 0) && !(typeOf( _object) in  DZE_DoorsLocked)) then {
 				if (_type in DZE_LockedStorage) then {
 					// Fill variables with loot
 					_object setVariable ["WeaponCargo", (_intentory select 0),true];

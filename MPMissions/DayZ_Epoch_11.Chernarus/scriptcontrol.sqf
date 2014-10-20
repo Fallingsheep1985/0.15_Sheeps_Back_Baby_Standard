@@ -83,6 +83,12 @@ AdminList = AdminList + SuperAdminList; // DONT CHANGE!!!
 
 //////////////////////SCRIPTS////////////////////
 
+//Door Mangement
+DoorAdminList = ["-2","-3"]; // List of Player Id's of admins that can manage all doors
+AllowManualCode = true;// 2 reason| 1: Allows breaking codes (if 2nd config = false and code = 3 digits) | 2: Friends can access access not owned doors until owner gets on.
+HarderPenalty = true;// Cen's Penalty: Flashes screen white. And kicks player to lobby if failed more then (random number between 4 and 14) times.
+DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallDoorLocked_DZ","CinderWallDoorSmallLocked_DZ"];
+
 //EVR Blowout
 ns_blowout = true; // true / false
 ns_blowout_dayz = true;// true / false

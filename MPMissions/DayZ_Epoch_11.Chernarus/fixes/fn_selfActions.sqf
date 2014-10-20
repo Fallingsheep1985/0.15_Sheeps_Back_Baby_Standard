@@ -705,6 +705,18 @@ if(NOSScript)then{
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;
 	};
+	
+/////////////////////////////////////////////////////////////////////////////////////////MANAGE DOOR START////////////////////////////////////////////////////////////////////////////////////////////////
+
+if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
+	if (s_player_manageDoor < 0) then {		 
+     s_player_manageDoor = player addAction ["<t color='#0059FF'>Manage Door</t>", "scripts\doorManagement\initDoorManagement.sqf", _cursorTarget, 5, false];
+	};
+} else {
+		player removeAction s_player_manageDoor;
+		s_player_manageDoor = -1;
+};
+/////////////////////////////////////////////////////////////////////////////////////////MANAGE DOOR END////////////////////////////////////////////////////////////////////////////////////////////////
 
 	//Allow owner to unlock vault
 	if((_typeOfCursorTarget in DZE_LockableStorage) && _characterID != "0" && (player distance _cursorTarget < 3)) then {
@@ -1151,6 +1163,8 @@ if(ArrestScript)then{
     s_player_escort = -1;
     player removeAction s_player_search;
     s_player_search = -1;
+	player removeAction s_player_manageDoor;
+	s_player_manageDoor = -1; 
 };
 
 
