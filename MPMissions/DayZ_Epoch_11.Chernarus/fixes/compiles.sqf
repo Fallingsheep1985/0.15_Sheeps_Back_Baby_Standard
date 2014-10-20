@@ -15,8 +15,13 @@ if (!isDedicated) then {
 	player_vaultPitch =				compile preprocessFileLineNumbers "scripts\PlotForLifev2\vault_pitch.sqf";
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
-
+	//Craft from sheds
 	player_craftItem =			compile preprocessFileLineNumbers "fixes\player_craftItem.sqf";
+	//Paint
+	VehicleColourPaint =			compile preprocessFileLineNumbers "Paint\vehicleColourPaint.sqf";
+	VehicleColourUpdate =			compile preprocessFileLineNumbers "Paint\VehicleColourUpdate.sqf";
+	VehicleColourUpdate2 =			compile preprocessFileLineNumbers "Paint\VehicleColourUpdate2.sqf";
+	player_paint =				compile preprocessFileLineNumbers "Paint\player_paint.sqf";
 };
 
 //Journal
