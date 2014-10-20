@@ -64,7 +64,9 @@ if (!isDedicated) then {
 		  [] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
 	};
 	//Lights
-	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
+	if (LightScript) then{
+		[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
+	};
 	
 	_nil =  execVM "scripts\VASP\VASP_init.sqf";
 	

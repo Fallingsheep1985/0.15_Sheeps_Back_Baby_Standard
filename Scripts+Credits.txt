@@ -53,7 +53,7 @@ DZMS
 Heli Lift
 Towing
 Animated Heli Crashes
-Auto Refuel
+Service points
 Bury Body
 Snow
 Ground Fog
@@ -69,3 +69,28 @@ Bank Robbery
 Walk Amongst Dead
 Mining ore fix (epoch 1.0.5.2)
 Deploy bike FIX - return all materials when packing mozzie
+JAEM
+
+
+OVERPOCH
+items at traders
+vehicles in dynamic spawns
+loot tables
+
+
+SINGLE CURRENCY
+zupas 1.1
+Souls 2.0 edits
+Traders use currency
+smelt coins/bars
+JAEM use currency
+DZMS use currency
+AI drop currency
+Transfer currency at ATMS
+Advanced Alchemy Crafting use currency
+Bank Robbery use currency
+WAI use currency
+Maintain base use currency
+Service points use currency
+
+

@@ -94,20 +94,22 @@ AllowManualCode = true;// 2 reason| 1: Allows breaking codes (if 2nd config = fa
 HarderPenalty = true;// Cen's Penalty: Flashes screen white. And kicks player to lobby if failed more then (random number between 4 and 14) times.
 DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallDoorLocked_DZ","CinderWallDoorSmallLocked_DZ"];
 
-//EVR Blowout
-ns_blowout = true; // true / false
-ns_blowout_dayz = true;// true / false
+//EVR Blow out
+EVRScript = true;// USE THIS TO TURN ON OFF
+ns_blowout = true;
+ns_blowout_dayz = true;
 ns_blow_delaymod = 0.74; //blowout delay
 ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
 ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
-ns_blow_emp = false; //Namalsk Only
+ns_blow_emp = false;
 
 
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text
-
+//Lights
+LightScript = true;
 //Welcome Credits
 ServerWelcomeCreditsScript = true;
 //Admin Tools
@@ -165,5 +167,4 @@ ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an 
 ELE_StopClass = "MetalFloor_Preview_DZ";
 //DZAI CLient
 DZAIClientScript = true;
-//EVR Blow out
-EVRScript = true;
+
