@@ -163,3 +163,7 @@ ELE_RequiredBuildTools = ["ItemToolbox", "ItemCrowbar"]; // required tools for b
 ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "ItemJerrycan"]; // required items to build an elevator
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
+//DZAI CLient
+DZAIClientScript = true;
+//EVR Blow out
+EVRScript = true;
