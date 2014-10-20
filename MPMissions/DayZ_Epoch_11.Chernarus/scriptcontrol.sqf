@@ -82,6 +82,17 @@ ModList = [
 AdminList = AdminList + SuperAdminList; // DONT CHANGE!!!
 
 //////////////////////SCRIPTS////////////////////
+
+//EVR Blowout
+ns_blowout = true; // true / false
+ns_blowout_dayz = true;// true / false
+ns_blow_delaymod = 0.74; //blowout delay
+ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
+ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
+ns_blow_emp = false; //Namalsk Only
+
+
+
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text

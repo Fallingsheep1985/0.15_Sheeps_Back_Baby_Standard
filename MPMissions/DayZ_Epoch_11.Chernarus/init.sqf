@@ -89,6 +89,9 @@ if (!isDedicated) then {
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+//EVR Blow out
+if (isServer) then { _bul = [ns_blow_emp] execVM "scripts\blowout\module\blowout_server.sqf"; };
+if (!isDedicated) then { _bul = [] execVM "scripts\blowout\module\blowout_client.sqf"; };
 
 
 //Debug Monitor
