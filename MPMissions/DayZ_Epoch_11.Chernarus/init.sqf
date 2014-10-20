@@ -26,6 +26,7 @@ EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
+call compile preprocessFileLineNumbers "init\variables.sqf";
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "fixes\publicEH.sqf";				//Initilize the publicVariable event handlers
 progressLoadingScreen 0.2;
@@ -70,16 +71,19 @@ if (!isDedicated) then {
 	//Right Click Actions
 	call compile preprocessFileLineNumbers "scripts\click_actions\init.sqf";
 	//Safezone
-	if(SafezoneScripts)then{
+	if (SafezoneScripts) then {
 		//Community Safezones
 		execVM "scripts\CAGN\initiate.sqf";	
 	};
 		//DZGM
-	if(DZGMScript)then{
+	if (DZGMScript) then {
 		execVM "scripts\dzgm\init.sqf";
 	};
-	if(TradeFromVehicleScript)then{
+	if (TradeFromVehicleScript) then {
 	ExecVM "scripts\TradeFromVehicle Version 2.0\setup\init.sqf";
+	};
+	if (ElevatorScript) then{
+		["elevator"] execVM "scripts\elevator\elevator_init.sqf";
 	};
 };
 
