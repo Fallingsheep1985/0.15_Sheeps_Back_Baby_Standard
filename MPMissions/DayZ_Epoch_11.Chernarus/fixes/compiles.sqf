@@ -19,6 +19,15 @@ if (!isDedicated) then {
 	player_craftItem =			compile preprocessFileLineNumbers "fixes\player_craftItem.sqf";
 };
 
+//Journal
+//playerstats
+    horde_epeen_fnc_fill_page = compile preProcessFile "scripts\journal\playerstats\fill_page_fnc.sqf";
+    horde_epeen_determine_humanity_fnc = compile preProcessFile "scripts\journal\playerstats\determine_humanity_fnc.sqf";
+    horde_epeen_setText_journal_fnc = compile preProcessFile "scripts\journal\playerstats\epeen_setText_journal.sqf";
+    horde_epeen_setText_humanity_fnc = compile preProcessFile "scripts\journal\playerstats\epeen_setText_humanity.sqf";
+    horde_epeen_setText_stats_fnc = compile preProcessFile "scripts\journal\playerstats\epeen_setText_stats.sqf";
+    horde_epeen_show_humanity_fnc = compile preProcessFile "scripts\journal\playerstats\show_humanity_fnc.sqf";
+
 //VASP
 // trader menu code
 	if (DZE_ConfigTrader) then {

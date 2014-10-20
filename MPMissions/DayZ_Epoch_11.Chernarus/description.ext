@@ -1,3 +1,13 @@
+//Journal
+class RscIGUIShortcutButton;
+#include "scripts\journal\CfgPlayerStats\defines.hpp"
+#include "scripts\journal\CfgPlayerStats\p__cover.hpp"
+#include "scripts\journal\CfgPlayerStats\p_journal_humanity.hpp"
+#include "scripts\journal\CfgPlayerStats\p_humanity_art.hpp"
+#include "scripts\journal\CfgPlayerStats\p_zombies_killed.hpp"
+#include "scripts\journal\CfgPlayerStats\p_bandits_killed.hpp"
+#include "scripts\journal\CfgPlayerStats\p_headshots.hpp"
+#include "scripts\journal\CfgPlayerStats\p_murders.hpp"
 
 //Custom Loot
 #include "CustomLoot\CfgBuildingLoot.hpp"
