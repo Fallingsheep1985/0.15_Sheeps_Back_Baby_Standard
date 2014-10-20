@@ -1,37 +1,36 @@
-Plot pole 4 Life
-Snap Build Pro
-Vector Build
-Admin Fast Build
-Custom Loot
-Watermark
-Welcome Credits
-Custom Loadscreen
-Custom Death Screen
-Admin Tools
-ESS (Enhanced Spawn Select)
-Debug Monitor
-Burn Tents
+Epoch Admintools 1.9.1 (NoxSicarius) 
+A Plot for Life v2.23 (Rimblock)
+Build Vectors v3 (strike)
+Snap Pro 1.4.1 (RayMix)
+Custom Loot (Shootex)
+Watermark (MadHatter05)
+Welcome Credits 1.3.7 ( IT07)
+Custom Loadscreen (jasonpointer)
+Custom Death Screen (Jokaru)
+ESS (Enhanced Spawn Select) (ebay)
+Debug Monitor 
+Burn Tents (soul)
 Deploy Bike
 Crafting
-Suicide
+Suicide ( Grafzahl)
 Buy Gems from traders
-Binocular Fog
-Carepackage on self
-Carepackage on map
+Binocular Fog (alexlawson)
+Carepackage on self (MattL)
+Carepackage on map (MattL)
 Animated MV22 Wings
 Animated SUV hatch
 Sirens
 Nitro
-Regen Blood
-Fast Rope
+Regen Blood (Schwede)
+Fast Rope (=BTC= & sabbath)
 CAGN (safezones)
 Harvest Hemp
-DZGM ( Group Management)
-Drink Water
+DZGM ( Group Management) (ebay)
+Drink Water (Mamu1234)
 Arrest/Investigate
-Tent Sleep Healing
-Zombie Bait/Bomb
-Anti Zombie emitter
-VASP
-fast trade
-Trade from vehicle + Backpack
+Tent Sleep Healing 1.1 (Krixes)
+Zombie Bait/Bomb (Freaking Fred)
+Anti Zombie emitter (Freaking Fred)
+VASP 1.2 (OtterNas3)
+fast trade (gr8_boi52)
+Trade from vehicle + Backpack (Csus)?
