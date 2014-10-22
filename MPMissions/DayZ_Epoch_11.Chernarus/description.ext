@@ -271,7 +271,24 @@ class RscTextNS
     font = "BitStream";
     SizeEx = 0.025;
 };
-
+class RscTxtT
+{
+	access = 0;
+	type = 0;
+	idc = -1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {0.8784,0.8471,0.651,1};
+	text = "";
+	fixedWidth = 0;
+	x = 0;
+	y = 0;
+	h = 0.037;
+	w = 0.3;
+	style = 0;
+	shadow = 2;
+	font = "Zeppelin32";
+	SizeEx = 0.03921;
+};
 //DZGM
 #include "scripts\dzgm\defines.hpp"
 class RscTitles
