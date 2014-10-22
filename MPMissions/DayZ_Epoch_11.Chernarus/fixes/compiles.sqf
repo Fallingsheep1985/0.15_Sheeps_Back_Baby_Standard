@@ -18,10 +18,10 @@ if (!isDedicated) then {
 	//Craft from sheds
 	player_craftItem =			compile preprocessFileLineNumbers "fixes\player_craftItem.sqf";
 	//Paint
-	VehicleColourPaint =			compile preprocessFileLineNumbers "Paint\vehicleColourPaint.sqf";
-	VehicleColourUpdate =			compile preprocessFileLineNumbers "Paint\VehicleColourUpdate.sqf";
-	VehicleColourUpdate2 =			compile preprocessFileLineNumbers "Paint\VehicleColourUpdate2.sqf";
-	player_paint =				compile preprocessFileLineNumbers "Paint\player_paint.sqf";
+	VehicleColourPaint =			compile preprocessFileLineNumbers "scripts\Paint\vehicleColourPaint.sqf";
+	VehicleColourUpdate =			compile preprocessFileLineNumbers "scripts\Paint\VehicleColourUpdate.sqf";
+	VehicleColourUpdate2 =			compile preprocessFileLineNumbers "scripts\Paint\VehicleColourUpdate2.sqf";
+	player_paint =				compile preprocessFileLineNumbers "scripts\Paint\player_paint.sqf";
 };
 
 //Journal

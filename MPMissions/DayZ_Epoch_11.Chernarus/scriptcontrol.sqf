@@ -156,6 +156,8 @@ TentHealScript = true;
 ArrestScript = true;
 //Trade from Vehicles
 TradeFromVehicleScript = true;
+//Anti Zombie Emitter
+AntiZombieEmitterScript = true;
 //Elevator
 ElevatorScript = true;
 ELE_MaxRange = 100; // maximum range the elevator can travel / stop points can be built (in meter)
