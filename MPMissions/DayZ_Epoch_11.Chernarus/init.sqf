@@ -6,7 +6,7 @@ startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
 //Load Configs
-call compile preprocessFileLineNumbers "scriptcontrol.sqf";
+[] execVM "scriptcontrol.sqf";
 
 //REALLY IMPORTANT VALUES
 dayZ_instance =	11;					//The instance
@@ -91,6 +91,13 @@ if (!isDedicated) then {
 	if (DZAIClientScript) then{
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 	};
+	//Debug Monitor
+	if(DebugMonitorScript)then{
+	debugMonitor = true;//default on
+		if (!isDedicated) then {
+			execVM "scripts\DebugMonitor\debug_monitor.sqf";
+		};
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"
@@ -105,13 +112,7 @@ if (isServer) then { _bul = [ns_blow_emp] execVM "scripts\blowout\module\blowout
 if (!isDedicated) then { _bul = [] execVM "scripts\blowout\module\blowout_client.sqf"; };
 };
 
-//Debug Monitor
-if(DebugMonitorScript)then{
-debugMonitor = true;//default on
-	if (!isDedicated) then {
-		execVM "scripts\DebugMonitor\debug_monitor.sqf";
-	};
-};
+
 if(HarvestHempScript)then{
 	if (isServer) then {
 	//Hemp

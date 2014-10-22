@@ -107,7 +107,7 @@ ns_blow_emp = false;
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
-server_name = "0.15 - Sheeps Back Baby!"; //Watermark Text
+server_name = "0.15"; //Watermark Text
 //Lights
 LightScript = true;
 //Welcome Credits

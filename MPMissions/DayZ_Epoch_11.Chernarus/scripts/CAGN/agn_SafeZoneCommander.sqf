@@ -8,7 +8,7 @@ diag_log ( "[AGN] Starting Trader City Safezone Commander!" );
  
 //if ( isDedicated || isServer ) exitWith {diag_log ( "Error: Attempting to start AGN products on a server where it should not be!" );}; 
 
-Private ["_EH_Fired", "_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_Vehicle","_inVehicleDamage","_antiBackpackThread","_antiBackpackThread2"];
+Private ["_ehID", "_fix","_inVehicle","_inVehicleLast","_EH_Fired_Vehicle","_inVehicleDamage","_antiBackpackThread","_antiBackpackThread2"];
 
 //ANTI SPAM GODMODE
 AGN_safeZoneAntispam = true;								// puts a time limit on God mode when trying to leave and enter a safe zone rapidly
