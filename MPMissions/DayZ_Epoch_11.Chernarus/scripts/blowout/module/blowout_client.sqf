@@ -32,6 +32,7 @@ bl_detection =
     playSound "bl_detect";
     cutRsc ["RscAPSI_h4","PLAIN"];
     sleep 23.8;
+	if (isNil("ns_blow_status")) then { ns_blow_status = false; };
     waitUntil{ns_blow_status};
     playSound "bl_detect";
     sleep 0.2;
@@ -338,7 +339,7 @@ bl_preparations = {
 while {true} do {
 	if (isNil("ns_blowout_dayz")) then { ns_blowout_dayz = false; };
 	if (isNil("ns_blow_ambient_music")) then { ns_blow_ambient_music = false; };
-
+	if (isNil("ns_blow_prep")) then { ns_blow_prep = false; };
 	waitUntil{ns_blow_prep};
 
 	diag_log format["[NAC BLOWOUT CLIENT] :: ns_blow_prep = %1 Blowout is preparing, take a cover!", ns_blow_prep];
@@ -361,7 +362,7 @@ while {true} do {
 	if (ns_blowout_dayz) then {
 		player setVariable["startcombattimer", 1, true];
 	};
-   
+   if (isNil("ns_blow_action")) then { ns_blow_action = false; };
    waitUntil{ns_blow_action};
    
    diag_log format["[NAC BLOWOUT CLIENT] :: ns_blow_action = %1 Blowout action received.", ns_blow_status];  
