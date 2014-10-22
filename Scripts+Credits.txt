@@ -43,6 +43,11 @@ Journal (jOoPs)
 Craft In Shed (Barra81)
 DZAI 2.1.3 (Buttface)
 WAI 2.1.4 (f3cuk)
+Mining ore fix (epoch 1.0.5.2)
+Street Lights (Using epoch built in)
+House Lights (Using epoch built in)
+Tower Lights (Using epoch built in)
+
 
 
 
@@ -57,9 +62,6 @@ Service points
 Bury Body
 Snow
 Ground Fog
-Street Lights
-House Lights
-Tower Lights
 Animated AN2 crashes
 AN2 carepackage drops
 Arrest Player FIX
@@ -67,7 +69,6 @@ Arrest Player FIX
 Hero perks
 Bank Robbery
 Walk Amongst Dead
-Mining ore fix (epoch 1.0.5.2)
 Deploy bike FIX - return all materials when packing mozzie
 JAEM
 

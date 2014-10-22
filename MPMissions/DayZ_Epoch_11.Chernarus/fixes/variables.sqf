@@ -2,6 +2,78 @@
 //Allowed Objects
 dayz_allowedObjects = ["MetalFloor_Preview_DZ","TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", "Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ","LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ","WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ","WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked","WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ","WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ","CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ","CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ","WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ"];
 
+//Player self-action handles
+dayz_resetSelfActions = {
+	s_player_fire =			-1;
+	s_player_cook =			-1;
+	s_player_boil =			-1;
+	s_player_fireout =		-1;
+	s_player_butcher =		-1;
+	s_player_packtent = 	-1;
+	s_player_packvault = 	-1;
+	s_player_lockvault = 	-1;
+	s_player_unlockvault = 	-1;
+	s_player_fillwater =	-1;
+	s_player_fillwater2 = 	-1;
+	s_player_fillfuel = 	-1;
+	s_player_grabflare = 	-1;
+	s_player_callzombies = 	-1;
+	s_player_showname = 	-1;
+	s_player_debuglootpos = 	-1;
+	s_player_pzombiesattack = 	-1;
+	s_player_pzombiesvision =	-1;
+	s_player_pzombiesfeed = 	-1;
+	s_player_removeflare = 	-1;
+	s_player_painkiller =	-1;
+	s_player_studybody = 	-1;
+	s_player_tamedog =		-1;
+	s_player_madsci_crtl =	-1;
+	s_player_parts_crtl =	-1;
+	s_build_Sandbag1_DZ = 	-1;
+	s_build_Hedgehog_DZ =	-1;
+	s_build_Wire_cat1 =		-1;
+	s_player_deleteBuild =	-1;
+	s_player_forceSave = 	-1;
+	s_player_checkGear = 	-1;
+	s_player_flipveh = 		-1;
+	s_player_stats =		-1;
+	s_player_sleep =		-1;
+	s_player_movedog =		-1;
+	s_player_speeddog =		-1;
+	s_player_calldog = 		-1;
+	s_player_feeddog = 		-1;
+	s_player_waterdog = 	-1;
+	s_player_staydog = 		-1;
+	s_player_trackdog = 	-1;
+	s_player_barkdog = 		-1;
+	s_player_warndog = 		-1;
+	s_player_followdog = 	-1;
+	s_player_repair_crtl =  -1;
+	s_player_information =  -1;
+	s_player_fuelauto    =  -1;
+	s_player_fuelauto2    =  -1;
+	s_player_fillgen	 =  -1;
+	s_player_upgrade_build	 =  -1;
+	s_player_maint_build	 =  -1;
+	s_player_downgrade_build	 =  -1;
+	s_player_towing		 =  -1;
+	s_halo_action =         -1;
+	s_player_SurrenderedGear = -1;
+	s_player_maintain_area = -1;
+	s_player_maintain_area_preview = -1;
+	s_player_heli_lift = -1;
+	s_player_heli_detach = -1;
+	s_player_lockUnlock_crtl = -1;
+	s_player_deploybike1 = -1;
+	s_player_deploybike2 = -1;
+	s_player_deploybike3 = -1;
+	s_player_deploybike4 = -1;
+	s_player_deploybike5 = -1;
+	s_player_deploybike6 = -1;
+	s_player_arrest  = -1;
+	s_player_drinkwater  = -1;
+};
+call dayz_resetSelfActions;
 
 //Paintable vehicles
 ColourVehicles = [
