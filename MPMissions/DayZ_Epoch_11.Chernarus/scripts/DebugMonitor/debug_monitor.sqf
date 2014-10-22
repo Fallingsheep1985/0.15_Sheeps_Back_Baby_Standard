@@ -3,18 +3,13 @@
 fnc_debug = {
 
 	while {debugMonitor} do {
-		//Debug Info
-		_humanity =		player getVariable["humanity",0];
-		//Kill Stats
-		_kills = 		player getVariable["zombieKills",0];
-		_killsH = 		player getVariable["humanKills",0];
-		_killsB = 		player getVariable["banditKills",0];
-		_My_speed = speed (vehicle player);
-		_myalt = getPos player select 2;
 		
 		_pic = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'picture'));
-		if (player == vehicle player) then {_pic = (getText (configFile >> 'CfgWeapons' >> (currentWeapon player) >> 'picture'));
-				}else{_pic = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'picture'));};
+		if (player == vehicle player) then {
+			_pic = (getText (configFile >> 'CfgWeapons' >> (currentWeapon player) >> 'picture'));
+		}else{
+		_pic = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'picture'));
+		};
 					
 		_txt = '';
 		_txt = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'displayName'));
@@ -41,14 +36,14 @@ fnc_debug = {
 			(count playableUnits), // %3Players Online
 			round(diag_fps), // %4 FPS
 			(round(240-(serverTime)/60)), // %5 restart time
-			_humanity, // %6 Humanity
-			_kills, //  %7 Zombie Kills
-			_killsH, // %8 Murders
-			_KillsB, // %9 Bandit kills
+			(player getVariable["humanity",0]), // %6 Humanity
+			(player getVariable["zombieKills",0]), //  %7 Zombie Kills
+			(player getVariable["humanKills",0]), // %8 Murders
+			(player getVariable["banditKills",0]), // %9 Bandit kills
 			round (r_player_blood), // %10 blood
 			(dayz_Survived), // %11 days survived
-			round(_My_speed),// %12 player speed
-			round(_myalt)//Altitude
+			round(speed (vehicle player)),// %12 player speed
+			round(getPos player select 2)//Altitude
 		];
 		sleep 1;	
 	};
