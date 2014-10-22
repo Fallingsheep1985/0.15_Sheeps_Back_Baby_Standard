@@ -72,6 +72,7 @@ dayz_resetSelfActions = {
 	s_player_deploybike6 = -1;
 	s_player_arrest  = -1;
 	s_player_drinkwater  = -1;
+	s_player_elevator_next = -1;
 };
 call dayz_resetSelfActions;
 
@@ -544,3 +545,10 @@ ColourVehicles = [
 "JetSkiYanahui_Blue",
 "JetSkiYanahui_Green" 
 ];
+
+//Undefined Fiz dayz_Survived
+_msg = dayzPlayerLogin;
+_survival = _msg select 3;
+_totalMins = _survival select 0;
+_days = floor (_totalMins / 1440);
+dayz_Survived = _days; 
