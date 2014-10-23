@@ -2,6 +2,10 @@
 //Allowed Objects
 dayz_allowedObjects = ["MetalFloor_Preview_DZ","TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", "Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ","LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ","WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ","WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked","WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ","WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ","CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ","CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ","WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ"];
 
+dayz_addsirens = [];
+themv22 = [];
+thesuv = [];
+
 //Player self-action handles
 dayz_resetSelfActions = {
 	s_player_fire =			-1;
@@ -75,10 +79,18 @@ dayz_resetSelfActions = {
 	s_player_elevator_next = -1;
 	s_player_elevator_previous = -1;
 	s_player_elevator_select = -1;
+	s_player_elevator_upgrade = -1;
+	s_player_elevator_upgrade_stop = -1;
 	s_player_release = -1;
 	zombieBait = -1;
 	zombieBomb = -1;
 	zombieShield = -1;
+	mv22_fold = -1;
+	mv22_unfold = -1;
+	mv22_open = -1;
+	mv22_close = -1;
+	suv_close = -1;
+	suv_open = -1;
 };
 call dayz_resetSelfActions;
 
