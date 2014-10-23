@@ -550,6 +550,34 @@ class CfgBuildingLoot {
 			{"","hunter",0.5}
 		};
 	};
+			class MilitaryOffice: Default {
+                zombieChance = 1;
+                minRoaming = 1;
+                maxRoaming = 5;
+                zombieClass[] = {"z_soldier_pilot","z_suit1","z_suit2","z_soldier","z_soldier","z_soldier","z_soldier","z_soldier_heavy","z_soldier_heavy","z_policeman"};
+                lootChance = 0.7;
+                lootPos[] = {};
+                lootType[] = {
+                        {"ItemMap","weapon",0.02},
+                        {"ItemCompass","weapon",0.02},
+                        {"ItemFlashlight","generic",0.01},
+                        {"ItemKnife","generic",0.01},
+                        {"ItemMatchbox_DZE","generic",0.01},
+                        {"ItemGPS","weapon",0.01},
+                        {"NVGoggles","weapon",0.01},
+                        {"ItemGenerator","magazine",0.01},
+                        {"ItemJerrycan","magazine",0.02},
+                        {"ItemSodaMdew","magazine",0.05},
+                        {"ItemSodaRbull","magazine",0.05},
+                        {"","food",0.05},
+                        {"","trash",0.1},
+                        {"","medical",0.05},
+                        {"","military",0.1},
+                        {"","backpacks",0.05},
+                        {"","militarybackpacks",0.05},
+                        {"","tents",0.01}
+                };
+        };
 	class DynamicDebris: Default
 	{
 		lootChance = 0.4;
