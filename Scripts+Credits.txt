@@ -47,6 +47,9 @@ Mining ore fix (epoch 1.0.5.2)
 Street Lights (Using epoch built in)
 House Lights (Using epoch built in)
 Tower Lights (Using epoch built in)
+Extra Loot Postions (General Zaroff)
+Animated C130 crashes (Gorsy)
+Animated AN2 crashes (Gorsy)
 
 
 
@@ -62,7 +65,6 @@ Service points
 Bury Body
 Snow
 Ground Fog
-Animated AN2 crashes
 AN2 carepackage drops
 Arrest Player FIX
 (disabled in safe zones must have 5000 humanity or -5000 humanity or be admin and have scrap metal)
