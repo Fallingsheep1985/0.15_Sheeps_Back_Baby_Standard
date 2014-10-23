@@ -55,7 +55,6 @@ Animated Heli Crashes (Grafzahl)
 EMS 0.3 (Fuchs + Mimic)
 
 
-
 TO ADD
 Advanced Alchemy Building
 Take clothes 
@@ -66,7 +65,7 @@ Bury Body
 Snow
 Ground Fog
 Arrest Player FIX
-(disabled in safe zones must have 5000 humanity or -5000 humanity or be admin and have scrap metal)
+(disabled in safe zones must be an admin or have scrap metal)
 Hero perks
 Bank Robbery
 Walk Amongst Dead
