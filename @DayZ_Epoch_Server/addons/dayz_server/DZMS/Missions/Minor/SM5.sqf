@@ -5,12 +5,12 @@
 private ["_missName","_coords","_crash","_crate"];
 
 //Name of the Mission
-_missName = "Bandit Humvee Crash";
+_missName = "Humvee Crash";
 
 //DZMSFindPos loops BIS_fnc_findSafePos until it gets a valid result
 _coords = call DZMSFindPos;
 
-[nil,nil,rTitleText,"A Humvee has crashed! Check your map for the location!", "PLAIN",10] call RE;
+[nil,nil,rTitleText,"A Humvee has crashed!\nGo Investigate the Cause of the Wreck!", "PLAIN",10] call RE;
 
 //DZMSAddMinMarker is a simple script that adds a marker to the location
 [_coords,_missName] ExecVM DZMSAddMinMarker;
@@ -27,18 +27,18 @@ _crate = createVehicle ["RULaunchersBox",[(_coords select 0) - 14, _coords selec
 [_crate] call DZMSProtectObj;
 
 //DZMSAISpawn spawns AI to the mission.
-//Usage: [_coords, count, skillLevel]
-[_coords,3,1] ExecVM DZMSAISpawn;
+//Usage: [_coords, count, skillLevel, unitArray]
+[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
-[_coords,3,1] ExecVM DZMSAISpawn;
+[_coords,3,1,"DZMSUnitsMinor"] call DZMSAISpawn;
 sleep 1;
 
-//Wait until the player is within 30meters
-waitUntil{{isPlayer _x && _x distance _coords <= 30 } count playableunits > 0}; 
+//Wait until the player is within 30 meters and also meets the kill req
+[_coords,"DZMSUnitsMinor"] call DZMSWaitMissionComp;
 
 //Let everyone know the mission is over
-[nil,nil,rTitleText,"The crash site has been secured by survivors!", "PLAIN",6] call RE;
-diag_log format["[DZMS]: Minor SM5 Humvee Crash Mission has Ended."];
+[nil,nil,rTitleText,"The Humvee has been Secured by Survivors!", "PLAIN",6] call RE;
+diag_log text format["[DZMS]: Minor SM5 Humvee Crash Mission has Ended."];
 deleteMarker "DZMSMinMarker";
 deleteMarker "DZMSMinDot";
 
