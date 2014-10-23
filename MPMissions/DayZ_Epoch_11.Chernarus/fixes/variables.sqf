@@ -81,6 +81,7 @@ dayz_resetSelfActions = {
 	s_player_elevator_select = -1;
 	s_player_elevator_upgrade = -1;
 	s_player_elevator_upgrade_stop = -1;
+	s_player_elevator_call = -1;
 	s_player_release = -1;
 	zombieBait = -1;
 	zombieBomb = -1;

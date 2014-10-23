@@ -210,7 +210,7 @@ while {true} do {
 		//_crash setDir _dir;
 
 		// I don't think this is needed (you can't get "in" a crash), but it was in the original DayZ Crash logic
-		dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_crash];
+		pvdze_serverobjectmonitor set [count pvdze_serverobjectmonitor,_crash];
 
 		_crash setVariable ["ObjectID",1,true];
 

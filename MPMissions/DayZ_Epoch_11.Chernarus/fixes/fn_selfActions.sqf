@@ -71,10 +71,10 @@ if(AnimateMV22script)then{
 	   if (mv22_fold < 0) then {
 		 themv22 = _vehicle;
 		 if !(isEngineOn themv22) then {
-		   mv22_fold = themv22 addAction ["Fold","scripts\animate\mv22_fold.sqf","",5,false,true];
-		   mv22_unfold = themv22 addAction ["UnFold","scripts\animate\mv22_unfold.sqf","",5,false,true];
-		   mv22_open = themv22 addAction ["Open Ramp","scripts\animate\mv22_open.sqf","",5,false,true];
-		   mv22_close = themv22 addAction ["Close Ramp","scripts\animate\mv22_close.sqf","",5,false,true];
+		   mv22_fold = themv22 addAction ["Fold","scripts\animate\mv22_fold.sqf","",5,false,true,"",""];
+		   mv22_unfold = themv22 addAction ["UnFold","scripts\animate\mv22_unfold.sqf","",5,false,true,"",""];
+		   mv22_open = themv22 addAction ["Open Ramp","scripts\animate\mv22_open.sqf","",5,false,true,"",""];
+		   mv22_close = themv22 addAction ["Close Ramp","scripts\animate\mv22_close.sqf","",5,false,true,"",""];
 		 };
 	   };
 	   if (isEngineOn themv22) then {
@@ -109,8 +109,8 @@ if(AnimateSUVscript)then{
 	   };
 	   if (suv_close < 0) then {
 		 thesuv = _vehicle;
-		 suv_close = thesuv addAction ["Close Hatch","scripts\animate\suv_close.sqf","",5,false,true];
-		 suv_open = thesuv addAction ["Open Hatch","scripts\animate\suv_open.sqf","",5,false,true];
+		 suv_close = thesuv addAction ["Close Hatch","scripts\animate\suv_close.sqf","",5,false,true,"",""];
+		 suv_open = thesuv addAction ["Open Hatch","scripts\animate\suv_open.sqf","",5,false,true,"",""];
 	   };
 	} else {
 	   thesuv removeAction suv_close;
@@ -344,6 +344,54 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
     		s_player_maintain_area_preview = -1;
 	 };
 
+	 	// All Traders
+	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
+		
+		if (s_player_parts_crtl < 0) then {
+
+			// get humanity
+			_humanity = player getVariable ["humanity",0];
+			_traderMenu = call compile format["menu_%1;",_traderType];
+
+			// diag_log ("TRADER = " + str(_traderMenu));
+			
+			_low_high = "low";
+			_humanity_logic = false;
+			if((_traderMenu select 2) == "friendly") then {
+				_humanity_logic = (_humanity < -5000);
+			};
+			if((_traderMenu select 2) == "hostile") then {
+				_low_high = "high";
+				_humanity_logic = (_humanity > -5000);
+			};
+			if((_traderMenu select 2) == "hero") then {
+				_humanity_logic = (_humanity < 5000);
+			};
+			if(_humanity_logic) then {
+				_cancel = player addAction [format[localize "STR_EPOCH_ACTIONS_HUMANITY",_low_high], "\z\addons\dayz_code\actions\trade_cancel.sqf",["na"], 0, true, false, "",""];
+				s_player_parts set [count s_player_parts,_cancel];
+			} else {
+				
+				// Static Menu
+				{
+					//diag_log format["DEBUG TRADER: %1", _x];
+					_buy = player addAction [format["Trade %1 %2 for %3 %4",(_x select 3),(_x select 5),(_x select 2),(_x select 6)], "\z\addons\dayz_code\actions\trade_items_wo_db.sqf",[(_x select 0),(_x select 1),(_x select 2),(_x select 3),(_x select 4),(_x select 5),(_x select 6)], (_x select 7), true, true, "",""];
+					s_player_parts set [count s_player_parts,_buy];
+				
+				} count (_traderMenu select 1);
+				// Database menu
+				LastTraderMenu = (_traderMenu select 0);
+				_buy = player addAction [localize "STR_EPOCH_PLAYER_289", "\z\addons\dayz_code\actions\show_dialog.sqf",(_traderMenu select 0), 999, true, false, "",""];
+				s_player_parts set [count s_player_parts,_buy];
+
+			};
+			s_player_parts_crtl = 1;
+			
+		};
+	} else {
+		{player removeAction _x} count s_player_parts;s_player_parts = [];
+		s_player_parts_crtl = -1;
+	};
 	// CURSOR TARGET ALIVE
 	if(_isAlive) then {
 		
@@ -950,57 +998,10 @@ if(TentHealScript)then{
 		};
 	};
 
-	// All Traders
-	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
-		
-		if (s_player_parts_crtl < 0) then {
 
-			// get humanity
-			_humanity = player getVariable ["humanity",0];
-			_traderMenu = call compile format["menu_%1;",_traderType];
-
-			// diag_log ("TRADER = " + str(_traderMenu));
-			
-			_low_high = "low";
-			_humanity_logic = false;
-			if((_traderMenu select 2) == "friendly") then {
-				_humanity_logic = (_humanity < -5000);
-			};
-			if((_traderMenu select 2) == "hostile") then {
-				_low_high = "high";
-				_humanity_logic = (_humanity > -5000);
-			};
-			if((_traderMenu select 2) == "hero") then {
-				_humanity_logic = (_humanity < 5000);
-			};
-			if(_humanity_logic) then {
-				_cancel = player addAction [format[localize "STR_EPOCH_ACTIONS_HUMANITY",_low_high], "\z\addons\dayz_code\actions\trade_cancel.sqf",["na"], 0, true, false, "",""];
-				s_player_parts set [count s_player_parts,_cancel];
-			} else {
-				
-				// Static Menu
-				{
-					//diag_log format["DEBUG TRADER: %1", _x];
-					_buy = player addAction [format["Trade %1 %2 for %3 %4",(_x select 3),(_x select 5),(_x select 2),(_x select 6)], "\z\addons\dayz_code\actions\trade_items_wo_db.sqf",[(_x select 0),(_x select 1),(_x select 2),(_x select 3),(_x select 4),(_x select 5),(_x select 6)], (_x select 7), true, true, "",""];
-					s_player_parts set [count s_player_parts,_buy];
-				
-				} count (_traderMenu select 1);
-				// Database menu
-				LastTraderMenu = (_traderMenu select 0);
-				_buy = player addAction [localize "STR_EPOCH_PLAYER_289", "\z\addons\dayz_code\actions\show_dialog.sqf",(_traderMenu select 0), 999, true, false, "",""];
-				s_player_parts set [count s_player_parts,_buy];
-
-			};
-			s_player_parts_crtl = 1;
-			
-		};
-	} else {
-		{player removeAction _x} count s_player_parts;s_player_parts = [];
-		s_player_parts_crtl = -1;
-	};
 if(ArrestScript)then{
 
-	if(!canbuild)then{
+	if !(canbuild) then{
 	_cantBuild = true;
 	};
 //--------------------------------------ARREST---------------------------------------------------------------- 

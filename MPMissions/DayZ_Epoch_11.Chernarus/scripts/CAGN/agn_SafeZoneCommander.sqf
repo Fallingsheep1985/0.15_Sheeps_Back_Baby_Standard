@@ -117,7 +117,7 @@ while {true} do {
 				};
 			};
 		};
-			
+		
 		_antiBackpackThread2 = [] spawn {
 			private ["_to","_dis","_inchk","_ip","_ia","_skip","_ct","_iv","_lp","_inv","_ctOwnerID","_friendlies","_if"];
 			_ctOwnerID = 0;
