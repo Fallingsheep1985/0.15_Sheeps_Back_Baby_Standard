@@ -50,6 +50,7 @@ Tower Lights (Using epoch built in)
 Extra Loot Postions (General Zaroff)
 Animated C130 crashes (Gorsy)
 Animated AN2 crashes (Gorsy)
+AN2 carepackage drops (Gorsy)
 
 
 
@@ -65,7 +66,6 @@ Service points
 Bury Body
 Snow
 Ground Fog
-AN2 carepackage drops
 Arrest Player FIX
 (disabled in safe zones must have 5000 humanity or -5000 humanity or be admin and have scrap metal)
 Hero perks
