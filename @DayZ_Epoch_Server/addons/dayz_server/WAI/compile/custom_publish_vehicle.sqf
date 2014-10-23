@@ -83,7 +83,7 @@ if (isServer) then {
 
 	};
 
-	if(debug_mode) then { diag_log("WAI: Spawned " +str(_class) + " at " + str(_position) + " with " + str(_fuel) + " fuel and " + str(_damage) + " damage."); };
+	//if(debug_mode) then { diag_log("WAI: Spawned " +str(_class) + " at " + str(_position) + " with " + str(_fuel) + " fuel and " + str(_damage) + " damage."); };
 	
 	_vehicle setFuel _fuel;
 	_vehicle addeventhandler ["HandleDamage",{ _this call vehicle_handleDamage } ];

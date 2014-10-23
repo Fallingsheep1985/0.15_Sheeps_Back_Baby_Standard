@@ -52,7 +52,6 @@ DZE_selfTransfuse_Values = [
  10,  // Chance of Infection
 300 //Cooldown Timer
 ];
-
 DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["VaultStorageLocked"]
 DZE_curPitch = 45; //Starting rotation angle. Only 1, 5, 45, or 90.
 
@@ -74,7 +73,15 @@ ns_blow_itemapsi = "NVGoggles"; //ItemAPSI replacement
 ns_blow_playerdamage = 4000; // damage players without ns_blow_itemapsi can get per blowout
 ns_blow_emp = false;
 
-
+//Elevator
+ElevatorScript = true;
+ELE_MaxRange = 100; // maximum range the elevator can travel / stop points can be built (in meter)
+ELE_Speed = 5; // speed of the elevator (meters per second)
+ELE_StopWaitTime = 0; // disable the wait time if you call the elevator
+ELE_RequiredBuildTools = ["ItemToolbox", "ItemCrowbar"]; // required tools for building an elevator and elevator stop
+ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "ItemJerrycan"]; // required items to build an elevator
+ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
+ELE_StopClass = "MetalFloor_Preview_DZ";
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
@@ -133,15 +140,6 @@ AntiZombieEmitterScript = true;
 ZombieBaitScript = true;
 //Zombie bomb bait
 ZombieBombScript = true;
-//Elevator
-ElevatorScript = true;
-ELE_MaxRange = 100; // maximum range the elevator can travel / stop points can be built (in meter)
-ELE_Speed = 5; // speed of the elevator (meters per second)
-ELE_StopWaitTime = 0; // disable the wait time if you call the elevator
-ELE_RequiredBuildTools = ["ItemToolbox", "ItemCrowbar"]; // required tools for building an elevator and elevator stop
-ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "ItemJerrycan"]; // required items to build an elevator
-ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
-ELE_StopClass = "MetalFloor_Preview_DZ";
 //DZAI CLient
 DZAIClientScript = true;
 
