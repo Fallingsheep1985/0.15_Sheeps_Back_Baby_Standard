@@ -95,6 +95,7 @@ if (!isDedicated) then {
 	if(DebugMonitorScript)then{
 	debugMonitor = true;//default on
 		if (!isDedicated) then {
+		waitUntil {!isNil "PVDZE_plr_LoginRecord"};
 			execVM "scripts\DebugMonitor\debug_monitor.sqf";
 		};
 	};
