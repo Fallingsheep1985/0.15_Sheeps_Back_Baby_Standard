@@ -74,6 +74,11 @@ dayz_resetSelfActions = {
 	s_player_drinkwater  = -1;
 	s_player_elevator_next = -1;
 	s_player_elevator_previous = -1;
+	s_player_elevator_select = -1;
+	s_player_release = -1;
+	zombieBait = -1;
+	zombieBomb = -1;
+	zombieShield = -1;
 };
 call dayz_resetSelfActions;
 
