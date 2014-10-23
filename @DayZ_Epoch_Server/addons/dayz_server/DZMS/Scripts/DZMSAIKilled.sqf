@@ -13,7 +13,7 @@ _player = _this select 1;
 if (isPlayer _player) then {
 	private ["_banditkills","_humanity"];
 	
-	//diag_log format ["[DZMS]: Debug: Unit killed by %1 at %2", _player, mapGridPosition _unit];
+	//diag_log text format ["[DZMS]: Debug: Unit killed by %1 at %2", _player, mapGridPosition _unit];
 	
 	//Lets grab some info
 	_humanity = _player getVariable ["humanity",0];
@@ -39,7 +39,7 @@ if (isPlayer _player) then {
 	
 } else {
 
-	//diag_log format ["[DZMS]: Debug: Unit killed by %1 at %2", _player, mapGridPosition _unit];
+	//diag_log text format ["[DZMS]: Debug: Unit killed by %1 at %2", _player, mapGridPosition _unit];
 
 	if (DZMSRunGear) then {
 		//Since a player ran them over, or they died from unknown causes
@@ -53,6 +53,20 @@ if (isPlayer _player) then {
 	
 };
 
+if (DZMSCleanDeath) then {
+	_unit call DZMSPurgeObject;
+	if (DZMSCleanDeath) exitWith {};
+};
+
+if (DZMSUseNVG) then {
+	_unit removeWeapon "NVGoggles";
+};
+
+if (DZMSUseRPG AND ("RPG7V" in (weapons _unit))) then {
+	_unit removeWeapon "RPG7V";
+	_unit removeMagazines "PG7V";
+};
+
 //Dead body timer and cleanup
-sleep DZMSBodyTime;
-deletevehicle _unit;
+[DZMSBodyTime,10] call DZMSSleep;
+_unit call DZMSPurgeObject;

@@ -15,13 +15,14 @@ clearMagazineCargoGlobal _crate;
 _bpackList = ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1","DZ_Czech_Vest_Puch","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_British_ACU","DZ_CivilBackpack_EP1","DZ_Backpack_EP1"];
 _gshellList = ["HandGrenade_west","FlareGreen_M203","FlareWhite_M203"];
 _medical = ["ItemBandage","ItemMorphine","ItemEpinephrine","ItemPainkiller","ItemWaterbottle","FoodMRE","ItemAntibiotic","ItemBloodbag"];
+_money = ["ItemSilverBar","ItemSilverBar10oz","ItemGoldBar","ItemGoldBar10oz"];
 
 //////////////////////////////////////////////////////////////////
 // Medical Crates
 if (_type == "medical") then {
 	// load medical
 	_scount = count _medical;
-	for "_x" from 0 to 16 do {
+	for "_x" from 0 to 40 do {
 		_sSelect = floor(random _sCount);
 		_item = _medical select _sSelect;
 		_crate addMagazineCargoGlobal [_item,(round(random 2))];
@@ -73,7 +74,7 @@ if (_type == "weapons") then {
 
 	//load mg
 	_scount = count DZMSmgList;
-	for "_x" from 0 to 2 do {
+	for "_x" from 0 to 1 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSmgList select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
@@ -85,7 +86,7 @@ if (_type == "weapons") then {
 
 	//load primary
 	_scount = count DZMSprimaryList;
-	for "_x" from 0 to 3 do {
+	for "_x" from 0 to 2 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSprimaryList select _sSelect;
 		_crate addWeaponCargoGlobal [_item,1];
@@ -109,47 +110,30 @@ if (_type == "supply") then {
 	
 	// load construction
 	_scount = count DZMSConSupply;
-	for "_x" from 0 to 12 do {
+	for "_x" from 0 to 30 do {
 		_sSelect = floor(random _sCount);
 		_item = DZMSConSupply select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_crate addMagazineCargoGlobal [_item,1];
+	};
+};
+if (_type == "build") then {
+	// load construction
+	_scount = count DZMSConSupply;
+	for "_x" from 0 to 50 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSConSupply select _sSelect;
+		_crate addMagazineCargoGlobal [_item,1];
 	};
 };
 
 ///////////////////////////////////////////////////////////////////
-// EMS Boxes/Crates
-if (_type == "weap") then {
-	// EMS Weaponry
-	_scount = count EMSWeaponry;
-	for "_x" from 0 to 2 do {
+// Epoch Money Crates
+if (_type == "money") then {
+	// load money
+	_scount = count _money;
+	for "_x" from 0 to 5 do {
 		_sSelect = floor(random _sCount);
-		_item = EMSWeaponry select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
+		_item = _money select _sSelect;
+		_crate addMagazineCargoGlobal [_item,1];
 	};
 };
-	
-if (_type == "meds") then {
-	// load medical
-	_scount = count EMSMedicals;
-	for "_x" from 0 to 16 do {
-		_sSelect = floor(random _sCount);
-		_item = EMSMedicals select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
-	};
-};
-	
-	// EMS Tools
-	_scount = count EMSToolsCon;
-	for "_x" from 0 to 4 do {
-		_sSelect = floor(random _sCount);
-		_item = EMSToolsCon select _sSelect;
-		_crate addWeaponCargoGlobal [_item, 4];
-	};
-	
-	// EMS Constructor
-	_scount = count EMSSupplyCon;
-	for "_x" from 0 to 15 do {
-		_sSelect = floor(random _sCount);
-		_item = EMSSupplyCon select _sSelect;
-		_crate addMagazineCargoGlobal [_item,(round(random 2))];
-	};

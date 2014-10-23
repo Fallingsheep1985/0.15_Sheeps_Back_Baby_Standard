@@ -9,7 +9,7 @@ private["_run","_timeDiff","_timeVar","_wait","_cntMis","_ranMis","_varName"];
 _timeDiff = DZMSMinorMax - DZMSMinorMin;
 _timeVar = _timeDiff + DZMSMinorMin;
 
-diag_log format ["[DZMS]: Minor Mission Clock Starting!"];
+diag_log text format ["[DZMS]: Minor Mission Clock Starting!"];
 
 //Lets get the loop going
 _run = true;
@@ -17,7 +17,7 @@ while {_run} do
 {
 	//Lets wait the random time
 	_wait  = round(random _timeVar);
-	sleep _wait;
+    [_wait,5] call DZMSSleep;
 	
 	//Let's check that there are missions in the array.
 	//If there are none, lets end the timer.
@@ -27,12 +27,18 @@ while {_run} do
 	//Lets pick a mission
 	_ranMis = floor (random _cntMis);
 	_varName = DZMSMinorArray select _ranMis;
-	
+    
+    // clean up all the existing units before starting a new one
+    {if (alive _x) then {_x call DZMSPurgeObject;};} forEach DZMSUnitsMinor;
+    
+    // rebuild the array for the next mission
+    DZMSUnitsMinor = [];
+    
 	//Let's Run the Mission
-	[] execVM format ["\z\addons\dayz_server\EMS\Missions\Minor\%1.sqf",_varName];
-	diag_log format ["[DZMS]: Running Minor Mission %1.",_varName];
+	[] execVM format ["\z\addons\dayz_server\DZMS\Missions\Minor\%1.sqf",_varName];
+	diag_log text format ["[DZMS]: Running Minor Mission %1.",_varName];
 	
 	//Let's wait for it to finish or timeout
 	waitUntil {DZMSMinDone};
-	DZMSMinDone = nil;
+	DZMSMinDone = false;
 };

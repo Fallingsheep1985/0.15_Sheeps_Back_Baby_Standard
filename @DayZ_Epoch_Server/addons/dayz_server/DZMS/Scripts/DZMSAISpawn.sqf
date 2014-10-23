@@ -5,12 +5,13 @@
 		UnitCount is the number of units to spawn
 		SkillLevel is the skill number defined in DZMSAIConfig.sqf
 */																		//
-private ["_position","_unitcount","_skill","_wpRadius","_xpos","_ypos","_unitGroup","_aiskin","_unit","_weapon","_magazine","_wppos1","_wppos2","_wppos3","_wppos4","_wp1","_wp2","_wp3","_wp4","_wpfin"];
+private ["_position","_unitcount","_skill","_wpRadius","_xpos","_ypos","_unitGroup","_aiskin","_unit","_weapon","_magazine","_wppos1","_wppos2","_wppos3","_wppos4","_wp1","_wp2","_wp3","_wp4","_wpfin","_unitArrayName","_unitMissionCount"];
 _position = _this select 0;
 _unitcount = _this select 1;
 _skill = _this select 2;
+_unitArrayName = _this select 3;
 
-//diag_log format ["[DZMS]: AI Pos:%1 / AI UnitNum: %2 / AI SkillLev:%3",_position,_unitcount,_skill];
+//diag_log text format ["[DZMS]: AI Pos:%1 / AI UnitNum: %2 / AI SkillLev:%3",_position,_unitcount,_skill];
 
 _wpRadius = 20;
 
@@ -40,7 +41,7 @@ for "_x" from 1 to _unitcount do {
 	_unit enableAI "MOVE";
 	_unit enableAI "ANIM";
 	_unit enableAI "FSM";
-	_unit setCombatMode "RED";
+	_unit setCombatMode "YELLOW";
 	_unit setBehaviour "COMBAT";
 	
 	//Remove the items he spawns with by default
@@ -55,7 +56,7 @@ for "_x" from 1 to _unitcount do {
 	_weapon = _weaponArray select 0;
 	_magazine = _weaponArray select 1;
 	
-	//diag_log format ["[DZMS]: AI Weapon:%1 / AI Magazine:%2",_weapon,_magazine];
+	//diag_log text format ["[DZMS]: AI Weapon:%1 / AI Magazine:%2",_weapon,_magazine];
 	
 	//Get the gear array
 	_aigearArray = [DZMSGear0,DZMSGear1,DZMSGear2,DZMSGear3,DZMSGear4];
@@ -75,6 +76,10 @@ for "_x" from 1 to _unitcount do {
 	
 	_unit addBackpack _aipack;
 	
+	if (DZMSUseNVG) then {
+		_unit addWeapon "NVGoggles";
+	};
+	
 	{
 		_unit addMagazine _x
 	} forEach _gearmagazines;
@@ -83,11 +88,14 @@ for "_x" from 1 to _unitcount do {
 		_unit addWeapon _x
 	} forEach _geartools;
 	
+	_aicskill = DZMSSkills1;
+	
 	//Lets set the skills
 	switch (_skill) do {
-		case 0: {_aicskill = DZMSSkills1;};
-		case 1: {_aicskill = DZMSSkills2;};
-		case 2: {_aicskill = DZMSSkills3;};
+		case 0: {_aicskill = DZMSSkills0;};
+		case 1: {_aicskill = DZMSSkills1;};
+		case 2: {_aicskill = DZMSSkills2;};
+		case 3: {_aicskill = DZMSSkills3;};
 	};
 	
 	{
@@ -97,6 +105,14 @@ for "_x" from 1 to _unitcount do {
 	//Lets prepare the unit for cleanup
 	_unit addEventHandler ["Killed",{ [(_this select 0), (_this select 1)] ExecVM DZMSAIKilled; }];
 	_unit setVariable ["DZMSAI", true];
+};
+
+//Lets give a launcher if enabled
+//The last _unit should still be defined from the FOR above
+if (DZMSUseRPG) then {
+	_unit addWeapon "RPG7V";
+	_unit addMagazine "PG7V";
+	_unit addMagazine "PG7V";
 };
 
 // These are 4 waypoints in a NorthSEW around the center
@@ -119,4 +135,12 @@ _wp4 setWaypointType "MOVE";
 _wpfin = _unitGroup addWaypoint [[_xpos,_ypos, 0], _wpRadius];
 _wpfin setWaypointType "CYCLE";
 
-//diag_log format ["[DZMS]: Spawned %1 AI at %2",_unitcount,_position];
+//diag_log text format ["[DZMS]: Spawned %1 AI at %2",_unitcount,_position];
+
+// load the unit groups into a passed array name so they can be cleaned up later
+call compile format["
+%1 = %1 + (units _unitGroup); 
+_unitMissionCount = count %1;
+",_unitArrayName];
+
+diag_log text format["[DZMS]: (%3) %1 AI Spawned, %2 units in mission.",count (units _unitGroup),_unitMissionCount,_unitArrayName];
