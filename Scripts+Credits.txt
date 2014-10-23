@@ -52,7 +52,7 @@ Animated C130 crashes (Gorsy)
 Animated AN2 crashes (Gorsy)
 AN2 carepackage drops (Gorsy)
 Animated Heli Crashes (Grafzahl)
-EMS 0.3 (Fuchs + Mimic)
+DZMS 1.1
 
 
 TO ADD
