@@ -51,17 +51,16 @@ Extra Loot Postions (General Zaroff)
 Animated C130 crashes (Gorsy)
 Animated AN2 crashes (Gorsy)
 AN2 carepackage drops (Gorsy)
-
+Animated Heli Crashes (Grafzahl)
+EMS 0.3 (Fuchs + Mimic)
 
 
 
 TO ADD
 Advanced Alchemy Building
 Take clothes 
-DZMS
 Heli Lift
 Towing
-Animated Heli Crashes
 Service points
 Bury Body
 Snow
@@ -88,7 +87,7 @@ Souls 2.0 edits
 Traders use currency
 smelt coins/bars
 JAEM use currency
-DZMS use currency
+EMS use currency
 AI drop currency
 Transfer currency at ATMS
 Advanced Alchemy Crafting use currency
