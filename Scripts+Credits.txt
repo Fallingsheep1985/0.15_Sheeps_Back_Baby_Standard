@@ -54,15 +54,16 @@ AN2 carepackage drops (Gorsy)
 Animated Heli Crashes (Grafzahl)
 
 DZMS 1.1 (TheVampire)
-DZMSHotSpots(ekroemer)
+DZMSHotSpots (ekroemer)
 Tow + Lift (Nightmare)
+Bury Body (seaweeduk)
+Cannibalism (seaweeduk)
 
 
 TO ADD
 Advanced Alchemy Building
 Take clothes 
 Service points
-Bury Body
 Snow
 Ground Fog
 Arrest Player FIX

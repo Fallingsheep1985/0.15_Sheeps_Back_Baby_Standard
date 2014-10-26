@@ -962,7 +962,16 @@ if(TentHealScript)then{
 			s_player_repair_crtl = -1;
 		};
 	};
-
+/////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
+	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
+        if (s_player_butcher_human < 0) then {
+            s_player_butcher_human = player addAction [format["Gut Human"], "scripts\cannibalism\gather_meat_human.sqf",cursorTarget, 0, false, true, "", ""];
+        };
+    } else {
+        player removeAction s_player_butcher_human;
+        s_player_butcher_human = -1;
+    };
+/////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
 	 	// All Traders
 	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
 		
@@ -1163,8 +1172,10 @@ if(TentHealScript)then{
     s_player_search = -1;
 	player removeAction s_player_manageDoor;
 	s_player_manageDoor = -1;
-		player removeAction s_player_bury_human;
+	player removeAction s_player_bury_human;
     s_player_bury_human = -1;
+	player removeAction s_player_butcher_human;
+	s_player_butcher_human = -1;
 };
 
 
