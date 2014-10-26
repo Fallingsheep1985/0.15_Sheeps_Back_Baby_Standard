@@ -63,7 +63,6 @@ Take Clothes (Zabn)
 
 TO ADD
 Advanced Alchemy Building
-Take clothes 
 Service points
 Snow
 Ground Fog
