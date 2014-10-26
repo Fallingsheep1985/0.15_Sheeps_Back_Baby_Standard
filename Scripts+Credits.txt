@@ -21,7 +21,7 @@ Carepackage on self (MattL)
 Carepackage on map (MattL)
 Animated MV22 \SUV (ebay)
 Sirens
-Nitro
+Nitro (Sandbird)
 Regen Blood (Schwede)
 Fast Rope (=BTC= & sabbath)
 CAGN (safezones)
@@ -52,14 +52,15 @@ Animated C130 crashes (Gorsy)
 Animated AN2 crashes (Gorsy)
 AN2 carepackage drops (Gorsy)
 Animated Heli Crashes (Grafzahl)
-DZMS 1.1
+
+DZMS 1.1 (TheVampire)
+DZMSHotSpots(ekroemer)
+Tow + Lift (Nightmare)
 
 
 TO ADD
 Advanced Alchemy Building
 Take clothes 
-Heli Lift
-Towing
 Service points
 Bury Body
 Snow
