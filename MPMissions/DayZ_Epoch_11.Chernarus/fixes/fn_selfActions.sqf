@@ -948,6 +948,18 @@ if(TentHealScript)then{
 		s_player_sleep = -1;
 	};	
 };
+//////////////////////////////////////////////////TAKE CLOTHES START/////////////////////////////////////
+        _clothesTaken = cursorTarget getVariable["clothesTaken",false];
+    // Take clothes by Zabn @ BalotaBuddies.net
+    if (_isMan and !_isAlive and !_isZombie and !_isAnimal and !_clothesTaken) then {
+        if (s_player_clothes < 0) then {
+            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\takeskin\player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
+        };
+    } else {
+        player removeAction s_player_clothes;
+        s_player_clothes = -1;
+        };
+//////////////////////////////////////////////////TAKE CLOTHES END/////////////////////////////////////
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != _cursorTarget) && _isVehicle && !_isMan && _hasToolbox && (damage _cursorTarget < 1) && !_isDisallowRepair) then {
 		if (s_player_repair_crtl < 0) then {
