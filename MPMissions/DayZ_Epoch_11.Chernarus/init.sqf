@@ -7,6 +7,7 @@ cutText ["","BLACK OUT"];
 enableSaving [false, false];
 //Load Configs
 [] execVM "scriptcontrol.sqf";
+[] execVM "scriptconfig.sqf";
 
 //REALLY IMPORTANT VALUES
 dayZ_instance =	11;					//The instance

@@ -949,6 +949,7 @@ if(TentHealScript)then{
 	};	
 };
 //////////////////////////////////////////////////TAKE CLOTHES START/////////////////////////////////////
+if (TakeClothesScript) then {
         _clothesTaken = cursorTarget getVariable["clothesTaken",false];
     // Take clothes by Zabn @ BalotaBuddies.net
     if (_isMan and !_isAlive and !_isZombie and !_isAnimal and !_clothesTaken) then {
@@ -959,6 +960,7 @@ if(TentHealScript)then{
         player removeAction s_player_clothes;
         s_player_clothes = -1;
         };
+};
 //////////////////////////////////////////////////TAKE CLOTHES END/////////////////////////////////////
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != _cursorTarget) && _isVehicle && !_isMan && _hasToolbox && (damage _cursorTarget < 1) && !_isDisallowRepair) then {
@@ -975,6 +977,7 @@ if(TentHealScript)then{
 		};
 	};
 /////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
+if (CannibalismScript) then {
 	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
         if (s_player_butcher_human < 0) then {
             s_player_butcher_human = player addAction [format["Gut Human"], "scripts\cannibalism\gather_meat_human.sqf",cursorTarget, 0, false, true, "", ""];
@@ -983,6 +986,7 @@ if(TentHealScript)then{
         player removeAction s_player_butcher_human;
         s_player_butcher_human = -1;
     };
+};
 /////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
 	 	// All Traders
 	if (_isMan && !_isPZombie && _traderType in serverTraders) then {

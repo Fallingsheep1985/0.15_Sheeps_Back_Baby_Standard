@@ -58,6 +58,7 @@ DZMSHotSpots (ekroemer)
 Tow + Lift (Nightmare)
 Bury Body (seaweeduk)
 Cannibalism (seaweeduk)
+Take Clothes (Zabn)
 
 
 TO ADD
