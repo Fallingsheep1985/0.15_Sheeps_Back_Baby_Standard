@@ -491,6 +491,8 @@ if (isServer && isNil "sm_done") then {
 	[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
 	//DZMS 1.1
 	[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
+	//DZMSHotSpots
+	[] ExecVM "\z\addons\dayz_server\DZMSHotSpots\DZMSHotSpotsInit.sqf";
 	allowConnection = true;	
 	sm_done = true;
 	publicVariable "sm_done";
