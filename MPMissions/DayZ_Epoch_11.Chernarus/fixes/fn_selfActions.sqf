@@ -1239,10 +1239,10 @@ if (_inVehicle and _isCopcar and (driver _vehicle == player)) then {
         s_player_sirens_off = dayz_addsirens addAction ["Sirens off","scripts\sirens\sirens_off.sqf",dayz_addsirens,2,false,true,"",""];
         };
     } else {
-        dayz_addsirens removeAction s_player_sirens_on;
-        dayz_addsirens removeAction s_player_sirens_off;
-        s_player_sirens_on = -1;
+		s_player_sirens_on = -1;
         s_player_sirens_off = -1;
+        dayz_addsirens removeAction s_player_sirens_on;
+        dayz_addsirens removeAction s_player_sirens_off;  
     };
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////SIRENS END////////////////////////////////////////////////////////////////////////////////////////////////////
