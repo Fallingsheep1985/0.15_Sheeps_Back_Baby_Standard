@@ -26,16 +26,21 @@ EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
-call compile preprocessFileLineNumbers "fixes\variables.sqf";
 progressLoadingScreen 0.1;
-call compile preprocessFileLineNumbers "fixes\publicEH.sqf";				//Initilize the publicVariable event handlers
+call compile preprocessFileLineNumbers "fixes\variables.sqf";
 progressLoadingScreen 0.2;
+call compile preprocessFileLineNumbers "fixes\publicEH.sqf";				//Initilize the publicVariable event handlers
+progressLoadingScreen 0.3;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
-call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.5;
+call compile preprocessFileLineNumbers "fixes\compiles.sqf";
+progressLoadingScreen 0.6;
 call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+progressLoadingScreen 0.7;
+call compile preprocessFileLineNumbers "logistic\init.sqf";
+progressLoadingScreen 0.8;
 call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
 progressLoadingScreen 1.0;
 
