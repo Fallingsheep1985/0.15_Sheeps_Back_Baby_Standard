@@ -966,7 +966,6 @@ _dogHandle = player getVariable ["dogID", 0];
 if (_dogHandle > 0) then {
 	_dog = _dogHandle getFSMVariable "_dog";
 	_characterID = "0";
-
 	if (!isNull cursorTarget) then { _characterID = cursorTarget getVariable ["CharacterID","0"]; };
 	if (_canDo && !_inVehicle && alive _dog && _characterID != dayz_characterID) then {
 		if (s_player_movedog < 0) then {
@@ -1247,6 +1246,7 @@ if (_inVehicle and _isCopcar and (driver _vehicle == player)) then {
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////SIRENS END////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////MANAGE DOOR START////////////////////////////////////////////////////////////////////////////////////////////////
+
 if((_typeOfCursorTarget in DZE_DoorsLocked)) then {
 	if (s_player_manageDoor < 0) then {		 
      s_player_manageDoor = player addAction ["<t color='#0059FF'>Manage Door</t>", "scripts\doorManagement\initDoorManagement.sqf", _cursorTarget, 5, false];
