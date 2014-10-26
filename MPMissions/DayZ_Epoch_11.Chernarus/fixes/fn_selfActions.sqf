@@ -599,7 +599,7 @@ _Build = canbuild;
 		// Study body
 		if (_isMan && !_isZombie && !_isAnimal) then {
 			_player_studybody = true;
-		}
+		};
 	} else {
 		// unit alive
 
@@ -641,7 +641,7 @@ if(BuryHumanScript)then{
 	if (!_isAlive && !_isZombie && !_isAnimal && _hasETool && _isMan && _canDo) then {
         if (s_player_bury_human < 0) then {
             s_player_bury_human = player addAction [format["Bury Body"], "scripts\BuryHuman\bury_human.sqf",cursorTarget, 3, true, true, "", ""];
-        }
+        };
     } else {
         player removeAction s_player_bury_human;
         s_player_bury_human = -1;
@@ -719,7 +719,7 @@ if(BuryHumanScript)then{
 						s_player_packtent = player addAction [localize "STR_EPOCH_ACTIONS_DESTROYTENT", "scripts\BurnTents\burn_tent.sqf",_cursorTarget, 1, true, true, "", ""];
 				};
 			};
-		}
+		};
 /////////////////////////////////////////////////////////////////////////////////////////BURN TENT END////////////////////////////////////////////////////////////////////////////////////////////////
 		};
 	} else {
@@ -1314,3 +1314,4 @@ if(ZombieBombScript)then{
 		zombieBomb = -1;
 	};
 };
+
