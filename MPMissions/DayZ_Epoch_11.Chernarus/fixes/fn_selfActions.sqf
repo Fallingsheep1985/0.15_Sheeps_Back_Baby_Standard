@@ -19,8 +19,8 @@ _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
 if(NOSScript)then{
  	//Nitro action
 	_hasNOSinstalled = _vehicle getVariable["nitroinstalled",0];
-	if (_inVehicle and _vehicle isKindOf "Car" and speed _vehicle >= 1) then {
-		if (_inVehicle and _hasNOSinstalled == 1) then {
+	if (_inVehicle && _vehicle isKindOf "Car" && speed _vehicle >= 1) then {
+		if (_inVehicle && _hasNOSinstalled == 1) then {
 			if (isnil("NITRO_Cond")) then {NITRO_Cond = false;};
 			if (s_player_nitrobooston <0) then {	
 				if (NITRO_Cond) then {
@@ -47,7 +47,7 @@ if(SirenScript)then{
 //Sirens
 _isCopcar = typeOf _vehicle in ["LadaLM","HMMWV_Ambulance","HMMWV_Ambulance_CZ_DES_EP1","S1203_ambulance_EP1","GAZ_Vodnik_MedEvac","policecar","Copcarswat","Copcar","Copcarhw"];
 
-if (_inVehicle and _isCopcar and (driver _vehicle == player)) then {
+if (_inVehicle && _isCopcar && (driver _vehicle == player)) then {
         dayz_addsirens = _vehicle;
     if (s_player_sirens_on < 0) then {
         s_player_sirens_on = dayz_addsirens addAction ["Sirens on","scripts\sirens\sirens_on.sqf",dayz_addsirens,2,false,true,"",""];
@@ -514,7 +514,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 if(ArrestScript)then{
 _Build = canbuild;
 //--------------------------------------ARREST---------------------------------------------------------------- 
-		   if ((player getVariable"humanity") >= 5000 or (player getVariable"humanity") <= -5000 or (getPlayerUID player) in AdminList ) then {
+		   if ((player getVariable"humanity") >= 5000 || (player getVariable"humanity") <= -5000 || (getPlayerUID player) in AdminList ) then {
 			if(_isMan && !_isZombie && _canDo && _isAlive && _Build) then {
 				if (s_player_arrest < 0) then {
 					s_player_arrest = player addaction ['<t color="#0074E8">' + "Investigation Menu" + '</t>', "Scripts\Investigation\investigation.sqf","",100,false,true,"", ""];
@@ -951,7 +951,7 @@ if(TentHealScript)then{
 if (TakeClothesScript) then {
         _clothesTaken = cursorTarget getVariable["clothesTaken",false];
     // Take clothes by Zabn @ BalotaBuddies.net
-    if (_isMan and !_isAlive and !_isZombie and !_isAnimal and !_clothesTaken) then {
+    if (_isMan && !_isAlive && !_isZombie && !_isAnimal && !_clothesTaken) then {
         if (s_player_clothes < 0) then {
             s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\takeskin\player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
         };
@@ -979,7 +979,7 @@ if (TakeClothesScript) then {
 	};
 /////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
 if (CannibalismScript) then {
-	if (!_isAlive and !_isZombie and !_isAnimal and !_isHarvested and _isMan and _hasKnife and _canDo) then {
+	if (!_isAlive && !_isZombie && !_isAnimal && !_isHarvested && _isMan && _hasKnife && _canDo) then {
         if (s_player_butcher_human < 0) then {
             s_player_butcher_human = player addAction [format["Gut Human"], "scripts\cannibalism\gather_meat_human.sqf",cursorTarget, 0, false, true, "", ""];
         };
@@ -1322,7 +1322,7 @@ if(NOSScript)then{
 	    _hasNOSitems = false;
 	};
 	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
-	if (_isaCar and !locked _cursorTarget and _hasNOSitems and _isNOSinstalled == 0) then {
+	if (_isaCar && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
 		if (s_player_nitroInstall < 0) then {
 			s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
 		};
