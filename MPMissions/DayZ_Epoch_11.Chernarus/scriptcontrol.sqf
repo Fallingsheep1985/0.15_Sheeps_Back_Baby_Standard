@@ -70,3 +70,5 @@ BuryHumanScript = true;
 CannibalismScript = true;
 //Zombie Truck
 ZombieTruckScript = true;
+//Hero Perks
+HeroPerkScript = true;

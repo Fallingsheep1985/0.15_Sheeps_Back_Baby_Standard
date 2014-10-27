@@ -232,11 +232,20 @@ if(ZombieTruckScript)then{
 //Zombie Truck
 call compile preprocessFileLineNumbers "scripts\zombietruck\init.sqf";
 };
-
+if(HeroPerkScript)then{
+	//hero spawn
+	herospawn = compile preprocessFileLineNumbers "scripts\HeroPerks\heroperk.sqf";
+};
 //ESS
 espawn = compile preprocessFileLineNumbers "scripts\spawn\spawn.sqf";
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
-if (!isDedicated && (dayzPlayerLogin2 select 2)) then {[] spawn espawn;};
+if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
+
+[] spawn espawn;
+	if(HeroPerkScript)then{
+		player spawn herospawn;
+	};
+};
 
 endLoadingScreen; // Work around for loadscreen freeze
 
