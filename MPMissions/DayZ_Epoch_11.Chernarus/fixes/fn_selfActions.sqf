@@ -39,21 +39,6 @@ if(NOSScript)then{
 			 _vehicle setVariable ["nitroinstalled", 1, true];
 		};
 	}; 
-	_isaCar = _cursorTarget isKindOf "Car";
-	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
-	    _hasNOSitems = true;
-	} else {
-	    _hasNOSitems = false;
-	};
-	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
-	if (_isaCar and !locked _cursorTarget and _hasNOSitems and _isNOSinstalled == 0) then {
-		if (s_player_nitroInstall < 0) then {
-			s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
-		};
-	} else {
-			s_player_nitroInstall = -1;
-		player removeAction s_player_nitroInstall;
-	};
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////NITRO END////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////SIRENS START////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -181,6 +166,7 @@ if(AnimateSUVscript)then{
 
 	};
 };
+
 /////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH END////////////////////////////////////////////////////////////////////////////////////////////////////
 
 _nearLight = 	nearestObject [player,"LitObject"];
@@ -1318,6 +1304,23 @@ if(ZombieBombScript)then{
 	} else {
 		zombieBomb = -1;
 		player removeAction zombieBomb;
+	};
+};
+if(NOSScript)then{
+	_isaCar = _cursorTarget isKindOf "Car";
+	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
+	    _hasNOSitems = true;
+	} else {
+	    _hasNOSitems = false;
+	};
+	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
+	if (_isaCar and !locked _cursorTarget and _hasNOSitems and _isNOSinstalled == 0) then {
+		if (s_player_nitroInstall < 0) then {
+			s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+		};
+	} else {
+			s_player_nitroInstall = -1;
+		player removeAction s_player_nitroInstall;
 	};
 };
 
