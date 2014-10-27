@@ -52,6 +52,7 @@ player_changeCombo = compile preprocessFileLineNumbers "scripts\doorManagement\p
 	}else{
 		call compile preprocessFileLineNumbers "scripts\VASP\player_traderMenuHive.sqf";
 	};
+	//Zombie Bait/Bomb
 zombie_findTargetAgent =    		compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
 
 initialized = true;
