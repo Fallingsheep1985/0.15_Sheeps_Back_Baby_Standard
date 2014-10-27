@@ -193,9 +193,11 @@ while {true} do {
 						waitUntil { isNull (FindDisplay 106) };
 					};
 				};
-				if ( _skip && _if ) then {
-					if ( AGN_safeZoneMessages ) then { systemChat ("[AGN] This player is tagged friendly, you have access to this players bag") };
-					sleep 30;
+				if (!isNil "_if") then {
+					if ( _skip && _if ) then {
+						if ( AGN_safeZoneMessages ) then { systemChat ("[AGN] This player is tagged friendly, you have access to this players bag") };
+						sleep 30;
+					};
 				};
 			};
 		};

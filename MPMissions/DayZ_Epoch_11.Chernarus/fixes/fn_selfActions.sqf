@@ -979,6 +979,7 @@ if (TakeClothesScript) then {
 	};
 /////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
 if (CannibalismScript) then {
+	_isHarvested = _cursorTarget getVariable["meatHarvested",false];
 	if (!_isAlive && !_isZombie && !_isAnimal && !_isHarvested && _isMan && _hasKnife && _canDo) then {
         if (s_player_butcher_human < 0) then {
             s_player_butcher_human = player addAction [format["Gut Human"], "scripts\cannibalism\gather_meat_human.sqf",cursorTarget, 0, false, true, "", ""];
@@ -1315,6 +1316,10 @@ if(ZombieBombScript)then{
 	};
 };
 if(NOSScript)then{
+	//RPT Client spam fix
+	_cursortarget = cursorTarget;
+	_magazinesPlayer = magazines player;
+	
 	_isaCar = _cursorTarget isKindOf "Car";
 	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
 	    _hasNOSitems = true;

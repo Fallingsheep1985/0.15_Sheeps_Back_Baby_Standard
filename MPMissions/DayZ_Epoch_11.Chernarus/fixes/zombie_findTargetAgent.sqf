@@ -43,6 +43,10 @@ if (count _targets == 0) then
 		if (!(_x in _targets)) then
 
 		{
+		//RPT client spam fix
+		if (isNil "_dis")  then {
+			_dis = 0; // no targets any way so no need for distance
+		};
 			_targets set [count _targets,_x];
 			_targetDis set [count _targetDis,_dis];
 
