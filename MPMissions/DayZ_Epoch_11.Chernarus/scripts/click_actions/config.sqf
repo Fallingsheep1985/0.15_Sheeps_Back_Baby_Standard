@@ -88,4 +88,12 @@ HARVEST = [
 } else {
 	HARVEST = [];
 };
-DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST;
+If(WalkAmongstDeadScript)then{
+WALKDEAD = [
+	["ItemWaterbottle","Wash zombie guts","[] execVM 'scripts\walkamongstthedead\usebottle.sqf';","true"],
+	["ItemZombieParts","Smear Guts on you","[] execVM 'scripts\walkamongstthedead\smear_guts.sqf';","true"]
+	];
+} else {
+	WALKDEAD = [];
+};
+DZE_CLICK_ACTIONS = DEPLOY_BIKE + CRAFTING + SUICIDE + BINOCULAR + CAREPACKAGESELF +CAREPACKAGEMAP + HARVEST + WALKDEAD;

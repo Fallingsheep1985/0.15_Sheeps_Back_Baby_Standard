@@ -72,3 +72,5 @@ CannibalismScript = true;
 ZombieTruckScript = true;
 //Hero Perks
 HeroPerkScript = true;
+//Walk amongst the dead
+WalkAmongstDeadScript = true;

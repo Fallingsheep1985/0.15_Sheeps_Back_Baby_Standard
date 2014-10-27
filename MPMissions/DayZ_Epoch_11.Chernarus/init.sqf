@@ -232,6 +232,9 @@ if(ZombieTruckScript)then{
 //Zombie Truck
 call compile preprocessFileLineNumbers "scripts\zombietruck\init.sqf";
 };
+if(WalkAmongstDeadScript)then{
+	call compile preprocessFileLineNumbers "scripts\walkamongstthedead\config.sqf";
+};
 if(HeroPerkScript)then{
 	//hero spawn
 	herospawn = compile preprocessFileLineNumbers "scripts\HeroPerks\heroperk.sqf";
