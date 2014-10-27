@@ -174,7 +174,18 @@ if(AnimateSUVscript)then{
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH END////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////Bank Robbery START/////////////////////////////////////////
+_bankrobbery = cursorTarget isKindOf "Notebook";
+    if ((speed player <= 1) && _bankrobbery && (player distance cursorTarget < 5)) then {
+        if (s_player_bankrob < 0) then {
+            s_player_bankrob = player addAction ["Rob the bank","rob\robbank.sqf",cursorTarget, 0, false, true, "",""];
+        };
+    } else {
+        s_player_bankrob = -1;
+        player removeAction s_player_bankrob;
+    };
 
+//////////////////////////////////////////////////////Bank Robbery END//////////////////////////////////////////////
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
 if (!isNull _nearLight) then {

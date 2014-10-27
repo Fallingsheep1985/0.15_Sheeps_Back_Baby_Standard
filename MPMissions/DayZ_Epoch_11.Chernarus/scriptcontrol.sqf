@@ -74,3 +74,5 @@ ZombieTruckScript = true;
 HeroPerkScript = true;
 //Walk amongst the dead
 WalkAmongstDeadScript = true;
+//Rob Bank
+RobBankScript = true;

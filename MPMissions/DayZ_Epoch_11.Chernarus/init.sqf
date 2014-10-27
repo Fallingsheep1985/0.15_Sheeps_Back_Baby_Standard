@@ -198,7 +198,11 @@ if(EVRScript)then{
 if (isServer) then { _bul = [ns_blow_emp] execVM "scripts\blowout\module\blowout_server.sqf"; };
 if (!isDedicated) then { _bul = [] execVM "scripts\blowout\module\blowout_client.sqf"; };
 };
-
+if (isServer) then{
+	if(RobBankScript)then{
+		execVM "scripts\rob\bank_building.sqf";
+	};
+};
 
 if(HarvestHempScript)then{
 	if (isServer) then {
