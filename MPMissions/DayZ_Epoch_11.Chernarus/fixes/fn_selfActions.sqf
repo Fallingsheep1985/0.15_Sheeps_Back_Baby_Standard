@@ -1327,13 +1327,16 @@ if(NOSScript)then{
 	    _hasNOSitems = false;
 	};
 	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
-	if (_isaCar && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
-		if (s_player_nitroInstall < 0) then {
-			s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+	//RPT client spam fix
+	if (!isNil "_isNOSinstalled") then {
+		if (_isaCar && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
+			if (s_player_nitroInstall < 0) then {
+				s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+			};
+		} else {
+				s_player_nitroInstall = -1;
+			player removeAction s_player_nitroInstall;
 		};
-	} else {
-			s_player_nitroInstall = -1;
-		player removeAction s_player_nitroInstall;
 	};
 };
 
