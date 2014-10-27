@@ -78,3 +78,10 @@ WalkAmongstDeadScript = true;
 RobBankScript = true;
 //Service Points
 ServicePointScript = true;
+//Snow
+SnowScript = true;
+//Wind Dust
+WindDustScript = true;
+//Ground  Fog
+GroundFogScript = true;
+
