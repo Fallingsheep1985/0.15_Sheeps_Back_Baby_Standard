@@ -59,6 +59,7 @@ Tow + Lift (Nightmare)
 Bury Body (seaweeduk)
 Cannibalism (seaweeduk)
 Take Clothes (Zabn)
+Custom Hud (Cen)
 
 
 TO ADD
