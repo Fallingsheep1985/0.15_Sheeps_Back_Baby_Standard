@@ -3,11 +3,13 @@ _dist = player distance _newCiv;
 _isMan = _newCiv isKindOf "Man";
 _isAlive = alive _newCiv;
 detach _newCiv;    // Just incase
-
+_hasscrap = "PartGeneric" in magazines player;
 /////////////////////////////////////////////////////////////////////////////////////
 if(_dist < 10 && _isMan && _isAlive && canbuild) then {
+
+if (_hasscrap) then {
     // removing required...
-    player removeMagazine"equip_cable_tie";
+    player removeMagazine"PartGeneric";
 
     sleep 1;
 
@@ -43,6 +45,11 @@ if (_newCiv getVariable "Detain" == 1) then {
         _newCiv setVariable ["Detain",0,true];
         PVDZ_ply_Arrst = _newCiv;
         publicVariable "PVDZ_ply_Arrst";
+};
+}else{
+    // Hint
+    cutText [format["You need scrap metal to tie a hostage up!"], "PLAIN"];
+    systemChat ('"You need scrap metal to tie a hostage up!"');
 };
 };
 /////////////////////////////////////////////////////////////////////////////////////
