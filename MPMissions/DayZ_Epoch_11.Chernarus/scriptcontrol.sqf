@@ -76,3 +76,5 @@ HeroPerkScript = true;
 WalkAmongstDeadScript = true;
 //Rob Bank
 RobBankScript = true;
+//Service Points
+ServicePointScript = true;

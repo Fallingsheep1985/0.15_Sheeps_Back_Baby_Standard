@@ -53,6 +53,8 @@ Animated AN2 crashes (Gorsy)
 AN2 carepackage drops (Gorsy)
 Animated Heli Crashes (Grafzahl)
 
+
+links and credits need on release\support page
 DZMS 1.1 (TheVampire)
 DZMSHotSpots (ekroemer)
 Tow + Lift (Nightmare)
@@ -60,21 +62,25 @@ Bury Body (seaweeduk)
 Cannibalism (seaweeduk)
 Take Clothes (Zabn)
 Custom Hud (Cen)
+Zombie Trucks
+Hero perks (MattL)
+Walk Amongst Dead (Sandbird)
+Bank Robbery (Darihon)
+Service points (Axe Cop)
 
 
 TO ADD
 Advanced Alchemy Building
-Service points
+
+JAEM
+
 Snow
 Ground Fog
 Arrest Player FIX
 (disabled in safe zones must be an admin or have scrap metal)
-Hero perks
-Bank Robbery
-Walk Amongst Dead
 Deploy bike FIX - return all materials when packing mozzie
-JAEM
-Zombie Trucks
+
+
 
 
 OVERPOCH

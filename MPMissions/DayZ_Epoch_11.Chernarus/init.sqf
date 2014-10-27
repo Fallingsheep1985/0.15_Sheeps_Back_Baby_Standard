@@ -177,6 +177,10 @@ if (!isDedicated) then {
 	if (DZAIClientScript) then{
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 	};
+	//Service Points
+	if (ServicePointScript) then{
+		execVM "scripts\service_point\service_point.sqf";
+	};
 	//Debug Monitor
 	if(DebugMonitorScript)then{
 	debugMonitor = true;//default on
