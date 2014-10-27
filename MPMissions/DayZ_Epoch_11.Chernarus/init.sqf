@@ -101,7 +101,8 @@ ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "Ite
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
-
+//snow
+snowchance = 5; //5% chance to snow on server start/restart
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
@@ -195,6 +196,20 @@ if (!isDedicated) then {
 
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
+
+if(SnowScript)then{
+	if (isServer) then {
+		if((random 100) < snowchance)then{
+			[] execVM "scripts\Weather\SnowStorm.sqf";//FPS HIT
+		};
+	};
+};
+if(WindDustScript)then{
+	execVM "scripts\Weather\WindDust.sqf"; //FPS HIT
+};
+if(GroundFogScript)then{
+	execVM "scripts\Weather\ground_fog.sqf"; //FPS HIT
+};
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
 //EVR Blow out
