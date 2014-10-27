@@ -68,3 +68,5 @@ TakeClothesScript = true;
 BuryHumanScript = true;
 //Cannibalism
 CannibalismScript = true;
+//Zombie Truck
+ZombieTruckScript = true;

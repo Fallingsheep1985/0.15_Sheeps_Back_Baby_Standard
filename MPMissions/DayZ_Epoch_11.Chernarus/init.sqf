@@ -228,6 +228,11 @@ if(ServerWelcomeCreditsScript)then{
 	//Welcome Credits
 	 execVM "scripts\ServerWelcomeCredits.sqf";
 };
+if(ZombieTruckScript)then{
+//Zombie Truck
+call compile preprocessFileLineNumbers "scripts\zombietruck\init.sqf";
+};
+
 //ESS
 espawn = compile preprocessFileLineNumbers "scripts\spawn\spawn.sqf";
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
