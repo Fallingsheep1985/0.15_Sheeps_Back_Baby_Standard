@@ -14,6 +14,7 @@ _inVehicle = (_vehicle != player);
 
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _canDo = (!r_drag_sqf && !r_player_unconscious && !_onLadder);
+
 /////////////////////////////////////////////////////////////////////////////////////////////////NITRO START////////////////////////////////////////////////////////////////////////////////////////////////////
 if(NOSScript)then{
  	//Nitro action
@@ -981,6 +982,7 @@ if (CannibalismScript) then {
     };
 };
 /////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
+
 	 	// All Traders
 	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
 		
@@ -1028,7 +1030,6 @@ if (CannibalismScript) then {
 		s_player_parts_crtl = -1;
 		{player removeAction _x} count s_player_parts;s_player_parts = [];
 	};
-	
 	if(dayz_tameDogs) then {
 		
 		//Dog

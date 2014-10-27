@@ -63,7 +63,6 @@ HarderPenalty = true;// Cen's Penalty: Flashes screen white. And kicks player to
 DZE_DoorsLocked = ["Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallDoorLocked_DZ","CinderWallDoorSmallLocked_DZ"];
 
 //EVR Blow out
-EVRScript = true;// USE THIS TO TURN ON OFF
 ns_blowout = true;
 ns_blowout_dayz = true;
 ns_blow_delaymod = 0.74; //blowout delay
