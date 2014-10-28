@@ -490,6 +490,30 @@ if (isServer && isNil "sm_done") then {
 		
 		endLoadingScreen;
 	};
+	//JAEM
+	if (isServer && (isNil "EvacServerPreload")) then {
+		publicVariable "PVDZE_EvacChopperFields";
+		
+		ON_fnc_evacChopperFieldsUpdate = {
+			private ["_action","_targetField"];
+			_action = _this select 0;
+			_targetField = _this select 1;
+			
+			if (_action == "add") then {
+				PVDZE_EvacChopperFields = PVDZE_EvacChopperFields + [_targetField];
+			};
+			
+			if (_action == "rem") then {
+				PVDZE_EvacChopperFields = PVDZE_EvacChopperFields - [_targetField];
+			};
+			
+			publicVariable "PVDZE_EvacChopperFields";
+		};
+
+		"PVDZE_EvacChopperFieldsUpdate" addPublicVariableEventHandler {(_this select 1) spawn ON_fnc_evacChopperFieldsUpdate};
+
+		EvacServerPreload = true;
+	};
 	//WAI 2.1.4
 	ExecVM "\z\addons\dayz_server\WAI\init.sqf";
 	//DZAI 2.1.3
@@ -501,28 +525,4 @@ if (isServer && isNil "sm_done") then {
 	allowConnection = true;	
 	sm_done = true;
 	publicVariable "sm_done";
-};
-//JAEM
-if (isServer && (isNil "EvacServerPreload")) then {
-    publicVariable "PVDZE_EvacChopperFields";
-    
-    ON_fnc_evacChopperFieldsUpdate = {
-        private ["_action","_targetField"];
-        _action = _this select 0;
-        _targetField = _this select 1;
-        
-        if (_action == "add") then {
-            PVDZE_EvacChopperFields = PVDZE_EvacChopperFields + [_targetField];
-        };
-        
-        if (_action == "rem") then {
-            PVDZE_EvacChopperFields = PVDZE_EvacChopperFields - [_targetField];
-        };
-        
-        publicVariable "PVDZE_EvacChopperFields";
-    };
-
-    "PVDZE_EvacChopperFieldsUpdate" addPublicVariableEventHandler {(_this select 1) spawn ON_fnc_evacChopperFieldsUpdate};
-
-    EvacServerPreload = true;
 };
