@@ -86,4 +86,6 @@ WindDustScript = true;
 GroundFogScript = true;
 //JAEM ( Just Another Evac Mod)
 JAEMScript = true;
+//Advanced Alchemy Building
+AdvancedAlchemyScript = true;
 

@@ -1186,3 +1186,7 @@ class RscTextGUIK {
 #include "scripts\doorManagement\doorUnlock.hpp"
 #include "scripts\doorManagement\doorManagement.hpp"
 #include "scripts\doorManagement\ComboLockUI.hpp"
+
+//Advanced Alchemy
+#include "scripts\Buildables\MT_Defines.hpp"
+#include "scripts\Buildables\Crafting_Dialogs.hpp"

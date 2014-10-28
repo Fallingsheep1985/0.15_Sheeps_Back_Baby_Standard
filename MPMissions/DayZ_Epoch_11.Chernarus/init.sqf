@@ -117,10 +117,12 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";	
 progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "fixes\compiles.sqf";
 progressLoadingScreen 0.6;
-call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+call compile preprocessFileLineNumbers "scripts\Buildables\Crafting_Compiles.sqf";
 progressLoadingScreen 0.7;
-call compile preprocessFileLineNumbers "logistic\init.sqf";
+call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
 progressLoadingScreen 0.8;
+call compile preprocessFileLineNumbers "logistic\init.sqf";
+progressLoadingScreen 0.9;
 call compile preprocessFileLineNumbers "admintools\AdminList.sqf"; // Epoch admin Tools variables/UIDs
 progressLoadingScreen 1.0;
 

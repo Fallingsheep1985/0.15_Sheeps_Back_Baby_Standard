@@ -344,7 +344,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isWreck = _typeOfCursorTarget in DZE_isWreck;
 	_isWreckBuilding = _typeOfCursorTarget in DZE_isWreckBuilding;
-	_isModular = _cursorTarget isKindOf "ModularItems";
+	_isModular = (_cursorTarget isKindOf "ModularItems") || ((typeOf _cursorTarget) in Custom_Buildables);
 	_isModularDoor = _typeOfCursorTarget in ["Land_DZE_WoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_GarageWoodDoor","CinderWallDoor_DZ","CinderWallDoorSmall_DZ"];
 
 	_isRemovable = _typeOfCursorTarget in DZE_isRemovable;
