@@ -67,19 +67,14 @@ Hero perks (MattL)
 Walk Amongst Dead (Sandbird)
 Bank Robbery (Darihon & Spodermayt)
 Service points (Axe Cop)
+JAEM (OtterNas3)
+Snow
+Ground Fog
+
 
 
 TO ADD
 Advanced Alchemy Building
-
-JAEM
-
-Snow
-Ground Fog
-Arrest Player FIX
-(disabled in safe zones must be an admin or have scrap metal)
-Deploy bike FIX - return all materials when packing mozzie
-
 
 
 
