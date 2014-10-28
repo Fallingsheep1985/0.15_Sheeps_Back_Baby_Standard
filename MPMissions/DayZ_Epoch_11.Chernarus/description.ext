@@ -1163,7 +1163,7 @@ class RscTextGUIK {
     h = 0.2;
 };
 
-#include "dayz_code\gui\ATD_Hud.h"
+#include "gui\ATD_Hud.h"
 //Snap Pro
 #include "scripts\snap_pro\snappoints.hpp"
 

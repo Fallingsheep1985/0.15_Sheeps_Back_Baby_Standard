@@ -91,16 +91,16 @@ diag_log format["DEBUG: foodlvl: %1 dayz_hunger: %2 foodval: %3",_foodLvl, dayz_
 diag_log format["DEBUG: templvl: %1 dayz_temperatur: %2 tempval: %3",_tempLvl, dayz_temperatur, _tempVal];
 */
 if (_bloodLvl <= 0) then { 
-	_blood = "\z\addons\dayz_code\gui\status\status_blood_inside_1_ca.paa";
+	_blood = "gui\status\status_blood_inside_1_ca.paa";
 	} else {
-	_blood = "\z\addons\dayz_code\gui\status\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
+	_blood = "gui\status\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
 	};
 
 if (_thirstLvl < 0) then { _thirstLvl = 0 };
-_thirst = "\z\addons\dayz_code\gui\status\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
+_thirst = "gui\status\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
 
 if (_foodLvl < 0) then { _foodLvl = 0 };
-_food = "\z\addons\dayz_code\gui\status\status_food_inside_" + str(_foodLvl) + "_ca.paa";
+_food = "gui\status\status_food_inside_" + str(_foodLvl) + "_ca.paa";
 
 if ( _tempLvl >= 36 )							then { _tempImg = 4 };
 if ( _tempLvl > 33 && _tempLvl < 36 )			then { _tempImg = 3 };
@@ -108,7 +108,7 @@ if ( _tempLvl >= 30 && _tempLvl <= 33 )			then { _tempImg = 2 };
 if ( _tempLvl > 28 && _tempLvl < 30 )			then { _tempImg = 1 };
 if ( _tempLvl <= 28 )							then { _tempImg = 0 };
 
-_temp = "\z\addons\dayz_code\gui\status\status_temp_" + str(_tempImg) + "_ca.paa";
+_temp = "gui\status\status_temp_" + str(_tempImg) + "_ca.paa";
 
 _ctrlBlood ctrlSetText _blood;
 _ctrlThirst ctrlSetText _thirst;
