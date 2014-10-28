@@ -44,15 +44,15 @@ FastropeScript = true;
 SafezoneScripts = true;
 //Harvest Hemp
 HarvestHempScript = true;
-//DZGM (Group Management)
+//DZGM (DayZ Group Management)
 DZGMScript = true;
 //Drink Water
 DrinkWaterScript = true;
 //Tent Sleep Healing
 TentHealScript = true;
-//Arrest
+//Investigation / Detain / Arrest
 ArrestScript = true;
-//Trade from Vehicles
+//Trade from Vehicles / backpacks
 TradeFromVehicleScript = true;
 //Anti Zombie Emitter
 AntiZombieEmitterScript = true;
@@ -60,7 +60,7 @@ AntiZombieEmitterScript = true;
 ZombieBaitScript = true;
 //Zombie bomb bait
 ZombieBombScript = true;
-//DZAI CLient
+//DZAI CLient (does not disable DZAI just the client side part)
 DZAIClientScript = true;
 //Take Clothes
 TakeClothesScript = true;
@@ -84,4 +84,6 @@ SnowScript = true;
 WindDustScript = true;
 //Ground  Fog
 GroundFogScript = true;
+//JAEM ( Just Another Evac Mod)
+JAEMScript = true;
 

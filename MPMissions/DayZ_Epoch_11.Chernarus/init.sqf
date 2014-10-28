@@ -190,6 +190,9 @@ if (!isDedicated) then {
 			execVM "scripts\DebugMonitor\debug_monitor.sqf";
 		};
 	};
+	if (JAEMScript) then {
+		_nil = [] execVM "scripts\JAEM\EvacChopper_init.sqf";
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"
