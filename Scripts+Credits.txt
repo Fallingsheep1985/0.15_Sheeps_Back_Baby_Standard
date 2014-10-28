@@ -25,8 +25,8 @@ Nitro (Sandbird)
 Regen Blood (Schwede)
 Fast Rope (=BTC= & sabbath)
 CAGN (safezones)
-Harvest Hemp  (infiSTAR, FragZ, Shogun338)
-DZGM ( Group Management) (ebay)
+Harvest Hemp (infiSTAR, FragZ, Shogun338)
+DZGM (ebay)
 Drink Water (Mamu1234)
 Arrest/Investigate
 Tent Sleep Healing 1.1 (Krixes)
@@ -34,7 +34,7 @@ Zombie Bait/Bomb (Freaking Fred)
 Anti Zombie emitter (Freaking Fred)
 VASP 1.2 (OtterNas3)
 fast trade (gr8_boi52)
-Trade from vehicle + Backpack (Csus)?
+Trade from vehicle + Backpack (Csus)
 Door Management (Zupa)
 Paint Vehicles (0verHeat)
 EVR Blow Out (Sumrak-Namaslk creator, JOoPs for how to)
@@ -55,6 +55,7 @@ Animated Heli Crashes (Grafzahl)
 
 
 links and credits need on release\support page
+
 DZMS 1.1 (TheVampire)
 DZMSHotSpots (ekroemer)
 Tow + Lift (Nightmare)
@@ -70,11 +71,9 @@ Service points (Axe Cop)
 JAEM (OtterNas3)
 Snow
 Ground Fog
+Advanced Alchemy Building (hogscraper)
 
 
-
-TO ADD
-Advanced Alchemy Building
 
 
 
