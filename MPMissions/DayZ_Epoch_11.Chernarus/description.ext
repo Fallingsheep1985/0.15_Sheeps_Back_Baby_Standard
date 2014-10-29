@@ -927,7 +927,7 @@ titles[] = {"DeathScr","wm_disp"};
 			class RscPicture_1307: RscPictureGUI
             {
                 idc = 1307;
-                text = "dayz_code\gui\status\st_humanity_survivor.paa";
+                text = "gui\status\st_humanity_survivor.paa";
                 x = 0.670 * safezoneW + safezoneX;
                 y = 0.933 * safezoneH + safezoneY;
                 w = 0.027 * safezoneW;
@@ -938,7 +938,7 @@ titles[] = {"DeathScr","wm_disp"};
             class RscPicture_1309: RscPictureGUI
             {
                 idc = 1309;
-                text = "dayz_code\gui\status\st_humanity_bandit.paa";
+                text = "gui\status\st_humanity_bandit.paa";
                 x = 0.713 * safezoneW + safezoneX;
                 y = 0.933 * safezoneH + safezoneY;
                 w = 0.027 * safezoneW;
@@ -949,7 +949,7 @@ titles[] = {"DeathScr","wm_disp"};
             class RscPicture_1310: RscPictureGUI
             {
                 idc = 1310;
-                text = "dayz_code\gui\status\zombie.paa";
+                text = "gui\status\zombie.paa";
                 x = 0.756 * safezoneW + safezoneX;
                 y = 0.933 * safezoneH + safezoneY;
                 w = 0.027 * safezoneW;

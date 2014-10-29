@@ -1,4 +1,4 @@
-private ["_display","_ctrlBlood","_ctrlBleed","_bloodVal","_humanityName","_ctrlFood","_ctrlThirst","_thirstVal","_foodVal","_ctrlTemp","_tempVal","_combatVal","_array","_ctrlEar","_ctrlEye","_ctrlCombat","_ctrlFracture","_visualText","_visual","_audibleText","_audible","_blood","_thirstLvl","_foodLvl","_tempImg","_thirst","_food","_temp","_bloodLvl","_tempLvl","_color","_string","_humanity","_size","_friendlies","_rfriendlies","_rfriendlyTo","_distance","_targetControl","_playerUID","_rplayerUID","_humanityTarget","_ctrlBloodOuter","_ctrlFoodBorder","_ctrlThirstBorder","_ctrlTempBorder"];
+private ["_display","_ctrlBlood","_ctrlBleed","_bloodVal","_humanityName","_ctrlFood","_ctrlThirst","_thirstVal","_foodVal","_ctrlTemp","_tempVal","_combatVal","_array","_ctrlEar","_ctrlEye","_ctrlCombat","_ctrlFracture","_visualText","_visual","_audibleText","_audible","_blood","_thirstLvl","_foodLvl","_tempImg","_thirst","_food","_temp","_bloodLvl","_tempLvl","_color","_string","_humanity","_size","_friendlies","_charID","_rcharID","_rfriendlies","_rfriendlyTo","_distance","_targetControl","_humanityTarget","_ctrlBloodOuter","_ctrlFoodBorder","_ctrlThirstBorder","_ctrlTempBorder"];
 disableSerialization;
 
 _foodVal = 		1 - (dayz_hunger / SleepFood);
@@ -22,6 +22,7 @@ _ctrlBloodOuter ctrlSetTextColor [1,1,1,1];
 _ctrlFoodBorder ctrlSetTextColor [1,1,1,1];
 _ctrlThirstBorder ctrlSetTextColor [1,1,1,1];
 _ctrlTempBorder ctrlSetTextColor [1,1,1,1];
+
 _ctrlBlood = 	_display displayCtrl 1300;
 _ctrlBleed = 	_display displayCtrl 1303;
 _bloodVal =		r_player_blood / r_player_bloodTotal;
@@ -61,19 +62,13 @@ _ctrlhumanKills  ctrlSetText str(player getVariable["humanKills", 0]);
 _ctrlbanditKills ctrlSetText str(player getVariable["banditKills", 0]);
 _ctrlzombieKills ctrlSetText str(player getVariable["zombieKills", 0]);
 //_ctrlhHeadshots  ctrlSetText str(player getVariable["headShots", 0]);
+
 //Food/Water/Blood
 _ctrlBlood ctrlSetTextColor 	[(Dayz_GUI_R + (0.3 * (1-_bloodVal))),(Dayz_GUI_G * _bloodVal),(Dayz_GUI_B * _bloodVal), 0.5];
 _ctrlFood ctrlSetTextColor 		[(Dayz_GUI_R + (0.3 * (1-_foodVal))),(Dayz_GUI_G * _foodVal),(Dayz_GUI_B * _foodVal), 0.5];
 _ctrlThirst ctrlSetTextColor 	[(Dayz_GUI_R + (0.3 * (1-_thirstVal))),(Dayz_GUI_G * _thirstVal),(Dayz_GUI_B * _thirstVal), 0.5];
 _ctrlTemp ctrlSetTextColor 		[(Dayz_GUI_R + (0.3 * (1-_tempVal))), (Dayz_GUI_G * _tempVal), _tempVal, 0.5];	// Color ranges from iceblue (cold) to red (hot)
-_ctrlCombat ctrlSetTextColor		[(Dayz_GUI_R + (0.3 * (1-_combatVal))),(Dayz_GUI_G * _combatVal),(Dayz_GUI_B * _combatVal), 0.5];
-
-/*
-	Blood: round((r_player_blood / 2) / 1000) = _bloodLvl (6 = full, 1 = empty)
-	Thirst: round(_thirstVal / 0.25) = _thirstLvl (4 = full, 0 = empty)
-	Hunger: round(_foodVal / 0.25) = _foodLvl (4 = full, 0 = empty)
-	Temp: round(dayz_temperatur) = tempLvl (>= 36 = full <= 28 = empty)
-*/
+_ctrlCombat ctrlSetTextColor	[(Dayz_GUI_R + (0.3 * (1-_combatVal))),(Dayz_GUI_G * _combatVal),(Dayz_GUI_B * _combatVal), 0.5];
 
 _blood = "";
 _thirst = "";
@@ -84,23 +79,18 @@ _bloodLvl = round((r_player_blood / 2) / 1000);
 _thirstLvl = round(_thirstVal / 0.25);
 _foodLvl = round(_foodVal / 0.25);
 _tempLvl = round(dayz_temperatur);
-/*
-diag_log format["DEBUG: bloodlvl: %1 r_player_blood: %2 bloodval: %3",_bloodLvl, r_player_blood, _bloodVal];
-diag_log format["DEBUG: thirstlvl: %1 dayz_thirst: %2 thirstval: %3",_thirstLvl, dayz_thirst, _thirstVal];
-diag_log format["DEBUG: foodlvl: %1 dayz_hunger: %2 foodval: %3",_foodLvl, dayz_hunger, _foodVal];
-diag_log format["DEBUG: templvl: %1 dayz_temperatur: %2 tempval: %3",_tempLvl, dayz_temperatur, _tempVal];
-*/
+
 if (_bloodLvl <= 0) then { 
-	_blood = "gui\status\status_blood_inside_1_ca.paa";
+	_blood = "\z\addons\dayz_code\gui\status\status_blood_inside_1_ca.paa";
 	} else {
-	_blood = "gui\status\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
+	_blood = "\z\addons\dayz_code\gui\status\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
 	};
 
 if (_thirstLvl < 0) then { _thirstLvl = 0 };
-_thirst = "gui\status\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
+_thirst = "\z\addons\dayz_code\gui\status\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
 
 if (_foodLvl < 0) then { _foodLvl = 0 };
-_food = "gui\status\status_food_inside_" + str(_foodLvl) + "_ca.paa";
+_food = "\z\addons\dayz_code\gui\status\status_food_inside_" + str(_foodLvl) + "_ca.paa";
 
 if ( _tempLvl >= 36 )							then { _tempImg = 4 };
 if ( _tempLvl > 33 && _tempLvl < 36 )			then { _tempImg = 3 };
@@ -108,7 +98,7 @@ if ( _tempLvl >= 30 && _tempLvl <= 33 )			then { _tempImg = 2 };
 if ( _tempLvl > 28 && _tempLvl < 30 )			then { _tempImg = 1 };
 if ( _tempLvl <= 28 )							then { _tempImg = 0 };
 
-_temp = "gui\status\status_temp_" + str(_tempImg) + "_ca.paa";
+_temp = "\z\addons\dayz_code\gui\status\status_temp_" + str(_tempImg) + "_ca.paa";
 
 _ctrlBlood ctrlSetText _blood;
 _ctrlThirst ctrlSetText _thirst;
@@ -121,12 +111,14 @@ _ctrlTemp ctrlSetText _temp;
 _visual = (dayz_disVisual / 185) min 1;
 if (_visual < 0.2) then {_visual = 0.2;};
 _ctrlEye  ctrlSetTextColor [1, 1, 1, _visual];
+
 /*
 	Audible:
 */
 _audible = (dayz_disAudial / 40) min 1;
 if (_audible < 0.2) then {_audible = 0.2;};
 _ctrlEar ctrlSetTextColor [1, 1, 1, _audible];
+
 /*
 	Fracture:
 */
@@ -181,18 +173,21 @@ if (!isNull _humanityTarget && isPlayer _humanityTarget && alive _humanityTarget
 
 		// Display name if player opt-in || if friend
 		_friendlies = player getVariable ["friendlies", []];
-		
-		_playerUID = getPlayerUID player;
-		_rplayerUID = getPlayerUID _humanityTarget;
-		
+		_charID = player getVariable ["CharacterID", "0"];
+		//PLOTPOLE4LIFE CODE
+		//_charID = [player] call convertPlayerUID; 
+
+		_rcharID = _humanityTarget getVariable ["CharacterID", "0"];
+		//PLOTPOLE4LIFE CODE
+		//_rcharID = [_humanityTarget] call convertPlayerUID; 
 		_rfriendlies = _humanityTarget getVariable ["friendlies", []];
 		_rfriendlyTo = _humanityTarget getVariable ["friendlyTo", []];
 
-		if ((_rplayerUID in _friendlies) && (_playerUID in _rfriendlies)) then {
+		if ((_rcharID in _friendlies) && (_charID in _rfriendlies)) then {
 
-			if !(_playerUID in _rfriendlyTo) then {
+			if !(_charID in _rfriendlyTo) then {
 				// diag_log format["IS FRIENDLY: %1", _player];
-				_rfriendlyTo set [count _rfriendlyTo, _playerUID];
+				_rfriendlyTo set [count _rfriendlyTo, _charID];
 				_humanityTarget setVariable ["friendlyTo", _rfriendlyTo, true];
 			};
 	
