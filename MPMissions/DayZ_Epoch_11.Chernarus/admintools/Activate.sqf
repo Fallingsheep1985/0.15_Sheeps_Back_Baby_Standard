@@ -41,6 +41,8 @@ if ((getPlayerUID player) in AdminList || (getPlayerUID player) in ModList) then
 		};
 		Sleep 2;
 	};
+	// reset actions 
+	dayz_resetSelfActions;
 	
 	_veh removeAction _idx;
 	_idx = -1;
