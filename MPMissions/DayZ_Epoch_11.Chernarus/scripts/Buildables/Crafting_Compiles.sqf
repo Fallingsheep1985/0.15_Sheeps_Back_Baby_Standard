@@ -1,5 +1,3 @@
-player_selectSlot = compile preprocessFileLineNumbers "custom\Buildables\ui_selectSlot.sqf";
-fnc_usec_selfActions = compile preprocessFileLineNumbers "custom\fn_selfActions.sqf"; 
 
 fnc_Load_Mats_and_Tools = {
 //5900-5903 tools
