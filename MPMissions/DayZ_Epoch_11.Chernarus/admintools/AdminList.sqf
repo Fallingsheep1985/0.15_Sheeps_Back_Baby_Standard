@@ -1,27 +1,31 @@
 // Epoch Admin Lists
 //Admin Build (Add all SuperAdmins/Admins)
 WG_adminBuild = [
-"11111111111",
-"76561198087015545"
-];//Manage Doors Admins
+"76561198087015545",
+"999999999"
+];
+//Advanced Alchemy Building admins
+Admin_Crafting = WG_adminBuild;
+
+//Manage Doors Admins
 DoorAdminList = [
-"11111111111",
-"76561198087015545"
+"76561198087015545",
+"999999999"
 ];
 
 //Super Admins
 SuperAdminList = [
-"111111111", // <Your In-Game Name here>
-"76561198087015545" // <S-Admin In-Game Name>
+"76561198087015545", // <Your In-Game Name here>
+"999999999" // <S-Admin In-Game Name>
 ];
 //Admins
 AdminList = [
-"999999999", // <Admin In-Game Name>
+"76561198087015545", // <Admin In-Game Name>
 "999999999" // <Admin In-Game Name>
 ];
 //Mods
 ModList = [
-"999999999", // <Moderator In-Game Name>
+"76561198087015545", // <Moderator In-Game Name>
 "999999999" // <Moderator In-Game Name>
 ];
 

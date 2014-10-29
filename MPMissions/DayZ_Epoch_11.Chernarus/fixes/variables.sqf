@@ -579,7 +579,7 @@ GlobalPreviewVariable = 0;
 Crafting_Object_Direction = -0.5;
 Crafting_Object_Radius = 7;
 Crafting_Object_Height = 0;
-Admin_Crafting = ["76561197964259073","76561198026793846"]; //old"98107654"
+
 AAC_1=false;
 AAC_2=false;
 AAC_3=false;
