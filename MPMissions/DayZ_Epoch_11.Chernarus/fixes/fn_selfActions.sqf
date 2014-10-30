@@ -1149,6 +1149,15 @@ if (CannibalismScript) then {
 	s_player_manageDoor = -1;
     s_player_bury_human = -1;
 	s_player_butcher_human = -1;
+	zombieBait = -1;
+	zombieBomb = -1;
+	zombieShield = -1;
+	mv22_fold = -1;
+	mv22_unfold = -1;
+	mv22_open = -1;
+	mv22_close = -1;
+	suv_close = -1;
+	suv_open = -1;
 	
 	{dayz_myCursorTarget removeAction _x} count s_player_repairActions;s_player_repairActions = [];
 

@@ -92,6 +92,10 @@ dayz_resetSelfActions = {
 	mv22_close = -1;
 	suv_close = -1;
 	suv_open = -1;
+    s_player_escort = -1;
+    s_player_search = -1;
+	s_player_manageDoor = -1;
+    s_player_bury_human = -1;
 	s_player_butcher_human = -1;
 };
 call dayz_resetSelfActions;
