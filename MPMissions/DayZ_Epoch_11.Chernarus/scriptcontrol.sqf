@@ -89,3 +89,73 @@ JAEMScript = true;
 //Advanced Alchemy Building
 AdvancedAlchemyScript = true;
 
+
+//CUSTOM BUILDINGS
+
+// to turn on  a custom area remove the // from the front
+if (isServer) then {
+//Sector FNG inland
+execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+
+//IXXO
+execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\Krasno.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\northeast.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\vybor.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\basebor.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\basedichina.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\basenovy.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\Zeleno.sqf";
+                                             
+//Caves                                      
+execVM "\z\addons\dayz_server\CustomBuildings\Prud_Cave.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\North_Cave.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";
+                                             
+//Kameka mine                                
+execVM "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
+execVM "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
+execVM "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";
+                                             
+//CDC Balota + Trader                        
+execVM "\z\addons\dayz_server\CustomBuildings\Trader_CDC_Balota.sqf";
+
+//Altar
+execVM "\z\addons\dayz_server\CustomBuildings\altar.sqf";
+
+//Golden River MIne
+execVM "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
+
+//cherno heliport
+execVM "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
+
+//beached aircraft carrier
+execVM "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
+
+//BANK
+execVM "\z\addons\dayz_server\CustomBuildings\banks\nbank_novy_sobor.sqf";
+
+//East coast cherno
+execVM "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
+
+//Black Lake Castle
+execVM "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
+
+execVM "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\otmel.sqf";
+
+//road from dam to sector FNG
+execVM "\z\addons\dayz_server\CustomBuildings\roadpobeda.sqf";
+
+//Black forest outpost
+execVM "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
+
+//Electro
+execVM "\z\addons\dayz_server\CustomBuildings\electro.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\electroZI.sqf";
+
+//Cherno
+execVM "\z\addons\dayz_server\CustomBuildings\Cherno.sqf";
+};
