@@ -263,6 +263,42 @@ dayz_resetSelfActions = {
     suv_open = -1;
 	//Drinkwater
 	s_player_drinkWater = -1;
+	//Deploy Bike
+	s_player_deploybike1 = -1;
+	s_player_deploybike2 = -1;
+	s_player_deploybike3 = -1;
+	s_player_deploybike4 = -1;
+	s_player_deploybike5 = -1;
+	s_player_deploybike6 = -1;
+	//Arrest Player
+	s_player_arrest  = -1;
+    s_player_escort = -1;
+    s_player_search = -1;
+	//Elevator
+	s_player_elevator_next = -1;
+	s_player_elevator_previous = -1;
+	s_player_elevator_select = -1;
+	s_player_elevator_upgrade = -1;
+	s_player_elevator_upgrade_stop = -1;
+	s_player_elevator_call = -1;
+	s_player_elevator_id = -1;
+	
+	s_player_release = -1;
+	//Zombie bait/bomb
+	zombieBait = -1;
+	zombieBomb = -1;
+	zombieShield = -1;
+	
+	mv22_fold = -1;
+	mv22_unfold = -1;
+	mv22_open = -1;
+	mv22_close = -1;
+	suv_close = -1;
+	suv_open = -1;
+
+	s_player_manageDoor = -1;
+    s_player_bury_human = -1;
+	s_player_butcher_human = -1;
 };
 call dayz_resetSelfActions;
 
