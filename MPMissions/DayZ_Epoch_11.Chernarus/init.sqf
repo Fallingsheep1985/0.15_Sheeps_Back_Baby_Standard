@@ -105,8 +105,6 @@ EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","
 snowchance = 5; //5% chance to snow on server start/restart
 
 //Load in compiled functions
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
-progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "fixes\variables.sqf";
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "fixes\publicEH.sqf";				//Initilize the publicVariable event handlers
