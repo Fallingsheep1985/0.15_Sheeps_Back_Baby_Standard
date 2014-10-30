@@ -251,6 +251,18 @@ dayz_resetSelfActions = {
 	s_player_heli_lift = -1;
 	s_player_heli_detach = -1;
 	s_player_lockUnlock_crtl = -1;
+	//nitro
+	s_player_nitroInstall = -1;
+	s_player_nitrobooston = -1;
+	//animated mv22/suv hatch
+	mv22_fold = -1;
+    mv22_unfold = -1;
+    mv22_open = -1;
+    mv22_close = -1;
+    suv_close = -1;
+    suv_open = -1;
+	//Drinkwater
+	s_player_drinkWater = -1;
 };
 call dayz_resetSelfActions;
 
@@ -387,6 +399,13 @@ DZE_HeliAllowTowFrom = [
 	"CH_47F_BAF",
 	"CH_47F_EP1",
 	"BAF_Merlin_DZE",
+	"Mi17_Civilian_DZ",
+	"Mi17_DZE",
+	"UH60M_EP1_DZE",
+	"UH1H_DZE",
+	"UH1Y_DZE",
+	"MV22_DZ",
+	"MH60S",
 	"CH53_DZE"
 ];
 
@@ -495,6 +514,9 @@ if(isNil "dayz_minpos") then {
 if(isNil "dayz_maxpos") then {
 	dayz_maxpos = 20000;
 };
+if(isNil "DZE_teleport") then {
+	DZE_teleport = [14000,14000,14000,14000,14000];
+};
 if(isNil "DZE_BuildingLimit") then {
 	DZE_BuildingLimit = 150;
 };
@@ -551,10 +573,220 @@ if(isNil "dayz_zedsAttackVehicles") then {
 
 // update objects
 dayz_updateObjects = ["Plane","Tank","Car", "Helicopter", "Motorcycle", "Ship", "TentStorage", "VaultStorage","LockboxStorage","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","GunRack_DZ","WoodCrate_DZ","Scaffolding_DZ"];
-dayz_disallowedVault = ["HeliHRescue","MetalFloor_Preview_DZ","TentStorage", "BuiltItems","ModularItems","DZE_Base_Object"];
+dayz_disallowedVault = ["TentStorage", "BuiltItems","ModularItems","DZE_Base_Object"];
 dayz_reveal = ["AllVehicles","WeaponHolder","Land_A_tent","BuiltItems","ModularItems","DZE_Base_Object"];
-dayz_allowedObjects = ["TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", "Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ","Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ","M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ","WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ","LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ","ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ","WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ","WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked","WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ","WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor","Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked","Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ","CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ","CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ","WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ"];
+dayz_allowedObjects = ["MAP_picture_a",
+"MAP_picture_a_02",
+"MAP_picture_a_03",
+"MAP_picture_a_04",
+"MAP_picture_a_05",
+"MAP_picture_b",
+"MAP_picture_b_02",
+"MAP_picture_c",
+"MAP_picture_c_02",
+"MAP_picture_d",
+"MAP_picture_e",
+"MAP_picture_f",
+"MAP_picture_f_02",
+"MAP_picture_g",
+"MAP_wall_board",
+"MAP_wall_board_02",
+"MAP_wall_board_03",
+"MAP_F_ch_mod_c",
+"MAP_ch_mod_h",
+"MAP_armchair",
+"MAP_ch_mod_h",
+"MAP_ch_office_B",
+"MAP_chair",
+"MAP_Church_chair",
+"MAP_hospital_bench",
+"MAP_kitchen_chair_a",
+"MAP_lavicka_1",
+"MAP_lavicka_2",
+"MAP_lavicka_3",
+"MAP_lavicka_4",
+"MAP_lobby_chair",
+"MAP_office_chair",
+"MAP_F_postel_manz_kov",
+"MAP_F_postel_panelak1",
+"MAP_F_postel_panelak2",
+"MAP_F_Vojenska_palanda",
+"MAP_postel_manz_kov",
+"MAP_postel_panelak1",
+"MAP_vojenska_palanda",
+"MAP_fridge",
+"MAP_Kitchenstove_Elec",
+"MAP_washing_machine",
+"MAP_P_Basin_A",
+"MAP_P_bath",
+"MAP_F_bath",
+"MAP_lekarnicka",
+"MAP_P_sink",
+"MAP_toilet_b",
+"MAP_P_toilet_b_02",
+"MAP_almara",
+"MAP_case_a",
+"MAP_case_bedroom_a",
+"MAP_case_bedroom_b",
+"MAP_case_cans_b",
+"MAP_case_d",
+"MAP_case_wall_unit_part_c",
+"MAP_case_wall_unit_part_d",
+"MAP_case_wooden_b",
+"MAP_Dhangar_borwnskrin",
+"MAP_Dhangar_brownskrin",
+"MAP_Dhangar_knihovna",
+"MAP_library_a",
+"MAP_shelf",
+"MAP_Skrin_bar",
+"MAP_Skrin_opalena",
+"MAP_Truhla_stara",
+"MAP_briefcase",
+"MAP_Dkamna_bila",
+"MAP_Dkamna_uhli",
+"MAP_F_Dkamna_uhli",
+"MAP_icebox",
+"MAP_mutt_vysilacka",
+"MAP_notebook",
+"MAP_pc",
+"MAP_phonebox",
+"MAP_radio",
+"MAP_radio_b",
+"MAP_satelitePhone",
+"MAP_smallTV",
+"MAP_tv_a",
+"MAP_vending_machine",
+"MAP_lantern",
+"MAP_bucket",
+"MAP_MetalBucket",
+"MAP_FuelCan",
+"MAP_SmallObj_money",
+"MAP_conference_table_a",
+"MAP_desk",
+"MAP_Dhangar_psacistul",
+"MAP_F_conference_table_a",
+"MAP_kitchen_table_a",
+"MAP_lobby_table",
+"MAP_office_table_a",
+"MAP_pultskasou",
+"MAP_SmallTable",
+"MAP_stul_hospoda",
+"MAP_stul_kuch1",
+"MAP_Table",
+"MAP_table_drawer",
+"MAP_kasna_new",
+"MAP_Misc_Boogieman",
+"MAP_ChickenCoop",
+"MAP_Misc_Greenhouse",
+"MAP_Misc_Hutch",
+"MAP_Misc_Well",
+"MAP_Misc_WellPump",
+"MAP_PowerGenerator",
+"MAP_psi_bouda",
+"MAP_pumpa",
+"MAP_stanek_3",
+"MAP_stanek_3_d",
+"MAP_stanek_3B",
+"MAP_AirCond_big",
+"MAP_AirCond_small",
+"MAP_antenna_big_roof",
+"MAP_antenna_small_roof",
+"MAP_antenna_small_roof_1",
+"MAP_drapes",
+"MAP_drapes_long",
+"MAP_GasMeterExt",
+"MAP_Ladder",
+"MAP_P_Ladder",
+"MAP_LadderHalf",
+"MAP_P_LadderLong",
+"MAP_leseni2x",
+"MAP_leseni4x",
+"MAP_Misc_loudspeakers",
+"MAP_parabola_big",
+"MAP_P_Stavebni_kozy",
+"MAP_Heli_H_civil",
+"MAP_Heli_H_army",
+"MAP_Heli_H_cross",
+"MAP_Heli_H_rescue",
+"MAP_Sr_border",
+"MAP_drevo_hromada",
+"MAP_garbage_misc",
+"MAP_garbage_paleta",
+"MAP_Ind_BoardsPack1",
+"MAP_Ind_BoardsPack2",
+"MAP_Ind_Timbers",
+"MAP_Kontejner",
+"MAP_Misc_GContainer_Big",
+"MAP_Misc_HayStack",
+"MAP_Misc_TyreHeap",
+"MAP_Misc_WoodPile",
+"MAP_pneu",
+"MAP_popelnice",
+"MAP_sekyraspalek",
+"MAP_seno_balik",
+"MAP_concrete_block",
+"MAP_Concrete_Ramp",
+"MAP_ramp_concrete",
+"MAP_woodenRamp",
+"MAP_brana",
+"MAP_Houpacka",
+"MAP_nastenkaX",
+"MAP_Piskoviste",
+"MAP_snowman",
+"MAP_Barel1",
+"MAP_Barel3",
+"MAP_Barel4",
+"MAP_Barel5",
+"MAP_Barel6",
+"MAP_Barel7",
+"MAP_Barel8",
+"MAP_Barels",
+"MAP_Barels2",
+"MAP_Barels3",
+"MAP_barrel_empty",
+"MAP_barrel_sand",
+"MAP_barrel_water",
+"MAP_P_bedna",
+"MAP_box_c",
+"MAP_P_cihly1",
+"MAP_P_cihly2",
+"MAP_P_cihly3",
+"MAP_P_cihly4",
+"MAP_metalcrate",
+"MAP_metalcrate_02",
+"Misc_concrete",
+"MAP_Misc_G_Pipes",
+"MAP_Misc_palletsfoiled",
+"MAP_Misc_palletsfoiled_heap",
+"MAP_obstacle_get_over",
+"MAP_obstacle_prone",
+"MAP_obstacle_run_duck",
+"MAP_paletaA",
+"MAP_paletyC",
+"MAP_paletyD",
+"MAP_Pallets_Column",
+"MAP_P_pipe_big",
+"MAP_P_pipe_small",
+"MAP_P_ytong",
+"TentStorage","TentStorageDomed","TentStorageDomed2", "VaultStorageLocked", "Hedgehog_DZ", 
+"Sandbag1_DZ","BagFenceRound_DZ","TrapBear","Fort_RazorWire","WoodGate_DZ",
+"Land_HBarrier1_DZ","Land_HBarrier3_DZ","Land_HBarrier5_DZ","Fence_corrugated_DZ",
+"M240Nest_DZ","CanvasHut_DZ","ParkBench_DZ","MetalGate_DZ","OutHouse_DZ","Wooden_shed_DZ",
+"WoodShack_DZ","StorageShed_DZ","Plastic_Pole_EP1_DZ","Generator_DZ","StickFence_DZ",
+"LightPole_DZ","FuelPump_DZ","DesertCamoNet_DZ","ForestCamoNet_DZ","DesertLargeCamoNet_DZ",
+"ForestLargeCamoNet_DZ","SandNest_DZ","DeerStand_DZ","MetalPanel_DZ","WorkBench_DZ",
+"WoodFloor_DZ","WoodLargeWall_DZ","WoodLargeWallDoor_DZ","WoodLargeWallWin_DZ",
+"WoodSmallWall_DZ","WoodSmallWallWin_DZ","WoodSmallWallDoor_DZ","LockboxStorageLocked",
+"WoodFloorHalf_DZ","WoodFloorQuarter_DZ","WoodStairs_DZ","WoodStairsSans_DZ","WoodStairsRails_DZ",
+"WoodSmallWallThird_DZ","WoodLadder_DZ","Land_DZE_GarageWoodDoor","Land_DZE_LargeWoodDoor",
+"Land_DZE_WoodDoor","Land_DZE_GarageWoodDoorLocked","Land_DZE_LargeWoodDoorLocked",
+"Land_DZE_WoodDoorLocked","CinderWallHalf_DZ","CinderWall_DZ","CinderWallDoorway_DZ",
+"CinderWallDoor_DZ","CinderWallDoorLocked_DZ","CinderWallSmallDoorway_DZ",
+"CinderWallDoorSmall_DZ","CinderWallDoorSmallLocked_DZ","MetalFloor_DZ",
+"WoodRamp_DZ","GunRack_DZ","FireBarrel_DZ","WoodCrate_DZ","Scaffolding_DZ",
+"MetalFloor_Preview_DZ","HeliHRescue"
 
+];
 DZE_LockableStorage = ["VaultStorage","VaultStorageLocked","LockboxStorageLocked","LockboxStorage"];
 DZE_LockedStorage = ["VaultStorageLocked","LockboxStorageLocked"];
 DZE_UnLockedStorage = ["VaultStorage","LockboxStorage"];
@@ -573,8 +805,7 @@ dayz_fuelpumparray = ["FuelPump_DZ","Land_A_FuelStation_Feed","Land_Ind_FuelStat
 DZE_fueltruckarray = ["KamazRefuel_DZ","UralRefuel_TK_EP1_DZ","MtvrRefuel_DES_EP1_DZ","V3S_Refuel_TK_GUE_EP1_DZ","MtvrRefuel_DZ","KamazRefuel_DZE","UralRefuel_TK_EP1_DZE","MtvrRefuel_DES_EP1_DZE","V3S_Refuel_TK_GUE_EP1_DZE","MtvrRefuel_DZE"];
 
 // Standard Fuel sources
-dayz_fuelsources = ["Land_Ind_TankSmall","Land_fuel_tank_big","Land_fuel_tank_stairs","Land_fuel_tank_stairs_ep1","Land_wagon_tanker","Land_fuelstation","Land_fuelstation_army","land_fuelstation_w","Land_benzina_schnell"];
-
+dayz_fuelsources = ["Land_Ind_TankSmall","Land_fuel_tank_big","Land_fuel_tank_stairs","Land_fuel_tank_stairs_ep1","Land_wagon_tanker","Land_fuelstation","Land_fuelstation_army","land_fuelstation_w","Land_benzina_schnell","Land_Ind_TankSmall2_EP1","MAP_Ind_TankSmall","MAP_Ind_TankSmall2","Land_A_FuelStation_Feed","Land_FuelStation_Feed_PMC"];
 DZE_Lock_Door = "";
 
 //init global arrays for Loot Chances
