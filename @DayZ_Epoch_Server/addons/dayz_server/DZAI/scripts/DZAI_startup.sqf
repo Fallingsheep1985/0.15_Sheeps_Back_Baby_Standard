@@ -13,6 +13,9 @@ DZAI_weaponGrades = [0,1,2,3];							//All possible weapon grades (does not incl
 DZAI_weaponGradesAll = [0,1,2,3,4,5,6,7,8,9];			//All possible weapon grades (including custom weapon grades).
 DZAI_curHeliPatrols = 0;									//Current number of active air patrols
 DZAI_curLandPatrols = 0;									//Current number of active land patrols
+//***************
+DZAI_curSeaPatrols = 0;										//Current number of active sea patrols
+
 DZAI_dynTriggerArray = [];									//List of all generated dynamic triggers.
 DZAI_staticTriggerArray = [];								//List of all static triggers
 DZAI_respawnQueue = [];										//Queue of AI groups that require respawning. Group ID is removed from queue after it is respawned.
@@ -29,6 +32,9 @@ DZAI_invalidClassnames = [[],[],[]];						//Classnames known as invalid - Weapon
 DZAI_respawnTimeVariance = (abs (DZAI_respawnTimeMax - DZAI_respawnTimeMin));
 DZAI_respawnTimeVarAir = (abs (DZAI_respawnTMaxA - DZAI_respawnTMinA));
 DZAI_respawnTimeVarLand = (abs (DZAI_respawnTMaxL - DZAI_respawnTMinL));
+//**************
+DZAI_respawnTimeVarSea = (abs (DZAI_respawnTMaxB - DZAI_respawnTMinB));
+
 DZAI_baseBlood = (DZAI_unitBloodLevel select 0);
 DZAI_bonusBlood = ((DZAI_unitBloodLevel select 1) - (DZAI_unitBloodLevel select 0));
 DZAI_customSpawnQueue = [];
@@ -39,6 +45,8 @@ DZAI_locations = [];
 DZAI_locationsLand = [];
 DZAI_heliTypesUsable = [];
 DZAI_vehTypesUsable = [];
+//***********************
+DZAI_seaTypesUsable = [];
 
 if (DZAI_verifyTables) then {
 	DZAI_tableChecklist = ["DZAI_Rifles0","DZAI_Rifles1","DZAI_Rifles2","DZAI_Rifles3","DZAI_Pistols0","DZAI_Pistols1","DZAI_Pistols2","DZAI_Pistols3",
@@ -129,7 +137,7 @@ if (DZAI_dynAISpawns) then {
 	_dynManagerV2 = [] execVM format ['%1\scripts\dynamicSpawn_manager.sqf',DZAI_directory];
 };
 
-if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)}) then {
+if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)} or {(DZAI_maxSeaPatrols > 0)}) then {
 	_nul = [] execVM format ['%1\scripts\setup_veh_patrols.sqf',DZAI_directory];
 };
 

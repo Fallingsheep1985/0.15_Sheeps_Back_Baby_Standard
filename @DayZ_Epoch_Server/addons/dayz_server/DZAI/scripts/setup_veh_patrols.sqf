@@ -59,3 +59,32 @@ if (DZAI_maxLandPatrols > 0) then {
 		};
 	};
 };
+
+if (DZAI_maxSeaPatrols > 0) then {
+	_nul = [] spawn {
+		for "_i" from 0 to ((count DZAI_boatList) - 1) do {
+			_vehType = (DZAI_boatList select _i) select 0;
+			_amount = (DZAI_boatList select _i) select 1;
+			
+			if ([_vehType,"vehicle"] call DZAI_checkClassname) then {
+				for "_j" from 1 to _amount do {
+					DZAI_seaTypesUsable set [count DZAI_seaTypesUsable,_vehType];
+				};
+			} else {
+				if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Attempted to spawn invalid vehicle type %1.",_vehType];};
+			};
+		};
+		
+		if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Assembled vehicle list: %1",DZAI_seaTypesUsable];};
+		
+		_maxVehicles = (DZAI_maxSeaPatrols min (count DZAI_seaTypesUsable));
+		for "_i" from 1 to _maxVehicles do {
+			_index = floor (random (count DZAI_seaTypesUsable));
+			_vehType = DZAI_seaTypesUsable select _index;
+			_nul = _vehType spawn DZAI_spawnVehiclePatrol;
+			DZAI_seaTypesUsable set [_index,objNull];
+			DZAI_seaTypesUsable = DZAI_seaTypesUsable - [objNull];
+			if (_i < _maxVehicles) then {uiSleep 20};
+		};
+	};
+};

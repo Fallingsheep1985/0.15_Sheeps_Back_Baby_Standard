@@ -62,22 +62,38 @@ while {(count DZAI_respawnQueue) > 0} do {
 				if (_mode == 2) exitWith {
 					//Vehicle AI patrol respawn
 					_vehicleTypeOld = (DZAI_respawnQueue select _i) select 2;
-					if (_vehicleTypeOld isKindOf "Air") then {
-						//Air-type vehicle AI patrol respawn
-						if ((count DZAI_heliTypesUsable) == 0) then {
-							_nul = _vehicleTypeOld spawn DZAI_spawnVehiclePatrol; 
-							if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI air vehicle patrol type %1.",_vehicleTypeOld]};
-						} else {
-							DZAI_heliTypesUsable set [(count DZAI_heliTypesUsable),_vehicleTypeOld];
-							_index = floor (random (count DZAI_heliTypesUsable));
-							_vehicleTypeNew = DZAI_heliTypesUsable select _index;						
-							_nul = _vehicleTypeNew spawn DZAI_spawnVehiclePatrol;
-							DZAI_heliTypesUsable set [_index,objNull];
-							DZAI_heliTypesUsable = DZAI_heliTypesUsable - [objNull];
-							if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI air vehicle type patrol %1.",_vehicleTypeNew]};
+					call {
+						if (_vehicleTypeOld isKindOf "Air") exitWith {
+							//Air-type vehicle AI patrol respawn
+							if ((count DZAI_heliTypesUsable) == 0) then {
+								_nul = _vehicleTypeOld spawn DZAI_spawnVehiclePatrol; 
+								if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI air vehicle patrol type %1.",_vehicleTypeOld]};
+							} else {
+								DZAI_heliTypesUsable set [(count DZAI_heliTypesUsable),_vehicleTypeOld];
+								_index = floor (random (count DZAI_heliTypesUsable));
+								_vehicleTypeNew = DZAI_heliTypesUsable select _index;						
+								_nul = _vehicleTypeNew spawn DZAI_spawnVehiclePatrol;
+								DZAI_heliTypesUsable set [_index,objNull];
+								DZAI_heliTypesUsable = DZAI_heliTypesUsable - [objNull];
+								if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI air vehicle type patrol %1.",_vehicleTypeNew]};
+							};
 						};
-					} else {
-						if (_vehicleTypeOld isKindOf "LandVehicle") then {
+						if (_vehicleTypeOld isKindOf "Ship") exitWith {
+							//Land-type vehicle AI patrol respawn
+							if ((count DZAI_seaTypesUsable) == 0) then {
+								_nul = _vehicleTypeOld spawn DZAI_spawnVehiclePatrol;
+								if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI sea vehicle patrol type %1.",_vehicleTypeOld]};
+							} else {
+								DZAI_seaTypesUsable set [(count DZAI_seaTypesUsable),_vehicleTypeOld];
+								_index = floor (random (count DZAI_seaTypesUsable));
+								_vehicleTypeNew = DZAI_seaTypesUsable select _index;	
+								_nul = _vehicleTypeNew spawn DZAI_spawnVehiclePatrol;
+								DZAI_seaTypesUsable set [_index,objNull];
+								DZAI_seaTypesUsable = DZAI_seaTypesUsable - [objNull];
+								if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Respawning AI sea vehicle patrol type %1.",_vehicleTypeNew]};
+							};
+						};
+						if (_vehicleTypeOld isKindOf "LandVehicle") exitWith {
 							//Land-type vehicle AI patrol respawn
 							if ((count DZAI_heliTypesUsable) == 0) then {
 								_nul = _vehicleTypeOld spawn DZAI_spawnVehiclePatrol;

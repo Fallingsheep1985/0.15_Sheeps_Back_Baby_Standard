@@ -81,7 +81,7 @@ if (DZAI_zombieEnemy && {DZAI_weaponNoise}) then { // Optional Zed-to-AI aggro f
 };
 
 //Air/land vehicle patrol spawn scripts
-if ((DZAI_maxHeliPatrols > 0) or {DZAI_maxLandPatrols > 0}) then {
+if ((DZAI_maxHeliPatrols > 0) or {DZAI_maxLandPatrols > 0} or {(DZAI_maxSeaPatrols > 0)}) then {
 	DZAI_spawnVehiclePatrol = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnVehiclePatrol.sqf",DZAI_directory];
 	//Helicopter patrol scripts
 	if (DZAI_maxHeliPatrols > 0) then {
@@ -92,6 +92,10 @@ if ((DZAI_maxHeliPatrols > 0) or {DZAI_maxLandPatrols > 0}) then {
 	//Land vehicle patrol scripts
 	if (DZAI_maxLandPatrols > 0) then {
 		DZAI_vehPatrol = compile preprocessFileLineNumbers format ["%1\compile\veh_randompatrol.sqf",DZAI_directory];
+	};
+	//Sea vehicle patrol scripts
+	if (DZAI_maxSeaPatrols > 0) then {
+		DZAI_seaPatrol = compile preprocessFileLineNumbers format ["%1\compile\sea_randompatrol.sqf",DZAI_directory];
 	};
 };
 
@@ -312,9 +316,13 @@ DZAI_respawnAIVehicle = {
 			};
 			if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
 		};
-		if (_unitType in ["air","land"]) exitWith {
+		if (_unitType in ["air","land","sea"]) exitWith {
 			[2,typeOf _vehicle] call fnc_respawnHandler;
-			if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
+			call {
+				if (_isAirVehicle) exitWith {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1};
+				if (_isSeaVehicle) exitWith {DZAI_curSeaPatrols = DZAI_curSeaPatrols - 1};
+				DZAI_curLandPatrols = DZAI_curLandPatrols - 1;
+			};
 		};
 	};
 	_vehicle setVariable ["DZAI_deathTime",diag_tickTime]; //mark vehicle for cleanup

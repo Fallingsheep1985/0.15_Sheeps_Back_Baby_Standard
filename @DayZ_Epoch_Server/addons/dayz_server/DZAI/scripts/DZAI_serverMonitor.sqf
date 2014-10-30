@@ -5,7 +5,7 @@ _cleanDead = diag_tickTime;
 _monitorReport = diag_tickTime;
 _deleteObjects = diag_tickTime;
 _dynLocations = diag_tickTime;
-_reportDynOrVehicles = (DZAI_dynAISpawns || ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)}));
+_reportDynOrVehicles = (DZAI_dynAISpawns || ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)} or {(DZAI_maxSeaPatrols > 0)}));
 
 uiSleep 60;
 
@@ -122,7 +122,7 @@ while {true} do {
 		_uptime = [] call DZAI_getUptime;
 		diag_log format ["DZAI Monitor :: Server Uptime: [%1d %2h %3m %4s]. Active AI Groups: %5.",_uptime select 0, _uptime select 1, _uptime select 2, _uptime select 3,({!isNull _x} count DZAI_activeGroups)];
 		diag_log format ["DZAI Monitor :: Static Spawns: %1. Respawn Queue: %2 groups queued.",(count DZAI_staticTriggerArray),(count DZAI_respawnQueue)];
-		if (_reportDynOrVehicles) then {diag_log format ["DZAI Monitor :: Dynamic Spawns: %1. Air Patrols: %2. Land Patrols: %3.",(count DZAI_dynTriggerArray),DZAI_curHeliPatrols,DZAI_curLandPatrols];};
+		if (_reportDynOrVehicles) then {diag_log format ["DZAI Monitor :: Dynamic Spawns: %1. Air Patrols: %2. Land Patrols: %3. Sea Patrols: %4.",(count DZAI_dynTriggerArray),DZAI_curHeliPatrols,DZAI_curLandPatrols,DZAI_curSeaPatrols];};
 		_monitorReport = diag_tickTime;
 	};
 	

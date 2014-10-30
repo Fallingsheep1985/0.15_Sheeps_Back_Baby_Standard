@@ -36,6 +36,12 @@ call {
 			_respawnSleep = (DZAI_respawnTMinL + random DZAI_respawnTimeVarLand);
 			if (_fastMode) then {_respawnSleep = (_respawnSleep/2) max 180};
 		};
+		call {
+			if (_vehicleType isKindOf "Air") exitWith { _respawnSleep = (DZAI_respawnTMinA + random DZAI_respawnTimeVarAir); };
+			if (_vehicleType isKindOf "Ship") exitWith { _respawnSleep = (DZAI_respawnTMinB + random DZAI_respawnTimeVarSea); };
+			_respawnSleep = (DZAI_respawnTMinL + random DZAI_respawnTimeVarLand);
+			if (_fastMode) then {_respawnSleep = (_respawnSleep/2) max 180};
+		};
 		_nextRespawnTime = (diag_tickTime + _respawnSleep);	//Determine time of next respawn
 		DZAI_respawnQueue set [(count DZAI_respawnQueue),[diag_tickTime + _respawnSleep,_mode,_vehicleType]];
 		if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Added AI vehicle patrol type %1 to respawn queue. Queue position %2. Wait Time %3 (respawnHandler)",_vehicleType,(count DZAI_respawnQueue),_respawnSleep];};

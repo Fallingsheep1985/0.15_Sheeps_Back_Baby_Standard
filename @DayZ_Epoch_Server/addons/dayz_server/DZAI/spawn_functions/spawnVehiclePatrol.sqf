@@ -1,4 +1,5 @@
-private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking"];
+private ["_marker","_vehicleType","_weapongrade","_unitGroup","_driver","_vehicle","_gunnerSpots","_markerPos","_isSeaVehicle",
+		"_markerSize","_isAirVehicle","_unitType","_vehSpawnPos","_isArmed","_maxUnits","_maxCargoUnits","_maxGunnerUnits","_keepLooking"];
 
 if (!isServer) exitWith {};
 
@@ -8,25 +9,32 @@ _maxCargoUnits = 0;
 _maxGunnerUnits = 0;
 _weapongrade = 0;
 _isAirVehicle = (_vehicleType isKindOf "Air");
+_isSeaVehicle = (_vehicleType isKindOf "Ship");
 _vehSpawnPos = [];
 _spawnMode = "NONE";
 _keepLooking = true;
 
-if (_vehicleType isKindOf "Air") then {
-	//Note: no cargo units for air vehicles
-	_maxGunnerUnits = DZAI_heliGunnerUnits;
-	_weapongrade = DZAI_heliUnitLevel call DZAI_getWeapongrade;
-} else {
+call {
+	if (_isAirVehicle) exitWith {
+		//Note: no cargo units for air vehicles
+		_maxGunnerUnits = DZAI_heliGunnerUnits;
+		_weapongrade = DZAI_heliUnitLevel call DZAI_getWeapongrade;
+		_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),300 + (random((getMarkerSize "DZAI_centerMarker") select 0)),random(360),1] call SHK_pos;
+		_vehSpawnPos set [2,150];
+		_spawnMode = "FLY";
+	};
+	if (_isSeaVehicle) exitWith {
+		_maxGunnerUnits = DZAI_boatGunnerUnits;
+		_maxCargoUnits = DZAI_boatCargoUnits;
+		_weapongrade = DZAI_boatUnitLevel call DZAI_getWeapongrade;
+		_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),7000,random(360),2] call SHK_pos;
+		_vehSpawnPos set [2,0];
+		_spawnMode = "NONE";
+	};
+	// isLandVehicle:
 	_maxGunnerUnits = DZAI_vehGunnerUnits;
 	_maxCargoUnits = DZAI_vehCargoUnits;
 	_weapongrade = DZAI_vehUnitLevel call DZAI_getWeapongrade;
-};
-
-if (_isAirVehicle) then {
-	_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),300 + (random((getMarkerSize "DZAI_centerMarker") select 0)),random(360),1] call SHK_pos;
-	_vehSpawnPos set [2,150];
-	_spawnMode = "FLY";
-} else {
 	while {_keepLooking} do {
 		_vehSpawnPos = [(getMarkerPos "DZAI_centerMarker"),300 + random((getMarkerSize "DZAI_centerMarker") select 0),random(360),0,[2,750]] call SHK_pos;
 		if ((count _vehSpawnPos) > 1) then {
@@ -46,7 +54,11 @@ _driver = _unitGroup createUnit [(DZAI_BanditTypes call BIS_fnc_selectRandom2), 
 [_driver] joinSilent _unitGroup;
 
 _vehicle = createVehicle [_vehicleType, _vehSpawnPos, [], 0, _spawnMode];
-_vehicle setPos _vehSpawnPos;
+if (_isSeaVehicle) then {
+	_vehicle setPosASL _vehSpawnPos;
+} else {
+	_vehicle setPos _vehSpawnPos;
+};
 _driver moveInDriver _vehicle;
 
 //Run high-priority commands to set up group vehicle
@@ -65,6 +77,7 @@ _vehicle setVariable ["unitGroup",_unitGroup];
 _turretCount = count (configFile >> "CfgVehicles" >> _vehicleType >> "turrets");
 _isArmed = ((({!(_x in ["CarHorn","BikeHorn","TruckHorn","TruckHorn2","SportCarHorn","MiniCarHorn"])} count (weapons _vehicle)) > 0) or {(_turretCount > 0)});
 
+//******** Maybe Boats need their own eventhandler? ******************
 //Determine vehicle type and add needed eventhandlers
 if (_isAirVehicle) then {
 	_vehicle setVariable ["durability",[0,0,0]];	//[structural, engine, tail rotor]
@@ -75,6 +88,7 @@ if (_isAirVehicle) then {
 	_vehicle addEventHandler ["Killed",{_this call DZAI_vehDestroyed;}];
 	_vehicle addEventHandler ["HandleDamage",{_this call DZAI_vHandleDamage}];
 };
+
 _vehicle allowCrewInImmobile (!_isAirVehicle);
 _vehicle setVehicleLock "LOCKED";
 clearWeaponCargoGlobal _vehicle;
@@ -134,7 +148,11 @@ _unitGroup setBehaviour "AWARE";
 _unitGroup setSpeedMode "NORMAL";
 _unitGroup setCombatMode "YELLOW";
 
-_unitType = if (_isAirVehicle) then {"air"} else {"land"};
+_unitType = call {
+	if (_isAirVehicle) exitWith {"air"};
+	if (_isSeaVehicle) exitWith {"sea"};
+	"land"
+};
 _unitGroup setVariable ["unitType",_unitType];
 _unitGroup setVariable ["weapongrade",_weapongrade];
 _unitGroup setVariable ["assignedVehicle",_vehicle];
@@ -156,29 +174,44 @@ if (_isAirVehicle && {!_isArmed}) then {
 };
 
 _rearm = [_unitGroup,_weapongrade] spawn DZAI_autoRearm_group;	//start group-level manager
+call {
+	if (_isAirVehicle) exitWith {
+		//Set initial waypoint and begin patrol
+		[_unitGroup,0] setWaypointType "MOVE";
+		[_unitGroup,0] setWaypointTimeout [0.5,0.5,0.5];
+		[_unitGroup,0] setWaypointCompletionRadius 200;
+		[_unitGroup,0] setWaypointStatements ["true","[(group this)] spawn DZAI_heliDetectPlayers;"];
 
-if (_isAirVehicle) then {
-	//Set initial waypoint and begin patrol
-	[_unitGroup,0] setWaypointType "MOVE";
-	[_unitGroup,0] setWaypointTimeout [0.5,0.5,0.5];
-	[_unitGroup,0] setWaypointCompletionRadius 200;
-	[_unitGroup,0] setWaypointStatements ["true","[(group this)] spawn DZAI_heliDetectPlayers;"];
+		_waypoint = _unitGroup addWaypoint [_vehSpawnPos,0];
+		_waypoint setWaypointType "MOVE";
+		_waypoint setWaypointTimeout [3,6,9];
+		_waypoint setWaypointCompletionRadius 150;
+		_waypoint setWaypointStatements ["true","[(group this)] spawn DZAI_heliRandomPatrol;"];
 
-	_waypoint = _unitGroup addWaypoint [_vehSpawnPos,0];
-	_waypoint setWaypointType "MOVE";
-	_waypoint setWaypointTimeout [3,6,9];
-	_waypoint setWaypointCompletionRadius 150;
-	_waypoint setWaypointStatements ["true","[(group this)] spawn DZAI_heliRandomPatrol;"];
-
-	[_unitGroup] spawn DZAI_heliRandomPatrol;
-	//if (DZAI_heliReinforceChance > 0) then {_oncall = [_vehicle,_unitGroup] spawn DZAI_heliOnCall}; //helicopter listen for reinforcement summons
-	_vehicle flyInHeight 125;
-	
-	if ((!isNull _vehicle) && {!isNull _unitGroup}) then {
-		DZAI_curHeliPatrols = DZAI_curHeliPatrols + 1;
-		if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Created AI helicopter crew group %1 is now active and patrolling.",_unitGroup];};
+		[_unitGroup] spawn DZAI_heliRandomPatrol;
+		//if (DZAI_heliReinforceChance > 0) then {_oncall = [_vehicle,_unitGroup] spawn DZAI_heliOnCall}; //helicopter listen for reinforcement summons
+		_vehicle flyInHeight 125;
+		
+		if ((!isNull _vehicle) && {!isNull _unitGroup}) then {
+			DZAI_curHeliPatrols = DZAI_curHeliPatrols + 1;
+			if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Created AI helicopter crew group %1 is now active and patrolling.",_unitGroup];};
+		};
 	};
-} else {
+	if (_isSeaVehicle) exitWith {
+		// isLandVehicle:
+		//Set initial waypoint and begin patrol
+		[_unitGroup,0] setWaypointType "MOVE";
+		[_unitGroup,0] setWaypointTimeout [5,10,15];
+		[_unitGroup,0] setWaypointCompletionRadius 150;
+		[_unitGroup,0] setWaypointStatements ["true","[(group this)] spawn DZAI_seaPatrol;"];
+		[_unitGroup] spawn DZAI_seaPatrol;
+
+		if ((!isNull _vehicle) && {!isNull _unitGroup}) then {
+			DZAI_curSeaPatrols = DZAI_curSeaPatrols + 1;
+			if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Created AI sea vehicle crew group %1 is now active and patrolling.",_unitGroup];};
+		};
+	};
+	// isLandVehicle:
 	//Set initial waypoint and begin patrol
 	[_unitGroup,0] setWaypointType "MOVE";
 	[_unitGroup,0] setWaypointTimeout [5,10,15];

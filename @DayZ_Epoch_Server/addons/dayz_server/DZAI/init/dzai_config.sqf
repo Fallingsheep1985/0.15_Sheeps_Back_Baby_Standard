@@ -82,7 +82,7 @@ DZAI_lastManStanding = false;
 DZAI_clientRadio = false;
 
 //Enable or disable AI hostility to zombies. If enabled, AI units spawned by DZAI will attack nearby zombies. (Default: false)
-DZAI_zombieEnemy = true;	
+DZAI_zombieEnemy = false;	
 
 //Maximum distance (in meters) for AI group leader to detect zombies. Increasing range beyond default may negatively impact server performance. (Default: 150)							
 DZAI_zDetectRange = 150;
@@ -115,7 +115,7 @@ DZAI_respawnLimit3 = -1; //Respawn limit for very high level AI in places with h
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Enable or disable dynamic AI spawns. If enabled, AI spawn locations will be generated for randomly selected players at randomized intervals (Default: true)									
-DZAI_dynAISpawns = false;
+DZAI_dynAISpawns = true;
 
 //Time (seconds) required to reach maximum spawn probability per player, after which the probability is reset to 0%. Lower number = More frequent spawns, Higher Number = Less frequent. (Recommended range: 1200-2700, Default: 1800)
 DZAI_maxSpawnTime = 1800;
@@ -144,7 +144,7 @@ DZAI_freshSpawnSafeArea = false;
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-DZAI_maxHeliPatrols = 2;
+DZAI_maxHeliPatrols = 0;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinA = 600;
@@ -171,11 +171,34 @@ DZAI_airWeapons = [
 ];
 
 
+/*	AI Sea vehicle patrol settings. These AI vehicles will randomly travel on the sea.
+--------------------------------------------------------------------------------------------------------------------*/		
+
+//Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
+DZAI_maxSeaPatrols = 0;
+
+//Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
+DZAI_respawnTMinB = 600;
+DZAI_respawnTMaxB = 900;
+
+//Classnames of air vehicle types to use, with the maximum amount of each type to spawn. Default: [["Zodiac",1]]
+DZAI_boatList = [["Zodiac",1],["PBX",1]];
+
+//Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
+DZAI_boatUnitLevel = 3;
+
+//Maximum number of gunner units per air vehicle. Limited by actual number of available gunner positions. (Default: 2)
+DZAI_boatGunnerUnits = 2;
+
+//Maximum number of cargo units per land vehicle. Limited by actual number of available cargo positions. (Default: 3)
+DZAI_boatCargoUnits = 3;
+
+
 /*AI Land vehicle patrol settings. These AI vehicles will randomly travel between different cities and towns.
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-DZAI_maxLandPatrols = 4;
+DZAI_maxLandPatrols = 0;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;

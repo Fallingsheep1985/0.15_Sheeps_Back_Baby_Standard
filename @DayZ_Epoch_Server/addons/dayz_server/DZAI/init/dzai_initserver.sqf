@@ -62,7 +62,8 @@ if (DZAI_modAutoDetect) then {
 //Create reference marker to act as boundary for spawning AI air/land vehicles. These values will be later modified on a per-map basis.
 if (isNil "DZAI_maxHeliPatrols") then {DZAI_maxHeliPatrols = 0};
 if (isNil "DZAI_maxLandPatrols") then {DZAI_maxLandPatrols = 0};
-if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)}) then {
+if (isNil "DZAI_maxSeaPatrols") then {DZAI_maxSeaPatrols = 0};
+if ((DZAI_maxHeliPatrols > 0) or {(DZAI_maxLandPatrols > 0)} or {(DZAI_maxSeaPatrols > 0)}) then {
 	_centerPos = (getMarkerPos 'center');
 	if ((_centerPos distance [0,0,0]) < 5) then {
 		_centerPos = getArray(configFile >> "CfgWorlds" >> worldName >> "centerPosition");
