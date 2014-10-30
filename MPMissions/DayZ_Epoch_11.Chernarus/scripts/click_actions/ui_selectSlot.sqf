@@ -91,7 +91,38 @@ if (_button == 1) then {
 			_menu ctrlSetEventHandler ["ButtonClick",_script];
 		};
 	};
-	
+	//Admins only
+	if ((getPlayerUID player) in AdminList) then {
+
+	///// jahan - begin vehicle pointer
+        // key colors
+        _colors = ["ItemKeyYellow","ItemKeyBlue","ItemKeyRed","ItemKeyGreen","ItemKeyBlack"];
+		if (configName(inheritsFrom(configFile >> "CfgWeapons" >> _item)) in _colors) then {
+            // characterID of the key (car character number)
+			_keyOwner = getNumber(configFile >> "CfgWeapons" >> _item >> "keyid");
+            // key name (like: e3f2)
+            _keyName = getText(configFile >> "CfgWeapons" >> _item >> "displayName");
+
+            //Menu entry Key vehicle pointer
+            _control =  _parent displayCtrl (1600 + _numActions);
+            _control ctrlShow true;
+            _height = _height + (0.025 * safezoneH);
+            // this needs to point the place where the script is in your mission (vehicle_pointer.sqf)
+            _script =  "admintools\sheep\locateVehicle.sqf";
+            _exescript = format["_id = ['%2','%3'] execVM '%1';closeDialog 0;",_script,_keyOwner,_keyName];
+            uiNamespace setVariable ['uiControl', _control];
+            // sets the text in the right button menu
+            _control ctrlSetText "Vehicle Pointer";
+            _control ctrlSetTextColor [0.3,0.4,1,1];
+            _control ctrlSetTooltip "Pinpoint vehicle. Mark on map if not in range.";
+            _control ctrlSetTooltipColorBox [0.3,0.4,1,1];
+            _control ctrlSetTooltipColorShade [0, 0, 0, 1];
+            _control ctrlSetTooltipColorText [0.3,0.4,1,1];
+            _control ctrlSetEventHandler ["ButtonClick",_exescript];
+            _numActions = _numActions + 1; // if there are other item action after that (other mods) add 1 to _numactions
+		};
+	};
+///// jahan - end vehicle pointer
     _pos set [3,_height];
     //hint format["Obj: %1 \nHeight: %2\nPos: %3",_item,_height,_grpPos];       
 
