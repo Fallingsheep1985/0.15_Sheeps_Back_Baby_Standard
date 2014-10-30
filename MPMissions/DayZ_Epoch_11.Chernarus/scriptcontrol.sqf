@@ -92,7 +92,18 @@ AdvancedAlchemyScript = true;
 
 //CUSTOM BUILDINGS
 
-// to turn on  a custom area remove the // from the front
+/* 
+to turn on a custom area remove the // from the front
+to turn it back off add the // back in
+
+EG
+Sector FNG ON
+execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+Sector FNG OFF
+//execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+
+
+*/
 if (isServer) then {
 //Sector FNG inland
 execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
@@ -116,10 +127,10 @@ execVM "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";
 //Kameka mine                                
 execVM "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
 execVM "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
-execVM "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
                                              
-//CDC Balota + Trader                        
-execVM "\z\addons\dayz_server\CustomBuildings\Trader_CDC_Balota.sqf";
+//CDC Balota (no trader)                        
+execVM "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
 
 //Altar
 execVM "\z\addons\dayz_server\CustomBuildings\altar.sqf";
@@ -133,9 +144,6 @@ execVM "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
 //beached aircraft carrier
 execVM "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
 
-//BANK
-execVM "\z\addons\dayz_server\CustomBuildings\banks\nbank_novy_sobor.sqf";
-
 //East coast cherno
 execVM "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
@@ -143,7 +151,10 @@ execVM "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
 //Black Lake Castle
 execVM "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
 
+//Kabino Check Point
 execVM "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
+
+//Otmel Base
 execVM "\z\addons\dayz_server\CustomBuildings\otmel.sqf";
 
 //road from dam to sector FNG

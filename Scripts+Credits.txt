@@ -52,10 +52,6 @@ Animated C130 crashes (Gorsy)
 Animated AN2 crashes (Gorsy)
 AN2 carepackage drops (Gorsy)
 Animated Heli Crashes (Grafzahl)
-
-
-links and credits need on release\support page
-
 DZMS 1.1 (TheVampire)
 DZMSHotSpots (ekroemer)
 Tow + Lift (Nightmare)
@@ -75,15 +71,7 @@ Advanced Alchemy Building (hogscraper)
 
 
 
-
-
-OVERPOCH
-items at traders
-vehicles in dynamic spawns
-loot tables
-
-
-SINGLE CURRENCY
+SINGLE CURRENCY ( not yet Released)
 zupas 1.1
 Souls 2.0 edits
 Traders use currency
