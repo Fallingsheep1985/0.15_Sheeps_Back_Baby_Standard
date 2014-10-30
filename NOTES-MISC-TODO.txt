@@ -1,0 +1,80 @@
+
+create map markers for custom buildings
+
+
+//Marker on Map
+_MARKERNAME = createMarker ["MARKERNAME", [6611.9756, 14201.991]];
+_MARKERNAME setMarkerText "Put in anything you want here";
+_MARKERNAME setMarkerShape "RECTANGLE";
+_MARKERNAME setMarkerType "Flag";
+_MARKERNAME setMarkerColor "ColorPink";
+_MARKERNAME setMarkerBrush "Solid";
+_MARKERNAME setMarkerSize [230, 180];
+MARKERNAME = _MARKERNAME ;
+
+
+old 0.14 SQM markers to convert to SQF
+class Item17
+-		{
+-			position[]={7018.75,304.99265,7653.63};
+-			name="NovyBank";
+-			text="Central Bank of Novy Sobor";
+-			type="mil_dot";
+-			colorName="ColorOrange";
+-		};
+-		class Item18
+-		{
+-			position[]={6611.9756,304.99265,14201.991};
+-			name="sectorfng";
+-			text="Sector FNG";
+-			type="mil_circle";
+-			colorName="ColorRed";
+-		};
+-		class Item19
+-		{
+-			position[]={87.26,304.99265,1599.11};
+-			name="kamenkamine";
+-			text="Kamenka Mine";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};
+-		class Item20
+-		{
+-			position[]={13376.6,304.99265,12000.2};
+-			name="blacklakecastle";
+-			text="Black Lake Castle";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};
+-		class Item21
+-		{
+-			position[]={4847.68,304.99265,2297.24};
+-			name="cdcbalota";
+-			text="Centre For Disease Control";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};
+-		class Item22
+-		{
+-			position[]={7469.71,304.99265,2713.64};
+-			name="beachedcarrier";
+-			text="Beached Carrier";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};
+-		class Item23
+-		{
+-			position[]={2143.53,304.99265,12834.1};
+-			name="goldenrivermine";
+-			text="Golden River Mine";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};	
+-		class Item24
+-		{
+-			position[]={8137.84,304.99265,9180.96};
+-			name="altarmilitarybase";
+-			text="Altar Military Base";
+-			type="mil_dot";
+-			colorName="ColorBlack";
+-		};
