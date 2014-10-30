@@ -1,17 +1,4 @@
 // Epoch Admin Lists
-//Admin Build (Add all SuperAdmins/Admins)
-WG_adminBuild = [
-"76561198087015545",
-"999999999"
-];
-//Advanced Alchemy Building admins
-Admin_Crafting = WG_adminBuild;
-
-//Manage Doors Admins
-DoorAdminList = [
-"76561198087015545",
-"999999999"
-];
 
 //Super Admins
 SuperAdminList = [
@@ -29,9 +16,14 @@ ModList = [
 "999999999" // <Moderator In-Game Name>
 ];
 
-//set adminlist to be all admins
-AdminList = AdminList + SuperAdminList; // DONT CHANGE!!!
 
+//set adminlist to be all admins
+AdminList = AdminList + SuperAdminList; 
+//Manage Doors Admins
+DoorAdminList = AdminList;
+//ADMIN BUILD
+WG_adminBuild = AdminList;
+Admin_Crafting = AdminList;
 /*
 	Broadcasts a message to the super admins when the admin tools are used.
 	Default: false
