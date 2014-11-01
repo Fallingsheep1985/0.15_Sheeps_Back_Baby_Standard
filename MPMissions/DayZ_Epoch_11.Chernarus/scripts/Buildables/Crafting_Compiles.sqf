@@ -1,3 +1,5 @@
+player_selectSlot = compile preprocessFileLineNumbers "custom\Buildables\ui_selectSlot.sqf";
+fnc_usec_selfActions = compile preprocessFileLineNumbers "custom\fn_selfActions.sqf"; 
 
 fnc_Load_Mats_and_Tools = {
 //5900-5903 tools
@@ -250,7 +252,7 @@ for "_i" from 0 to ( count _cmbType ) -1 do
 //diag_log format ["%1",_count];
 GlobalComboboxVariable=99;
 };
-/*
+
 dayz_spaceInterrupt = {
 private ["_dikCode","_handled","_primaryWeapon","_secondaryWeapon","_nearbyObjects","_nill","_shift","_ctrl","_alt","_dropPrimary","_dropSecondary","_iItem","_removed","_iPos","_radius","_item"];
 _dikCode = 	_this select 1;
@@ -449,4 +451,4 @@ if (_dikCode == 0x04) then {
 	AAC_3 = true;
 };
 _handled
-};*/
+};

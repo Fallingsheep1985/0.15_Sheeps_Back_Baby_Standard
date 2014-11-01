@@ -10,7 +10,6 @@ ComboBoxResult="";
 {_index = lbAdd [_comboBox, _x]; } 
 forEach [
 "Barrels",
-"Carports",
 "CargoContainers",
 "ConstructionSite",
 "MiscLarge", 
@@ -30,35 +29,30 @@ call fnc_Load_Items;
 };
 case 1:
 {
-ComboBoxResult="Carports";
+ComboBoxResult="CargoContainers";
 call fnc_Load_Items;
 };
 case 2:
 {
-ComboBoxResult="CargoContainers";
+ComboBoxResult="ConstructionSite";
 call fnc_Load_Items;
 };
 case 3:
 {
-ComboBoxResult="ConstructionSite";
+ComboBoxResult="MiscLarge";
 call fnc_Load_Items;
 };
 case 4:
 {
-ComboBoxResult="MiscLarge";
+ComboBoxResult="MiscSmall";
 call fnc_Load_Items;
 };
 case 5:
 {
-ComboBoxResult="MiscSmall";
-call fnc_Load_Items;
-};
-case 6:
-{
 ComboBoxResult="Scaffolding";
 call fnc_Load_Items;
 };
-case 7:
+case 6:
 {
 ComboBoxResult="Sunshades";
 call fnc_Load_Items;

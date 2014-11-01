@@ -5,6 +5,7 @@ class Advanced_Crafting {
 	onUnload = "GlobalCraftingVariable=0;uiNamespace setVariable ['Advanced_CraftingV', nil]";
 	class Controls
 	{
+
 class AAC_Background: RscBackground
 {
 	idc = 1800;

@@ -10,7 +10,7 @@ Cleaned up a lot of old code that wasn't needed any more for this custom craftin
 Removed irrelevant variables from private block
 This file is called with zero parameters
 */
-private ["_helperColor","_objectHelper","_objectHelperDir","_objectHelperPos","_canDo","_HT_temp","_HM_temp","_location","_dir","_classname","_cancel","_reason","_isMedic","_dis","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_zheightchanged","_rotate","_zheightdirection","_isNear","_objHupDiff","_vehicle","_inVehicle","_requireplot","_objHDiff","_ownerPUID", "_playerUID"];
+private ["_HT_temp","_HM_temp","_location","_dir","_classname","_cancel","_reason","_isMedic","_dis","_tmpbuilt","_onLadder","_isWater","_require","_text","_offset","_IsNearPlot","_isOk","_location1","_location2","_counter","_position","_object","_canBuildOnPlot","_friendlies","_nearestPole","_ownerID","_findNearestPoles","_findNearestPole","_distance","_zheightchanged","_rotate","_zheightdirection","_isNear","_objHupDiff","_vehicle","_inVehicle","_requireplot","_objHDiff"];
 
  _AdminCraft=false;
  _PUID = getPlayerUID player;
@@ -31,8 +31,6 @@ _isWater =  dayz_isSwimming;
 _cancel = false;
 _reason = "";
 _canBuildOnPlot = false;
-
-
  
  //create arrays for checking whether or not the player
  //has the correct tools and materials to make the desired item
@@ -106,9 +104,6 @@ _HM_temp=_HM_temp+" " + getText (configFile >> "CfgMagazines" >> _x >> "displayN
 
 _vehicle = vehicle player;
 _inVehicle = (_vehicle != player);
-_playerUID = getPlayerUID player;
-helperDetach = false;
-_canDo = (!r_drag_sqf and !r_player_unconscious);
  
 DZE_Q = false;
 DZE_Z = false;
@@ -122,9 +117,7 @@ DZE_Z_ctrl = false;
 DZE_5 = false;
 DZE_4 = false;
 DZE_6 = false;
-
-DZE_F = false;
-
+ 
 DZE_cancelBuilding = false;
  
 call gear_ui_init;
@@ -168,12 +161,11 @@ _IsNearPlot = count (_findNearestPole);
 
 // check nearby plot's ownership and then for friend status
 //if plot does not belong to player
-
 _nearestPole = _findNearestPole select 0;
  
-_ownerID = _nearestPole getVariable["ownerPUID","0"];
+_ownerID = _nearestPole getVariable["CharacterID","0"];
 
-if(_playerUID == _ownerID) then {  //Keep ownership
+if(dayz_characterID == _ownerID) then {  //Keep ownership
 	_canBuildOnPlot = true;
 } else {
 _friendlies	= player getVariable ["friendlyTo",[]];
@@ -181,7 +173,6 @@ if(_ownerID in _friendlies) then {
 	_canBuildOnPlot = true;
 	};
 };
-
 //if plotpole is needed and none are within range or if what's in range does belong
 //to the player or a friendly we need to exit now
 
@@ -195,13 +186,7 @@ _location1 = getPosATL player;
 _dir = getDir player;
  
 _object = createVehicle [_classname, _location, [], 0, "CAN_COLLIDE"];
-//Build gizmo
-_objectHelper = "Sign_sphere10cm_EP1" createVehicle _location;
-_helperColor = "#(argb,8,8,3)color(0,0,0,0,ca)";
-_objectHelper setobjecttexture [0,_helperColor];
-_objectHelper attachTo [player,_offset];
-_object attachTo [_objectHelper,[0,0,0]];
-_position = getPosATL _objectHelper;
+_object attachTo [player,_offset];
 
 if(_AdminCraft) then{
 } else {
@@ -253,25 +238,13 @@ _zheightchanged = true;
 if (DZE_4) then {
 _rotate = true;
 DZE_4 = false;
-if (helperDetach) then {
-_dir = -45;
-} else {
 _dir = 180;
-    };
-
-
-
-
 };
-		if (DZE_6) then {
-			_rotate = true;
-			DZE_6 = false;
-			if (helperDetach) then {
-				_dir = 45;
-			} else {
-				_dir = 0;
-			};
-		};
+if (DZE_6) then {
+_rotate = true;
+DZE_6 = false;
+_dir = 0;
+};
 //Number keys above qwerty
 //1=turn clockwise 1/16th of a circle
 //2=detaches object from player - OBJECT MUST BE COMPLETELY ABOVE GROUND OR IT WILL DISAPPEAR!!
@@ -279,144 +252,56 @@ _dir = 180;
 if (AAC_1) then {
 _rotate = true;
 AAC_1 = false;
-if (helperDetach) then {
-_dir = -45;
-} else {
 _dir = _dir + 22.5;;
-    };
 };
 
 if (AAC_3) then {
 _rotate = true;
 AAC_3 = false;
-if (helperDetach) then {
-_dir = -45;
-} else {
 _dir = _dir - 22.5;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    };
-
-
-
-
 };
-		
-		if (DZE_F and _canDo) then {	
-			if (helperDetach) then {
-			_objectHelperDir = getDir _objectHelper; 
-			_objectHelper attachTo [player];
-			_objectHelper setDir _objectHelperDir-(getDir player);
-			helperDetach = false;
-			} else {
-			_objectHelperPos = getPosATL _objectHelper;
-			detach _objectHelper;			
-			_objectHelper setPosATL _objectHelperPos;
-			_objectHelperDir = getDir _objectHelper;
-			_objectHelper setVelocity [0,0,0]; //fix sliding glitch
-			helperDetach = true;
-			};
-			DZE_F = false;
-		};
-
-		if(_rotate) then {
-			if (helperDetach) then {
-				_objectHelperDir = getDir _objectHelper;
-				_objectHelperPos = getPosATL _objectHelper;
-				_objectHelper setDir _objectHelperDir+_dir;
-				_objectHelper setPosATL _objectHelperPos;
-			} else {
-				_objectHelper setDir _dir;
-				_objectHelper setPosATL _position;
-				//diag_log format["DEBUG Rotate BUILDING POS: %1", _position];			
-			};
-
-		};
-
-		if(_zheightchanged) then {
-			if (!helperDetach) then {
-			detach _objectHelper;
-			};
-
-			_position = getPosATL _objectHelper;
-
-			if(_zheightdirection == "up") then {
-				_position set [2,((_position select 2)+0.1)];
-				_objHDiff = _objHDiff + 0.1;
-			};
-			if(_zheightdirection == "down") then {
-				_position set [2,((_position select 2)-0.1)];
-				_objHDiff = _objHDiff - 0.1;
-			};
-
-			if(_zheightdirection == "up_alt") then {
-				_position set [2,((_position select 2)+1)];
-				_objHDiff = _objHDiff + 1;
-			};
-			if(_zheightdirection == "down_alt") then {
-				_position set [2,((_position select 2)-1)];
-				_objHDiff = _objHDiff - 1;
-			};
-
-			if(_zheightdirection == "up_ctrl") then {
-				_position set [2,((_position select 2)+0.01)];
-				_objHDiff = _objHDiff + 0.01;
-			};
-			if(_zheightdirection == "down_ctrl") then {
-				_position set [2,((_position select 2)-0.01)];
-				_objHDiff = _objHDiff - 0.01;
-			};
-
-			_objectHelper setDir (getDir _objectHelper);
-
-			if((_isAllowedUnderGround == 0) && ((_position select 2) < 0)) then {
-				_position set [2,0];
-			};
-
-			_objectHelper setPosATL _position;
-
-			//diag_log format["DEBUG Change BUILDING POS: %1", _position];
-
-			if (!helperDetach) then {
-			_objectHelper attachTo [player];
-			};
-		};
-
+ 
+if(_rotate) then {
+_object setDir _dir;
+_object setPosATL _position;
+};
+ 
+if(_zheightchanged) then {
+detach _object;
+ 
+_position = getPosATL _object;
+ 
+if(_zheightdirection == "up") then {
+_position set [2,((_position select 2)+0.1)];
+_objHDiff = _objHDiff + 0.1;
+};
+if(_zheightdirection == "down") then {
+_position set [2,((_position select 2)-0.1)];
+_objHDiff = _objHDiff - 0.1;
+};
+ 
+if(_zheightdirection == "up_alt") then {
+_position set [2,((_position select 2)+1)];
+_objHupDiff = _objHupDiff + 1;
+};
+if(_zheightdirection == "down_alt") then {
+_position set [2,((_position select 2)-1)];
+_objHDiff = _objHDiff - 1;
+};
+ 
+if(_zheightdirection == "up_ctrl") then {
+_position set [2,((_position select 2)+0.01)];
+_objHupDiff = _objHupDiff + 0.01;
+};
+if(_zheightdirection == "down_ctrl") then {
+_position set [2,((_position select 2)-0.01)];
+_objHDiff = _objHDiff - 0.01;
+};
+ 
+_object setDir (getDir _object);
+_object setPosATL _position;
+_object attachTo [player];
+};
  
 sleep 0.5;
  
@@ -428,28 +313,22 @@ detach _object;
 _dir = getDir _object;
 _position = getPosATL _object;
 deleteVehicle _object;
-detach _objectHelper;
-deleteVehicle _objectHelper;
 };
  
-if(_location1 distance _location2 > 10) exitWith {
+if(_location1 distance _location2 > 5) exitWith {
 _isOk = false;
 _cancel = true;
-_reason = "You've moved to far away from where you started building (within 10 meters)";
+_reason = "You've moved to far away from where you started building (within 5 meters)";
 detach _object;
 deleteVehicle _object;
-detach _objectHelper;
-deleteVehicle _objectHelper;
 };
  
-if(abs(_objHDiff) > 15) exitWith {
+if(abs(_objHDiff) > 5) exitWith {
 _isOk = false;
 _cancel = true;
-_reason = "Cannot move up or down more than 15 meters";
+_reason = "Cannot move up or down more than 5 meters";
 detach _object;
 deleteVehicle _object;
-detach _objectHelper;
-deleteVehicle _objectHelper;
 };
  
 if (player getVariable["combattimeout", 0] >= time) exitWith {
@@ -458,8 +337,6 @@ _cancel = true;
 _reason = (localize "str_epoch_player_43");
 detach _object;
 deleteVehicle _object;
-detach _objectHelper;
-deleteVehicle _objectHelper;
 };
  
 if (DZE_cancelBuilding) exitWith {
@@ -468,8 +345,6 @@ _cancel = true;
 _reason = "Cancelled building.";
 detach _object;
 deleteVehicle _object;
-detach _objectHelper;
-deleteVehicle _objectHelper;
 };
 };
  
@@ -480,7 +355,6 @@ if (isOnRoad _position) then { _cancel = true; _reason = "Cannot build on a road
  
 // No building in trader zones
 if(!canbuild) then { _cancel = true; _reason = "Cannot build in a trader zone."; };
-
  
 if(!_cancel) then {
 
@@ -495,7 +369,6 @@ _location = _position;
 _tmpbuilt setPosATL _location;
 
 cutText [format[(localize "str_epoch_player_138"),_text], "PLAIN DOWN"];
-
  
 player playActionNow "Medic";
 [player,"repair",0,false,10] call dayz_zombieSpeak;
@@ -505,12 +378,11 @@ player playActionNow "Medic";
  
 _tmpbuilt setVariable ["OEMPos",_location,true];
 _tmpbuilt setVariable ["CharacterID",dayz_characterID,true];
-_tmpbuilt setVariable ["ownerPUID",_playerUID,true];
-
+ 
 _charID = dayz_characterID;
 _activatingPlayer = player;
  
-PVDZE_obj_Publish = [dayz_characterID,_tmpbuilt,[_dir,_location,_playerUID],_classname];
+PVDZE_obj_Publish = [dayz_characterID,_tmpbuilt,[_dir,_location],_classname];
 publicVariableServer "PVDZE_obj_Publish";
  
 cutText [format["Your build was successful!"], "PLAIN DOWN",3];
