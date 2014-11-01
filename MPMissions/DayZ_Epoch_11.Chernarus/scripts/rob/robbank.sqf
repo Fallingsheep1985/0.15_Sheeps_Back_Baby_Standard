@@ -6,7 +6,7 @@ if(isNil "script_in_progress")then{
 };
  
 if(script_in_progress)exitwith{
-        systemChat "This script is only useable once (untill restart)!";
+        systemChat "The Bank is Empty!";
 };
 script_in_progress = true;
 // End Checks if Script is active
@@ -33,7 +33,7 @@ script_in_progress = true;
 	sleep 60;
 	player playActionNow "Medic";
 	sleep 8;
-	if (_failRob == 1)exitWith{
+	if (failRob == 1)exitWith{
 		if(_debugBank == 1) then {
 			systemChat "[DEBUG] Bank Rob Failed.";
 		};
@@ -51,7 +51,7 @@ _gold = "ItemGoldBar";
 _gold10oz = "ItemGoldBar10oz";
 _briefcase = "ItemBriefcase100oz";
 
-	_loot=floor(random 6);
+	_loot= floor(random 6);
 		if (_loot == 0) then {
 			cutText [format["The vault was emptied recently, no big loot, except some silver."], "PLAIN DOWN"];
 			player addMagazine _silver10oz;
@@ -95,6 +95,9 @@ _briefcase = "ItemBriefcase100oz";
 			systemChat "Ting ting ting... The jackpot has been stolen! Bye bye 2 briefcases";
 		};
 	};
+	
+	wait 600;
+	script_in_progress = false;
 	
 	if(_debugBank == 1) then {
 		systemChat "[DEBUG] Robbery Completed, exiting.";

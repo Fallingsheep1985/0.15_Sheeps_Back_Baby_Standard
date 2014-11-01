@@ -9,7 +9,7 @@ if(_debugBank == 1) then {
 waitUntil (_meters >= 50) then {
 	if (_robComplete == 1) exitWith {};
 	if !(_robComplete == 1) exitWith {
-		_failRob = 1;
+		failRob = 1;
 		systemChat "Bank robbery failed.";
 	};
 };
