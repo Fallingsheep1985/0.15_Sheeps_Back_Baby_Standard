@@ -299,6 +299,9 @@ dayz_resetSelfActions = {
 	s_player_manageDoor = -1;
     s_player_bury_human = -1;
 	s_player_butcher_human = -1;
+	s_player_clothes = -1;
+	s_player_bankrob = -1;
+	s_player_butcherz = -1;
 };
 call dayz_resetSelfActions;
 
