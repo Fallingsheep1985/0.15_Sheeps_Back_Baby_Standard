@@ -13,8 +13,7 @@ if (!isDedicated) then {
 	player_updateGui =				compile preprocessFileLineNumbers "scripts\PlotForLifev2\player_updateGui.sqf";
 	player_tentPitch =				compile preprocessFileLineNumbers "scripts\PlotForLifev2\tent_pitch.sqf";
 	player_vaultPitch =				compile preprocessFileLineNumbers "scripts\PlotForLifev2\vault_pitch.sqf";
-	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
-	player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+
 	//Craft from sheds
 	player_craftItem =			compile preprocessFileLineNumbers "fixes\player_craftItem.sqf";
 	//Paint
@@ -22,6 +21,12 @@ if (!isDedicated) then {
 	VehicleColourUpdate =			compile preprocessFileLineNumbers "scripts\Paint\VehicleColourUpdate.sqf";
 	VehicleColourUpdate2 =			compile preprocessFileLineNumbers "scripts\Paint\VehicleColourUpdate2.sqf";
 	player_paint =				compile preprocessFileLineNumbers "scripts\Paint\player_paint.sqf";
+	
+	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
+	
+	player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+	player_humanityMorph =		compile preprocessFileLineNumbers "fixes\player_humanityMorph.sqf";	
+	player_wearClothes =		compile preprocessFileLineNumbers "fixes\player_wearClothes.sqf";
 };
 
 //Journal

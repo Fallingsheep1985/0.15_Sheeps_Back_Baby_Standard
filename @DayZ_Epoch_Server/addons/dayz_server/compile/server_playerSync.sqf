@@ -16,11 +16,12 @@ if (isNull _character) exitWith {
 	diag_log ("Player is Null FAILED: Exiting, player sync: " + str(_character));
 };
 
-_characterID =	_character getVariable ["CharacterID","0"];
-_charPos = 		getPosATL _character;
-_isInVehicle = 	vehicle _character != _character;
-_timeSince = 	0;
-_humanity =		0;
+_characterID =		_character getVariable ["CharacterID","0"];
+_charPos = 			getPosATL _character;
+_isInVehicle = 		vehicle _character != _character;
+_timeSince = 		0;
+_humanity =			0;
+_inTransit =		_character getVariable ["inTransit",false];
 
 //diag_log ("DW_DEBUG: (isnil _characterID): " + str(isnil "_characterID"));
 _name = if (alive _character) then { name _character; } else { "Dead Player"; };
@@ -34,6 +35,10 @@ if (isnil "_characterID") exitWith {
 
 if (_characterID == "0") exitWith {
 	diag_log ("ERROR: Cannot Sync Character " + (_name) + " as no characterID");
+};
+
+if (_inTransit) exitWith {
+    diag_log ("NOTICE: Cannot update " + (_name) + ", player is in transit");
 };
 
 private["_debug","_distance"];
