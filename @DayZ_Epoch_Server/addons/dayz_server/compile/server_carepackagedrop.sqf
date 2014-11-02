@@ -60,7 +60,7 @@ _lootRadius = 1;
               _itemChance = [0.01 ,0.01 ,0.01 ,0.03 ,0.03 ,0.03 ,0.03 ,0.03 ,0.03 ,0.03 ,0.03 ,0.06 ,0.06 ,0.06 ,0.1 ,0.1 ,0.1 ,0.1 ,0.12 ,0.12 ,0.12 ,0.15 ,0.15 ,0.15 ,0.18 ,0.18 ,0.18 ,0.18 ,0.18 ,0.18 ,0.2 ,0.2 ,0.2 ,0.25 ,0.25];
  
               _weights = [];
-              _weights = [_itemType,_itemChance] call fnc_buildWeightedArray;
+              _weights = [_itemTypes,_itemChance] call fnc_buildWeightedArray;
               _cntWeights = count _weights;
              
 
