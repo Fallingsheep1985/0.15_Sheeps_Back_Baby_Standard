@@ -1,8 +1,8 @@
 FIX SCRIPTS
 
 PAINT
-Alchemy build
-Deploy Bike
+Alchemy build - fixed
+Deploy Bike - fixed
 bank robbery
 
 
