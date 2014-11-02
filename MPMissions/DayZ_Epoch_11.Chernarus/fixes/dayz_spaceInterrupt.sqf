@@ -119,7 +119,7 @@ if (_dikCode in (actionKeys "GetOver")) then {
 //if (_dikCode == 57) then {_handled = true}; // space
 //if (_dikCode in actionKeys 'MoveForward' or _dikCode in actionKeys 'MoveBack') then {r_interrupt = true};
 if (_dikCode == 210) then {
-		createDialog "horde_journal_front_cover";
+		//createDialog "horde_journal_front_cover";
 };
 
 if (_dikCode in actionKeys "ForceCommandingMode") then {_handled = true};
@@ -141,7 +141,7 @@ if (_dikCode in actionKeys "Chat" and (diag_tickTime - dayz_lastCheckBit > 10)) 
 };
 if (_dikCode in actionKeys "User20" and (diag_tickTime - dayz_lastCheckBit > 5)) then {
 	dayz_lastCheckBit = diag_tickTime;
-	createDialog "horde_journal_front_cover";
+	//createDialog "horde_journal_front_cover";
 };
 
 // numpad 8 0x48 now pgup 0xC9 1
@@ -207,6 +207,12 @@ if (_dikCode == 0x9D) then {
 	 if (dialog) then {closeDialog 0;groupManagementActive = false;} else {execVM "scripts\dzgm\loadGroupManagement.sqf";};
 	};
 };
+if(JournalScript)then{
+//Journal
+if (_dikCode == 0x24) then {
+createDialog "horde_journal_front_cover";
+};
+};
 
 //Debug Monitor
 if (_dikCode == 0x44) then {
@@ -218,13 +224,34 @@ if (_dikCode == 0x44) then {
 		[] spawn fnc_debug;
 	};
 };
+
+			if (_dikCode == 0x3F) then {
+				PreviewLoop = false;
+				(findDisplay 46) displayRemoveEventHandler ['KeyDown', PreviewAbortHotkey];
+				(findDisplay 46) displayRemoveEventHandler ['KeyDown', PreviewRotateHotkey];
+				(findDisplay 46) displayRemoveEventHandler ['KeyDown', PreviewZoomHotkey];
+				VehiclePreview_Camera cameraEffect ["terminate","back"];
+				camDestroy VehiclePreview_Camera;
+				SkinPreview_Camera cameraEffect ["terminate","back"];
+				camDestroy SkinPreview_Camera;
+				player setVariable["Preview",false,true];
+				deleteVehicle previewUnit;
+				deleteVehicle previewVehicle;
+				previewVehicle = objNull;
+				previewUnit = objNull;
+				_handled = true;
+			};
+
 //Advanced alchemy
-// num 1 or 3 above qwerty
+// num 1, 2 or 3 above qwerty
 if (_dikCode == 0x02) then {
-AAC_1 = true;
+	AAC_1 = true;
+};
+if (_dikCode == 0x03) then {
+	AAC_2 = true;
 };
 if (_dikCode == 0x04) then {
-AAC_3 = true;
+	AAC_3 = true;
 };
 
 _handled

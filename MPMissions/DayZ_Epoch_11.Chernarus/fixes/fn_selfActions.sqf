@@ -173,20 +173,6 @@ if(AnimateSUVscript)then{
 	};
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////ANIMATED MV22 & SUV HATCH END////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////Bank Robbery START/////////////////////////////////////////
-if (RobBankScript) then{
-_bankrobbery = cursorTarget isKindOf "Notebook";
-    if ((speed player <= 1) && _bankrobbery && (player distance cursorTarget < 5)) then {
-        if (s_player_bankrob < 0) then {
-            s_player_bankrob = player addAction ["Rob the bank","scripts\rob\robbank.sqf",cursorTarget, 0, false, true, "",""];
-        };
-    } else {
-       
-        player removeAction s_player_bankrob;
-		s_player_bankrob = -1;
-    };
-};
-//////////////////////////////////////////////////////Bank Robbery END//////////////////////////////////////////////
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
 if (!isNull _nearLight) then {
@@ -1035,6 +1021,27 @@ if (CannibalismScript) then {
 		{player removeAction _x} count s_player_parts;s_player_parts = [];
 		s_player_parts_crtl = -1;
 	};
+if(NOSScript)then{
+	_isaCar = _cursorTarget isKindOf "Car";
+	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
+	    _hasNOSitems = true;
+	} else {
+	    _hasNOSitems = false;
+	};
+	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
+	//RPT client spam fix
+	if (!isNil "_isNOSinstalled") then {
+		if (_isaCar && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
+			if (s_player_nitroInstall < 0) then {
+				s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
+			};
+		} else {
+				
+			player removeAction s_player_nitroInstall;
+			s_player_nitroInstall = -1;
+		};
+	};
+};
 	if(dayz_tameDogs) then {
 		
 		//Dog
@@ -1097,6 +1104,20 @@ if (CannibalismScript) then {
 			s_player_followdog = -1;
 		};
 	};
+////////////////////////////////////////////////////////Bank Robbery START/////////////////////////////////////////
+if (RobBankScript) then{
+_bankrobbery = cursorTarget isKindOf "Notebook";
+    if ((speed player <= 1) && _bankrobbery && (player distance cursorTarget < 5)) then {
+        if (s_player_bankrob < 0) then {
+            s_player_bankrob = player addAction ["Rob the bank","scripts\rob\robbank.sqf",cursorTarget, 0, false, true, "",""];
+        };
+    } else {
+       
+        player removeAction s_player_bankrob;
+		s_player_bankrob = -1;
+    };
+};
+//////////////////////////////////////////////////////Bank Robbery END//////////////////////////////////////////////
 } else {
 	//Engineering
 	{dayz_myCursorTarget removeAction _x} count s_player_repairActions;s_player_repairActions = [];
@@ -1311,28 +1332,4 @@ if(ZombieBombScript)then{
 		zombieBomb = -1;
 	};
 };
-if(NOSScript)then{
-	//RPT Client spam fix
-	_cursortarget = cursorTarget;
-	_magazinesPlayer = magazines player;
-	
-	_isaCar = _cursorTarget isKindOf "Car";
-	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
-	    _hasNOSitems = true;
-	} else {
-	    _hasNOSitems = false;
-	};
-	_isNOSinstalled = _cursorTarget getVariable ["nitroinstalled", 0];
-	//RPT client spam fix
-	if (!isNil "_isNOSinstalled") then {
-		if (_isaCar && !locked _cursorTarget && _hasNOSitems && _isNOSinstalled == 0) then {
-			if (s_player_nitroInstall < 0) then {
-				s_player_nitroInstall = player addAction [("<t color=""#39C1F3"">" + ("Install NOS boost") +"</t>"), "scripts\NOS\nitroinstall.sqf",_cursorTarget, 999, true, false, "",""];
-			};
-		} else {
-				
-			player removeAction s_player_nitroInstall;
-			s_player_nitroInstall = -1;
-		};
-	};
-};
+
