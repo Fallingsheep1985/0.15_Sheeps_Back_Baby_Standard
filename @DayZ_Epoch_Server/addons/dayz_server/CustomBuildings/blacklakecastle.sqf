@@ -1,5 +1,14 @@
 if (isServer) then{
 
+//Marker on Map
+_blacklakecastle = createMarker ["blacklakecastle", [13376.6, 12000.2]];
+_blacklakecastle setMarkerText "Black Lake Castle";
+_blacklakecastle setMarkerType "mil_dot";
+_blacklakecastle setMarkerColor "ColorBlack";
+_blacklakecastle setMarkerBrush "Solid";
+_blacklakecastle setMarkerSize [180, 180];
+blacklakecastle = _blacklakecastle ;
+
 _vehicle_4 = objNull;
 if (true) then
 {

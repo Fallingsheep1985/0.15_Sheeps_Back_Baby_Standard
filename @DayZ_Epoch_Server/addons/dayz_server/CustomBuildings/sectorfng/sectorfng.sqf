@@ -4,6 +4,18 @@
 //Thanks to Sarge for his great AI work.
 
 if (isServer) then {
+
+//Marker on Map
+_sectorfng = createMarker ["sectorfng", [6611.9756, 14201.991]];
+_sectorfng setMarkerText "Sector FNG";
+_sectorfng setMarkerShape "RECTANGLE";
+_sectorfng setMarkerType "Flag";
+_sectorfng setMarkerColor "ColorRed";
+_sectorfng setMarkerBrush "Solid";
+_sectorfng setMarkerSize [230, 180];
+sectorfng = _sectorfng;
+
+
 _vehicle_1 = objNull;
 if (true) then
 {

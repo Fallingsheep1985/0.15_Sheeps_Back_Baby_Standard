@@ -1,4 +1,12 @@
 if (isServer) then {
+//Marker on Map
+_altarmilitarybase = createMarker ["altarmilitarybase", [8137.84, 9180.96]];
+_altarmilitarybase setMarkerText "Altar Military Base";
+_altarmilitarybase setMarkerType "mil_dot";
+_altarmilitarybase setMarkerColor "ColorBlack";
+_altarmilitarybase setMarkerBrush "Solid";
+_altarmilitarybase setMarkerSize [180, 180];
+altarmilitarybase = _altarmilitarybase ;
 
 if (true) then
 {

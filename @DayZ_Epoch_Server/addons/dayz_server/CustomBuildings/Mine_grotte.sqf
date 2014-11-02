@@ -3,6 +3,15 @@
 
 if (isServer) then {
 
+//Marker on Map
+_kamenkamine = createMarker ["kamenkamine", [87.26, 1599.11]];
+_kamenkamine setMarkerText "Kamenka Mine";
+_kamenkamine setMarkerType "mil_dot";
+_kamenkamine setMarkerColor "ColorBlack";
+_kamenkamine setMarkerBrush "Solid";
+_kamenkamine setMarkerSize [180, 180];
+kamenkamine = _kamenkamine ;
+
 _vehicle_0 = objNull;
 if (true) then
 {

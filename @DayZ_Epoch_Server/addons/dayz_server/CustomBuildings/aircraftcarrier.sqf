@@ -1,6 +1,14 @@
 // Goggi Aircraft Carrier
 // by DaddelGoggi
 if (isServer) then {
+//Marker on Map
+_beachedcarrier = createMarker ["beachedcarrier", [8137.84, 9180.96]];
+_beachedcarrier setMarkerText "Beached Carrier";
+_beachedcarrier setMarkerType "mil_dot";
+_beachedcarrier setMarkerColor "ColorBlack";
+_beachedcarrier setMarkerBrush "Solid";
+_beachedcarrier setMarkerSize [180, 180];
+beachedcarrier = _beachedcarrier ;
 
 _vehicle_0 = objNull;
 if (true) then
