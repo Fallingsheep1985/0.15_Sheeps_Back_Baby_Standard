@@ -78,7 +78,8 @@ ON_fnc_convertUID = {
 	private["_number_string","_string_array","_result","_num", "_playertemp"];   // Setup the local variables 
 
 	_playertemp = _this select 0;  // Grab the first parameter sent to the function.
-	_number_string = getPlayerUID _playertemp ; 
+	//_number_string = getPlayerUID _playertemp ;
+	_number_string = getPlayerUIDOld _playertemp ;	
 	_string_array = toArray _number_string;  // Convert the PlayerUID string to a numberic unicode array.
 	_result = ""; 
 
