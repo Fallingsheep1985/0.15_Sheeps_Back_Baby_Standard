@@ -1,7 +1,11 @@
 FIX SCRIPTS
 
-PAINT - rscslider
-sector FNG (EvangeliumBD - replacesbarrels with lamp posts)
+PAINT - rscslider not defined
+
+sector FNG - EvangeliumBD - replacesbarrels with lamp posts
+
 Fix markers - Blackforest Outpost and Altar
+
+zed camo - contiues after players shoot, dosnt break camo, works for admins
 
 
