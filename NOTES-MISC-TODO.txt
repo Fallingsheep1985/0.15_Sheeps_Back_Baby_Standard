@@ -1,10 +1,6 @@
 FIX SCRIPTS
 
 PAINT
-Alchemy build - fixed
-Deploy Bike - fixed
-bank robbery - fixed
-
 
 
 create map markers for custom buildings
