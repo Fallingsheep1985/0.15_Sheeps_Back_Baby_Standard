@@ -74,7 +74,8 @@ class RscProgressF
 
 
 /////////////
-
+#define CT_SLIDER 3
+#define SL_HORZ 0x400
 
 class RscTextT
 {
