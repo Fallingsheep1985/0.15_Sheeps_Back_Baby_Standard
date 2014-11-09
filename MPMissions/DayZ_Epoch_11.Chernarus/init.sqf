@@ -100,7 +100,18 @@ ELE_RequiredBuildTools = ["ItemToolbox", "ItemCrowbar"]; // required tools for b
 ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "ItemJerrycan"]; // required items to build an elevator
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
-EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
+
+EpochEvents = [
+["any","any","any","any",30,"crash_spawner"],
+["any","any","any","any",0,"crash_spawner"],
+["any","any","any","any",25,"crash_spawner"],
+["any","any","any","any",15,"supply_drop"],
+["any","any","any","any",50,"supply_drop"],
+["any","any","any","any",10,"FMission_Launcher1"],
+["any","any","any","any",20,"FMission_Launcher1"],
+["any","any","any","any",35,"FMission_Launcher1"],
+["any","any","any","any",50,"FMission_Launcher1"]
+];
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
 

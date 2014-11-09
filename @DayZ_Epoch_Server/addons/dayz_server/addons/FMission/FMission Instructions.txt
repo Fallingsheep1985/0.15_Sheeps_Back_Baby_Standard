@@ -1,0 +1,94 @@
+---------------------------------------------------------------------------------
+
+FMission 1.1
+By Foamy
+
+*******************************************************************************
+DISCLAIMER:
+
+Do Not Change the base FMission Files. You may use the scripts to make any mission 
+type you want but I ask that the base files be left alone so the functionality can 
+be maintained.
+
+You may create new files FROM the original files to add on to your own personal Mission 
+system but do NOT alter the originals within FMission.  
+
+*******************************************************************************
+
+	
+Section 1. FMission Installation Instructions
+Section 2. Using FMission
+Section 3. Upgrading FMission
+
+Last Updated: 3/21/2014
+---------------------------------------------------------------------------------
+
+Section 1. FMission Installation Instructions
+
+1. Download the entire FMission folder and all it's contents to your desktop.
+2. Copy the FMission folder and all it's contents into the addons folder of your server
+3. Move the files "FMission_LauncherX.sqf" from the root FMission Directory into your "modules" folder
+
+(Note: FMission_LauncherX.sqf refers to FMission_Launcher1.sqf, FMission_Launcher2.sqf and FMission_Launcher3.sqf)
+FMission currently allows up to 3 missions at once.
+
+FMission Mission Classes are as follows:
+M1 = Main Missions
+M2 = Side Missions
+M3 = Minor Hunt/Gather Missions
+
+4. Edit "FMission_LauncherX.sqf" to include the missions you want it to cycle.
+Example:
+_scriptslist = 
+		[
+		"\z\addons\dayz_server\addons\Fmission\Missions\M1\Foamy\FMission_Mission1_Hostage_Rescue.sqf",
+		"\z\addons\dayz_server\addons\Fmission\Missions\M1\Foamy\mission_name.sqf",
+		"\z\addons\dayz_server\addons\Fmission\Missions\M1\Foamy\mission_name.sqf",
+		"\z\addons\dayz_server\addons\Fmission\Missions\M1\Foamy\mission_name.sqf"
+		];
+
+---------------------------------------------------------------------------------
+
+Section 2. Using FMission
+
+1. Fmission is launched by adding an entry to "init.sqf" in the Epoch Scheduler.
+
+The following Example would run the chance to spawn each mission type once an hour. 
+
+EpochEvents = 
+[
+["any","any","any","any",20,"FMission_Launcher1"],
+["any","any","any","any",40,"FMission_Launcher2"],
+["any","any","any","any",59,"FMission_Launcher3"]
+];
+
+
+You can easily add multiple times per hour for each mission type.
+
+EpochEvents = 
+[
+["any","any","any","any",1,"FMission_Launcher1"],
+["any","any","any","any",20,"FMission_Launcher1"],
+["any","any","any","any",40,"FMission_Launcher1"],
+
+["any","any","any","any",10,"FMission_Launcher2"],
+["any","any","any","any",50,"FMission_Launcher2"],
+
+["any","any","any","any",5,"FMission_Launcher3"],
+["any","any","any","any",35,"FMission_Launcher3"]
+];
+
+---------------------------------------------------------------------------------
+
+Section 3. Upgrading FMission
+
+As new authors make missions they can create their own folder to hold their missions which 
+can be copied into the main "Missions" folder of FMission. This way users can create playlists 
+of missions from the folders and authors can make changes to their folder only thus they don't 
+change FMission itself.
+
+All new additions to FMission are individual tools thus will not break FMission itself. The tools 
+will allow novice scripters to create their own robust missions using the pre-made tools and templates.
+
+
+---------------------------------------------------------------------------------
