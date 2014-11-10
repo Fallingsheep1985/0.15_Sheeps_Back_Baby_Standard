@@ -1593,7 +1593,7 @@ if (true) then
 _vehicle_1076 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6454.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6454.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1076 = _this;
   _this setDir 90;
   _this setPos [6454.5986, 14067.461];
@@ -1601,7 +1601,7 @@ if (true) then
 _vehicle_1080 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6460.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6460.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1080 = _this;
   _this setDir 90;
   _this setPos [6460.7988, 14067.461];
@@ -1609,7 +1609,7 @@ if (true) then
 _vehicle_1081 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6467.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6467.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1081 = _this;
   _this setDir 90;
   _this setPos [6467.001, 14067.461];
@@ -1617,7 +1617,7 @@ if (true) then
 _vehicle_1084 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6473.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6473.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1084 = _this;
   _this setDir 90;
   _this setPos [6473.1992, 14067.461];
@@ -1625,7 +1625,7 @@ if (true) then
 _vehicle_1085 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6479.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6479.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1085 = _this;
   _this setDir 90;
   _this setPos [6479.3984, 14067.461];
@@ -1633,7 +1633,7 @@ if (true) then
 _vehicle_1088 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6485.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6485.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1088 = _this;
   _this setDir 90;
   _this setPos [6485.5986, 14067.461];
@@ -1641,7 +1641,7 @@ if (true) then
 _vehicle_1089 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6491.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6491.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1089 = _this;
   _this setDir 90;
   _this setPos [6491.7988, 14067.461];
@@ -1649,7 +1649,7 @@ if (true) then
 _vehicle_1092 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6498.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6498.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1092 = _this;
   _this setDir 90;
   _this setPos [6498.001, 14067.461];
@@ -1657,7 +1657,7 @@ if (true) then
 _vehicle_1093 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6504.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6504.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1093 = _this;
   _this setDir 90;
   _this setPos [6504.1992, 14067.461];
@@ -1665,7 +1665,7 @@ if (true) then
 _vehicle_1096 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6510.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6510.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1096 = _this;
   _this setDir 90;
   _this setPos [6510.3984, 14067.461];
@@ -1673,7 +1673,7 @@ if (true) then
 _vehicle_1097 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6516.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6516.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_1097 = _this;
   _this setDir 90;
   _this setPos [6516.5986, 14067.461];
@@ -1681,7 +1681,7 @@ if (true) then
 _vehicle_10100 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6522.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6522.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10100 = _this;
   _this setDir 90;
   _this setPos [6522.7988, 14067.461];
@@ -1689,7 +1689,7 @@ if (true) then
 _vehicle_10101 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6529.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6529.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10101 = _this;
   _this setDir 90;
   _this setPos [6529.001, 14067.461];
@@ -1697,7 +1697,7 @@ if (true) then
 _vehicle_10104 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6535.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6535.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10104 = _this;
   _this setDir 90;
   _this setPos [6535.1992, 14067.461];
@@ -1705,7 +1705,7 @@ if (true) then
 _vehicle_10105 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6541.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6541.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10105 = _this;
   _this setDir 90;
   _this setPos [6541.3984, 14067.461];
@@ -1713,7 +1713,7 @@ if (true) then
 _vehicle_10108 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6547.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6547.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10108 = _this;
   _this setDir 90;
   _this setPos [6547.5986, 14067.461];
@@ -1721,7 +1721,7 @@ if (true) then
 _vehicle_10109 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6553.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6553.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10109 = _this;
   _this setDir 90;
   _this setPos [6553.7988, 14067.461];
@@ -1729,7 +1729,7 @@ if (true) then
 _vehicle_10112 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6560.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6560.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10112 = _this;
   _this setDir 90;
   _this setPos [6560.001, 14067.461];
@@ -1737,7 +1737,7 @@ if (true) then
 _vehicle_10113 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6566.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6566.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10113 = _this;
   _this setDir 90;
   _this setPos [6566.1992, 14067.461];
@@ -1745,7 +1745,7 @@ if (true) then
 _vehicle_10116 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6572.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6572.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10116 = _this;
   _this setDir 90;
   _this setPos [6572.3984, 14067.461];
@@ -1753,7 +1753,7 @@ if (true) then
 _vehicle_10117 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6578.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6578.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10117 = _this;
   _this setDir 90;
   _this setPos [6578.5986, 14067.461];
@@ -1761,7 +1761,7 @@ if (true) then
 _vehicle_10120 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6584.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6584.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10120 = _this;
   _this setDir 90;
   _this setPos [6584.7988, 14067.461];
@@ -1769,7 +1769,7 @@ if (true) then
 _vehicle_10121 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6591.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6591.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10121 = _this;
   _this setDir 90;
   _this setPos [6591.001, 14067.461];
@@ -1777,7 +1777,7 @@ if (true) then
 _vehicle_10124 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6597.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6597.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10124 = _this;
   _this setDir 90;
   _this setPos [6597.1992, 14067.461];
@@ -1785,7 +1785,7 @@ if (true) then
 _vehicle_10125 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6603.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6603.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10125 = _this;
   _this setDir 90;
   _this setPos [6603.3984, 14067.461];
@@ -1793,7 +1793,7 @@ if (true) then
 _vehicle_10128 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6609.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6609.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10128 = _this;
   _this setDir 90;
   _this setPos [6609.5986, 14067.461];
@@ -1801,7 +1801,7 @@ if (true) then
 _vehicle_10129 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6615.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6615.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10129 = _this;
   _this setDir 90;
   _this setPos [6615.7988, 14067.461];
@@ -1809,7 +1809,7 @@ if (true) then
 _vehicle_10132 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6622.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6622.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10132 = _this;
   _this setDir 90;
   _this setPos [6622.001, 14067.461];
@@ -1817,7 +1817,7 @@ if (true) then
 _vehicle_10133 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6628.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6628.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10133 = _this;
   _this setDir 90;
   _this setPos [6628.1992, 14067.461];
@@ -1825,7 +1825,7 @@ if (true) then
 _vehicle_10136 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6634.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6634.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10136 = _this;
   _this setDir 90;
   _this setPos [6634.3984, 14067.461];
@@ -1833,7 +1833,7 @@ if (true) then
 _vehicle_10137 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6640.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6640.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10137 = _this;
   _this setDir 90;
   _this setPos [6640.5986, 14067.461];
@@ -1841,7 +1841,7 @@ if (true) then
 _vehicle_10140 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6646.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6646.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10140 = _this;
   _this setDir 90;
   _this setPos [6646.7988, 14067.461];
@@ -1849,7 +1849,7 @@ if (true) then
 _vehicle_10141 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6653.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6653.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10141 = _this;
   _this setDir 90;
   _this setPos [6653.001, 14067.461];
@@ -1857,7 +1857,7 @@ if (true) then
 _vehicle_10144 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6659.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6659.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10144 = _this;
   _this setDir 90;
   _this setPos [6659.1992, 14067.461];
@@ -1865,7 +1865,7 @@ if (true) then
 _vehicle_10145 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6665.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6665.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10145 = _this;
   _this setDir 90;
   _this setPos [6665.3984, 14067.461];
@@ -1873,7 +1873,7 @@ if (true) then
 _vehicle_10148 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6671.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6671.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10148 = _this;
   _this setDir 90;
   _this setPos [6671.5986, 14067.461];
@@ -1881,7 +1881,7 @@ if (true) then
 _vehicle_10149 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6677.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6677.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10149 = _this;
   _this setDir 90;
   _this setPos [6677.7988, 14067.461];
@@ -1889,7 +1889,7 @@ if (true) then
 _vehicle_10152 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6684.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6684.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10152 = _this;
   _this setDir 90;
   _this setPos [6684.001, 14067.461];
@@ -1897,7 +1897,7 @@ if (true) then
 _vehicle_10153 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6690.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6690.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10153 = _this;
   _this setDir 90;
   _this setPos [6690.1992, 14067.461];
@@ -1905,7 +1905,7 @@ if (true) then
 _vehicle_10156 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6696.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6696.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10156 = _this;
   _this setDir 90;
   _this setPos [6696.3984, 14067.461];
@@ -1913,7 +1913,7 @@ if (true) then
 _vehicle_10157 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6702.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6702.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10157 = _this;
   _this setDir 90;
   _this setPos [6702.5986, 14067.461];
@@ -1921,7 +1921,7 @@ if (true) then
 _vehicle_10160 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6708.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6708.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10160 = _this;
   _this setDir 90;
   _this setPos [6708.7988, 14067.461];
@@ -1929,7 +1929,7 @@ if (true) then
 _vehicle_10161 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6715.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6715.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10161 = _this;
   _this setDir 90;
   _this setPos [6715.001, 14067.461];
@@ -1937,7 +1937,7 @@ if (true) then
 _vehicle_10164 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6721.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6721.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10164 = _this;
   _this setDir 90;
   _this setPos [6721.1992, 14067.461];
@@ -1945,7 +1945,7 @@ if (true) then
 _vehicle_10165 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6727.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6727.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10165 = _this;
   _this setDir 90;
   _this setPos [6727.3984, 14067.461];
@@ -1953,7 +1953,7 @@ if (true) then
 _vehicle_10168 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6733.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6733.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10168 = _this;
   _this setDir 90;
   _this setPos [6733.5986, 14067.461];
@@ -1961,7 +1961,7 @@ if (true) then
 _vehicle_10169 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6739.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6739.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10169 = _this;
   _this setDir 90;
   _this setPos [6739.7988, 14067.461];
@@ -1969,7 +1969,7 @@ if (true) then
 _vehicle_10172 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6746.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6746.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10172 = _this;
   _this setDir 90;
   _this setPos [6746.001, 14067.461];
@@ -1977,7 +1977,7 @@ if (true) then
 _vehicle_10173 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6752.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6752.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10173 = _this;
   _this setDir 90;
   _this setPos [6752.1992, 14067.461];
@@ -1985,7 +1985,7 @@ if (true) then
 _vehicle_10176 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6758.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6758.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10176 = _this;
   _this setDir 90;
   _this setPos [6758.3984, 14067.461];
@@ -1993,7 +1993,7 @@ if (true) then
 _vehicle_10177 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6764.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6764.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10177 = _this;
   _this setDir 90;
   _this setPos [6764.5986, 14067.461];
@@ -2001,7 +2001,7 @@ if (true) then
 _vehicle_10180 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6770.7988, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6770.7988, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10180 = _this;
   _this setDir 90;
   _this setPos [6770.7988, 14067.461];
@@ -2009,7 +2009,7 @@ if (true) then
 _vehicle_10181 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6777.001, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6777.001, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10181 = _this;
   _this setDir 90;
   _this setPos [6777.001, 14067.461];
@@ -2017,7 +2017,7 @@ if (true) then
 _vehicle_10184 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6783.1992, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6783.1992, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10184 = _this;
   _this setDir 90;
   _this setPos [6783.1992, 14067.461];
@@ -2025,7 +2025,7 @@ if (true) then
 _vehicle_10185 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6789.3984, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6789.3984, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10185 = _this;
   _this setDir 90;
   _this setPos [6789.3984, 14067.461];
@@ -2033,7 +2033,7 @@ if (true) then
 _vehicle_10188 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6795.5986, 14067.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6795.5986, 14067.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10188 = _this;
   _this setDir 90;
   _this setPos [6795.5986, 14067.461];
@@ -2041,7 +2041,7 @@ if (true) then
 _vehicle_10276 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6454.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6454.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10276 = _this;
   _this setDir 90;
   _this setPos [6454.5986, 14339.461];
@@ -2049,7 +2049,7 @@ if (true) then
 _vehicle_10280 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6460.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6460.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10280 = _this;
   _this setDir 90;
   _this setPos [6460.7988, 14339.461];
@@ -2057,7 +2057,7 @@ if (true) then
 _vehicle_10281 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6467.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6467.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10281 = _this;
   _this setDir 90;
   _this setPos [6467.001, 14339.461];
@@ -2065,7 +2065,7 @@ if (true) then
 _vehicle_10284 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6473.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6473.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10284 = _this;
   _this setDir 90;
   _this setPos [6473.1992, 14339.461];
@@ -2073,7 +2073,7 @@ if (true) then
 _vehicle_10285 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6479.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6479.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10285 = _this;
   _this setDir 90;
   _this setPos [6479.3984, 14339.461];
@@ -2081,7 +2081,7 @@ if (true) then
 _vehicle_10288 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6485.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6485.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10288 = _this;
   _this setDir 90;
   _this setPos [6485.5986, 14339.461];
@@ -2089,7 +2089,7 @@ if (true) then
 _vehicle_10289 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6491.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6491.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10289 = _this;
   _this setDir 90;
   _this setPos [6491.7988, 14339.461];
@@ -2097,7 +2097,7 @@ if (true) then
 _vehicle_10292 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6498.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6498.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10292 = _this;
   _this setDir 90;
   _this setPos [6498.001, 14339.461];
@@ -2105,7 +2105,7 @@ if (true) then
 _vehicle_10293 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6504.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6504.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10293 = _this;
   _this setDir 90;
   _this setPos [6504.1992, 14339.461];
@@ -2113,7 +2113,7 @@ if (true) then
 _vehicle_10296 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6510.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6510.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10296 = _this;
   _this setDir 90;
   _this setPos [6510.3984, 14339.461];
@@ -2121,7 +2121,7 @@ if (true) then
 _vehicle_10297 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6516.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6516.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_10297 = _this;
   _this setDir 90;
   _this setPos [6516.5986, 14339.461];
@@ -2129,7 +2129,7 @@ if (true) then
 _vehicle_102100 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6522.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6522.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102100 = _this;
   _this setDir 90;
   _this setPos [6522.7988, 14339.461];
@@ -2137,7 +2137,7 @@ if (true) then
 _vehicle_102101 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6529.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6529.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102101 = _this;
   _this setDir 90;
   _this setPos [6529.001, 14339.461];
@@ -2145,7 +2145,7 @@ if (true) then
 _vehicle_102104 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6535.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6535.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102104 = _this;
   _this setDir 90;
   _this setPos [6535.1992, 14339.461];
@@ -2153,7 +2153,7 @@ if (true) then
 _vehicle_102105 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6541.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6541.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102105 = _this;
   _this setDir 90;
   _this setPos [6541.3984, 14339.461];
@@ -2161,7 +2161,7 @@ if (true) then
 _vehicle_102108 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6547.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6547.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102108 = _this;
   _this setDir 90;
   _this setPos [6547.5986, 14339.461];
@@ -2169,7 +2169,7 @@ if (true) then
 _vehicle_102109 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6553.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6553.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102109 = _this;
   _this setDir 90;
   _this setPos [6553.7988, 14339.461];
@@ -2177,7 +2177,7 @@ if (true) then
 _vehicle_102112 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6560.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6560.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102112 = _this;
   _this setDir 90;
   _this setPos [6560.001, 14339.461];
@@ -2185,7 +2185,7 @@ if (true) then
 _vehicle_102113 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6566.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6566.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102113 = _this;
   _this setDir 90;
   _this setPos [6566.1992, 14339.461];
@@ -2193,7 +2193,7 @@ if (true) then
 _vehicle_102116 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6572.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6572.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102116 = _this;
   _this setDir 90;
   _this setPos [6572.3984, 14339.461];
@@ -2201,7 +2201,7 @@ if (true) then
 _vehicle_102117 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6578.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6578.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102117 = _this;
   _this setDir 90;
   _this setPos [6578.5986, 14339.461];
@@ -2209,7 +2209,7 @@ if (true) then
 _vehicle_102120 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6584.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6584.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102120 = _this;
   _this setDir 90;
   _this setPos [6584.7988, 14339.461];
@@ -2217,7 +2217,7 @@ if (true) then
 _vehicle_102121 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6591.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6591.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102121 = _this;
   _this setDir 90;
   _this setPos [6591.001, 14339.461];
@@ -2225,7 +2225,7 @@ if (true) then
 _vehicle_102124 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6597.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6597.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102124 = _this;
   _this setDir 90;
   _this setPos [6597.1992, 14339.461];
@@ -2233,7 +2233,7 @@ if (true) then
 _vehicle_102125 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6603.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6603.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102125 = _this;
   _this setDir 90;
   _this setPos [6603.3984, 14339.461];
@@ -2241,7 +2241,7 @@ if (true) then
 _vehicle_102128 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6609.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6609.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102128 = _this;
   _this setDir 90;
   _this setPos [6609.5986, 14339.461];
@@ -2249,7 +2249,7 @@ if (true) then
 _vehicle_102129 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6615.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6615.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102129 = _this;
   _this setDir 90;
   _this setPos [6615.7988, 14339.461];
@@ -2257,7 +2257,7 @@ if (true) then
 _vehicle_102132 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6622.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6622.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102132 = _this;
   _this setDir 90;
   _this setPos [6622.001, 14339.461];
@@ -2265,7 +2265,7 @@ if (true) then
 _vehicle_102133 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6628.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6628.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102133 = _this;
   _this setDir 90;
   _this setPos [6628.1992, 14339.461];
@@ -2273,7 +2273,7 @@ if (true) then
 _vehicle_102136 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6634.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6634.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102136 = _this;
   _this setDir 90;
   _this setPos [6634.3984, 14339.461];
@@ -2281,7 +2281,7 @@ if (true) then
 _vehicle_102137 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6640.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6640.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102137 = _this;
   _this setDir 90;
   _this setPos [6640.5986, 14339.461];
@@ -2289,7 +2289,7 @@ if (true) then
 _vehicle_102140 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6646.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6646.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102140 = _this;
   _this setDir 90;
   _this setPos [6646.7988, 14339.461];
@@ -2297,7 +2297,7 @@ if (true) then
 _vehicle_102141 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6653.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6653.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102141 = _this;
   _this setDir 90;
   _this setPos [6653.001, 14339.461];
@@ -2305,7 +2305,7 @@ if (true) then
 _vehicle_102144 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6659.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6659.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102144 = _this;
   _this setDir 90;
   _this setPos [6659.1992, 14339.461];
@@ -2313,7 +2313,7 @@ if (true) then
 _vehicle_102145 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6665.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6665.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102145 = _this;
   _this setDir 90;
   _this setPos [6665.3984, 14339.461];
@@ -2321,7 +2321,7 @@ if (true) then
 _vehicle_102148 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6671.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6671.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102148 = _this;
   _this setDir 90;
   _this setPos [6671.5986, 14339.461];
@@ -2329,7 +2329,7 @@ if (true) then
 _vehicle_102149 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6677.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6677.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102149 = _this;
   _this setDir 90;
   _this setPos [6677.7988, 14339.461];
@@ -2337,7 +2337,7 @@ if (true) then
 _vehicle_102152 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6684.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6684.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102152 = _this;
   _this setDir 90;
   _this setPos [6684.001, 14339.461];
@@ -2345,7 +2345,7 @@ if (true) then
 _vehicle_102153 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6690.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6690.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102153 = _this;
   _this setDir 90;
   _this setPos [6690.1992, 14339.461];
@@ -2353,7 +2353,7 @@ if (true) then
 _vehicle_102156 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6696.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6696.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102156 = _this;
   _this setDir 90;
   _this setPos [6696.3984, 14339.461];
@@ -2361,7 +2361,7 @@ if (true) then
 _vehicle_102157 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6702.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6702.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102157 = _this;
   _this setDir 90;
   _this setPos [6702.5986, 14339.461];
@@ -2369,7 +2369,7 @@ if (true) then
 _vehicle_102160 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6708.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6708.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102160 = _this;
   _this setDir 90;
   _this setPos [6708.7988, 14339.461];
@@ -2377,7 +2377,7 @@ if (true) then
 _vehicle_102161 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6715.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6715.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102161 = _this;
   _this setDir 90;
   _this setPos [6715.001, 14339.461];
@@ -2385,7 +2385,7 @@ if (true) then
 _vehicle_102164 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6721.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6721.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102164 = _this;
   _this setDir 90;
   _this setPos [6721.1992, 14339.461];
@@ -2393,7 +2393,7 @@ if (true) then
 _vehicle_102165 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6727.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6727.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102165 = _this;
   _this setDir 90;
   _this setPos [6727.3984, 14339.461];
@@ -2401,7 +2401,7 @@ if (true) then
 _vehicle_102168 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6733.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6733.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102168 = _this;
   _this setDir 90;
   _this setPos [6733.5986, 14339.461];
@@ -2409,7 +2409,7 @@ if (true) then
 _vehicle_102169 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6739.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6739.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102169 = _this;
   _this setDir 90;
   _this setPos [6739.7988, 14339.461];
@@ -2417,7 +2417,7 @@ if (true) then
 _vehicle_102172 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6746.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6746.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102172 = _this;
   _this setDir 90;
   _this setPos [6746.001, 14339.461];
@@ -2425,7 +2425,7 @@ if (true) then
 _vehicle_102173 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6752.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6752.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102173 = _this;
   _this setDir 90;
   _this setPos [6752.1992, 14339.461];
@@ -2433,7 +2433,7 @@ if (true) then
 _vehicle_102176 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6758.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6758.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102176 = _this;
   _this setDir 90;
   _this setPos [6758.3984, 14339.461];
@@ -2441,7 +2441,7 @@ if (true) then
 _vehicle_102177 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6764.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6764.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102177 = _this;
   _this setDir 90;
   _this setPos [6764.5986, 14339.461];
@@ -2449,7 +2449,7 @@ if (true) then
 _vehicle_102180 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6770.7988, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6770.7988, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102180 = _this;
   _this setDir 90;
   _this setPos [6770.7988, 14339.461];
@@ -2457,7 +2457,7 @@ if (true) then
 _vehicle_102181 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6777.001, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6777.001, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102181 = _this;
   _this setDir 90;
   _this setPos [6777.001, 14339.461];
@@ -2465,7 +2465,7 @@ if (true) then
 _vehicle_102184 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6783.1992, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6783.1992, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102184 = _this;
   _this setDir 90;
   _this setPos [6783.1992, 14339.461];
@@ -2473,7 +2473,7 @@ if (true) then
 _vehicle_102185 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6789.3984, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6789.3984, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102185 = _this;
   _this setDir 90;
   _this setPos [6789.3984, 14339.461];
@@ -2481,7 +2481,7 @@ if (true) then
 _vehicle_102188 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6795.5986, 14339.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6795.5986, 14339.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102188 = _this;
   _this setDir 90;
   _this setPos [6795.5986, 14339.461];
@@ -2489,574 +2489,574 @@ if (true) then
 _vehicle_102190 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14069.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14069.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102190 = _this;
   _this setPos [6800.5986, 14069.062];
 };
 _vehicle_102192 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14075.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14075.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102192 = _this;
   _this setPos [6800.5986, 14075.261];
 };
 _vehicle_102193 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14081.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14081.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102193 = _this;
   _this setPos [6800.5986, 14081.461];
 };
 _vehicle_102194 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14087.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14087.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102194 = _this;
   _this setPos [6800.5986, 14087.661];
 };
 _vehicle_102197 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14093.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14093.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102197 = _this;
   _this setPos [6800.5986, 14093.861];
 };
 _vehicle_102199 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14100.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14100.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102199 = _this;
   _this setPos [6800.5986, 14100.062];
 };
 _vehicle_102201 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14106.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14106.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102201 = _this;
   _this setPos [6800.5986, 14106.261];
 };
 _vehicle_102203 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14112.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14112.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102203 = _this;
   _this setPos [6800.5986, 14112.461];
 };
 _vehicle_102195 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14118.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14118.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102195 = _this;
   _this setPos [6800.5986, 14118.661];
 };
 _vehicle_102210 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14124.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14124.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102210 = _this;
   _this setPos [6800.5986, 14124.861];
 };
 _vehicle_102211 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14131.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14131.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102211 = _this;
   _this setPos [6800.5986, 14131.062];
 };
 _vehicle_102212 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14137.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14137.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102212 = _this;
   _this setPos [6800.5986, 14137.261];
 };
 _vehicle_102213 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14143.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14143.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102213 = _this;
   _this setPos [6800.5986, 14143.461];
 };
 _vehicle_102214 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14149.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14149.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102214 = _this;
   _this setPos [6800.5986, 14149.661];
 };
 _vehicle_102220 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14155.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14155.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102220 = _this;
   _this setPos [6800.5986, 14155.861];
 };
 _vehicle_102221 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14162.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14162.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102221 = _this;
   _this setPos [6800.5986, 14162.062];
 };
 _vehicle_102222 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14168.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14168.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102222 = _this;
   _this setPos [6800.5986, 14168.261];
 };
 _vehicle_102223 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14174.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14174.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102223 = _this;
   _this setPos [6800.5986, 14174.461];
 };
 _vehicle_102224 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14180.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14180.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102224 = _this;
   _this setPos [6800.5986, 14180.661];
 };
 _vehicle_102230 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14186.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14186.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102230 = _this;
   _this setPos [6800.5986, 14186.861];
 };
 _vehicle_102231 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14193.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14193.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102231 = _this;
   _this setPos [6800.5986, 14193.062];
 };
 _vehicle_102232 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14199.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14199.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102232 = _this;
   _this setPos [6800.5986, 14199.261];
 };
 _vehicle_102233 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14205.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14205.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102233 = _this;
   _this setPos [6800.5986, 14205.461];
 };
 _vehicle_102234 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14211.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14211.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102234 = _this;
   _this setPos [6800.5986, 14211.661];
 };
 _vehicle_102240 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14217.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14217.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102240 = _this;
   _this setPos [6800.5986, 14217.861];
 };
 _vehicle_102241 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14224.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14224.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102241 = _this;
   _this setPos [6800.5986, 14224.062];
 };
 _vehicle_102242 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14230.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14230.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102242 = _this;
   _this setPos [6800.5986, 14230.261];
 };
 _vehicle_102243 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14236.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14236.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102243 = _this;
   _this setPos [6800.5986, 14236.461];
 };
 _vehicle_102244 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14242.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14242.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102244 = _this;
   _this setPos [6800.5986, 14242.661];
 };
 _vehicle_102250 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14248.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14248.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102250 = _this;
   _this setPos [6800.5986, 14248.861];
 };
 _vehicle_102251 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14255.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14255.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102251 = _this;
   _this setPos [6800.5986, 14255.062];
 };
 _vehicle_102252 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14261.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14261.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102252 = _this;
   _this setPos [6800.5986, 14261.261];
 };
 _vehicle_102253 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14267.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14267.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102253 = _this;
   _this setPos [6800.5986, 14267.461];
 };
 _vehicle_102254 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14273.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14273.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102254 = _this;
   _this setPos [6800.5986, 14273.461];
 };
 _vehicle_102205 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14279.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14279.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102205 = _this;
   _this setPos [6800.5986, 14279.861];
 };
 _vehicle_102260 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14286.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14286.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102260 = _this;
   _this setPos [6800.5986, 14286.062];
 };
 _vehicle_102261 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14292.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14292.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102261 = _this;
   _this setPos [6800.5986, 14292.261];
 };
 _vehicle_102262 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14298.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14298.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102262 = _this;
   _this setPos [6800.5986, 14298.461];
 };
 _vehicle_102263 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14304.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14304.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102263 = _this;
   _this setPos [6800.5986, 14304.661];
 };
 _vehicle_102264 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14310.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14310.861], [], 0, "CAN_COLLIDE"];
   _vehicle_102264 = _this;
   _this setPos [6800.5986, 14310.861];
 };
 _vehicle_102265 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14317.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14317.062], [], 0, "CAN_COLLIDE"];
   _vehicle_102265 = _this;
   _this setPos [6800.5986, 14317.062];
 };
 _vehicle_102266 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14323.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14323.261], [], 0, "CAN_COLLIDE"];
   _vehicle_102266 = _this;
   _this setPos [6800.5986, 14323.261];
 };
 _vehicle_102267 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14329.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14329.461], [], 0, "CAN_COLLIDE"];
   _vehicle_102267 = _this;
   _this setPos [6800.5986, 14329.461];
 };
 _vehicle_102268 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6800.5986, 14335.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6800.5986, 14335.661], [], 0, "CAN_COLLIDE"];
   _vehicle_102268 = _this;
   _this setPos [6800.5986, 14335.661];
 };
 _vehicle_103190 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14069.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14069.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103190 = _this;
   _this setPos [6449.3984, 14069.062];
 };
 _vehicle_103192 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14075.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14075.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103192 = _this;
   _this setPos [6449.3984, 14075.261];
 };
 _vehicle_103193 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14081.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14081.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103193 = _this;
   _this setPos [6449.3984, 14081.461];
 };
 _vehicle_103194 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14087.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14087.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103194 = _this;
   _this setPos [6449.3984, 14087.661];
 };
 _vehicle_103197 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14093.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14093.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103197 = _this;
   _this setPos [6449.3984, 14093.861];
 };
 _vehicle_103199 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14100.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14100.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103199 = _this;
   _this setPos [6449.3984, 14100.062];
 };
 _vehicle_103201 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14106.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14106.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103201 = _this;
   _this setPos [6449.3984, 14106.261];
 };
 _vehicle_103203 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14112.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14112.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103203 = _this;
   _this setPos [6449.3984, 14112.461];
 };
 _vehicle_103195 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14118.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14118.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103195 = _this;
   _this setPos [6449.3984, 14118.661];
 };
 _vehicle_103210 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14124.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14124.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103210 = _this;
   _this setPos [6449.3984, 14124.861];
 };
 _vehicle_103211 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14131.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14131.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103211 = _this;
   _this setPos [6449.3984, 14131.062];
 };
 _vehicle_103212 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14137.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14137.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103212 = _this;
   _this setPos [6449.3984, 14137.261];
 };
 _vehicle_103213 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14143.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14143.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103213 = _this;
   _this setPos [6449.3984, 14143.461];
 };
 _vehicle_103214 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14149.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14149.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103214 = _this;
   _this setPos [6449.3984, 14149.661];
 };
 _vehicle_103220 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14155.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14155.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103220 = _this;
   _this setPos [6449.3984, 14155.861];
 };
 _vehicle_103221 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14162.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14162.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103221 = _this;
   _this setPos [6449.3984, 14162.062];
 };
 _vehicle_103222 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14168.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14168.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103222 = _this;
   _this setPos [6449.3984, 14168.261];
 };
 _vehicle_103223 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14174.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14174.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103223 = _this;
   _this setPos [6449.3984, 14174.461];
 };
 _vehicle_103224 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14180.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14180.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103224 = _this;
   _this setPos [6449.3984, 14180.661];
 };
 _vehicle_103241 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14224.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14224.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103241 = _this;
   _this setPos [6449.3984, 14224.261];
 };
 _vehicle_103242 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14230.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14230.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103242 = _this;
   _this setPos [6449.3984, 14230.261];
 };
 _vehicle_103243 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14236.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14236.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103243 = _this;
   _this setPos [6449.3984, 14236.461];
 };
 _vehicle_103244 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14242.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14242.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103244 = _this;
   _this setPos [6449.3984, 14242.661];
 };
 _vehicle_103250 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14248.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14248.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103250 = _this;
   _this setPos [6449.3984, 14248.861];
 };
 _vehicle_103251 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14255.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14255.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103251 = _this;
   _this setPos [6449.3984, 14255.062];
 };
 _vehicle_103252 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14261.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14261.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103252 = _this;
   _this setPos [6449.3984, 14261.261];
 };
 _vehicle_103253 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14267.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14267.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103253 = _this;
   _this setPos [6449.3984, 14267.461];
 };
 _vehicle_103254 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14273.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14273.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103254 = _this;
   _this setPos [6449.3984, 14273.461];
 };
 _vehicle_103205 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14279.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14279.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103205 = _this;
   _this setPos [6449.3984, 14279.861];
 };
 _vehicle_103260 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14286.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14286.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103260 = _this;
   _this setPos [6449.3984, 14286.062];
 };
 _vehicle_103261 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14292.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14292.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103261 = _this;
   _this setPos [6449.3984, 14292.261];
 };
 _vehicle_103262 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14298.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14298.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103262 = _this;
   _this setPos [6449.3984, 14298.461];
 };
 _vehicle_103263 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14304.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14304.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103263 = _this;
   _this setPos [6449.3984, 14304.661];
 };
 _vehicle_103264 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14310.861], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14310.861], [], 0, "CAN_COLLIDE"];
   _vehicle_103264 = _this;
   _this setPos [6449.3984, 14310.861];
 };
 _vehicle_103265 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14317.062], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14317.062], [], 0, "CAN_COLLIDE"];
   _vehicle_103265 = _this;
   _this setPos [6449.3984, 14317.062];
 };
 _vehicle_103266 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14323.261], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14323.261], [], 0, "CAN_COLLIDE"];
   _vehicle_103266 = _this;
   _this setPos [6449.3984, 14323.261];
 };
 _vehicle_103267 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_Burning", [6449.3984, 14329.461], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14329.461], [], 0, "CAN_COLLIDE"];
   _vehicle_103267 = _this;
   _this setPos [6449.3984, 14329.461];
 };
 _vehicle_103268 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_Barrel_burning", [6449.3984, 14335.661], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6449.3984, 14335.661], [], 0, "CAN_COLLIDE"];
   _vehicle_103268 = _this;
   _this setPos [6449.3984, 14335.661];
 };
@@ -4085,7 +4085,7 @@ if (true) then
 _vehicle_570 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6694.7939, 14277.757], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6694.7939, 14277.757], [], 0, "CAN_COLLIDE"];
   _vehicle_570 = _this;
   _this setDir -179.76077;
   _this setPos [6694.7939, 14277.757];
@@ -4093,7 +4093,7 @@ if (true) then
 _vehicle_571 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6739.6807, 14282.008], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6739.6807, 14282.008], [], 0, "CAN_COLLIDE"];
   _vehicle_571 = _this;
   _this setDir -179.76077;
   _this setPos [6739.6807, 14282.008];
@@ -4101,7 +4101,7 @@ if (true) then
 _vehicle_572 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6697.3506, 14236.535], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6697.3506, 14236.535], [], 0, "CAN_COLLIDE"];
   _vehicle_572 = _this;
   _this setDir -179.76077;
   _this setPos [6697.3506, 14236.535];
@@ -4109,7 +4109,7 @@ if (true) then
 _vehicle_573 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6742.5557, 14240.731], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6742.5557, 14240.731], [], 0, "CAN_COLLIDE"];
   _vehicle_573 = _this;
   _this setDir -179.76077;
   _this setPos [6742.5557, 14240.731];
@@ -4117,7 +4117,7 @@ if (true) then
 _vehicle_574 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6741.4658, 14260.622], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6741.4658, 14260.622], [], 0, "CAN_COLLIDE"];
   _vehicle_574 = _this;
   _this setDir -179.76077;
   _this setPos [6741.4658, 14260.622];
@@ -4125,7 +4125,7 @@ if (true) then
 _vehicle_575 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6693.6123, 14252.354], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6693.6123, 14252.354], [], 0, "CAN_COLLIDE"];
   _vehicle_575 = _this;
   _this setDir -179.76077;
   _this setPos [6693.6123, 14252.354];
@@ -4133,7 +4133,7 @@ if (true) then
 _vehicle_576 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [6693.4795, 14258.375], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_lampa_ind", [6693.4795, 14258.375], [], 0, "CAN_COLLIDE"];
   _vehicle_576 = _this;
   _this setDir -179.76077;
   _this setPos [6693.4795, 14258.375];
