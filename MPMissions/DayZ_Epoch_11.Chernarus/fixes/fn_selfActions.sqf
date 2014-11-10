@@ -975,7 +975,7 @@ if (CannibalismScript) then {
 		s_player_butcher_human = -1;
     };
 };
-/////////////////////////////////////////CANNIBALISM START/////////////////////////////////////////
+/////////////////////////////////////////CANNIBALISM END/////////////////////////////////////////
 	 	// All Traders
 	if (_isMan && !_isPZombie && _traderType in serverTraders) then {
 		
@@ -1021,6 +1021,7 @@ if (CannibalismScript) then {
 		{player removeAction _x} count s_player_parts;s_player_parts = [];
 		s_player_parts_crtl = -1;
 	};
+/////////////////////////////////////////NOS START/////////////////////////////////////////
 if(NOSScript)then{
 	_isaCar = _cursorTarget isKindOf "Car";
 	if (("ItemJerrycan" in _magazinesPlayer) && ("ItemSodaRbull" in _magazinesPlayer)) then {
@@ -1042,6 +1043,7 @@ if(NOSScript)then{
 		};
 	};
 };
+/////////////////////////////////////////NOS END/////////////////////////////////////////
 	if(dayz_tameDogs) then {
 		
 		//Dog
@@ -1081,13 +1083,7 @@ if(NOSScript)then{
 				s_player_followdog = player addAction [localize "str_actions_followdog","\z\addons\dayz_code\actions\dog\follow.sqf",[_dogHandle,true], 6, false, true,"",""];
 			};
 		} else {
-			
-			
-			
-			
-			
-			
-			
+
 			player removeAction s_player_feeddog;
 			s_player_feeddog = -1;
 			player removeAction s_player_waterdog;
@@ -1240,8 +1236,8 @@ if (_dogHandle > 0) then {
 	player removeAction s_player_calldog;
 	s_player_calldog = 		-1;
 };
+/////////////////////////////////////////DRINK WATER START/////////////////////////////////////////
 if(DrinkWaterScript)then{
-	// ----------------------------- / Drink water \ ----------------------
 	private["_playerPos","_canDrink","_isPond","_isWell","_pondPos","_objectsWell","_objectsPond","_display"];
 	 
 	_playerPos = getPosATL player;
@@ -1283,8 +1279,8 @@ if(DrinkWaterScript)then{
 			player removeAction s_player_drinkWater;
 			s_player_drinkWater = -1;
 		};
-	// ----------------------------- \ Drink water / ----------------------
 };
+/////////////////////////////////////////DRINK WATER END/////////////////////////////////////////
 if(AntiZombieEmitterScript)then{
 	// ZOMBIE SHIELD START
 	if (("TrashTinCan" in magazines player) && ("TrashJackDaniels" in magazines player) && ("PartEngine" in magazines player) && ("ItemJerrycan" in magazines player) && ("ItemToolbox" in items player)) then {
