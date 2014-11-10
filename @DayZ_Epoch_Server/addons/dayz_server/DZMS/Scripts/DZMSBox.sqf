@@ -124,6 +124,7 @@ if (_type == "build") then {
 		_item = DZMSConSupply select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
+	
 };
 
 ///////////////////////////////////////////////////////////////////
@@ -136,4 +137,12 @@ if (_type == "money") then {
 		_item = _money select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
+	//Briefcases
+	_random = floor(random 4);//random amount of briefcases
+	_scount = count DZMSBreifcase;
+	for "_x" from 0 to _random do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSBreifcase select _sSelect;
+		_crate addMagazineCargoGlobal [_item,1];
+	};	
 };
