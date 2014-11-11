@@ -299,6 +299,10 @@ if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
 	};
 };
 
+if(WepaonModScript)then{
+	call compile preprocessFileLineNumbers "scripts\wmod\init.sqf";
+};
+
 endLoadingScreen; // Work around for loadscreen freeze
 
 //Admin Tools

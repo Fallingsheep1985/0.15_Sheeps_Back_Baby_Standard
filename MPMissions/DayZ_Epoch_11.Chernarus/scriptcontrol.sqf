@@ -9,6 +9,8 @@ server_name = "0.15"; //Watermark Text
 logoWatermark = true;
 //Custom Kill Message's
 KillMessageScript = true;
+//Weapon Mods
+WepaonModScript = true;
 //EVR Blowout
 EVRScript = true;
 //Lights
