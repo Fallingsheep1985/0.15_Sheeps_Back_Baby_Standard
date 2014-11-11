@@ -253,7 +253,7 @@ if(WaterMarkScript)then{
 if(logoWatermark)then{
 	_piclogo = "pictures\logo.paa";
 	[
-		'<img align=''left'' size=''1.0'' shadow=''1'' image='+(str(_piclogo))+' />',
+		'<img align=''left'' size=''2.0'' shadow=''0'' image='+(str(_piclogo))+' />',
 		safeZoneX+0.027,
 		safeZoneY+safeZoneH-0.1,
 		99999,

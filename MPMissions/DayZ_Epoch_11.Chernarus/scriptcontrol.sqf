@@ -2,7 +2,7 @@
 
 
 //Server watermark
-WaterMarkScript = false; //Watermark on/off
+WaterMarkScript = true; //Watermark on/off
 server_name = "0.15"; //Watermark Text
 
 //Server Logo TURN OF WATER MARK BEFORE USE!!!
