@@ -7,7 +7,8 @@ server_name = "0.15"; //Watermark Text
 
 //Server Logo TURN OF WATER MARK BEFORE USE!!!
 logoWatermark = true;
-
+//Custom Kill Message's
+KillMessageScript = true;
 //EVR Blowout
 EVRScript = true;
 //Lights
