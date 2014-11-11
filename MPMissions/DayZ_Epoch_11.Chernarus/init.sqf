@@ -200,6 +200,9 @@ if (!isDedicated) then {
 	if (JAEMScript) then {
 		_nil = [] execVM "scripts\JAEM\EvacChopper_init.sqf";
 	};
+	if(KillMessageScript)then{
+		execVM "scripts\CustomKillMessage\kill_msg.sqf";
+	};
 };
 
 #include "\z\addons\dayz_code\system\REsec.sqf"

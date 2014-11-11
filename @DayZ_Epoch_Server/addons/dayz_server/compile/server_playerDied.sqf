@@ -32,6 +32,19 @@ if ((typeName _killer) != "STRING") then
 	{
 		_message = format["%1 was killed by %2 with weapon %3 from %4m",_victimName, _killerName, _weapon, _distance];
 		_loc_message = format["PKILL: %1 was killed by %2 with weapon %3 from %4m", _victimName, _killerName, _weapon, _distance];
+		_pickill = _victim getVariable["AttackedByWeaponImg", "nil"];
+		
+                if ((gettext (configFile >> 'cfgWeapons' >> (currentWeapon _killer) >> 'displayName')) != "Throw") then {
+			if (!isNil "_pickill") then {
+				_kill_txt = format ["<t align='left' size='0.9'>%1 </t>",_killerName,_pickill,_victimName,(ceil _distance)];
+				_kill_txt = _kill_txt + format ["<img size='1.0' align='left' image='%2'/>",_killerName,_pickill,_victimName,(ceil _distance)];
+				_kill_txt = _kill_txt + format ["<t align='left' size='0.9'> %3 </t>",_killerName,_pickill,_victimName,(ceil _distance)];
+				_kill_txt = _kill_txt + format ["<t align='left' size='0.9'>[%4m]</t>",_killerName,_pickill,_victimName,(ceil _distance)];
+
+				customkillMessage = [_kill_txt];
+				publicVariable "customkillMessage";
+			};
+		}; 
 	};
 
 	diag_log _loc_message;
