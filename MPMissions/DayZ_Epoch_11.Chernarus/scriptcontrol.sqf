@@ -102,12 +102,43 @@ execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
 Sector FNG OFF
 //execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
 
+to turn the map markers on change false to true
 
 */
 if (isServer) then {
 //Sector FNG inland
 //execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+sectorfngMarker = false;
 
+//CDC Balota (no trader)                        
+//execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
+CDCMarker = false;
+
+//Altar
+//execVM  "\z\addons\dayz_server\CustomBuildings\altar.sqf";
+altarmilitarybaseMarker = false;
+
+//beached aircraft carrier
+//execVM  "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
+beachedcarrierMarker = false;
+
+//Black Lake Castle
+//execVM  "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
+blacklakecastlerMarker = false;
+
+//Kameka mine                                
+//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
+//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
+//execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
+kamenkamineMarker = false;
+
+//Black forest outpost
+//execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
+blackforestoutpostMarker = false;
+
+//Golden River MIne
+//execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
+golden_river_mineMarker  = false;
 //IXXO
 //execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
@@ -122,34 +153,14 @@ if (isServer) then {
 //Caves                                      
 //execVM  "\z\addons\dayz_server\CustomBuildings\Prud_Cave.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\North_Cave.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";
-                                             
-//Kameka mine                                
-//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
-//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
-//execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
-                                             
-//CDC Balota (no trader)                        
-//execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
-
-//Altar
-//execVM  "\z\addons\dayz_server\CustomBuildings\altar.sqf";
-
-//Golden River MIne
-//execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
+//execVM  "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";                                                                                     
 
 //cherno heliport
 //execVM  "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
 
-//beached aircraft carrier
-//execVM  "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
-
 //East coast cherno
 //execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
-
-//Black Lake Castle
-//execVM  "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
 
 //Kabino Check Point
 //execVM  "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
@@ -160,8 +171,7 @@ if (isServer) then {
 //road from dam to sector FNG
 //execVM  "\z\addons\dayz_server\CustomBuildings\roadpobeda.sqf";
 
-//Black forest outpost
-//execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
+
 
 //Electro
 //execVM  "\z\addons\dayz_server\CustomBuildings\electro.sqf";

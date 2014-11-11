@@ -39,14 +39,7 @@ if (true) then
 };
 */
 
-//Marker on Map
-_CDC = createMarker ["CDC", [4847.68, 2297.24]];
-_CDC setMarkerText "Centre For Disease Control";
-_CDC setMarkerType "dot";
-_CDC setMarkerColor "ColorBlack";
-_CDC setMarkerBrush "Solid";
-_CDC setMarkerSize [180, 180];
-CDC = _CDC ;
+
 
 _vehicle_920 = objNull;
 if (true) then
