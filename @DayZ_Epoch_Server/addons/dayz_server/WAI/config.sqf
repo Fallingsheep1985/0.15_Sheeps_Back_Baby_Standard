@@ -2,7 +2,7 @@ if(isServer) then {
 
 	/* GENERAL CONFIG */
 
-		debug_mode					= true;			// enable debug
+		debug_mode					= false;			// enable debug
 		use_blacklist				= true;		// use blacklist
 		blacklist					= [
 			[[0,16000,0],[1000,-0,0]],				// Left
