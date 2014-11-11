@@ -2,10 +2,6 @@ FIX SCRIPTS
 
 PAINT - rscslider not defined
 
-sector FNG - EvangeliumBD - replacesbarrels with lamp posts
-
-Fix markers - Blackforest Outpost and Altar
-
 Drink water - dosnt work (compare to 0.14)
 
 

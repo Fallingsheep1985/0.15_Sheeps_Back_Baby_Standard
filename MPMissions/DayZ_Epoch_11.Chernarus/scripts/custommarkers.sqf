@@ -27,7 +27,7 @@ _blacklakecastle setMarkerType "mil_dot";
 _blacklakecastle setMarkerColor "ColorBlack";
 _blacklakecastle setMarkerBrush "Solid";
 _blacklakecastle setMarkerSize [180, 180];
-blacklakecastle = _blacklakecastle ;
+blacklakecastle = _blacklakecastle;
 //Beached Carrier
 if (beachedcarrierMarker) then {
 _beachedcarrier = createMarker ["beachedcarrier", [8137.84, 9180.96]];

@@ -171,8 +171,6 @@ golden_river_mineMarker  = false;
 //road from dam to sector FNG
 //execVM  "\z\addons\dayz_server\CustomBuildings\roadpobeda.sqf";
 
-
-
 //Electro
 //execVM  "\z\addons\dayz_server\CustomBuildings\electro.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\electroZI.sqf";
