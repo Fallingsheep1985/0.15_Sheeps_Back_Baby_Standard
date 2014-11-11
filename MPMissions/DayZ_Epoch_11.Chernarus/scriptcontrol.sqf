@@ -2,8 +2,12 @@
 
 
 //Server watermark
-WaterMarkScript = true; //Watermark on/off
+WaterMarkScript = false; //Watermark on/off
 server_name = "0.15"; //Watermark Text
+
+//Server Logo TURN OF WATER MARK BEFORE USE!!!
+logoWatermark = true;
+
 //EVR Blowout
 EVRScript = true;
 //Lights
