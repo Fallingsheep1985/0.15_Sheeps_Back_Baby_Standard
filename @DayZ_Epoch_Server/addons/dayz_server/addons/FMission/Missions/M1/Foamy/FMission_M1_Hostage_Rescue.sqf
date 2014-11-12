@@ -131,6 +131,7 @@ diag_log("MISSION 1: Hostage Rescue - Spawning Attackers");
 			_attacker1 setUnitPos "AUTO";
 			_null = [_attacker1] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Bandit.sqf";
 			
+			
 		_attacker2 = _attackgroup createUnit ["TK_Soldier_Medic_EP1", _hostagecamp, [], 0, "Form"];
 			_attacker2 setUnitPos "AUTO";
 			_null = [_attacker2] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Medic.sqf";
@@ -138,6 +139,7 @@ diag_log("MISSION 1: Hostage Rescue - Spawning Attackers");
 		_attacker3 = _attackgroup createUnit ["TK_INS_Soldier_EP1", _hostagecamp, [], 0, "Form"];
 			_attacker3 setUnitPos "AUTO";
 			_null = [_attacker3] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Bandit.sqf";
+			
 			
 		_attacker4 = _attackgroup createUnit ["TK_INS_Soldier_EP1", _hostagecamp, [], 0, "Form"];
 			_attacker4 setUnitPos "AUTO";
@@ -161,6 +163,13 @@ _aiunit3 = [_aiunit_spawn_pos,50,4,"Medic",_loot_pos,"M1"] execVM "\z\addons\day
 _aiunit4 = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
 
 _aiunit5 = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
+
+//Humanity
+_aiunit1 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit2 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit3 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit4 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit5 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
 
 [nil,nil,rTitleText,"A camp holding local women hostage has been reported. These camps move quickly so hero up and save these women! Check your map for the camp's reported vicinity.", "PLAIN",10] call RE;
 

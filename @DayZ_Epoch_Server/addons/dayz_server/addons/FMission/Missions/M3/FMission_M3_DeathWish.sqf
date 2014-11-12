@@ -142,7 +142,18 @@ _aiunit9 = [_aiunit_spawn_pos,50,4,"Sniper",_loot_pos,"M1"] execVM "\z\addons\da
 _aiunit10 = [_aiunit_spawn_pos,50,4,"Sniper",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
 
 _aiunit11 = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
-
+//Humanity
+_aiunit1 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit2 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit3 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit4 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit5 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit6 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit7 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit8 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit9 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit10 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit11 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
 sleep 10;
 diag_log("MISSION 3: DeathWish - Loading -=FAI=- Completed");
 

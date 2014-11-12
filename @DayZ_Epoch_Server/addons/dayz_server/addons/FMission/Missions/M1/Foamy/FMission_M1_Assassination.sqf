@@ -111,7 +111,12 @@ _aiunit3 = [_aiunit_spawn_pos,50,4,"Medic",_loot_pos,"M1"] execVM "\z\addons\day
 _aiunit4 = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
 
 _aiunit5 = [_aiunit_spawn_pos,50,4,"Bandit",_loot_pos,"M1"] execVM "\z\addons\dayz_server\addons\FMission\FAI\FAI_Create_Unit.sqf";
-
+//Humanity
+_aiunit1 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit2 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit3 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit4 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
+_aiunit5 addEventHandler ["killed",{_this ExecVM "\z\addons\dayz_server\fmission\ai_killed.sqf"}];
 sleep 10;
 diag_log("MISSION 1: Assassination - Loading -=FAI=- Completed");
 
