@@ -1,7 +1,10 @@
 FIX SCRIPTS
 
-PAINT - rscslider not defined
+PAINT - test paint
+FMission undefined variables 
+Test zombie hordes + add more hordes
+base jump 
+salvage vehicle
 
-Drink water - dosnt work (compare to 0.14)
 
 

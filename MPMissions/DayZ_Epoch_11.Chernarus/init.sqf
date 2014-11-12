@@ -119,6 +119,7 @@ EpochEvents = [
 ["any","any","any","any",25,"crash_spawner"],
 ["any","any","any","any",15,"supply_drop"],
 ["any","any","any","any",50,"supply_drop"]
+];
 };
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
