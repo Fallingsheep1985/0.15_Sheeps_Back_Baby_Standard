@@ -113,6 +113,9 @@ to turn the map markers on change false to true
 
 */
 if (isServer) then {
+//Water base - Geekin aka Chainsaw Squirrel
+//execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
+
 //Sector FNG inland
 //execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
 sectorfngMarker = false;
@@ -165,7 +168,7 @@ golden_river_mineMarker  = false;
 //cherno heliport
 //execVM  "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
 
-//East coast cherno
+//East coast cherno - edits by Geekin aka Chainsaw Squirrel to improve FPS
 //execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
 
