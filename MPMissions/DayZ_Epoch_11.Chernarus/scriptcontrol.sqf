@@ -7,6 +7,8 @@ server_name = "0.15"; //Watermark Text
 
 //Server Logo TURN OF WATER MARK BEFORE USE!!!
 logoWatermark = true;
+//FMissions
+FMissionScript = true;
 //Custom Kill Message's
 KillMessageScript = true;
 //Weapon Mods

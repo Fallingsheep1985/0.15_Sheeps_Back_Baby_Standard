@@ -101,6 +101,7 @@ ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "Ite
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
 
+if(FMissionScript)then{
 EpochEvents = [
 ["any","any","any","any",30,"crash_spawner"],
 ["any","any","any","any",0,"crash_spawner"],
@@ -111,6 +112,14 @@ EpochEvents = [
 ["any","any","any","any",35,"FMission_Launcher2"],
 ["any","any","any","any",45,"FMission_Launcher3"]
 ];
+}else{
+EpochEvents = [
+["any","any","any","any",30,"crash_spawner"],
+["any","any","any","any",0,"crash_spawner"],
+["any","any","any","any",25,"crash_spawner"],
+["any","any","any","any",15,"supply_drop"],
+["any","any","any","any",50,"supply_drop"]
+};
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
 
