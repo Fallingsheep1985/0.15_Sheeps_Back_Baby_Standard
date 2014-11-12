@@ -1785,6 +1785,17 @@ if (true) then
   _this setDir 68.549126;
   _this setPos [13817.806, 11746.111, -27.215347];
 };
+//Gambler test
+_unit_10000 = objNull;
+if (true) then
+{
+  _this = createAgent ["Hooker4", [11460.307, 11360.972, 3.05], [], 0, "CAN_COLLIDE"];
+  _unit_10000 = _this;
+  _this setDir 422.9967;
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setUnitAbility 0.60000002;
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+
 
 processInitCommands;
 
