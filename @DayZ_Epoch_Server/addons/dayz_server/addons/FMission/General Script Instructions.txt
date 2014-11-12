@@ -1,0 +1,117 @@
+********************* General Instructions *****************************
+
+NOTE: These instructions are for INDIVIDUAL usage of the scripts ONLY. The path in the examples does NOT reflect 
+the correct path for usage in FMission. See "FMission Instructions.txt" for FMission usage.
+
+Last Updated: 3/26/2014
+
+Section A: FMarkerX.sqf
+Section B: FMission_LauncherX.sqf
+Section C: FLoot_XXXX.sqf
+Section D: FMinefield.sqf
+
+----------------------------------------------------------------------------------------------------------
+Section A: FMarkerX.sqf
+
+Description:
+FMarker is a marker refresh script designed for use with the stock Epoch Event system.
+It will refresh the marker every 15 seconds so players who join after a mission has 
+started will be able to see the mission marker. Same for players that die during a mission.
+
+Instructions:
+There are two ways, "Easy" for those that are not skill savvy and the "Detail" way for those that 
+like organization.
+
+Easy Way:
+Drop the script in the "Modules" folder on your server and change the call line to point to that location.
+
+Detail Way:
+Create a seperate folder for FMarker called FMarker on your server in the addons directory and put it in 
+there.
+Call it from your Mission script like this:
+_null = [_position,_loot_pos,_markerRadius,_markercolor,false] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarker.sqf";
+
+The call is expecting 5 parameters (position,loot position,marker radius, marker color, debug true or false)
+1) position - where the marker is
+2) loot position - for debug if debug is true.
+3) marker radius - how big the marker is
+4) marker color - what color the marker will be
+5) true or false - for debug true false (puts the dot where the loot position is for debug purposes)
+6) Text Icon Type "Icon Type for Text Marker" https://community.bistudio.com/wiki/cfgMarkers
+7) Marker Text "Text to display on Marker"
+8) Marker Brush ("SOLID","HORIZONTAL","VERTICAL","GRID","FDIAGONAL","BDIAGONAL","DIAGRID","CROSS","BORDER","SOLIDBORDER" 
+
+define the variables in your script before the marker call like this:
+
+mission_despawn_timer = 1200; // This sets the Timeout if a timer is used.
+_wait_time = 900; // This is how long the loot box will stay once it spawns.
+_spawnRadius = 5000; // This is the distance from Center - Used to determine the radius in which missions will spawn
+_spawnMarker = 'center'; // DO NOT Change this, UNLESS you need a hard coded center loc for custom purposes
+_markerRadius = 350; // This sets marker radius and the area the loot can spawn in
+_markerColor = "ColorBlue"; // This sets the Marker Color
+_textMarker_IconType = "mil_objective"; // This sets the "Icon Type" (https://community.bistudio.com/wiki/cfgMarkers)
+_markerText = "Mission: Blah Blah"; // Text to display at Marker (Leave "" blank if you dont want a message)
+_markerBrush = "SOLID"; // Marker Brush - How the marker is filled in
+
+_position = [getMarkerPos _spawnMarker,0,_spawnRadius,10,0,2000,0] call BIS_fnc_findSafePos;
+_loot_pos = [_position,0,(_markerRadius - 100),10,0,2000,0] call BIS_fnc_findSafePos;
+
+[_position,_loot_pos,_markerRadius,_markerColor,false,_textMarker_IconType,_markerText,_markerBrush] execVM "\z\addons\dayz_server\addons\FMission\FMarker\FMarkerX.sqf";
+
+-----------------------------------------------------------------------------------------------------------
+
+Section B: FMission_LauncherX.sqf
+
+Description:
+FMission_LauncherX.sqf is a mission launcher for use with Epochs built in Event system. It allows unlimited 
+random mission selection from one entry in your init. I run it twice an hour (2 entries in init)
+
+(Note: FMission_LauncherX.sqf refers to FMission_Launcher1.sqf, FMission_Launcher2.sqf and FMission_Launcher3.sqf)
+FMission currently allows up to 3 missions at once.
+
+FMission Mission Classes are as follows:
+M1 = Main Missions
+M2 = Side Missions
+M3 = Minor Hunt/Gather Missions
+
+Instructions:
+1) Create a folder called FMission and put your mission scripts in there.
+2) Put FMission_LauncherX.sqf in your "Modules" folder on your server.
+3) Edit FMission_LauncherX.sqf and list all your missions scripts into the array. (The script shows you where)
+4) Add an entry or two into your init to run the launcher.
+
+------------------------------------------------------------------------------------------------------------
+
+Section C: FLoot_XXXX.sqf
+
+Description:
+FLoot_XXXX.sqf is a random loot generator for AI units. It allows you to create one off units or custom units 
+from Arma 2's AI logic and have custom loot.
+
+Instructions:
+1) Create a Folder called "Floot" in your server addons folder and put the FLoot scripts you create in there.
+1) Edit FLoot_XXXX.sqf to reflect the loot you want to assign to that unit type.
+2) Name the XXXX to the unit type. Example: FLoot_Bandit.sqf.
+3) Call the script from your mission when creating AI.
+Example:
+_unitname = _unitgroup createUnit ["UNIT_TYPE", _location, [], 0, "Form"];
+_unitname setUnitPos "AUTO";
+[_unitname] execVM "\z\addons\dayz_server\addons\FLoot\FLoot_Bandit.sqf";
+
+---------------------------------------------------------------------------------------------------------------
+
+Section D: FMinefield.sqf
+
+Description:
+FMinefield creates a minefield with warning signs around any postion. Will disappear on server restarts.
+Adjustable spawn chance, number of mines, mine spread, minefield radius and faction of minefield.
+
+Instructions:
+1) Create a folder called "FMinefield" in your server addons folder and copy FMinefield.sqf to it.
+2) Call FMinefield.sqf from your mission script.
+example:
+It uses 3 variables. (position, faction of minefield and chance to spawn)
+[_loot_pos,east,.75] execVM "\z\addons\dayz_server\addons\FMinefield\FMinefield.sqf";
+
+
+---------------------------------------------------------------------------------------------------------------

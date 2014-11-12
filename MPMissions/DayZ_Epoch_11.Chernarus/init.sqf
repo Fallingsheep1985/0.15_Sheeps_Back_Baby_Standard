@@ -106,7 +106,10 @@ EpochEvents = [
 ["any","any","any","any",0,"crash_spawner"],
 ["any","any","any","any",25,"crash_spawner"],
 ["any","any","any","any",15,"supply_drop"],
-["any","any","any","any",50,"supply_drop"]
+["any","any","any","any",50,"supply_drop"],
+["any","any","any","any",15,"FMission_Launcher1"],
+["any","any","any","any",35,"FMission_Launcher2"],
+["any","any","any","any",45,"FMission_Launcher3"]
 ];
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
