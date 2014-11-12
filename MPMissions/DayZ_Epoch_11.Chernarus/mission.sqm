@@ -1305,7 +1305,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=10;
+		items=11;
 		class Item0
 		{
 			position[]={6325.6772,304.99033,7807.7412};
@@ -1472,6 +1472,23 @@ class Mission
 			expCond="(player distance BoatDealerEast2) < 25;";
 			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity;";
 			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity;";
+			class Effects
+			{
+			};
+		};
+		class Item10
+		{
+			position[]={6642.4,0.001,2439.6};  // Chernogorsk area
+			a=100;
+			b=100;
+			activationBy="ANY";
+			repeating=1;  // every one who enters the area after this spawns an additional horde
+			interruptable=1;
+			age="UNKNOWN";
+			name="ZombleSpawnTrigger";
+			expCond="(vehicle player) in thislist;";
+			expActiv="zomblespawnt = [] execVM ""scripts\hordes\spawn_horde.sqf"";";
+			expDesactiv="terminate zomblespawnt;";
 			class Effects
 			{
 			};
