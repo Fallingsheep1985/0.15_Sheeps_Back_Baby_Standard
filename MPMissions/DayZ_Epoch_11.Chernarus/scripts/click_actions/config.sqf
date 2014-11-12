@@ -26,7 +26,8 @@ If(craftingScript)then{
 		["ItemKnife","Make Bandage","[] execVM 'scripts\crafting\makebandage.sqf';","true"],
 		["ItemToolbox","Make Knife","[] execVM 'scripts\crafting\makeknife.sqf';","true"],
 		["ItemToolbox","Make Bow","[] execVM 'scripts\crafting\makebow.sqf';","true"],
-		["ItemToolbox","Make Hatchet","[] execVM 'scripts\crafting\makehatchet.sqf';","true"]
+		["ItemToolbox","Make Hatchet","[] execVM 'scripts\crafting\makehatchet.sqf';","true"],
+		["ItemToolbox","Make CinderBlocks","[] execVM 'scripts\crafting\makecinderblock.sqf';","true"]
 	];
 } else {
 	CRAFTING = [];
