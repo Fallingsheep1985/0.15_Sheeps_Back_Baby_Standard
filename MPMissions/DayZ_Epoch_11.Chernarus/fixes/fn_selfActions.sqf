@@ -950,7 +950,7 @@ if (TakeClothesScript) then {
 		if (s_player_repair_crtl < 0) then {
 			dayz_myCursorTarget = _cursorTarget;
 				_menu = dayz_myCursorTarget addAction [localize "STR_EPOCH_PLAYER_REPAIRV", "\z\addons\dayz_code\actions\repair_vehicle.sqf",_cursorTarget, 0, true, false, "",""];
-				_menu1 = dayz_myCursorTarget addAction [localize "STR_EPOCH_PLAYER_SALVAGEV", "\z\addons\dayz_code\actions\salvage_vehicle.sqf",_cursorTarget, 0, true, false, "",""];
+				_menu1 = dayz_myCursorTarget addAction [localize "STR_EPOCH_PLAYER_SALVAGEV", "scripts\salvage\salvage.sqf",_cursorTarget, 0, true, false, "",""];
 				
 				s_player_repairActions set [count s_player_repairActions,_menu];
 				s_player_repairActions set [count s_player_repairActions,_menu1];
