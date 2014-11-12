@@ -1317,8 +1317,8 @@ class Mission
 			age="UNKNOWN";
 			name="zonestary";
 			expCond="(player distance zonestary) < 100;";
-			expActiv="[""trader city Stary"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Stary"",true,""leave""] spawn player_traderCity;";
+			expActiv="[""trader city Stary"",true,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""trader city Stary"",true,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1334,8 +1334,8 @@ class Mission
 			age="UNKNOWN";
 			name="zonebash";
 			expCond="(player distance zonebash) < 100;";
-			expActiv="[""trader city Bash"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Bash"",true,""leave""] spawn player_traderCity;";
+			expActiv="[""trader city Bash"",true,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""trader city Bash"",true,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1351,8 +1351,8 @@ class Mission
 			age="UNKNOWN";
 			name="zoneklen";
 			expCond="(player distance zoneklen) < 100;";
-			expActiv="[""trader city Klen"",true,""enter""] spawn player_traderCity;";
-			expDesactiv="[""trader city Klen"",true,""leave""] spawn player_traderCity;";
+			expActiv="[""trader city Klen"",true,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""trader city Klen"",true,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1368,8 +1368,8 @@ class Mission
 			age="UNKNOWN";
 			name="zonebandit";
 			expCond="(player distance zonebandit) < 25;";
-			expActiv="[""Bandit Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Bandit Trader"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""Bandit Trader"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""Bandit Trader"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1385,8 +1385,8 @@ class Mission
 			age="UNKNOWN";
 			name="zonehero";
 			expCond="(player distance zonehero) < 25;";
-			expActiv="[""Hero Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Hero Trader"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""Hero Trader"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""Hero Trader"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1402,8 +1402,8 @@ class Mission
 			age="UNKNOWN";
 			name="wholesaleSouthtrader";
 			expCond="(player distance wholesaleSouthtrader) < 25;";
-			expActiv="[""Wholesaler"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Wholesaler"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""Wholesaler"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""Wholesaler"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1419,8 +1419,8 @@ class Mission
 			age="UNKNOWN";
 			name="boatTraderEast2";
 			expCond="(player distance boatTraderEast2) < 25;";
-			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1436,8 +1436,8 @@ class Mission
 			age="UNKNOWN";
 			name="BoatDealerSouth2";
 			expCond="(player distance BoatDealerSouth2) < 25;";
-			expActiv="[""South Boat Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""South Boat Trader"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""South Boat Trader"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""South Boat Trader"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1453,8 +1453,8 @@ class Mission
 			age="UNKNOWN";
 			name="AirTrader";
 			expCond="(player distance AirTrader) < 25;";
-			expActiv="[""Aircraft Dealer"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""Aircraft Dealer"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""Aircraft Dealer"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""Aircraft Dealer"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
@@ -1470,8 +1470,8 @@ class Mission
 			age="UNKNOWN";
 			name="BoatDealerEast2";
 			expCond="(player distance BoatDealerEast2) < 25;";
-			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity;";
-			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity;";
+			expActiv="[""East Boat Trader"",false,""enter""] spawn player_traderCity; canbuild = false;";
+			expDesactiv="[""East Boat Trader"",false,""leave""] spawn player_traderCity; canbuild = true;";
 			class Effects
 			{
 			};
