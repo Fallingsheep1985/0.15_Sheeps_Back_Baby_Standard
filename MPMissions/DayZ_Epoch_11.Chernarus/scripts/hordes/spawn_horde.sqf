@@ -7,10 +7,13 @@ private ["_zedTypes","_zedType","_zedPos","_agent","_zedTarget"];
 _zedTypes = ["pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest"];
 _zedPos = [6642.4,2439.6,0];//Position to spawn the Zed - Chernogorsk Central Garden
 _zedTarget = [5956,7960,0];//Give the poor zed somewhere to walk to - Somewhere near Stary Sobor
-_zedType = _zedTypes call BIS_fnc_selectRandom;
+
 _i = 1;
 for "_i" from 1 to 30 do // spawns between 1 and 30 zombies
 {
+//random zed skin
+_zedType = _zedTypes call BIS_fnc_selectRandom;
+
 _agent = createAgent [_zedType, _zedPos, [], 40, "NONE"];
 _agent disableAI "FSM";
 _agent disableAI "AUTOTARGET";
