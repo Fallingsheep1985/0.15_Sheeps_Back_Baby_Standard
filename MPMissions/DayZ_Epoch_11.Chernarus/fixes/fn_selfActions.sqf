@@ -1331,8 +1331,7 @@ if(ZombieBombScript)then{
 //Gambleing
 
 //Random number game
-gambler = ["hooker4"]; //change to your gamblers skin
-	if (_isMan && !_isPZombie && _traderType in gambler) then {
+	if (_cursorTarget isKindOf "Hooker4") then {
 		if (s_player_gamble10 < 0) then {
             s_player_gamble10 = player addAction [("<t color='#0096ff'>")+("Gamble 10oz Briefcase")+("</t>"), "scripts\gambling\numbergame\10oz.sqf",cursorTarget, -10, false, true, "",""];
         };
