@@ -223,10 +223,10 @@ if (!isDedicated) then {
 //Bus Route
 if (BusRouteScript)then{
 	if (isServer) then {
-		[true] execVM "busroute\init_bus.sqf";
+		[true] execVM "scripts\busroute\init_bus.sqf";
 	};
 	if (!isDedicated) then {
-		[] execVM "busroute\player_axeBus.sqf";
+		[] execVM "scripts\busroute\player_axeBus.sqf";
 	};
 };
 //Start Dynamic Weather
