@@ -219,6 +219,15 @@ if (!isDedicated) then {
 
 #include "\z\addons\dayz_code\system\REsec.sqf"
 
+//Bus Route
+if (BusRouteScript)then{
+	if (isServer) then {
+		[true] execVM "busroute\init_bus.sqf";
+	};
+	if (!isDedicated) then {
+		[] execVM "busroute\player_axeBus.sqf";
+	};
+};
 //Start Dynamic Weather
 execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 

@@ -8,6 +8,7 @@
 5 "BIS_MPF_logic" !"BIS_MPF_logic = BIS_MPF_dummygroup createUnit"
 5 "BIS_MPF_dummygroup" !="BIS_MPF_dummygroup = createGroup sideLogic;" !"BIS_MPF_logic = BIS_MPF_dummygroup createUnit"
 5 _codeAHOFF
+5 addWaypoint !"\"addWaypoint\"," !"units\add_unit.sqf" !"busroute\bus_driver.sqf"
 5 _box
 5 "_first in"
 5 "_commands"
