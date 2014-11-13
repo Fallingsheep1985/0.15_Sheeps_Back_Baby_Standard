@@ -4,9 +4,13 @@ Private["_randomnumber","_result","_number","_bet","_win"];
 GearAdd = (vehicle player);
 _bet = "ItemBriefcase50oz";
 _win = false;
-if !(_bet in Magazines Player) then {
-	exitWith {cutText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"];};
+if (_bet in magazines player) then {
+    50ozBet = true;
+} else {
+    50ozBet = false;
 };
+if (50ozBet) then {  
+
 //remove bet
 GearAdd removeMagazine _bet;
 
@@ -47,4 +51,7 @@ if (_result1 == _result2)then{
 if(_win)then{
 GearAdd addMagazine _bet;
 GearAdd addMagazine _bet;
+};
+}else{
+	titleText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"]; titleFadeOut 5;
 };
