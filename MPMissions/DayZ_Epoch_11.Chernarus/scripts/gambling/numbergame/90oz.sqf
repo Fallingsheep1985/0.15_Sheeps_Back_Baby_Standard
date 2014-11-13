@@ -1,9 +1,7 @@
 //Sheeps random number game
-Private["_randomnumber","_result","_number","_bet","_win"];
-//variables
-_bet = "ItemBriefcase90oz";
-_win = false;
-if (_bet in magazines player) then {
+Private["_randomnumber","_result","_number","_win"];
+
+if ("ItemBriefcase90oz" in magazines player) then {
     90ozBet = true;
 } else {
     90ozBet = false;
@@ -11,11 +9,10 @@ if (_bet in magazines player) then {
 if (90ozBet) then {  
 
 //remove bet
-player removeMagazine _bet;
-
+player removeMagazine "ItemBriefcase90oz";
+sleep 0.01;
 //inform player of bet amount
-cutText [format["\n You have Bet: %1", _bet],"PLAIN DOWN"];
-systemChat format ["You have Bet: %1", _bet];
+titleText ["You Bet 90oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
 
 //house rolled
 _randomnumber = random 90; 
@@ -33,24 +30,22 @@ sleep 1;
 //alert player of house roll
 cutText [format["\n You Rolled: %1", _result2],"PLAIN DOWN"];
 systemChat format ["You Rolled: %1", _result2];
-
+sleep 1;
 //check if numbers match
 if (_result1 == _result2)then{
 	_win = true;
 	//alert player they have won
-	cutText [format["\n Congratulations! You won: 2x %1", _bet],"PLAIN DOWN"];
-	systemChat format ["CongratulationsYou won: 2x %1", _bet];
+titleText ["You won 2x 90oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
 }else{
 	_win = false;
 	//alert player they have lost
-	cutText [format["\n Bad luck, You lost: %1 !", _bet],"PLAIN DOWN"];
-	systemChat format ["Bad luck, You lost: %1", _bet];
+titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 5;
 };
 //Pay player if they win
 if(_win)then{
-player addMagazine _bet;
-player addMagazine _bet;
+player addMagazine "ItemBriefcase90oz";
+player addMagazine "ItemBriefcase90oz";
 };
 }else{
-	titleText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"]; titleFadeOut 5;
+	titleText ["You need 1x 90oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
 };
