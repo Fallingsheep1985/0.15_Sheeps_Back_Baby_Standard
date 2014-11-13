@@ -1,15 +1,15 @@
 //Sheeps random number game
 Private["_randomnumber","_result","_number","_win"];
-
+_100ozBet = false;
 if ("ItemBriefcase100oz" in magazines player) then {
-    100ozBet = true;
+    _100ozBet = true;
 } else {
-    100ozBet = false;
+    _100ozBet = false;
 };
-if (100ozBet) then {  
+if (_100ozBet) then {  
 
 //remove bet
-player removeMagazine "ItemBriefcase10oz";
+player removeMagazine "ItemBriefcase100oz";
 sleep 0.01;
 //inform player of bet amount
 titleText ["You Bet 100oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
@@ -26,11 +26,11 @@ _result2 = round _number;
 cutText [format["\n House Rolled: %1", _result1],"PLAIN DOWN"];
 systemChat format ["House Rolled: %1", _result1];
 //wait before showing player roll
-sleep 1;
+sleep 4;
 //alert player of house roll
 cutText [format["\n You Rolled: %1", _result2],"PLAIN DOWN"];
 systemChat format ["You Rolled: %1", _result2];
-sleep 1;
+sleep 4;
 //check if numbers match
 if (_result1 == _result2)then{
 	_win = true;

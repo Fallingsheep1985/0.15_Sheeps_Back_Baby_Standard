@@ -1,12 +1,12 @@
 //Sheeps random number game
 Private["_randomnumber","_result","_number","_win"];
-
+_80ozBet = false;
 if ("ItemBriefcase80oz" in magazines player) then {
-    80ozBet = true;
+    _80ozBet = true;
 } else {
-    80ozBet = false;
+    _80ozBet = false;
 };
-if (80ozBet) then {  
+if (_80ozBet) then {  
 
 //remove bet
 player removeMagazine "ItemBriefcase80oz";
@@ -26,11 +26,11 @@ _result2 = round _number;
 cutText [format["\n House Rolled: %1", _result1],"PLAIN DOWN"];
 systemChat format ["House Rolled: %1", _result1];
 //wait before showing player roll
-sleep 1;
+sleep 4;
 //alert player of house roll
 cutText [format["\n You Rolled: %1", _result2],"PLAIN DOWN"];
 systemChat format ["You Rolled: %1", _result2];
-sleep 1;
+sleep 4;
 //check if numbers match
 if (_result1 == _result2)then{
 	_win = true;
