@@ -8,7 +8,7 @@ _bet = "ItemBriefcase90oz";
 _win = false;
 if !(_bet in Magazines Player) then {
 	exitWith {
-	cutText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"]
+	cutText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"];
 	};
 };
 //remove bet

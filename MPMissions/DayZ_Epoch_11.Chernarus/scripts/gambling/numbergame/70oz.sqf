@@ -5,7 +5,7 @@ GearAdd = (vehicle player);
 _bet = "ItemBriefcase70oz";
 _win = false;
 if !(_bet in Magazines Player) then {
-	exitWith {cutText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"]};
+	exitWith {cutText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"];};
 };
 
 //remove bet
