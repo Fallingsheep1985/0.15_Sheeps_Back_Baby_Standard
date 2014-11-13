@@ -1,7 +1,6 @@
 //Sheeps random number game
 Private["_randomnumber","_result","_number","_bet","_win"];
 //variables
-GearAdd = (vehicle player);
 _bet = "ItemBriefcase100oz";
 _win = false;
 if (_bet in magazines player) then {
@@ -12,7 +11,7 @@ if (_bet in magazines player) then {
 if (100ozBet) then {  
 
 //remove bet
-GearAdd removeMagazine _bet;
+player removeMagazine _bet;
 
 //inform player of bet amount
 cutText [format["\n You have Bet: %1", _bet],"PLAIN DOWN"];
@@ -49,8 +48,8 @@ if (_result1 == _result2)then{
 };
 //Pay player if they win
 if(_win)then{
-GearAdd addMagazine _bet;
-GearAdd addMagazine _bet;
+player addMagazine _bet;
+player addMagazine _bet;
 };
 }else{
 	titleText [format["\n You need %1 to place this bet!", _bet],"PLAIN DOWN"]; titleFadeOut 5;
