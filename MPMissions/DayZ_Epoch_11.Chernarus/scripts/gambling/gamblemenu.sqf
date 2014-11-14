@@ -5,8 +5,7 @@ gamblemenu = [
 	["",true],
 		["Match number - Pays 3-1", [], "#USER:Match", -5, [["expression", ""]], "1", "0"],
 		["Highest Number - Pays 2-1", [], "#USER:HighestNumber", -5, [["expression", ""]], "1", "1"],
-		["", [], "", -5, [["expression", ""]], "1", "0"],
-			["Main Menu", [20], "#USER:gamblemenu", -5, [["expression", ""]], "1", "1"]
+		["", [], "", -5, [["expression", ""]], "1", "0"]
 	];
 	
 Match = [
