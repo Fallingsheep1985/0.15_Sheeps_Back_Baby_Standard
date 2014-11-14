@@ -1,10 +1,12 @@
 _EXECscript1 = 'player execVM "scripts\gambling\numbergame\%1"';
 _EXECscript2 = 'player execVM "scripts\gambling\highestnumbergame\%1"';
+_EXECscript3 = 'player execVM "scripts\gambling\guessinggame\%1"';
 
 gamblemenu = [
 	["",true],
-		["Match number - Pays 3-1", [], "#USER:Match", -5, [["expression", ""]], "1", "0"],
+		["Match Number - Pays 3-1", [], "#USER:Match", -5, [["expression", ""]], "1", "0"],
 		["Highest Number - Pays 2-1", [], "#USER:HighestNumber", -5, [["expression", ""]], "1", "1"],
+		["Guessing Game - Pays 2-1", [], "#USER:Guess", -5, [["expression", ""]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"]
 	];
 	
@@ -37,6 +39,22 @@ HighestNumber = [
 		["Bet: 80oz", [],"", -5, [["expression", format[_EXECscript2,"80oz.sqf"]]], "1", "1"],
 		["Bet: 90oz", [],"", -5, [["expression", format[_EXECscript2,"90oz.sqf"]]], "1", "1"],
 		["Bet: 100oz", [],"", -5, [["expression", format[_EXECscript2,"100oz.sqf"]]], "1", "1"],
+		["", [], "", -5, [["expression", ""]], "1", "0"],
+		["Main Menu", [20], "#USER:gamblemenu", -5, [["expression", ""]], "1", "1"]
+	];
+Guess = [
+	["",true],
+		["Guessing Game", [],"", -5, [["expression", ""]], "1", "0"],
+		["Bet: 10oz", [],"", -5, [["expression", format[_EXECscript3,"10oz.sqf"]]], "1", "1"],
+		["Bet: 20oz", [],"", -5, [["expression", format[_EXECscript3,"20oz.sqf"]]], "1", "1"],
+		["Bet: 30oz", [],"", -5, [["expression", format[_EXECscript3,"30oz.sqf"]]], "1", "1"],
+		["Bet: 40oz", [],"", -5, [["expression", format[_EXECscript3,"40oz.sqf"]]], "1", "1"],
+		["Bet: 50oz", [],"", -5, [["expression", format[_EXECscript3,"50oz.sqf"]]], "1", "1"],
+		["Bet: 60oz", [],"", -5, [["expression", format[_EXECscript3,"60oz.sqf"]]], "1", "1"],
+		["Bet: 70oz", [],"", -5, [["expression", format[_EXECscript3,"70oz.sqf"]]], "1", "1"],
+		["Bet: 80oz", [],"", -5, [["expression", format[_EXECscript3,"80oz.sqf"]]], "1", "1"],
+		["Bet: 90oz", [],"", -5, [["expression", format[_EXECscript3,"90oz.sqf"]]], "1", "1"],
+		["Bet: 100oz", [],"", -5, [["expression", format[_EXECscript3,"100oz.sqf"]]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:gamblemenu", -5, [["expression", ""]], "1", "1"]
 	];
