@@ -303,16 +303,8 @@ dayz_resetSelfActions = {
 	s_player_bankrob = -1;
 	s_player_butcherz = -1;
 
-	s_player_gamble10 = -1;
-	s_player_gamble20 = -1;
-	s_player_gamble30 = -1;
-	s_player_gamble40 = -1;
-	s_player_gamble50 = -1;
-	s_player_gamble60 = -1;
-	s_player_gamble70 = -1;
-	s_player_gamble80 = -1;
-	s_player_gamble90 = -1;
-	s_player_gamble100 = -1;
+	s_player_gamble = -1;
+
 };
 call dayz_resetSelfActions;
 

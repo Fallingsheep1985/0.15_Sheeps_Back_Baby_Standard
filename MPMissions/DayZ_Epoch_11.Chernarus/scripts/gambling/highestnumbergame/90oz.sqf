@@ -31,11 +31,11 @@ sleep 4;
 cutText [format["\n You Rolled: %1", _result2],"PLAIN DOWN"];
 systemChat format ["You Rolled: %1", _result2];
 sleep 4;
-//check if numbers match
-if (_result1 == _result2)then{
+//check if house is less than player
+if (_result1 < _result2)then{
 	_win = true;
 	//alert player they have won
-titleText ["You won 3x 90oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
+titleText ["You won 2x 90oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
 }else{
 	_win = false;
 	//alert player they have lost
@@ -43,7 +43,6 @@ titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 5;
 };
 //Pay player if they win
 if(_win)then{
-player addMagazine "ItemBriefcase90oz";
 player addMagazine "ItemBriefcase90oz";
 player addMagazine "ItemBriefcase90oz";
 };

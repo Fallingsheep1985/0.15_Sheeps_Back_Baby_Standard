@@ -35,7 +35,7 @@ sleep 4;
 if (_result1 == _result2)then{
 	_win = true;
 	//alert player they have won
-titleText ["You won 2x 70oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
+titleText ["You won 3x 70oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
 }else{
 	_win = false;
 	//alert player they have lost
@@ -43,6 +43,7 @@ titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 5;
 };
 //Pay player if they win
 if(_win)then{
+player addMagazine "ItemBriefcase70oz";
 player addMagazine "ItemBriefcase70oz";
 player addMagazine "ItemBriefcase70oz";
 };

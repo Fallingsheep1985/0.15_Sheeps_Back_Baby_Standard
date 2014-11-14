@@ -1332,55 +1332,10 @@ if(ZombieBombScript)then{
 
 //Random number game
 	if (cursorTarget isKindOf "Hooker4") then {
-		if (s_player_gamble10 < 0) then {
-            s_player_gamble10 = player addAction [("<t color='#0096ff'>")+("Gamble 10oz Briefcase")+("</t>"), "scripts\gambling\numbergame\10oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble20 < 0) then {
-            s_player_gamble20 = player addAction [("<t color='#0096ff'>")+("Gamble 20oz Briefcase")+("</t>"), "scripts\gambling\numbergame\20oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble30 < 0) then {
-            s_player_gamble30 = player addAction [("<t color='#0096ff'>")+("Gamble 30oz Briefcase")+("</t>"), "scripts\gambling\numbergame\30oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble40 < 0) then {
-            s_player_gamble40 = player addAction [("<t color='#0096ff'>")+("Gamble 40oz Briefcase")+("</t>"), "scripts\gambling\numbergame\40oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble50 < 0) then {
-            s_player_gamble50 = player addAction [("<t color='#0096ff'>")+("Gamble 50oz Briefcase")+("</t>"), "scripts\gambling\numbergame\50oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble60 < 0) then {
-            s_player_gamble60 = player addAction [("<t color='#0096ff'>")+("Gamble 60oz Briefcase")+("</t>"), "scripts\gambling\numbergame\60oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble70 < 0) then {
-            s_player_gamble70 = player addAction [("<t color='#0096ff'>")+("Gamble 70oz Briefcase")+("</t>"), "scripts\gambling\numbergame\70oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble80 < 0) then {
-            s_player_gamble80 = player addAction [("<t color='#0096ff'>")+("Gamble 80oz Briefcase")+("</t>"), "scripts\gambling\numbergame\80oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble90 < 0) then {
-            s_player_gamble90 = player addAction [("<t color='#0096ff'>")+("Gamble 90oz Briefcase")+("</t>"), "scripts\gambling\numbergame\90oz.sqf","",5,false,true,"",""];
-        };
-		if (s_player_gamble100 < 0) then {
-            s_player_gamble100 = player addAction [("<t color='#0096ff'>")+("Gamble 100oz Briefcase")+("</t>"), "scripts\gambling\numbergame\100oz.sqf","",5,false,true,"",""];
-        };
+		if (s_player_gamble < 0) then {
+            s_player_gamble = player addAction [("<t color='#0096ff'>")+("Gamble")+("</t>"), "scripts\gambling\gamblemenu.sqf","",5,false,true,"",""];
+		};
 	}else {
-	    player removeAction s_player_gamble10;
-		s_player_gamble10 = -1;
-		player removeAction s_player_gamble20;
-		s_player_gamble20 = -1;
-		player removeAction s_player_gamble30;
-		s_player_gamble30 = -1;
-		player removeAction s_player_gamble40;
-		s_player_gamble40 = -1;
-		player removeAction s_player_gamble50;
-		s_player_gamble50 = -1;
-		player removeAction s_player_gamble60;
-		s_player_gamble60 = -1;
-		player removeAction s_player_gamble70;
-		s_player_gamble70 = -1;
-		player removeAction s_player_gamble80;
-		s_player_gamble80 = -1;
-		player removeAction s_player_gamble90;
-		s_player_gamble90 = -1;
-		player removeAction s_player_gamble100;
-		s_player_gamble100 = -1;
+	    player removeAction s_player_gamble;
+		s_player_gamble = -1;
 	};
