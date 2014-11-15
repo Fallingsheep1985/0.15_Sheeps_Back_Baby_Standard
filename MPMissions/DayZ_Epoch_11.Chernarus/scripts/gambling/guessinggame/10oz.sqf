@@ -16,7 +16,7 @@ sleep 0.01;
 //inform player of bet amount
 titleText ["You Bet 10oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
 //bring up guess menu
-player execVM "scripts\gambling\guessmenu.sqf";
+player execVM "scripts\gambling\guessinggame\guessmenu.sqf";
 }else{
 	titleText ["You need 1x 10oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
 };

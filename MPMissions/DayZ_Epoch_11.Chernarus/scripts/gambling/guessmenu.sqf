@@ -12,9 +12,9 @@ Guess = [
 		["7", [],"", -5, [["expression", format[_EXECscript3,"7.sqf"]]], "1", "1"],
 		["8", [],"", -5, [["expression", format[_EXECscript3,"8.sqf"]]], "1", "1"],
 		["9", [],"", -5, [["expression", format[_EXECscript3,"9.sqf"]]], "1", "1"],
-		["1", [],"", -5, [["expression", format[_EXECscript3,"10.sqf"]]], "1", "1"],
-		["", [], "", -5, [["expression", ""]], "1", "0"],
-		["Main Menu", [20], "#USER:gamblemenu", -5, [["expression", ""]], "1", "1"]
+		["1", [],"", -5, [["expression", format[_EXECscript3,"10.sqf"]]], "1", "1"]
 	];
+
+HouseGuess = round((random 9) +1);
 	
 showCommandingMenu "#USER:gamblemenu";

@@ -3,10 +3,14 @@ FIX SCRIPTS
 PAINT - test paint
 FMission undefined variables 
 Test zombie hordes + add more hordes
-base jump 
-salvage vehicle
-nuke event
-black jack game + other casino games --- dont ask when lol
-bus marker
 
+nuke event
+
+guessing game
+
+bus marker
+dancing hookers
+drug dealer
+
+casino
 
