@@ -86,4 +86,5 @@ class CfgTraderCategory {
 	#include "Category\Drugs.hpp"
 	#include "Category\Gems.hpp"
 	#include "Category\Misc.hpp"
+	#include "Category\FoodNuts.hpp"
 };

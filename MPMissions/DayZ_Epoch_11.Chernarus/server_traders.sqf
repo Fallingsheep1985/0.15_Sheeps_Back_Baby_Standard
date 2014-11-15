@@ -162,3 +162,16 @@ menu_GUE_Woodlander2 = [
 	[],
 	"neutral"
 ];
+
+// Bartender
+menu_Hooker2 = [
+	[["Drinks",633],["Nuts",902]],
+	[],
+	"neutral"
+];
+// Drug Dealer
+menu_Hooker1 = [
+	[["Drugs",901]],
+	[],
+	"neutral"
+];
