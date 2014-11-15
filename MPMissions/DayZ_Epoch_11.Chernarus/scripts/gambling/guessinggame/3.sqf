@@ -1,6 +1,5 @@
 private["_guessbet"];
 _guess = 3;
-titleText ["You guess 3.","PLAIN DOWN"]; titleFadeOut 5;
 sleep 2;
 cutText [format["\n The number was %1", HouseGuess],"PLAIN DOWN"];
 systemChat format ["The number was %1", HouseGuess];
