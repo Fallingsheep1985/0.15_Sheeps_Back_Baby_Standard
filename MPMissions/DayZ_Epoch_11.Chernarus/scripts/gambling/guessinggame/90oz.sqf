@@ -15,6 +15,7 @@ player removeMagazine "ItemBriefcase90oz";
 sleep 0.01;
 //inform player of bet amount
 titleText ["You Bet 90oz briefcase.","PLAIN DOWN"]; titleFadeOut 5;
+//show number choices
 player execVM "scripts\gambling\guessinggame\guessmenu.sqf";
 }else{
 	titleText ["You need 1x 90oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;

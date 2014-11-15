@@ -1,6 +1,6 @@
 //Sheeps random number game
 Private["_randomnumber","_result","_number","_win"];
-_10ozBet = false;
+_100ozBet = false;
 GUESSBET = "";
 if ("ItemBriefcase100oz" in magazines player) then {
     _100ozBet = true;

@@ -4,7 +4,8 @@ _EXECscript3 = 'player execVM "scripts\gambling\guessinggame\%1"';
 
 gamblemenu = [
 	["",true],
-		["Match Number - Pays 3-1", [], "#USER:Match", -5, [["expression", ""]], "1", "0"],
+		["Choose Game", [],"", -5, [["expression", ""]], "1", "0"],
+		["Match Number - Pays 3-1", [], "#USER:Match", -5, [["expression", ""]], "1", "1"],
 		["Highest Number - Pays 2-1", [], "#USER:HighestNumber", -5, [["expression", ""]], "1", "1"],
 		["Guessing Game - Pays 2-1", [], "#USER:Guess", -5, [["expression", ""]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"]
