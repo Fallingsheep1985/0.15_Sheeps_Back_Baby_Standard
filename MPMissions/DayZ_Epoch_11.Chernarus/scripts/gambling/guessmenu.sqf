@@ -1,6 +1,6 @@
 _EXECscript3 = 'player execVM "scripts\gambling\guessinggame\%1"';
 
-Guess = [
+Guessmenu = [
 	["",true],
 		["Pick A Number", [],"", -5, [["expression", ""]], "1", "0"],
 		["1", [],"", -5, [["expression", format[_EXECscript3,"1.sqf"]]], "1", "1"],
@@ -17,4 +17,4 @@ Guess = [
 
 HouseGuess = round((random 9) +1);
 	
-showCommandingMenu "#USER:gamblemenu";
+showCommandingMenu "#USER:Guessmenu";
