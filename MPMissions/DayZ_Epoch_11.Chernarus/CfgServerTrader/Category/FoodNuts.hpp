@@ -1,4 +1,4 @@
-class Category_902 {
+class Category_9002 {
 	class FoodPistachio {
 		type = "trade_items";
 		buy[] = {2,"ItemSilverBar"};

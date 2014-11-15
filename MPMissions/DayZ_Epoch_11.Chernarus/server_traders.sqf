@@ -165,7 +165,7 @@ menu_GUE_Woodlander2 = [
 
 // Bartender
 menu_Hooker2 = [
-	[["Drinks",633],["Nuts",902]],
+	[["Drinks",633],["Nuts",9002]],
 	[],
 	"neutral"
 ];
