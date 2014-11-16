@@ -121,12 +121,12 @@ to turn the map markers on change false to true
 
 */
 if (isServer) then {
-//Project X - Geekin aka Chainsaw Squirrel
-//execVM "\z\addons\dayz_server\CustomBuildings\projectX\roadtoprojectX.sqf";
-//execVM "\z\addons\dayz_server\CustomBuildings\projectX\bridgetoprojectX.sqf";
-//execVM "\z\addons\dayz_server\CustomBuildings\projectX\projectX.sqf";
-//execVM "\z\addons\dayz_server\CustomBuildings\projectX\tradersProjectX.sqf";
-projectxMarker = false;
+Project X - Geekin aka Chainsaw Squirrel
+execVM "\z\addons\dayz_server\CustomBuildings\projectX\roadtoprojectX.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\projectX\bridgetoprojectX.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\projectX\projectX.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\projectX\tradersProjectX.sqf";
+projectxMarker = true;
 
 //Water base - Geekin aka Chainsaw Squirrel
 //execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
