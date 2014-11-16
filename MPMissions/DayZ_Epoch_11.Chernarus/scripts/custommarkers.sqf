@@ -73,3 +73,13 @@ _golden_river_mine setMarkerColor "ColorBlack";
 _golden_river_mine setMarkerBrush "Solid";
 _golden_river_mine setMarkerSize [180, 180];
 golden_river_mine = _golden_river_mine;
+//Project X
+if (projectxMarker) then {
+_projectxMarker = createMarker ["projectx", [6491.0933, 14284.572]];
+_projectxMarker setMarkerText "Casino";
+_projectxMarker setMarkerType "mil_dot";
+_projectxMarker setMarkerColor "ColorBlack";
+_projectxMarker setMarkerBrush "Solid";
+_projectxMarker setMarkerSize [180, 180];
+projectx = _projectxMarker;
+};

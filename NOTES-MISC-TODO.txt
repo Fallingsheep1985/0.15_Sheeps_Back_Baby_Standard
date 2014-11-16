@@ -6,11 +6,15 @@ Test zombie hordes + add more hordes
 
 nuke event
 
-guessing game
-
 bus marker
-dancing hookers
-drug dealer
 
-casino
+dancing hookers(ProjectX)
+drug dealer(ProjectX)
 
+casino(ProjectX)
+
+turrents that you can buy and deploy (advanced alchemy)
+
+
+
+OVERPOCH - update and test
