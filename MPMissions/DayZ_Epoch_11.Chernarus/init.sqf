@@ -7,7 +7,8 @@ cutText ["","BLACK OUT"];
 enableSaving [false, false];
 //Load Configs
 [] execVM "scriptcontrol.sqf";
-
+//Load Markers
+[] execVM "scripts\custommarkers.sqf";
 //REALLY IMPORTANT VALUES
 dayZ_instance =	11;					//The instance
 dayzHiveRequest = [];

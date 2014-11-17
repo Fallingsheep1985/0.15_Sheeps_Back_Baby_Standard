@@ -121,7 +121,7 @@ to turn the map markers on change false to true
 
 */
 if (isServer) then {
-Project X - Geekin aka Chainsaw Squirrel
+//Project X - Geekin aka Chainsaw Squirrel
 execVM "\z\addons\dayz_server\CustomBuildings\projectX\roadtoprojectX.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\projectX\bridgetoprojectX.sqf";
 execVM "\z\addons\dayz_server\CustomBuildings\projectX\projectX.sqf";
@@ -132,38 +132,38 @@ projectxMarker = true;
 //execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
 
 //Sector FNG inland
-//execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
-sectorfngMarker = false;
+execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+sectorfngMarker = true;
 
 //CDC Balota (no trader)                        
-//execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
-CDCMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
+CDCMarker = true;
 
 //Altar
-//execVM  "\z\addons\dayz_server\CustomBuildings\altar.sqf";
-altarmilitarybaseMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\altar.sqf";
+altarmilitarybaseMarker = true;
 
 //beached aircraft carrier
-//execVM  "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
-beachedcarrierMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\aircraftcarrier.sqf";
+beachedcarrierMarker = true;
 
 //Black Lake Castle
-//execVM  "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
-blacklakecastlerMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
+blacklakecastlerMarker = true;
 
 //Kameka mine                                
-//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
-//execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
-//execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
-kamenkamineMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
+execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
+execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
+kamenkamineMarker = true;
 
 //Black forest outpost
 //execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
 blackforestoutpostMarker = false;
 
 //Golden River MIne
-//execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
-golden_river_mineMarker  = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
+golden_river_mineMarker  = true;
 //IXXO
 //execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
 //execVM  "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
