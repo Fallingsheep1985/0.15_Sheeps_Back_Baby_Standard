@@ -496,9 +496,11 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		s_player_lockUnlock_crtl = -1;
 	};
 if(ArrestScript)then{
+_isTrader = _typeOfCursorTarget in ["Hooker1","Hooker2","RU_Functionary1","RU_Citizen3","Rocker4","Profiteer4","Rita_Ensler_EP1","CIV_EuroMan01_EP1","CIV_EuroMan02_EP1","TK_GUE_Soldier_5_EP1","GUE_Soldier_MG","Worker2","Worker3","Woodlander1","UN_CDF_Soldier_Pilot_EP1","RU_WorkWoman1","Dr_Annie_Baker_EP1","RU_Citizen4","RU_WorkWoman5","RU_Citizen1","RU_Villager3","TK_CIV_Takistani04_EP1","Pilot_EP1","RU_Profiteer4","Woodlander3","Dr_Hladik_EP1","Doctor","HouseWife1","GUE_Woodlander2"];
+
 //--------------------------------------ARREST---------------------------------------------------------------- 
 		   if ((player getVariable"humanity") >= 5000 || (player getVariable"humanity") <= -5000 || (getPlayerUID player) in AdminList ) then {
-			if(_isMan && !_isZombie && _canDo && _isAlive && !( _traderType in serverTraders)) then {
+			if(_isMan && !_isZombie && _canDo && _isAlive && !_isTrader) then {
 				if (s_player_arrest < 0) then {
 					s_player_arrest = player addaction ['<t color="#0074E8">' + "Investigation Menu" + '</t>', "Scripts\Investigation\investigation.sqf","",100,false,true,"", ""];
 					};
@@ -1333,7 +1335,7 @@ if(ZombieBombScript)then{
 //Random number game
 	if (cursorTarget isKindOf "Hooker4") then {
 		if (s_player_gamble < 0) then {
-            s_player_gamble = player addAction [("<t color='#0096ff'>")+("Gamble")+("</t>"), "scripts\gambling\gamblemenu.sqf","",5,false,true,"",""];
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Gamble")+("</t>"), "scripts\gambling\gamblemenu.sqf","",5,false,true,"",""];
 		};
 	}else {
 	    player removeAction s_player_gamble;
