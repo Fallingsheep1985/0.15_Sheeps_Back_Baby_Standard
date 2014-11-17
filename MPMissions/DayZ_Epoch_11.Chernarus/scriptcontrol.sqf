@@ -129,7 +129,7 @@ execVM "\z\addons\dayz_server\CustomBuildings\projectX\tradersProjectX.sqf";
 projectxMarker = true;
 
 //Water base - Geekin aka Chainsaw Squirrel
-//execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
 
 
 //CDC Balota (no trader)                        
@@ -155,47 +155,47 @@ execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
 kamenkamineMarker = true;
 
 //Black forest outpost
-//execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
-blackforestoutpostMarker = false;
+execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
+blackforestoutpostMarker = true;
 
 //Golden River MIne
 execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
 golden_river_mineMarker  = true;
 //IXXO
-//execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\Krasno.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\northeast.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\vybor.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\basebor.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\basedichina.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\basenovy.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\Zeleno.sqf";
+execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\Krasno.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\northeast.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\vybor.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\basebor.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\basedichina.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\basenovy.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\Zeleno.sqf";
                                              
 //Caves                                      
-//execVM  "\z\addons\dayz_server\CustomBuildings\Prud_Cave.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\North_Cave.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";                                                                                     
+execVM  "\z\addons\dayz_server\CustomBuildings\Prud_Cave.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\North_Cave.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\South_Cave.sqf";                                                                                     
 
 //cherno heliport
-//execVM  "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
 
 //East coast cherno - edits by Geekin aka Chainsaw Squirrel to improve FPS
-//execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
 
 //Kabino Check Point
-//execVM  "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
 
 //Otmel Base
-//execVM  "\z\addons\dayz_server\CustomBuildings\otmel.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\otmel.sqf";
 
 //Electro
-//execVM  "\z\addons\dayz_server\CustomBuildings\electro.sqf";
-//execVM  "\z\addons\dayz_server\CustomBuildings\electroZI.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\electro.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\electroZI.sqf";
 
 //Cherno
-//execVM  "\z\addons\dayz_server\CustomBuildings\Cherno.sqf";
+execVM  "\z\addons\dayz_server\CustomBuildings\Cherno.sqf";
 
 
 //DONT USE THE BELOW WITH PROJECTX!

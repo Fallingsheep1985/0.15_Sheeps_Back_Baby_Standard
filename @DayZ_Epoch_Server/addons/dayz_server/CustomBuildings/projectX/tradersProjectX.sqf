@@ -2,7 +2,7 @@
 _unit_10000 = objNull;
 if (true) then
 {
-  _this = createAgent ["Hooker4", [11460.307, 11360.972, 3.05], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Hooker4", [6473.39, 14292.2, 0], [], 0, "CAN_COLLIDE"];
   _unit_10000 = _this;
   _this setDir 422.9967;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -13,7 +13,7 @@ if (true) then
 _unit_10001 = objNull;
 if (true) then
 {
-  _this = createAgent ["Hooker2", [6480.47, 14297.2, 3.05], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Hooker2", [6480.47, 14297.2, 0], [], 0, "CAN_COLLIDE"];
   _unit_10001 = _this;
   _this setDir 422.9967;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -24,7 +24,7 @@ if (true) then
 _unit_10002 = objNull;
 if (true) then
 {
-  _this = createAgent ["Hooker1", [11458.307, 11360.972, 3.05], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Hooker1", [6475.19, 14270.5, 0], [], 0, "CAN_COLLIDE"];
   _unit_10002 = _this;
   _this setDir 422.9967;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
@@ -35,7 +35,7 @@ if (true) then
 _unit_10003 = objNull;
 if (true) then
 {
-  _this = createAgent ["Hooker3", [11458.307, 11359.972, 3.05], [], 0, "CAN_COLLIDE"];
+  _this = createAgent ["Hooker3", [6487.82, 14283.8, 1.435], [], 0, "CAN_COLLIDE"];
   _unit_10003 = _this;
   _this setDir 422.9967;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0; this playMoveNow 'ActsPercMstpSnonWnonDnon_DancingDuoIvan'; this disableAI 'Anim';";
