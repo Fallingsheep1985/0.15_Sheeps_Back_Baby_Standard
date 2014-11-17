@@ -4,10 +4,11 @@ PAINT - test paint
 FMission undefined variables 
 Test zombie hordes + add more hordes
 nuke event
-map markers
+
+Re do loot for Casino killhouse
+
 neon lights
 bus marker
 dancing hookers(ProjectX)
-drug dealer(ProjectX)
-casino(ProjectX)
+
 turrents that you can buy and deploy (advanced alchemy)
