@@ -131,9 +131,6 @@ projectxMarker = true;
 //Water base - Geekin aka Chainsaw Squirrel
 //execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
 
-//Sector FNG inland
-execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
-sectorfngMarker = true;
 
 //CDC Balota (no trader)                        
 execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";
@@ -200,8 +197,11 @@ golden_river_mineMarker  = true;
 //Cherno
 //execVM  "\z\addons\dayz_server\CustomBuildings\Cherno.sqf";
 
-//DONT USE WITH PROJECTX!
+
+//DONT USE THE BELOW WITH PROJECTX!
 //road from dam to sector FNG
 //execVM  "\z\addons\dayz_server\CustomBuildings\roadpobeda.sqf";
-
+//Sector FNG inland
+//execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+sectorfngMarker = false;
 };
