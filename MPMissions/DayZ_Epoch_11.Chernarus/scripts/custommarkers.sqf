@@ -16,10 +16,9 @@ If (isServer) then{
 	_altarmilitarybase = createMarker ["altarmilitarybase", [8137.84, 9180.96]];
 	_altarmilitarybase setMarkerText "Altar Military Base";
 	_altarmilitarybase setMarkerType "DOT";
-	_altarmilitarybase setMarkerShape "ELLIPSE"; 
 	_altarmilitarybase setMarkerColor "ColorBlack";
 	_altarmilitarybase setMarkerBrush "Solid";
-	_altarmilitarybase setMarkerSize [10, 10];
+	_altarmilitarybase setMarkerSize [1, 1];
 	altarmilitarybase = _altarmilitarybase;
 	};
 	//Black Lake Castle
@@ -27,10 +26,9 @@ If (isServer) then{
 	_blacklakecastle = createMarker ["blacklakecastle", [13376.6, 12000.2]];
 	_blacklakecastle setMarkerText "Black Lake Castle";
 	_blacklakecastle setMarkerType "DOT";
-	_blacklakecastle setMarkerShape "ELLIPSE"; 
 	_blacklakecastle setMarkerColor "ColorBlack";
 	_blacklakecastle setMarkerBrush "Solid";
-	_blacklakecastle setMarkerSize [10, 10];
+	_blacklakecastle setMarkerSize [1, 1];
 	blacklakecastle = _blacklakecastle;
 	};
 	//Beached Carrier
@@ -38,10 +36,9 @@ If (isServer) then{
 	_beachedcarrier = createMarker ["beachedcarrier", [8137.84, 9180.96]];
 	_beachedcarrier setMarkerText "Beached Carrier";
 	_beachedcarrier setMarkerType "DOT";
-	_beachedcarrier setMarkerShape "ELLIPSE"; 
 	_beachedcarrier setMarkerColor "ColorBlack";
 	_beachedcarrier setMarkerBrush "Solid";
-	_beachedcarrier setMarkerSize [10, 10];
+	_beachedcarrier setMarkerSize [1, 1];
 	beachedcarrier = _beachedcarrier;
 	};
 	//CDC
@@ -49,10 +46,9 @@ If (isServer) then{
 	_CDC = createMarker ["CDC", [4847.68, 2297.24]];
 	_CDC setMarkerText "Centre For Disease Control";
 	_CDC setMarkerType "DOT";
-	_CDC setMarkerShape "ELLIPSE"; 
 	_CDC setMarkerColor "ColorBlack";
 	_CDC setMarkerBrush "Solid";
-	_CDC setMarkerSize [10, 10];
+	_CDC setMarkerSize [1, 1];
 	CDC = _CDC;
 	};
 	//Kamenka Mine
@@ -60,10 +56,9 @@ If (isServer) then{
 	_kamenkamine = createMarker ["kamenkamine", [87.26, 1599.11]];
 	_kamenkamine setMarkerText "Kamenka Mine";
 	_kamenkamine setMarkerType "DOT";
-	_kamenkamine setMarkerShape "ELLIPSE"; 
 	_kamenkamine setMarkerColor "ColorBlack";
 	_kamenkamine setMarkerBrush "Solid";
-	_kamenkamine setMarkerSize [10, 10];
+	_kamenkamine setMarkerSize [1, 1];
 	kamenkamine = _kamenkamine;
 	};
 	//Black Forest Outpost Mine
@@ -71,10 +66,9 @@ If (isServer) then{
 	_blackforestoutpost = createMarker ["blackforestoutpost", [8565, 8085.11]];
 	_blackforestoutpost setMarkerText "Black Forest Outpost";
 	_blackforestoutpost setMarkerType "DOT";
-	_blackforestoutpost setMarkerShape "ELLIPSE"; 
 	_blackforestoutpost setMarkerColor "ColorBlack";
 	_blackforestoutpost setMarkerBrush "Solid";
-	_blackforestoutpost setMarkerSize [10, 10];
+	_blackforestoutpost setMarkerSize [1, 1];
 	blackforestoutpost = _blackforestoutpost;
 	};
 	//Golden River Mine
@@ -84,7 +78,7 @@ If (isServer) then{
 	_golden_river_mine setMarkerType "DOT";
 	_golden_river_mine setMarkerColor "ColorBlack";
 	_golden_river_mine setMarkerBrush "Solid";
-	_golden_river_mine setMarkerSize [10, 10];
+	_golden_river_mine setMarkerSize [1, 1];
 	golden_river_mine = _golden_river_mine;
 	};
 	//Project X
@@ -94,7 +88,7 @@ If (isServer) then{
 	_projectxMarker setMarkerType "DOT";
 	_projectxMarker setMarkerColor "ColorBlack";
 	_projectxMarker setMarkerBrush "Solid";
-	_projectxMarker setMarkerSize [10, 10];
+	_projectxMarker setMarkerSize [1, 1];
 	projectx = _projectxMarker;
 	};
 
