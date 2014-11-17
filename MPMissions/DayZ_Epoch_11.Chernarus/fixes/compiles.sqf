@@ -24,9 +24,14 @@ if (!isDedicated) then {
 	
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	
-	player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+	//player_switchModel = 			compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+	//player_wearClothes  = compile preprocessFileLineNumbers "fixes\player_wearClothes.sqf"; 
 	player_humanityMorph =		compile preprocessFileLineNumbers "fixes\player_humanityMorph.sqf";	
-	player_wearClothes =		compile preprocessFileLineNumbers "fixes\player_wearClothes.sqf";
+	
+	FillSkinList  = compile preprocessFileLineNumbers "scripts\takeskin\getList.sqf";
+	ApplySkinList  = compile preprocessFileLineNumbers "scripts\takeskin\changeClothes.sqf";
+	player_wearClothes  = compile preprocessFileLineNumbers "scripts\takeskin\player_wearClothes.sqf"; 
+	player_switchModel  = compile preprocessFileLineNumbers "scripts\takeskin\player_switchModel.sqf";
 };
 
 //Journal

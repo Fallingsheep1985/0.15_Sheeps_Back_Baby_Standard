@@ -931,17 +931,15 @@ if(TentHealScript)then{
 };
 //////////////////////////////////////////////////TAKE CLOTHES START/////////////////////////////////////
 if (TakeClothesScript) then {
-        _clothesTaken = cursorTarget getVariable["clothesTaken",false];
-    // Take clothes by Zabn @ BalotaBuddies.net
-    if (_isMan && !_isAlive && !_isZombie && !_isAnimal && !_clothesTaken) then {
-        if (s_player_clothes < 0) then {
-            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "scripts\takeskin\player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
-        };
-    } else {
-        
-        player removeAction s_player_clothes;
-		s_player_clothes = -1;
-    };
+//Remove CLOTHES
+if (_isMan and !_isAlive and !_isZombie and !_isAnimal) then {
+if (s_clothes < 0) then {
+s_clothes = player addAction [("" + ("Take Clothes") + ""), "scripts\takeskin\removeclothes.sqf",cursorTarget, 1, false, true, "",""];
+};
+} else {
+player removeAction s_clothes;
+s_clothes = -1;
+};
 };
 //////////////////////////////////////////////////TAKE CLOTHES END/////////////////////////////////////
 	//Repairing Vehicles
@@ -1207,6 +1205,9 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
     s_player_search = -1;
 	player removeAction s_player_butcherZ;
 	s_player_butcherZ = -1;
+	//remove clothes
+	player removeAction s_clothes;
+	s_clothes = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
