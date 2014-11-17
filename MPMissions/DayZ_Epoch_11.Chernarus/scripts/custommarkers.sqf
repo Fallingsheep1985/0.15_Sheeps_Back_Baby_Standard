@@ -33,7 +33,7 @@ If (isServer) then{
 	};
 	//Beached Carrier
 	if (beachedcarrierMarker) then {
-	_beachedcarrier = createMarker ["beachedcarrier", [8137.84, 9180.96]];
+	_beachedcarrier = createMarker ["beachedcarrier", [7469.71,2713.64]];
 	_beachedcarrier setMarkerText "Beached Carrier";
 	_beachedcarrier setMarkerType "DOT";
 	_beachedcarrier setMarkerColor "ColorBlack";

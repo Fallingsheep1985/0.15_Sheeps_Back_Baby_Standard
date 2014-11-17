@@ -3,15 +3,14 @@ FIX SCRIPTS
 PAINT - test paint
 FMission undefined variables 
 Test zombie hordes + add more hordes
+check if horde is causing delay on start up
 nuke event
-
+Beached carrier marker (move to correct place)
 Re do loot for Casino killhouse
-
-neon lights
+neon lights (add in)
 bus marker
+clear road for BUS
+black market trader no trade from backpack option
 dancing hookers(ProjectX)
-
 turrents that you can buy and deploy (advanced alchemy)
-
-
-take skins/ wear clothes
+take skins/ wear clothes (needs testing)
