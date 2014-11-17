@@ -8,20 +8,11 @@
 ///////////////////////////////////////////////
 // Array of skin classnames for the AI to use
 DZMSHotSpotsBanditSkins = [
-"Villager1",
-"Villager2",
-"Villager3",
-"Villager4",
-"Worker1",
-"Worker2",
-"Worker4",
-"Citizen1",
-"Citizen2",
-"Citizen3",
-"Citizen4",
-"Woodlander1",
-"Woodlander2",
-"Woodlander3"
+"Bandit1_DZ",
+"Camo1_DZ",
+"BanditW2_DZ",
+"GUE_Soldier_Crew_DZ",
+"GUE_Soldier_2_DZ"
 ];
 ////////////////////////
 // Array of AI Skills
