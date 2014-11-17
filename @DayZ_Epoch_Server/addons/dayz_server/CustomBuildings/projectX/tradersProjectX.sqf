@@ -35,13 +35,12 @@ if (true) then
 _unit_10003 = objNull;
 if (true) then
 {
-  _this = createAgent ["Hooker3", [6487.82, 14283.8, 1.435], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Hooker3", [6487.82, 14283.8, 1.435], [], 0, "CAN_COLLIDE"];
   _unit_10003 = _this;
   _this setDir 422.9967;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this text = 'p1'; this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
-  _this text = "p1";
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;_this text = "p1";};
   
 };
 
