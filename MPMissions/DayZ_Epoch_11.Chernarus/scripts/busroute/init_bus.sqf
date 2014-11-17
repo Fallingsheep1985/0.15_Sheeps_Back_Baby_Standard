@@ -1,6 +1,6 @@
 	private ["_axeBusUnit","_firstRun","_dir","_axWPZ","_unitpos","_rndLOut","_ailoadout","_aiwep","_aiammo","_axeBus","_axeBusGroup","_axeBuspawnpos","_axeBusWPradius","_axeBusWPIndex","_axeBusFirstWayPoint","_axeBusWP","_axeBusRouteWaypoints","_axeBusDriver","_axeBusLogicGroup","_axeBusLogicCenter"];
 	_axeBusUnit = objNull;
-	_axeBusGroup = createGroup RESISTANCE;
+	_axeBusGroup = createGroup west;
 	_axeBuspawnpos = [13128.2,10381.9,0];
 	_unitpos = [13125.2,10416,0];
 	_axeBusWPradius = 2;//waypoint radius
