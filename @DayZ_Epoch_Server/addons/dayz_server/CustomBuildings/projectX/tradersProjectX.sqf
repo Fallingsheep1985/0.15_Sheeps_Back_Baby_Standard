@@ -40,7 +40,9 @@ if (true) then
   _this setDir 422.9967;
   _this setVehicleInit "this playMove 'ActsPercMstpSnonWnonDnon_DancingDuoIvan'; this disableAI 'Anim';";
   _this setUnitAbility 0.60000002;
-	_this playMove "ActsPercMstpSnonWnonDnon_DancingDuoIvan"; _this disableAI "Anim";
+  _this playMove "ActsPercMstpSnonWnonDnon_DancingDuoIvan"; 
+  _this disableAI "Anim";
+  _this text = "p1";
 };
 
 processInitCommands;

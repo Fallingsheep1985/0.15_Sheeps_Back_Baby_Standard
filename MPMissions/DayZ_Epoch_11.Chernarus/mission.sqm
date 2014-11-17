@@ -1305,7 +1305,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			position[]={6325.6772,304.99033,7807.7412};
@@ -1489,6 +1489,18 @@ class Mission
 			expCond="(vehicle player) in thislist;";
 			expActiv="zomblespawnt = [] execVM ""scripts\hordes\spawn_horde.sqf"";";
 			expDesactiv="terminate zomblespawnt;";
+			class Effects
+			{
+			};
+		};
+		class Item11
+		{
+			position[]={6487.82,0,14283.8};
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="p1 playmove ""ActsPercMstpSnonWnonDnon_DancingDuoIvan""";
 			class Effects
 			{
 			};
