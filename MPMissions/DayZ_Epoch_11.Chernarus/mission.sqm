@@ -47,7 +47,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			side="WEST";
@@ -1173,6 +1173,24 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={6487.35,0.0,14284.3};
+					id=1;
+					side="WEST";
+					vehicle="Hooker3";
+					leader=1;
+					skill=0.60000002;
+					text="p1";
 				};
 			};
 		};
