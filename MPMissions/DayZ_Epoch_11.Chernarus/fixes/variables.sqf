@@ -48,7 +48,21 @@ Clothing24 = ["BanditW2_DZ"];
 Clothing25 = ["GUE_Commander_DZ"];
 Clothing26 = ["GUE_Soldier_2_DZ"];
 Clothing27 = ["GUE_Soldier_CO_DZ"];
-AllPlayers = AllPlayers + Clothing1 + Clothing2 + Clothing3 + Clothing4 + Clothing5 + Clothing6 + Clothing7 + Clothing8 + Clothing9 + Clothing10 + Clothing11  + Clothing12  + Clothing13  + Clothing14  + Clothing15  + Clothing16  + Clothing17  + Clothing18  + Clothing19 + Clothing20 + Clothing21+ Clothing22+ Clothing23+ Clothing24+ Clothing25+ Clothing26+ Clothing27 ;
+AllPlayers = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R",
+"FR_Commander","Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman","USMC_SoldierS","USMC_SoldierS_Sniper",
+"USMC_Soldier_AA","USMC_Soldier_Pilot","Ins_Soldier_GL_DZ","CDF_Soldier","CDF_Commander","CDF_Soldier_AR","CDF_Soldier_Crew",
+"CDF_Soldier_Light","CDF_Soldier_Pilot","GUE_Soldier_Crew_DZ","RU_Soldier","RU_Soldier_Crew","RU_Soldier_Light",
+"RU_Soldier_Pilot","RUS_Commander","RUS_Soldier1","MVD_Soldier_Sniper",
+"Graves_Light_DZ","Drake","Graves","Herrera","Pierce","US_Delta_Force_Assault_EP1","US_Soldier_AR_EP1",
+"US_Soldier_AT_EP1","US_Soldier_MG_EP1","US_Pilot_Light_EP1","US_Soldier_SL_EP1",
+"CZ_Special_Forces_GL_DES_EP1_DZ","CZ_Soldier_AT_DES_EP1","CZ_Soldier_Light_DES_EP1","CZ_Special_Forces_DES_EP1","CZ_Special_Forces_TL_DES_EP1",
+"Bandit2_DZ","MVD_Soldier_Sniper","GER_Soldier_EP1","GER_Soldier_MG_EP1","ER_Soldier_TL_EP1",
+"Soldier_Bodyguard_AA12_PMC_DZ","CIV_Contractor2_BAF","BAF_crewman_DDPM","BAF_Soldier_FAC_DDPM","BAF_Soldier_N_DDPM",
+"BAF_Soldier_Marksman_DDPM","BAF_Soldier_Officer_DDPM","BAF_Soldier_L_DDPM","TK_INS_Soldier_EP1_DZ","TK_Commander_EP1",
+"TK_Soldier_Crew_EP1","TK_Soldier_MG_EP1","TK_Special_Forces_MG_EP1","TK_INS_Bonesetter_EP1","Survivor2_DZ","FR_Rodriguez_DZ",
+"FR_Corpsman","FR_GL","FR_Light","FR_Marksman","FR_R","FR_Sapper","FR_TL","Drake_Light_DZ","Soldier_Sniper_PMC_DZ",
+"CZ_Soldier_Sniper_EP1_DZ","Camo1_DZ","Rocket_DZ","Sniper1_DZ","Soldier_TL_PMC_DZ","GUE_Soldier_Sniper_DZ",
+"TK_INS_Warlord_EP1_DZ","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","GUE_Commander_DZ","GUE_Soldier_2_DZ","GUE_Soldier_CO_DZ"];
 
 MeleeWeapons = ["MeleeFishingPole","MeleeCrowbar","MeleeBaseBallBatNails","MeleeBaseBallBatBarbed","MeleeBaseBallBat","Crossbow_DZ","MeleeSledge","MeleeMachete","MeleeHatchet_DZE"];
 gear_done = false;
@@ -334,7 +348,7 @@ dayz_resetSelfActions = {
 	s_player_manageDoor = -1;
     s_player_bury_human = -1;
 	s_player_butcher_human = -1;
-	s_player_clothes = -1;
+	s_clothes = -1;
 	s_player_bankrob = -1;
 	s_player_butcherz = -1;
 
