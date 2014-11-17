@@ -1184,10 +1184,10 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={6487.35,0.0,14284.3};
+					position[]={6487.35,3.0,14284.3};
 					id=1;
 					side="WEST";
-					vehicle="Hooker3";
+					vehicle="US_Delta_Force_Undercover_Takistani06_EP1";
 					leader=1;
 					skill=0.60000002;
 					text="p1";
@@ -1513,12 +1513,16 @@ class Mission
 		};
 		class Item11
 		{
-			position[]={6487.82,0,14283.8};
+			position[]={6487.82,3.0,14283.8};
+			a=100;
+			b=100;
 			activationBy="ANY";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
+			name="DanceTrigger";
 			expActiv="p1 playmove ""ActsPercMstpSnonWnonDnon_DancingDuoIvan""";
+			expDesactiv="";
 			class Effects
 			{
 			};
