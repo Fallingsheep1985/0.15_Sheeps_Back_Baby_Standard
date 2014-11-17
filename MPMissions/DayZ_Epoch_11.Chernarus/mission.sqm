@@ -47,7 +47,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=2;
 		class Item0
 		{
 			side="WEST";
@@ -1176,24 +1176,6 @@ class Mission
 				};
 			};
 		};
-		class Item2
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6487.35,3.0,14284.3};
-					id=1;
-					side="WEST";
-					vehicle="SurvivorW2_DZ";
-					leader=1;
-					skill=0.60000002;
-					text="man";
-				};
-			};
-		};
 	};
 	class Markers
 	{
@@ -1323,7 +1305,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=12;
+		items=11;
 		class Item0
 		{
 			position[]={6325.6772,304.99033,7807.7412};
@@ -1507,18 +1489,6 @@ class Mission
 			expCond="(vehicle player) in thislist;";
 			expActiv="zomblespawnt = [] execVM ""scripts\hordes\spawn_horde.sqf"";";
 			expDesactiv="terminate zomblespawnt;";
-			class Effects
-			{
-			};
-		};
-		class Item11
-		{
-			position[]={6487.82,3.0,14283.8};
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expActiv="man playmove ""ActsPercMstpSnonWnonDnon_DancingDuoIvan""";
 			class Effects
 			{
 			};
