@@ -4,7 +4,9 @@ s_clothes = -1;
 
 _body = _this select 3;
 _model = typeOf _body;
-
+//define undefiend vars before use
+_txt = "";
+_hasBackPack = false;
 if( _model in Clothing1)then{_model = "FR_OHara_DZ"; //OK
 }else{
 if( _model in Clothing2)then{_model = "Soldier1_DZ";//OK
