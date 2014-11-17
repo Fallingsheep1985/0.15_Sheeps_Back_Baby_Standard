@@ -65,4 +65,7 @@ player_changeCombo = compile preprocessFileLineNumbers "scripts\doorManagement\p
 	//Zombie Bait/Bomb
 zombie_findTargetAgent =    		compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
 
+
+//Remove junk from roads
+stream_locationFill = compile preprocessFileLineNumbers "fiexs\stream_locationFill.sqf";
 initialized = true;
