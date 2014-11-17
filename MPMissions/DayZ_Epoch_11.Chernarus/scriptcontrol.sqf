@@ -18,7 +18,7 @@ FMissionScript = true;
 //Custom Kill Message's
 KillMessageScript = true;
 //Weapon Mods
-WepaonModScript = true;
+WeaponModScript = true;
 //EVR Blowout
 EVRScript = true;
 //Lights

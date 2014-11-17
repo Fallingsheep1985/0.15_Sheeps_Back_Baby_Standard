@@ -322,7 +322,7 @@ if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
 	};
 };
 
-if(WepaonModScript)then{
+if(WeaponModScript)then{
 	call compile preprocessFileLineNumbers "scripts\wmod\init.sqf";
 };
 //Base jump
