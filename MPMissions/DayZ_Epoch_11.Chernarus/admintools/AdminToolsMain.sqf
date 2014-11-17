@@ -50,6 +50,7 @@ SheepsMenu =
 	["Building Kits Menu >>", [], "#USER:BuildingKitMenu", -5, [["expression", ""]], "1", "1"],	
 	["Materials Menu >>", [], "#USER:MaterialsMenu", -5, [["expression", ""]], "1", "1"],
 	["Gems Menu >>", [], "#USER:GemsMenu", -5, [["expression", ""]], "1", "1"],	
+	["Show Class/Info", [],"", -5, [["expression", format[_EXECscript9,"ShowClass.sqf"]]], "1", "1"],
 	["Show Position", [],"", -5, [["expression", format[_EXECscript9,"showpostion.sqf"]]], "1", "1"],
 	["Show Position ATL", [],"", -5, [["expression", format[_EXECscript9,"showpostionATL.sqf"]]], "1", "1"],
 	["Locate Vehicles (need key + Map)", [],"", -5, [["expression", format[_EXECscript9,"locate_vehicle.sqf"]]], "1", "1"],
