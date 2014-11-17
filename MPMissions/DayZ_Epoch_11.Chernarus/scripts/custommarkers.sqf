@@ -18,7 +18,7 @@ If (isServer) then{
 	_altarmilitarybase setMarkerType "mil_dot";
 	_altarmilitarybase setMarkerColor "ColorBlack";
 	_altarmilitarybase setMarkerBrush "Solid";
-	_altarmilitarybase setMarkerSize [80, 80];
+	_altarmilitarybase setMarkerSize [10, 10];
 	altarmilitarybase = _altarmilitarybase;
 	};
 	//Black Lake Castle
@@ -28,7 +28,7 @@ If (isServer) then{
 	_blacklakecastle setMarkerType "mil_dot";
 	_blacklakecastle setMarkerColor "ColorBlack";
 	_blacklakecastle setMarkerBrush "Solid";
-	_blacklakecastle setMarkerSize [180, 180];
+	_blacklakecastle setMarkerSize [10, 10];
 	blacklakecastle = _blacklakecastle;
 	};
 	//Beached Carrier
@@ -38,7 +38,7 @@ If (isServer) then{
 	_beachedcarrier setMarkerType "mil_dot";
 	_beachedcarrier setMarkerColor "ColorBlack";
 	_beachedcarrier setMarkerBrush "Solid";
-	_beachedcarrier setMarkerSize [80, 80];
+	_beachedcarrier setMarkerSize [10, 10];
 	beachedcarrier = _beachedcarrier;
 	};
 	//CDC
@@ -48,7 +48,7 @@ If (isServer) then{
 	_CDC setMarkerType "dot";
 	_CDC setMarkerColor "ColorBlack";
 	_CDC setMarkerBrush "Solid";
-	_CDC setMarkerSize [80, 80];
+	_CDC setMarkerSize [10, 10];
 	CDC = _CDC;
 	};
 	//Kamenka Mine
@@ -58,7 +58,7 @@ If (isServer) then{
 	_kamenkamine setMarkerType "mil_dot";
 	_kamenkamine setMarkerColor "ColorBlack";
 	_kamenkamine setMarkerBrush "Solid";
-	_kamenkamine setMarkerSize [80, 80];
+	_kamenkamine setMarkerSize [10, 10];
 	kamenkamine = _kamenkamine;
 	};
 	//Black Forest Outpost Mine
@@ -68,7 +68,7 @@ If (isServer) then{
 	_blackforestoutpost setMarkerType "mil_dot";
 	_blackforestoutpost setMarkerColor "ColorBlack";
 	_blackforestoutpost setMarkerBrush "Solid";
-	_blackforestoutpost setMarkerSize [80, 80];
+	_blackforestoutpost setMarkerSize [10, 10];
 	blackforestoutpost = _blackforestoutpost;
 	};
 	//Golden River Mine
@@ -78,7 +78,7 @@ If (isServer) then{
 	_golden_river_mine setMarkerType "mil_dot";
 	_golden_river_mine setMarkerColor "ColorBlack";
 	_golden_river_mine setMarkerBrush "Solid";
-	_golden_river_mine setMarkerSize [80, 80];
+	_golden_river_mine setMarkerSize [10, 10];
 	golden_river_mine = _golden_river_mine;
 	};
 	//Project X
@@ -88,7 +88,7 @@ If (isServer) then{
 	_projectxMarker setMarkerType "mil_dot";
 	_projectxMarker setMarkerColor "ColorBlack";
 	_projectxMarker setMarkerBrush "Solid";
-	_projectxMarker setMarkerSize [80, 80];
+	_projectxMarker setMarkerSize [10, 10];
 	projectx = _projectxMarker;
 	};
 
