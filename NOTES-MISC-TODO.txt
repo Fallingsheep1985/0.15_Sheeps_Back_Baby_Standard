@@ -2,11 +2,12 @@ FIX SCRIPTS
 
 PAINT (test)
 FMission undefined variables 
-Test zombie hordes + add more hordes
-check if horde is causing delay on start up
+Test zombie hordes + add more hordes / check if horde is causing delay on start up
 nuke event
 Re do loot for Casino killhouse
 neon lights (add in)
 dancing hookers(ProjectX)
 turrents that you can buy and deploy (advanced alchemy)
 take skins/ wear clothes (needs testing)
+test survior hire
+add credits for survivor hire script
