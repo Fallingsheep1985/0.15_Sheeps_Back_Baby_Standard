@@ -152,7 +152,7 @@
 		};
 		//Create marker for bus
 		deleteMarker "BUSMarker";
-		_BUSMarker = createmarker"BUSMarker",getpos _axeBus];
+		_BUSMarker = createmarker ["BUSMarker", position _axeBus];
 		_BUSMarker setMarkerText "Bus";
 		_BUSMarker setMarkerType "DOT";
 		_BUSMarker setMarkerColor "ColorRed";
