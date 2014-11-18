@@ -7,7 +7,8 @@ nuke event
 Re do loot for Casino killhouse
 neon lights (add in)
 dancing hookers(ProjectX)
-turrents that you can buy and deploy (advanced alchemy)
+turrets that you can buy and deploy (advanced alchemy)
 take skins/ wear clothes (needs testing)
-test survior hire
+test survivor hire
 add credits for survivor hire script
+add survivor recruit info to readme (how to change spawn amount, etc)
