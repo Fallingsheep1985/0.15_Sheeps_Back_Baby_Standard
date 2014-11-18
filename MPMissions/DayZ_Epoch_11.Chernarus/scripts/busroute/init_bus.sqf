@@ -79,6 +79,8 @@
 		_axeBusUnit enableAI "MOVE";
 		_axeBusUnit enableAI "ANIM";
 		_axeBusUnit enableAI "FSM";
+		//stop AI attacking bus
+		_axeBusUnit setCaptive true;
 		_axeBusUnit allowDammage true;
 
 		_axeBusUnit setCombatMode "GREEN";
@@ -148,6 +150,15 @@
 		units _axeBusGroup select 0 assignAsDriver _axeBus;
 		units _axeBusGroup select 0 moveInDriver _axeBus;
 		};
+		//Create marker for bus
+		deleteMarker["BUSMarker"];
+		_BUSMarker = createmarker["BUSMarker",getpos _axeBus];
+		_BUSMarker setMarkerText "Bus";
+		_BUSMarker setMarkerType "DOT";
+		_BUSMarker setMarkerColor "ColorRed";
+		_BUSMarker setMarkerBrush "Solid";
+		_BUSMarker setMarkerSize [1, 1];
+		BUSMarker = _BUSMarker;
 
 	sleep 3;
 	};
