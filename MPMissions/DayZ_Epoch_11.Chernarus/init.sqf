@@ -4,7 +4,7 @@
 */
 //Recruit Survivors
 DBGroupsStarted = false;
-DBMaxSurvivors = 50; // change this to the number of survivors you want, the more you add the lower your server and client FPS
+DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
