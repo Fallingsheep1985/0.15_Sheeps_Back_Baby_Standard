@@ -63,8 +63,9 @@ player_changeCombo = compile preprocessFileLineNumbers "scripts\doorManagement\p
 		call compile preprocessFileLineNumbers "scripts\VASP\player_traderMenuHive.sqf";
 	};
 	//Zombie Bait/Bomb
-zombie_findTargetAgent =    		compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
-
+zombie_findTargetAgent = compile preprocessFileLineNumbers "fixes\zombie_findTargetAgent.sqf";
+//Recruit Survivors
+zombie_generate = compile preprocessFileLineNumbers "fixes\zombie_generate.sqf";
 
 //Remove junk from roads
 stream_locationFill = compile preprocessFileLineNumbers "fixes\stream_locationFill.sqf";

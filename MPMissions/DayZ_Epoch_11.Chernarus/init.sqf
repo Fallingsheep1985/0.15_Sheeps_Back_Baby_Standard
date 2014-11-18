@@ -2,6 +2,9 @@
 	For DayZ Epoch
 	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
 */
+//Recruit Survivors
+DBGroupsStarted = false;
+DBMaxSurvivors = 50; // change this to the number of survivors you want, the more you add the lower your server and client FPS
 startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
@@ -288,6 +291,24 @@ if(logoWatermark)then{
 		3090
 	] spawn bis_fnc_dynamicText;
 };
+if(RecruitSurvivorsScript)then{
+	if (isServer) then {
+		DBPV_SrvrUnits = [];
+		publicVariable "DBPV_SrvrUnits";
+		DBCurSurvivors = 0;
+		publicVariable "DBCurSurvivors";
+		DBSGroups = false;
+		publicVariable "DBSGroups";
+		DBUpdClient = false;
+		publicVariable "DBUpdClient";
+		};
+	[] execVM "scripts\dbgroups\init.sqf";
+if (!isDedicated) then {
+	[] execVM "scripts\dbgroups\scripts\scp_srvractions.sqf";
+	[] execVM "scripts\dbgroups\scripts\scp_adjustrating.sqf";
+	DBUpdClient = true; // update survivor variables
+	publicVariable "DBUpdClient";
+};	
 
 if(FastropeScript)then{
 	_fast_roping = [] execVM "scripts\Fastrope\BTC_fast_roping_init.sqf";

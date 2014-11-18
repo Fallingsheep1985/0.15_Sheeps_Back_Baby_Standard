@@ -7,6 +7,8 @@ server_name = "0.15"; //Watermark Text
 
 //Server Logo TURN OF WATER MARK BEFORE USE!!!
 logoWatermark = true;
+//Recruit Survivors
+RecruitSurvivorsScript = true;
 //Roaming Zombie Hordes
 HordeScript = true;
 //Base jump
