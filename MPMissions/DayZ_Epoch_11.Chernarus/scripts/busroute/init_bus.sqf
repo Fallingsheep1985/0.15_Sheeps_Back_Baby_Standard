@@ -151,8 +151,8 @@
 		units _axeBusGroup select 0 moveInDriver _axeBus;
 		};
 		//Create marker for bus
-		deleteMarker["BUSMarker"];
-		_BUSMarker = createmarker["BUSMarker",getpos _axeBus];
+		deleteMarker "BUSMarker";
+		_BUSMarker = createmarker"BUSMarker",getpos _axeBus];
 		_BUSMarker setMarkerText "Bus";
 		_BUSMarker setMarkerType "DOT";
 		_BUSMarker setMarkerColor "ColorRed";
