@@ -150,6 +150,7 @@
 		units _axeBusGroup select 0 assignAsDriver _axeBus;
 		units _axeBusGroup select 0 moveInDriver _axeBus;
 		};
+		if(BUSmarkerScript)then{
 		//Create marker for bus
 		deleteMarker "BUSMarker";
 		_BUSMarker = createmarker ["BUSMarker", position _axeBus];
@@ -159,6 +160,7 @@
 		_BUSMarker setMarkerBrush "Solid";
 		_BUSMarker setMarkerSize [1, 1];
 		BUSMarker = _BUSMarker;
+		};
 
 	sleep 3;
 	};

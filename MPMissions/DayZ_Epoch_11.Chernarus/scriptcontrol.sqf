@@ -13,6 +13,8 @@ HordeScript = true;
 BaseJumpScript = true;
 //AI BUS Route
 BusRouteScript = true;
+//Show marker for AI bus on map
+BUSmarkerScript = true;
 //FMissions
 FMissionScript = true;
 //Custom Kill Message's
