@@ -1680,34 +1680,6 @@ if (true) then
   _this setPos [5158.1064, 8543.9297, 0.00015258789];
 };
 
-_vehicle_241 = objNull;
-if (true) then
-{
-  _this = createVehicle ["policecar", [5091.2124, 8617.9512, -6.1035156e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_241 = _this;
-  _this setVehicleLock "LOCKED";
-  _this setPos [5091.2124, 8617.9512, -6.1035156e-005];
-};
-
-_vehicle_242 = objNull;
-if (true) then
-{
-  _this = createVehicle ["policecar", [5246.1929, 8616.4277, -0.00015258789], [], 0, "CAN_COLLIDE"];
-  _vehicle_242 = _this;
-  _this setVehicleLock "LOCKED";
-  _this setPos [5246.1929, 8616.4277, -0.00015258789];
-};
-
-_vehicle_244 = objNull;
-if (true) then
-{
-  _this = createVehicle ["T90", [5174.7939, 8582.6455, 9.1552734e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_244 = _this;
-  _this setDir 62.842659;
-  _this setVehicleLock "LOCKED";
-  _this setPos [5174.7939, 8582.6455, 9.1552734e-005];
-};
-
 _vehicle_245 = objNull;
 if (true) then
 {
@@ -2155,4 +2127,36 @@ if (true) then
   _this setPos [5147.251, 8578.3701, -3.0517578e-005];
 };
 
-};   //designed and created by Geekin aka Chainsaw Squirrel 11/17/2017
+_vehicle_305 = objNull;
+if (true) then
+{
+  _this = createVehicle ["UralWreck", [5254.2808, 8620.3613, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_305 = _this;
+  _this setDir 50.613686;
+  _this setPos [5254.2808, 8620.3613, 6.1035156e-005];
+};
+
+_vehicle_306 = objNull;
+if (true) then
+{
+  _this = createVehicle ["Mi8Wreck", [5036.2183, 8603.0791, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_306 = _this;
+  _this setPos [5036.2183, 8603.0791, 6.1035156e-005];
+};
+
+_vehicle_307 = objNull;
+if (true) then
+{
+  _this = createVehicle ["UH60_ARMY_Wreck_burned_DZ", [5096.978, 8670.2539, 3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_307 = _this;
+  _this setPos [5096.978, 8670.2539, 3.0517578e-005];
+};
+
+_vehicle_310 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BMP2Wreck", [5174.4814, 8583.2705, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_310 = _this;
+  _this setPos [5174.4814, 8583.2705, -3.0517578e-005];
+};
+};
