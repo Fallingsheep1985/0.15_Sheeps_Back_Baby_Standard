@@ -67,5 +67,5 @@ zombie_findTargetAgent =    		compile preprocessFileLineNumbers "fixes\zombie_fi
 
 
 //Remove junk from roads
-stream_locationFill = compile preprocessFileLineNumbers "fiexs\stream_locationFill.sqf";
+stream_locationFill = compile preprocessFileLineNumbers "fixes\stream_locationFill.sqf";
 initialized = true;
