@@ -7,8 +7,6 @@ check if horde is causing delay on start up
 nuke event
 Re do loot for Casino killhouse
 neon lights (add in)
-bus marker
-clear road for BUS
 dancing hookers(ProjectX)
 turrents that you can buy and deploy (advanced alchemy)
 take skins/ wear clothes (needs testing)
