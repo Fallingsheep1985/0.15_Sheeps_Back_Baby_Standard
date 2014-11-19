@@ -10,7 +10,6 @@ neon lights (add in)
 dancing hookers(ProjectX)
 take skins (new script needs testing)
 test survivor hire
-add credits for survivor hire script
 add survivor recruit info to readme
 (how to change spawn amount, etc)
 test markers on death and restarts
