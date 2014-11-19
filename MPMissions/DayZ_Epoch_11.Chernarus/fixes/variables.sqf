@@ -1661,13 +1661,14 @@ _FlagsMisc = ["FlagCarrierArmex_EP1","FlagCarrierBIS_EP1","FlagCarrierIONblack_P
 _Sapphire = _FlagsNations + _FlagsOrganizations + _FlagsMedical + _FlagsPlain + _FlagsMisc;
 
 //Topaz - Base Defenses
+_Mounted_Weapons = ["AGS_Ins","D30_Ins","M2StaticMG","DSHKM_Ins"];
 _Bridges = ["MAP_Bridge_stone_asf2_25","MAP_bridge_asf1_25","MAP_Bridge_wood_25","MAP_rail_najazdovarampa","MAP_prebehlavka"];
 _Defenses = ["Hhedgehog_concrete","Hhedgehog_concreteBig","US_WarfareBBarrier10x_EP1","Base_WarfareBBarrier10xTall","Fence_corrugated_plate","Fence_Ind_long","Land_CncBlock","Land_CncBlock_D","Land_CncBlock_Stripes","Concrete_Wall_EP1","Land_fort_artillery_nest_EP1","MAP_fort_artillery_nest","Land_fort_rampart_EP1","MAP_fort_rampart","MAP_Barbedwire","MAP_concrete_block","MAP_Concrete_Ramp","MAP_Fort_Razorwire","MAP_HBarrier5_round15","MAP_plot_provizorni","MAP_prebehlavka","MAP_prolejzacka","MAP_ramp_concrete","MAP_woodenRamp","MAP_Misc_WindBreak","MAP_obstacle_get_over","MAP_obstacle_prone","MAP_obstacle_run_duck"];
 _Forts = ["Land_Fort_Watchtower_EP1","Land_MBG_HeavyShelter","MAP_fort_watchtower","CDF_WarfareBBarracks","TK_WarfareBBarracks_Base_EP1","USMC_WarfareBBarracks","MAP_fortified_nest_big","MAP_fortified_nest_small","MAP_Pristresek_mensi","MAP_Mil_Mil_Guardhouse","MAP_GuardShed","MAP_Fortress_02","MAP_Fortress_01","WarfareBDepot"];
 _Tents = ["MAP_MASH","MAP_Stan","MAP_tent_small_west","MAP_Stan_east","MAP_tent_east","MAP_tent_west","MAP_tent2_west","CDF_WarfareBFieldhHospital","USMC_WarfareBFieldhHospital"];
 _Towers = ["Land_Vysilac_FM2","MAP_vez","Land_aif_hlaska","Land_aif_strazni_vez","EndTowers","MAP_majak_podesta","MAP_molo_beton","MAP_molo_krychle"];
 _Walls = ["MAP_Wall_Wood1_5","MAP_Wall_Wood1_5_2","MAP_Gate_Wood1_5","MAP_Wall_Gate_Wood1","MAP_Wall_Wood1D_5","MAP_Wall_Wood1D_5_2","MAP_Wall_Wood2_5","MAP_Gate_wood2_5","MAP_Wall_WoodVil_4","MAP_Wall_WoodVil_4_2","MAP_Wall_IndVar1_5","MAP_Wall_IndVar1_5_2","MAP_Wall_VilVar1_6","MAP_Wall_VilVar2_4","MAP_Wall_VilVar2_4_2","MAP_Wall_FenW_7","MAP_DD_pletivo","MAP_pletivo_wired","MAP_Wall_IndFnc_9","MAP_plot_vlnplech1","MAP_plot_vlnplech2","MAP_Wall_Tin_4","MAP_Wall_TinCom_3","MAP_Wall_TinCom_9","MAP_Newplot","MAP_Newplot2","MAP_plot_istan1_rovny_short","MAP_plot_istan1_rovny_bezs","MAP_plot_istan1_rovny","MAP_plot_istan1_rovny_gate","MAP_plot_istan1_sloupek","MAP_zidka01","MAP_zidka02","MAP_zidka_branka","MAP_Wall_CGry_5","MAP_Wall_CYel_5","MAP_plot_istan3_short","MAP_plot_istan3","MAP_plot_istan3_sloupek","MAP_Wall_IndVar2_5","MAP_Gate_IndVar2_5","MAP_Wall_CBrk_5","MAP_zed_civil","MAP_zed2_civil","MAP_Wall_IndCnc_4"];
-_Topaz = _Bridges + _Defenses + _Forts + _Tents + _Towers + _Walls;
+_Topaz = _Mounted_Weapons + _Bridges + _Defenses + _Forts + _Tents + _Towers + _Walls;
 
 _CraftingArray = _Amethyst + _Citrine + _Emerald + _Lights + _Obsidian + _Ruby + _Sapphire + _Topaz;
 dayz_allowedObjects = dayz_allowedObjects + _CraftingArray;

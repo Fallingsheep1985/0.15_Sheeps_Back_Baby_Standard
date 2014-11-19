@@ -245,7 +245,20 @@ class Custom_Buildables {
 		offset[]={0,13,0};
 		requiredtools[] = {"ItemToolbox","ItemEtool","ItemCrowbar","ItemSledge"};		
 		requiredmaterials[] ={"ItemEmerald","bulk_PartGeneric","bulk_PartGeneric","ItemPole","ItemPole","ItemPole","ItemPole","ItemPole","ItemPole","ItemPole"};
-	};	
+	};
+	class DefaultMountedWeapons: Default {
+		offset[]={0,7,0};
+		requiredtools[] = {"ItemToolbox","ItemCrowbar","ItemEtool","ItemSledge"};
+		requiredmaterials[] ={"ItemTopaz","ItemTankTrap","ItemPole","ItemSodaRbull","ItemFuelBarrel","bulk_PartGeneric","metal_panel_kit","metal_panel_kit"};
+	};
+	//Topaz - Base Defense
+	//52
+	class MountedWeapons{ //4 
+	class AGS_Ins: DefaultMountedWeapons{};
+	class D30_Ins: DefaultMountedWeapons{};
+	class M2StaticMG: DefaultMountedWeapons{};
+	class DSHKM_Ins: DefaultMountedWeapons{};
+	};
 	//687 Total Items
 	//Topaz - Base Defense
 	//108
