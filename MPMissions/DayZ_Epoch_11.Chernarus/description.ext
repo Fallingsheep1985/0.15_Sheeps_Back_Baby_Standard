@@ -1652,3 +1652,6 @@ class MenClothing
 //Advanced Alchemy
 #include "scripts\Buildables\MT_Defines.hpp"
 #include "scripts\Buildables\Crafting_Dialogs.hpp"
+
+//plot management
+#include "scripts\plotManagement\plotManagement.hpp"

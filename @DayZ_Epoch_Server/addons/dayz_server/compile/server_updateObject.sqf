@@ -80,11 +80,15 @@ _object_inventory = {
 			_inventory = _object getVariable ["doorfriends", []]; //We're replacing the inventory with UIDs for this item
 		};
 		if(_isNormal)then {
-			_inventory = [
-			getWeaponCargo _object,
-			getMagazineCargo _object,
-			getBackpackCargo _object
-			];
+			if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then{
+				_inventory = _object getVariable ["plotfriends", []]; //We're replacing the inventory with UIDs for this item
+			} else {
+				_inventory = [
+				getWeaponCargo _object,
+				getMagazineCargo _object,
+				getBackpackCargo _object
+				];
+			};
 		};
 		_previous = str(_object getVariable["lastInventory",[]]);
 		if (str(_inventory) != _previous) then {

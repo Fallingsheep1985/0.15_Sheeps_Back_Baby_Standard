@@ -267,9 +267,15 @@ if(_IsNearPlot == 0) then {
 	} else {
 		// disallow building plot
 		if(!_isPole) then {
-			_friendlies		= player getVariable ["friendlyTo",[]];
+			_friendlies = _nearestPole getVariable ["plotfriends",[]];
+			_fuid  = [];
+			{
+				  _friendUID = _x select 0;
+				  _fuid  =  _fuid  + [_friendUID];
+			} forEach _friendlies;
+			_builder  = getPlayerUID player;
 			// check if friendly to owner
-			if(_ownerID in _friendlies) then {
+			if(_builder in _fuid) then {
 				_canBuildOnPlot = true;
 			};
 		};

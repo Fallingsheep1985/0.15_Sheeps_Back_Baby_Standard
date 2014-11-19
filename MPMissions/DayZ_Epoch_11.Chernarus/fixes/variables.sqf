@@ -14,40 +14,6 @@ Camo1_DZ = 		"Camo1_DZ";
 Soldier1_DZ = 	"Soldier1_DZ";
 Rocket_DZ = 	"Rocket_DZ";
 
-// Arma 2
-Clothing1 = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R","FR_Commander"];
-Clothing2 = ["Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman","USMC_SoldierS","USMC_SoldierS_Sniper","USMC_Soldier_AA","USMC_Soldier_Pilot"];
-Clothing3 = ["Ins_Soldier_GL_DZ","CDF_Soldier","CDF_Commander","CDF_Soldier_AR","CDF_Soldier_Crew","CDF_Soldier_Light","CDF_Soldier_Pilot"];
-Clothing4 = ["GUE_Soldier_Crew_DZ","RU_Soldier","RU_Soldier_Crew","RU_Soldier_Light","RU_Soldier_Pilot","RUS_Commander","RUS_Soldier1","MVD_Soldier_Sniper"];
-Clothing5 = ["Graves_Light_DZ","Drake","Graves","Herrera","Pierce","US_Delta_Force_Assault_EP1","US_Soldier_AR_EP1","US_Soldier_AT_EP1","US_Soldier_MG_EP1","US_Pilot_Light_EP1","US_Soldier_SL_EP1"];
-Clothing6 = ["CZ_Special_Forces_GL_DES_EP1_DZ","CZ_Soldier_AT_DES_EP1","CZ_Soldier_Light_DES_EP1","CZ_Special_Forces_DES_EP1","CZ_Special_Forces_TL_DES_EP1"];
-Clothing7 = ["Bandit2_DZ","MVD_Soldier_Sniper","GER_Soldier_EP1","GER_Soldier_MG_EP1","ER_Soldier_TL_EP1"];
-Clothing8 = ["Soldier_Bodyguard_AA12_PMC_DZ","CIV_Contractor2_BAF","BAF_crewman_DDPM","BAF_Soldier_FAC_DDPM","BAF_Soldier_N_DDPM","BAF_Soldier_Marksman_DDPM","BAF_Soldier_Officer_DDPM","BAF_Soldier_L_DDPM"];
-Clothing9 = ["TK_INS_Soldier_EP1_DZ","TK_Commander_EP1","TK_Soldier_Crew_EP1","TK_Soldier_MG_EP1","TK_Special_Forces_MG_EP1","TK_INS_Bonesetter_EP1"];
-Clothing10 = ["Survivor2_DZ"];
-Clothing11 = ["FR_Rodriguez_DZ","FR_Corpsman","FR_GL","FR_Light","FR_Marksman","FR_R","FR_Sapper","FR_TL"];
-
-// Overwatch
-
-//Hero
-Clothing12 = ["Drake_Light_DZ"];
-Clothing13 = ["Soldier_Sniper_PMC_DZ"];
-Clothing14 = ["CZ_Soldier_Sniper_EP1_DZ"];
-Clothing15 = ["Camo1_DZ"];
-Clothing16 = ["Rocket_DZ"];
-Clothing17 = ["Sniper1_DZ"];
-Clothing18 = ["Soldier_TL_PMC_DZ"];
-Clothing19 = ["GUE_Soldier_Sniper_DZ"];
-Clothing20 = ["TK_INS_Warlord_EP1_DZ"];
-//Bandit
-
-Clothing21 = ["Bandit1_DZ"];
-Clothing22 = ["Bandit2_DZ"];
-Clothing23 = ["BanditW1_DZ"];
-Clothing24 = ["BanditW2_DZ"];
-Clothing25 = ["GUE_Commander_DZ"];
-Clothing26 = ["GUE_Soldier_2_DZ"];
-Clothing27 = ["GUE_Soldier_CO_DZ"];
 AllPlayers = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R",
 "FR_Commander","Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman","USMC_SoldierS","USMC_SoldierS_Sniper",
 "USMC_Soldier_AA","USMC_Soldier_Pilot","Ins_Soldier_GL_DZ","CDF_Soldier","CDF_Commander","CDF_Soldier_AR","CDF_Soldier_Crew",
@@ -353,6 +319,8 @@ dayz_resetSelfActions = {
 	s_player_butcherz = -1;
 
 	s_player_gamble = -1;
+	
+	s_player_plotManagement = -1;
 
 };
 call dayz_resetSelfActions;
