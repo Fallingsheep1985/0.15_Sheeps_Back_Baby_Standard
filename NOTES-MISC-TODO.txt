@@ -8,7 +8,7 @@ nuke event
 Re do loot for Casino killhouse
 neon lights (add in)
 dancing hookers(ProjectX)
-take skins/ wear clothes (needs testing)
+take skins (new script needs testing)
 test survivor hire
 add credits for survivor hire script
 add survivor recruit info to readme
