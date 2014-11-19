@@ -2,7 +2,7 @@ FIX SCRIPTS
 
 PAINT (test)
 FMission undefined variables 
-Test zombie hordes + add more hordes / 
+Test zombie hordes + add more hordes
 check if horde is causing delay on start up
 nuke event
 Re do loot for Casino killhouse
@@ -13,6 +13,11 @@ test survivor hire
 add credits for survivor hire script
 add survivor recruit info to readme
 (how to change spawn amount, etc)
+
+oil rig and oil gathering
+fishing area for fishing boat
+fish trader
+
 
 slot machine
 black jack
