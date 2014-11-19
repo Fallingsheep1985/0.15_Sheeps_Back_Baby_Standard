@@ -11,7 +11,8 @@ forEach [
 "Defenses",
 "Forts",
 "Tents",
-"Towers"
+"Towers",
+"MountedWeapons"
 ]; 
 
 while {GlobalCraftingVariable==1} do {
@@ -39,7 +40,11 @@ case 3:
 ComboBoxResult="Towers";
 call fnc_Load_Items;
 };
-
+case 4:
+{
+ComboBoxResult="MountedWeapons";
+call fnc_Load_Items;
+};
 
 default { };
 };
