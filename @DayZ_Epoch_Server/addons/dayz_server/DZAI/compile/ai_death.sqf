@@ -6,7 +6,7 @@
         Usage: [_unit,_killer] call DZAI_unitDeath;
 */
 
-private["_victim","_killer","_unitGroup","_unitType","_launchWeapon","_launchAmmo","_deathType","_groupIsEmpty","_unitsAlive","_vehicle","_groupSize"];
+private["_skin","_bp","_okSkin","_result","_pos","_victim","_killer","_unitGroup","_unitType","_launchWeapon","_launchAmmo","_deathType","_groupIsEmpty","_unitsAlive","_vehicle","_groupSize"];
 
 _victim = _this select 0;
 _killer = _this select 1;
@@ -75,6 +75,25 @@ if !(isNull _victim) then {
 	if (_victim getVariable ["removeNVG",true]) then {
 		_victim removeWeapon "NVGoggles";
 	};
+//Script addition to add skin to units gear
+_skin = (typeOf _victim);
+_skin = "Skin_" + _skin;
+_okSkin = isClass (configFile >> "CfgMagazines" >> _skin);
+
+if (_okSkin) then {
+
+ _result = [_victim,_skin] call BIS_fnc_invAdd;
+	if (_result) then {
+		hintSilent "";
+
+	} else {
+		
+		_bp = unitBackpack _victim;
+		_bp addMagazineCargoGlobal [_skin,1];
+		
+	};
+};
+//Script end
 
 	_victim spawn DZAI_deathFlies;
 	_bodyName = _victim getVariable ["bodyName","unknown"];
@@ -91,5 +110,6 @@ if !(isNull _victim) then {
 		_nul = [_killer,_bodyName] spawn DZAI_sendKillMessage;
 	};
 };
+
 
 _victim

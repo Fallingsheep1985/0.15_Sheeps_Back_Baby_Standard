@@ -76,14 +76,16 @@ terminate dayz_medicalH;
 terminate dayz_gui;
 
 r_player_dead = true;
-if(TakeClothesScript)then{
-	call compile preprocessFileLineNumbers "scripts\TakeClothes\Recoverskin.sqf";
-};
+
 "dynamicBlur" ppEffectEnable true;"dynamicBlur" ppEffectAdjust [4]; "dynamicBlur" ppEffectCommit 0.2;
 
 "colorCorrections" ppEffectEnable true;
 "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 0.01],  [1, 1, 1, 0.0]];
 "colorCorrections" ppEffectCommit 1;
+
+// Begin adding skin to player body
+call compile preprocessFileLineNumbers "scripts\takeskin\Recoverskin.sqf";
+// End adding skin to player body
 
 //Player is Dead!
 3 fadeSound 0;
@@ -107,7 +109,7 @@ _body setVariable["combattimeout", 0, true];
 //["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
-100 cutRsc ["DeathScr","BLACK OUT",3];
+1 cutRsc ["DeathScreen","BLACK OUT",3];
 
 playMusic "dayz_track_death_1";
 
@@ -116,10 +118,13 @@ playMusic "dayz_track_death_1";
 
 sleep 2;
 
+
 for  "_x" from 5 to 1 step -1 do {
 	titleText [format[localize "str_return_lobby", _x], "PLAIN DOWN", 1];
 	sleep 1;
 };
+
+
 
 PVDZE_Server_Simulation = [_body, false];
 publicVariableServer "PVDZE_Server_Simulation";
