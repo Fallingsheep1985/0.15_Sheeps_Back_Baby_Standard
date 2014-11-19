@@ -11,4 +11,10 @@ dancing hookers(ProjectX)
 take skins/ wear clothes (needs testing)
 test survivor hire
 add credits for survivor hire script
-add survivor recruit info to readme (how to change spawn amount, etc)
+add survivor recruit info to readme
+(how to change spawn amount, etc)
+
+slot machine
+black jack
+poker (maybe)
+craps (maybe)
