@@ -1,5 +1,8 @@
 
 If (isServer) then{
+_run = true;
+while {_run} do
+{
 	//Sector FNG
 	if (sectorfngMarker) then {
 	_sectorfng = createMarker ["sectorfng", [6611.9756, 14201.991]];
@@ -91,5 +94,17 @@ If (isServer) then{
 	_projectxMarker setMarkerSize [1, 1];
 	projectx = _projectxMarker;
 	};
-
+	//JIP fix
+	sleep 25; // wait 25 seconds
+	//delete markers
+	deleteMarker "projectx";
+	deleteMarker "golden_river_mine";
+	deleteMarker "blackforestoutpost";
+	deleteMarker "kamenkamine";
+	deleteMarker "sectorfng";
+	deleteMarker "altarmilitarybase";
+	deleteMarker "blacklakecastle";
+	deleteMarker "beachedcarrier";
+	deleteMarker "CDC";
+	};
 };

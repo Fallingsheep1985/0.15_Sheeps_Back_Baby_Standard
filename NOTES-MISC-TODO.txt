@@ -13,7 +13,7 @@ test survivor hire
 add credits for survivor hire script
 add survivor recruit info to readme
 (how to change spawn amount, etc)
-
+test markers on death and restarts
 oil rig and oil gathering
 fishing area for fishing boat
 fish trader
