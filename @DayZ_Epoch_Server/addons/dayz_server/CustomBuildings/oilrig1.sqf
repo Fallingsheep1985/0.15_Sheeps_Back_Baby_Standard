@@ -394,7 +394,7 @@ if (true) then
 _vehicle_175 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [7847.1489, 2402.478, -4.042356], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["MAP_Barels2", [7847.1489, 2402.478, -4.042356], [], 0, "CAN_COLLIDE"];
   _vehicle_175 = _this;
   _this setPos [7847.1489, 2402.478, -4.042356];
 };
@@ -426,7 +426,7 @@ if (true) then
 _vehicle_183 = objNull;
 if (true) then
 {
-  _this = createVehicle ["Land_Fire_barrel_burning", [7829.3179, 2428.8389, 8.5324545], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["MAP_Barels2", [7829.3179, 2428.8389, 8.5324545], [], 0, "CAN_COLLIDE"];
   _vehicle_183 = _this;
   _this setPos [7829.3179, 2428.8389, 8.5324545];
 };
