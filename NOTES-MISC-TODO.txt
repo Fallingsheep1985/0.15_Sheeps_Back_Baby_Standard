@@ -1,6 +1,6 @@
 FIX SCRIPTS
 
-Ai spawns at custom areas (use 0.14 spawns)
+Ai spawns at custom areas (new areas)
 
 PAINT (test)
 
@@ -24,13 +24,13 @@ add survivor recruit info to readme
 
 test markers on death and restarts
 
-oil rig (add pallet of barrels to rig to fill from)
+oil rig (test)
 
 fishing area for fishing boat
 fish trader
 
 
-slot machine
+slot machine (do display base code should be good to go)
 black jack
 poker (maybe)
 craps (maybe)
