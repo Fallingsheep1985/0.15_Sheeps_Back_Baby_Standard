@@ -994,7 +994,7 @@ if (TakeClothesScript) then {
 //Remove CLOTHES
 if (_isMan and !_isAlive and !_isZombie and !_isAnimal) then {
 if (s_clothes < 0) then {
-s_clothes = player addAction [("" + ("Take Clothes") + ""), "scripts\takeskin\removeclothes.sqf",cursorTarget, 1, false, true, "",""];
+s_clothes = player addAction [("" + ("Take Clothes") + ""), "scripts\takeskin\Recoverskin.sqf",cursorTarget, 1, false, true, "",""];
 };
 } else {
 player removeAction s_clothes;
@@ -1270,6 +1270,9 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	s_clothes = -1;
 	player removeAction s_player_plotManagement;
 	s_player_plotManagement = -1;
+	//Oil
+	player removeAction s_player_fillbarrel;
+	s_player_fillbarrel = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
