@@ -1655,3 +1655,7 @@ class MenClothing
 
 //plot management
 #include "scripts\plotManagement\plotManagement.hpp"
+
+//Skin Trader
+#include "scripts\Skin_Trader\dialog\common.hpp"
+#include "scripts\Skin_Trader\dialog\SkinGui.hpp"

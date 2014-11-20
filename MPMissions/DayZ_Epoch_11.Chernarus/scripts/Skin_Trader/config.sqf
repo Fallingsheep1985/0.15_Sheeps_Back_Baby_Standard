@@ -1,0 +1,1 @@
+Global_Price = [["ItemGoldBar10oz",2]];//[["ItemGoldBar10oz",0]]-free

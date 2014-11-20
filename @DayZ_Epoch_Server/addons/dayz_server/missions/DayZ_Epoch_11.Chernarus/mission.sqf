@@ -161,20 +161,24 @@ if (true) then
   _this = createAgent ["RU_WorkWoman5", [4071.9915, 11676.731, 0.54440308], [], 0, "CAN_COLLIDE"];
   _unit_58 = _this;
   _this setDir 566.81744;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
   _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
 
+_this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
+_this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
 _unit_59 = objNull;
 if (true) then
 {
   _this = createAgent ["TK_GUE_Soldier_5_EP1", [4054.218, 11664.668, -0.51617432], [], 0, "CAN_COLLIDE"];
   _unit_59 = _this;
   _this setDir 422.9967;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
   _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
 
+_this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
+_this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
 _unit_60 = objNull;
 if (true) then
 {
@@ -667,9 +671,12 @@ if (true) then
   _this = createAgent ["RU_Functionary1", [12946.349, 12766.593, 2.0980835e-005], [], 0, "CAN_COLLIDE"];
   _unit_73 = _this;
   _this setDir 194.24156;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
+  _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
+  _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""]
+  };
 
 _unit_74 = objNull;
 if (true) then
@@ -687,10 +694,12 @@ if (true) then
   _this = createAgent ["RU_WorkWoman1", [11463.931, 11351.671, 0.94462103], [], 0, "CAN_COLLIDE"];
   _unit_75 = _this;
   _this setDir 261.27719;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
   _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
 
+_this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
+_this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
 _unit_78 = objNull;
 if (true) then
 {
@@ -882,10 +891,12 @@ if (true) then
   _this = createAgent ["Rita_Ensler_EP1", [6310.7803, 7794.5054, 0.88001078], [], 0, "CAN_COLLIDE"];
   _unit_95 = _this;
   _this setDir -114.43345;
-  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;";
+  _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
   _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
 
+  _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
+  _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
 _vehicle_521 = objNull;
 if (true) then
 {
