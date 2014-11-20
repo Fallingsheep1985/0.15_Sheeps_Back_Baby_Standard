@@ -4,9 +4,10 @@
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.15"; //Watermark Text
-
-//Server Logo TURN OF WATER MARK BEFORE USE!!!
+//Server Logo
 logoWatermark = true;
+//Fill oil barrels scripts
+oilrigFillScript = true;
 //Recruit Survivors
 RecruitSurvivorsScript = true;
 //Roaming Zombie Hordes
@@ -118,6 +119,7 @@ to turn it back off add the // back in
 EG
 Sector FNG ON
 execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
+
 Sector FNG OFF
 //execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
 
@@ -135,6 +137,9 @@ projectxMarker = true;
 //Water base - Geekin aka Chainsaw Squirrel
 execVM "\z\addons\dayz_server\CustomBuildings\waterbase.sqf";
 
+//Oilrig
+execVM "\z\addons\dayz_server\CustomBuildings\oilrig1.sqf";
+oilrigMarker = true;
 
 //CDC Balota (no trader)                        
 execVM  "\z\addons\dayz_server\CustomBuildings\CDC_Balota.sqf";

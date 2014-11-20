@@ -94,6 +94,17 @@ while {_run} do
 	_projectxMarker setMarkerSize [1, 1];
 	projectx = _projectxMarker;
 	};
+	//Oilrig
+	if (oilrigMarker) then {
+	_oilrigMarker = createMarker ["oilrig", [7847.895, 2424.355]];
+	_oilrigMarker setMarkerText "Oil Rig";
+	_oilrigMarker setMarkerType "DOT";
+	_oilrigMarker setMarkerColor "ColorBlack";
+	_oilrigMarker setMarkerBrush "Solid";
+	_oilrigMarker setMarkerSize [1, 1];
+	oilrig = _oilrigMarker;
+	};
+	
 	//JIP fix
 	sleep 25; // wait 25 seconds
 	//delete markers
@@ -106,5 +117,6 @@ while {_run} do
 	deleteMarker "blacklakecastle";
 	deleteMarker "beachedcarrier";
 	deleteMarker "CDC";
+	deleteMarker "oilrig";
 	};
 };

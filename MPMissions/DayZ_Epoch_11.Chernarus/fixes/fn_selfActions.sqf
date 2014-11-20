@@ -1102,6 +1102,17 @@ if(NOSScript)then{
 	};
 };
 /////////////////////////////////////////NOS END/////////////////////////////////////////
+if(oilrigFillScript)then{
+	if (_cursorTarget isKindOf "MAP_Barels2") then {
+		if (s_player_fillbarrel < 0) then {
+            s_player_fillbarrel = player addAction [("<t color=""#39C1F3"">" + ("Fill Oil Barrel") +"</t>"),"scripts\oilrig\fillbarrel.sqf",_cursorTarget,0,false,true,"", ""];
+		};
+    } else {
+        player removeAction s_player_fillbarrel;
+        s_player_fillbarrel = -1;
+	};
+};
+
 	if(dayz_tameDogs) then {
 		
 		//Dog
@@ -1272,7 +1283,7 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	s_player_plotManagement = -1;
 	//Oil
 	player removeAction s_player_fillbarrel;
-	s_player_fillbarrel = -1;
+    s_player_fillbarrel = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
