@@ -1,5 +1,7 @@
 FIX SCRIPTS
 
+Ai spawns at custom areas (use 0.14 spawns)
+
 PAINT (test)
 
 FMission undefined variables 

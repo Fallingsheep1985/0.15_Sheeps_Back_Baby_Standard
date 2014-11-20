@@ -156,12 +156,14 @@ beachedcarrierMarker = true;
 //Black Lake Castle
 execVM  "\z\addons\dayz_server\CustomBuildings\blacklakecastle.sqf";
 blacklakecastlerMarker = true;
+blacklakeAI = true;
 
 //Kameka mine                                
 execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte.sqf";//removed ore and added to separate spawn
 execVM  "\z\addons\dayz_server\CustomBuildings\mine_grotte_ore.sqf";//ore
 execVM  "\z\addons\dayz_server\CustomBuildings\box_la_grotte.sqf";//Loot box
 kamenkamineMarker = true;
+KamenkamineAI = true;
 
 //Black forest outpost
 execVM  "\z\addons\dayz_server\CustomBuildings\blackforestoutpost.sqf";
@@ -170,6 +172,8 @@ blackforestoutpostMarker = true;
 //Golden River MIne
 execVM  "\z\addons\dayz_server\CustomBuildings\golden_river_mine.sqf";
 golden_river_mineMarker  = true;
+goldenriverAI = true;
+
 //IXXO
 execVM "\z\addons\dayz_server\CustomBuildings\balota.sqf";
 execVM  "\z\addons\dayz_server\CustomBuildings\kamenka.sqf";

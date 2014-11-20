@@ -24,7 +24,7 @@
 		600						//(OPTIONAL)* Respawn time. Number of seconds to wait until AI and vehicle are respawned. (Default: 600). Timer begins after AI group is wiped out or vehicle is destroyed, whichever comes first.
 	] call DZAI_spawn_vehicle;
 	
-	The above DZAI_spawn_vehicle call will spawn an Armored SUV with 1 driver, 3 passenger units and 1 gunner unit with military-grade weapons, and will respawn after 600 seconds (10 minutes).
+	The above DZAI_spawn_vehicle call will spawn an Armored SUV with 1 driver, 3 passenger units and 1 gunner unit with military-grade weapons, and will respawn after 600 seconds (3 minutes).
 
 	* Optional parameters may be left out of the function call. A default action will be taken instead.
 	
@@ -40,9 +40,105 @@
 */
 
 //----------------------------Add your custom spawn definitions below this line ----------------------------
+//Black Lake Castle
+if (blacklakeAI) then {
+	[
+	"DZAI_marker_castle1",
+	4,
+	3,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_marker_castle2",
+	3,
+	2,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_marker_castle3",
+	4,
+	3,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_marker_castle4",
+	3,
+	3,
+	false
+	] call DZAI_spawn_units;
+	//tower
+	[
+	"DZAI_marker_castle5",
+	1,
+	3,
+	false
+	] call DZAI_spawn_units;
+	//tower
+	[
+	"DZAI_marker_castle6",
+	1,
+	3,
+	false
+	] call DZAI_spawn_units;
+};
+if (KamenkamineAI) then {
+	//Kamenka Mine
+	[
+	"DZAI_marker_mine1",
+	4,
+	3,
+	false
+	] call DZAI_spawn_units;
+	[
+	"DZAI_marker_mine2",
+	3,
+	2,
+	false
+	] call DZAI_spawn_units;
+	[
+	"DZAI_marker_mine3",
+	4,
+	3,
+	false
+	] call DZAI_spawn_units;
+};
+
+
+//Golden river mine Mine
+if (goldenriverAI) then {
+	[
+	"DZAI_patrol_zone_m_1",
+	3,
+	3,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_patrol_zone_m_2",
+	3,
+	3,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_patrol_zone_m_3",
+	3,
+	3,
+	false
+	] call DZAI_spawn_units;
+
+	[
+	"DZAI_patrol_zone_m_4",
+	3,
+	3,
+	false
+	] call DZAI_spawn_units; 
+};
 
 
 
-
-
-
+//----------------------------Do not edit anything below this line -----------------------------------------
+DZAI_customSpawnsReady = true;
