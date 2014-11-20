@@ -193,7 +193,7 @@ execVM  "\z\addons\dayz_server\CustomBuildings\heliport.sqf";
 execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast.sqf";
 execVM  "\z\addons\dayz_server\CustomBuildings\Eastcoast2.sqf";
 
-//Kabino Check Point
+//Kabino Check Point - edits by Geekin aka Chainsaw Squirrel to improve FPS
 execVM  "\z\addons\dayz_server\CustomBuildings\kabinocheckpoint.sqf";
 
 //Otmel Base
