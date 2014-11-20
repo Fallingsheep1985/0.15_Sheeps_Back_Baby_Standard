@@ -11,7 +11,7 @@ _maxDist = _this select 2;
 _blacklist = [];
 if ((count _this) > 4) then {_blacklist = _this select 4};
 
-HotZoneDistances = HotZoneDistances + [_maxDist];
+//HotZoneDistances = HotZoneDistances + [_maxDist];
 
 //Validate parameters
 if ((typeName _grp) != (typeName grpNull)) exitWith {debugLog "Log: [taskPatrol] Group (0) must be a Group!"; false};
