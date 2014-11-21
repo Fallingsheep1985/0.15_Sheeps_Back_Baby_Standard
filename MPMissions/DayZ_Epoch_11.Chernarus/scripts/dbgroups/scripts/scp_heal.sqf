@@ -6,6 +6,9 @@ diag_log "** scp_heal initializing";
 
 private ["_unit","_med","_medaction"];
 
+//var fix
+_medaction = "";
+
 _unit = _this select 0;
 _med = false;
 
