@@ -114,7 +114,11 @@ if(FMissionScript)then{
 	["any","any","any","any",50,"supply_drop"],
 	["any","any","any","any",15,"FMission_Launcher1"],
 	["any","any","any","any",35,"FMission_Launcher2"],
-	["any","any","any","any",45,"FMission_Launcher3"]
+	["any","any","any","any",45,"FMission_Launcher3"],
+	["any","any","any","any",10,"Military"], 
+	["any","any","any","any",25,"Treasure"], 
+	["any","any","any","any",40,"Supplyitems"], 
+	["any","any","any","any",55,"Construction"]
 	];
 }else{
 	EpochEvents = [
@@ -122,7 +126,11 @@ if(FMissionScript)then{
 	["any","any","any","any",0,"crash_spawner"],
 	["any","any","any","any",25,"crash_spawner"],
 	["any","any","any","any",15,"supply_drop"],
-	["any","any","any","any",50,"supply_drop"]
+	["any","any","any","any",50,"supply_drop"],
+	["any","any","any","any",10,"Military"], 
+	["any","any","any","any",25,"Treasure"], 
+	["any","any","any","any",40,"Supplyitems"], 
+	["any","any","any","any",55,"Construction"]
 	];
 };
 //snow
@@ -351,7 +359,9 @@ if(WeaponModScript)then{
 if(BaseJumpScript)then{
 	call compile preprocessFileLineNumbers "scripts\baseJump\init.sqf";  
 };
-
+If(ZombieFreeBaseScript)then{
+	[] execVM "scripts\safebases\base_SafeArea.sqf";
+};
 //Admin Tools
 if(AdmintoolsScript)then{
 	[] execVM "admintools\Activate.sqf";

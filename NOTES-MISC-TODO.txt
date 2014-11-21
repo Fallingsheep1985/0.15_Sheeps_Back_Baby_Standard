@@ -17,12 +17,12 @@ dancing hookers(ProjectX)
 Re do loot for Casino killhouse
 
 take skins (new script needs testing)
+skin trader (needs testing)
 
 test survivor hire
 add survivor recruit info to readme
 (how to change spawn amount, etc)
 
-test markers on death and restarts
 
 oil rig (test)
 

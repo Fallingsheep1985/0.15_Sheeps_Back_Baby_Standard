@@ -6,6 +6,8 @@ WaterMarkScript = true; //Watermark on/off
 server_name = "0.15"; //Watermark Text
 //Server Logo
 logoWatermark = true;
+//Zombie free bases
+ZombieFreeBaseScript = true;
 //Fill oil barrels scripts
 oilrigFillScript = true;
 //Recruit Survivors
