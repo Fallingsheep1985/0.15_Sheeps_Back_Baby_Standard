@@ -163,10 +163,11 @@ if (true) then
   _this setDir 566.81744;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
 
 _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
 _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
+};
 _unit_59 = objNull;
 if (true) then
 {
@@ -175,10 +176,11 @@ if (true) then
   _this setDir 422.9967;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
 
 _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
 _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
+};
 _unit_60 = objNull;
 if (true) then
 {
@@ -675,7 +677,7 @@ if (true) then
   _this setUnitAbility 0.60000002;
   _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
   _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
-  _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""]
+  _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
   };
 
 _unit_74 = objNull;
@@ -696,10 +698,11 @@ if (true) then
   _this setDir 261.27719;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
 
 _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
 _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
+};
 _unit_78 = objNull;
 if (true) then
 {
@@ -893,10 +896,11 @@ if (true) then
   _this setDir -114.43345;
   _this setVehicleInit "this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];";
   _this setUnitAbility 0.60000002;
-  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;};
+  _this allowDammage false; _this disableAI 'FSM'; _this disableAI 'MOVE'; _this disableAI 'AUTOTARGET'; _this disableAI 'TARGET'; _this setBehaviour 'CARELESS'; _this forceSpeed 0;_this enableSimulation false;
 
   _this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];
   _this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""];
+  };
 _vehicle_521 = objNull;
 if (true) then
 {
