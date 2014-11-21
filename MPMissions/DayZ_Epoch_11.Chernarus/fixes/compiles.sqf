@@ -25,6 +25,12 @@ if (!isDedicated) then {
 
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	
+	//Admin reskin
+	"PVOZ_adminSkin" addPublicVariableEventHandler {
+		 _obj =  (_this select 1) select 0 ;
+		 _colour =  (_this select 1) select 1; // this can also be a color or an image (color format = #(rgb,8,8,3)color(1,0,0,1)		
+	    _obj setObjectTexture [0, _colour];
+    };
 };
 
 //Journal

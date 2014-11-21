@@ -11,10 +11,12 @@ _pathtosheep = "admintools\sheep\";
 _pathtomaterials = "admintools\materials\";
 _pathtobuildkits = "admintools\buildingkits\";
 _pathtogems = "admintools\gems\";
+
 _EXECscript9 = 'player execVM "'+_pathtosheep+'%1"';
 _EXECscript10 = 'player execVM "'+_pathtomaterials+'%1"';
 _EXECscript11 = 'player execVM "'+_pathtobuildkits+'%1"';
 _EXECscript12 = 'player execVM "'+_pathtogems+'%1"';
+
 
 if ((getPlayerUID player) in AdminList) then { // Admins
 	epochmenustart = [
@@ -217,6 +219,7 @@ AdminSkinsMenu =
 [
 ["",true],
 	// Entry Format:["Entry Name",[],"",-5,[["expression",'["Skin_class_name"] execVM "admintools\tools\skinChanger.sqf"']],"1","1"],
+	["Wear Admin Skin", [],"", -5, [["expression", format[_EXECscript9,"adminskin.sqf"]]], "1", "1"],
 	["Survivor",[],"",-5,[["expression",'["Survivor2_DZ"] execVM "admintools\tools\skinChanger.sqf"']],"1","1"],
 	["Hero",[],"",-5,[["expression",'["Survivor3_DZ"] execVM "admintools\tools\skinChanger.sqf"']],"1","1"],
 	["Bandit",[],"",-5,[["expression",'["Bandit1_DZ"] execVM "admintools\tools\skinChanger.sqf"']],"1","1"],
