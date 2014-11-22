@@ -1,6 +1,6 @@
 /*
 =====================================================================================================================
-ShowClass - by Cyborg11
+admintools\sheep\showclass - by Cyborg11
 Version: 1.4
 Date: 05.04.2010
 Description: 
@@ -69,7 +69,7 @@ Changelog:
 		
 	v1.0:	- first Release
 
-Parameter:  nul = [] execVM "showclass.sqf";
+Parameter:  nul = [] execVM "admintools\sheep\showclass.sqf";
 =====================================================================================================================
 */
 
@@ -86,8 +86,8 @@ _sleep = 1;
 _ace = isClass (configFile>>"cfgWeapons" >> "ACE_B61BombLauncher");		// Check if ACE is installed
 _pistol = "";
 
-If (isNil "CYBP_save") then {saveact = player addAction ["Save to arma2.rpt", "showclass.sqf", ["save"], 99, false, true, ""]};
-If (isNil "CYBP_tapl") then {changetargetact = player addAction ["Change target to Player", "showclass.sqf", ["player"], 98, false, true, ""]};
+If (isNil "CYBP_save") then {saveact = player addAction ["Save to arma2.rpt", "admintools\sheep\showclass.sqf", ["save"], 99, false, true, ""]};
+If (isNil "CYBP_tapl") then {changetargetact = player addAction ["Change target to Player", "admintools\sheep\showclass.sqf", ["player"], 98, false, true, ""]};
 
 If (count _this > 2) then {_array = _this select 3} else {_array = []};	// _this is greater than 2 if the player has activated the given action
 If (count _array > 0) then {
@@ -97,12 +97,12 @@ If (count _array > 0) then {
 			case true : {
 				CYBP_tapl = false;
 				player removeAction changetargetact;
-				changetargetact = player addAction ["Change target to Player", "showclass.sqf", ["player"], 98, false, true, ""];
+				changetargetact = player addAction ["Change target to Player", "admintools\sheep\showclass.sqf", ["player"], 98, false, true, ""];
 			};
 			case false : {
 				CYBP_tapl = true;
 				player removeAction changetargetact;
-				changetargetact = player addAction ["Change target to cursorTarget", "showclass.sqf", ["player"], 98, false, true, ""];
+				changetargetact = player addAction ["Change target to cursorTarget", "admintools\sheep\showclass.sqf", ["player"], 98, false, true, ""];
 			};
 		};
 	};
