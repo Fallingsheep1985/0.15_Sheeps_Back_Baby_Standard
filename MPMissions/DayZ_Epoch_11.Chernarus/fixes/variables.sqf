@@ -1,7 +1,7 @@
 disableSerialization;
 
-AllPlayers set 	[count AllPlayers, 
-					"FR_Ohara_DZ",
+AllPlayers = [
+"FR_Ohara_DZ",
 "FR_Miles",
 "FR_Cooper",
 "FR_Rodriguez_DZ",
