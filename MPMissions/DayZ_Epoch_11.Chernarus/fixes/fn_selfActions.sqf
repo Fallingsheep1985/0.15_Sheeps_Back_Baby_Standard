@@ -1284,6 +1284,10 @@ _bankrobbery = cursorTarget isKindOf "Notebook";
 	//Oil
 	player removeAction s_player_fillbarrel;
     s_player_fillbarrel = -1;
+	player removeAction s_player_clothesmenu;
+	s_player_clothesmenu = -1;
+	player removeAction s_player_clothesmenu2;
+	s_player_clothesmenu2 = -1;
 };
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
@@ -1415,4 +1419,24 @@ if(ZombieBombScript)then{
 	}else {
 	    player removeAction s_player_gamble;
 		s_player_gamble = -1;
+	};
+	
+	clothetraders = ["Rita_Ensler_EP1","RU_Functionary1","GUE_Soldier_MG","RU_WorkWoman1","RU_WorkWoman5"];
+//Clothes menu
+	if (cursorTarget in clothetraders) then {
+		if (s_player_clothesmenu < 0) then {
+            s_player_clothesmenu = player addAction [("<t color='#c30000'>")+("Mens Clothes")+("</t>"), "scripts\Skin_Trader\open_dialog.sqf","",5,false,true,"",""];
+		};
+	}else {
+	    player removeAction s_player_clothesmenu;
+		s_player_clothesmenu = -1;
+	};
+//Clothes menu
+	if (cursorTarget in clothetraders) then {
+		if (s_player_clothesmenu2 < 0) then {
+            s_player_clothesmenu2 = player addAction [("<t color='#c30000'>")+("Womens Clothes")+("</t>"), "scripts\Skin_Trader\open_dialog2.sqf","",5,false,true,"",""];
+		};
+	}else {
+	    player removeAction s_player_clothesmenu2;
+		s_player_clothesmenu2 = -1;
 	};

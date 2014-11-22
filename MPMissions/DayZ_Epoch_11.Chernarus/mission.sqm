@@ -47,7 +47,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=3;
+		items=2;
 		class Item0
 		{
 			side="WEST";
@@ -1173,26 +1173,6 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
-				};
-			};
-		};
-		class Item2
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6303.8,0.001,7795.03};//Trader City Stary
-					azimut=138.222;
-					special="NONE";
-					id=101;
-					side="GUER";
-					vehicle="UN_CDF_Soldier_SL_EP1";
-					leader=1;
-					skill=0.60000002;
-					init="this allowDammage false; this disableAI 'FSM'; this disableAI 'MOVE'; this disableAI 'AUTOTARGET'; this disableAI 'TARGET'; this setBehaviour 'CARELESS'; this forceSpeed 0;this enableSimulation false;this setcaptive true;this addAction [""Men Clothing"",""scripts\Skin_Trader\open_dialog.sqf""];this addAction [""Women Clothing"",""scripts\Skin_Trader\open_dialog2.sqf""]";
 				};
 			};
 		};

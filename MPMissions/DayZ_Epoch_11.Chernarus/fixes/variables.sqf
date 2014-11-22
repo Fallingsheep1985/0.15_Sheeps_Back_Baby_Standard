@@ -12,6 +12,7 @@ AllPlayers set 	[count AllPlayers,
 					"Soldier1_DZ",
 					"Rocket_DZ"
 				];
+AllPlayers = AllPlayers;
 				
 MeleeWeapons = ["MeleeFishingPole","MeleeCrowbar","MeleeBaseBallBatNails","MeleeBaseBallBatBarbed","MeleeBaseBallBat","Crossbow_DZ","MeleeSledge","MeleeMachete","MeleeHatchet_DZE"];
 gear_done = false;
@@ -293,6 +294,8 @@ dayz_resetSelfActions = {
 	s_player_gamble = -1;
 	s_player_plotManagement = -1;
     s_player_fillbarrel = -1;
+	s_player_clothesmenu = -1;
+	s_player_clothesmenu2 = -1;
 
 };
 call dayz_resetSelfActions;
