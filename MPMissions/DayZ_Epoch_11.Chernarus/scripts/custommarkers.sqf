@@ -96,13 +96,41 @@ while {_run} do
 	};
 	//Oilrig
 	if (oilrigMarker) then {
-	_oilrigMarker = createMarker ["oilrig", [7847.895, 2424.355]];
+	_oilrigMarker = createMarker ["oilrig", [10332.807, 1600.0876]];
 	_oilrigMarker setMarkerText "Oil Rig";
 	_oilrigMarker setMarkerType "DOT";
-	_oilrigMarker setMarkerColor "ColorBlack";
+	_oilrigMarker setMarkerColor "ColorRed";
 	_oilrigMarker setMarkerBrush "Solid";
 	_oilrigMarker setMarkerSize [1, 1];
 	oilrig = _oilrigMarker;
+		_oilrigMarker2 = createMarker ["oilrig2", [9941.6992, 1642.0028]];
+	_oilrigMarker2 setMarkerText "Oil Rig";
+	_oilrigMarker2 setMarkerType "DOT";
+	_oilrigMarker2 setMarkerColor "ColorRed";
+	_oilrigMarker2 setMarkerBrush "Solid";
+	_oilrigMarker2 setMarkerSize [1, 1];
+	oilrig2 = _oilrigMarker2;
+		_oilrigMarker3 = createMarker ["oilrig3", [7325.1211, 2266.5552]];
+	_oilrigMarker3 setMarkerText "Oil Rig";
+	_oilrigMarker3 setMarkerType "DOT";
+	_oilrigMarker3 setMarkerColor "ColorRed";
+	_oilrigMarker3 setMarkerBrush "Solid";
+	_oilrigMarker3 setMarkerSize [1, 1];
+	oilrig3 = _oilrigMarker3;
+		_oilrigMarker4 = createMarker ["oilrig4", [13114.623, 10429.828]];
+	_oilrigMarker4 setMarkerText "Oil Rig";
+	_oilrigMarker4 setMarkerType "DOT";
+	_oilrigMarker4 setMarkerColor "ColorRed";
+	_oilrigMarker4 setMarkerBrush "Solid";
+	_oilrigMarker4 setMarkerSize [1, 1];
+	oilrig4 = _oilrigMarker4;
+		_oilrigMarker = createMarker ["oilrig5", [13188.821, 9750.667]];
+	_oilrigMarker5 setMarkerText "Oil Rig";
+	_oilrigMarker5 setMarkerType "DOT";
+	_oilrigMarker5 setMarkerColor "ColorRed";
+	_oilrigMarker5 setMarkerBrush "Solid";
+	_oilrigMarker5 setMarkerSize [1, 1];
+	oilrig5 = _oilrigMarker5;
 	};
 	
 	//JIP fix
@@ -118,5 +146,9 @@ while {_run} do
 	deleteMarker "beachedcarrier";
 	deleteMarker "CDC";
 	deleteMarker "oilrig";
+	deleteMarker "oilrig2";
+	deleteMarker "oilrig3";
+	deleteMarker "oilrig4";
+	deleteMarker "oilrig5";
 	};
 };
