@@ -7,7 +7,8 @@ PAINT (test)
 FMission undefined variables 
 
 Test zombie hordes + add more hordes
-check if horde is causing delay on start up
+
+fast rope causes delay
 
 nuke event
 
@@ -16,15 +17,13 @@ neon lights (add in)
 dancing hookers(ProjectX)
 Re do loot for Casino killhouse
 
-take skins (new script needs testing)
-skin trader (needs testing)
 
 test survivor hire
 add survivor recruit info to readme
 (how to change spawn amount, etc)
 
 
-oil rig (test)
+oil rig (move to oil fileds)
 
 fishing area for fishing boat
 fish trader
