@@ -1,49 +1,55 @@
 disableSerialization;
+//Model Variables
+Bandit1_DZ = 	"Bandit1_DZ";
+Bandit2_DZ = 	"Bandit2_DZ";
+BanditW1_DZ = 	"BanditW1_DZ";
+BanditW2_DZ = 	"BanditW2_DZ";
+Survivor1_DZ = 	"Survivor2_DZ";
+Survivor2_DZ = 	"Survivor2_DZ";
+SurvivorW2_DZ = "SurvivorW2_DZ";
+SurvivorW3_DZ = "SurvivorW2_DZ";
+Sniper1_DZ = 	"Sniper1_DZ";
+Camo1_DZ = 		"Camo1_DZ";
+Soldier1_DZ = 	"Soldier1_DZ";
+Rocket_DZ = 	"Rocket_DZ";
 
-AllPlayers = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R","FR_Commander", "Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman",
-"USMC_SoldierS","USMC_SoldierS_Sniper","USMC_Soldier_AA","USMC_Soldier_Pilot", "Ins_Soldier_GL_DZ","CDF_Soldier","CDF_Commander","CDF_Soldier_AR","CDF_Soldier_Crew","CDF_Soldier_Light","CDF_Soldier_Pilot", 
-"GUE_Soldier_Crew_DZ","RU_Soldier","RU_Soldier_Crew","RU_Soldier_Light","RU_Soldier_Pilot","RUS_Commander","RUS_Soldier1","MVD_Soldier_Sniper", "Graves_Light_DZ","Drake","Graves","Herrera","Pierce",
-"US_Delta_Force_Assault_EP1","US_Soldier_AR_EP1","US_Soldier_AT_EP1","US_Soldier_MG_EP1","US_Pilot_Light_EP1","US_Soldier_SL_EP1", "CZ_Special_Forces_GL_DES_EP1_DZ","CZ_Soldier_AT_DES_EP1","CZ_Soldier_Light_DES_EP1",
-"CZ_Special_Forces_DES_EP1","CZ_Special_Forces_TL_DES_EP1", "Bandit2_DZ","MVD_Soldier_Sniper","GER_Soldier_EP1","GER_Soldier_MG_EP1","GER_Soldier_TL_EP1", "Soldier_Bodyguard_AA12_PMC_DZ","CIV_Contractor2_BAF",
-"BAF_crewman_DDPM","BAF_Soldier_FAC_DDPM","BAF_Soldier_N_DDPM","BAF_Soldier_Marksman_DDPM","BAF_Soldier_Officer_DDPM","BAF_Soldier_L_DDPM", "TK_INS_Soldier_EP1_DZ","TK_Commander_EP1","TK_Soldier_Crew_EP1",
-"TK_Soldier_MG_EP1","TK_Special_Forces_MG_EP1","TK_INS_Bonesetter_EP1","Survivor2_DZ", "FR_Rodriguez_DZ","FR_Corpsman","FR_GL","FR_Light","FR_Marksman","FR_R","FR_Sapper","FR_TL","Mercenary_Default20b",
-"Mercenary_Default20c","Mercenary_Default20d", "Drake_Light_DZ","arma1_us_soldier_sabass","arma1_us_soldier_sabmark","arma1_us_soldier_sabot","frb_tl","frb_tl_mask","frb_gl","frb_gl_mask","frb_mg","frb_mg_mask",
-"frb_mark","frb_mark_mask", "frb_stealth_tl","frb_stealth_rifleman","frb_stealth_sabot","frb_stealth_mark", "Soldier_Sniper_PMC_DZ","SBH_Alpha_Soldier1","SBH_Alpha_Soldier2","SBH_Alpha_Soldier3","SBH_Alpha_Soldier4",
-"SBH_Alpha_Soldier5","SBH_Alpha_Soldier6","SBH_Alpha_Soldier7","SBH_Alpha_Soldier8", "SBH_Alpha_Soldier9","SBH_Alpha_Soldier10","SBH_Alpha_Soldier11","SBH_Alpha_Soldier12","CZ_Soldier_Sniper_EP1_DZ", 
-"Camo1_DZ","US_Delta_Force_TL_EP1","US_Delta_Force_EP1","US_Delta_Force_AR_EP1","US_Delta_Force_Medic_EP1","US_Delta_Force_Marksman_EP1","US_Delta_Force_Air_Controller_EP1", "Rocket_DZ","SFSG_des_tl",
-"SFSG_des_op","SFSG_des_ar","SFSG_des_med","SFSG_des_demo","SFSG_des_mrk","SFSG_des_jtac","SFSG_mtp_tl","SFSG_mtp_op","SFSG_mtp_ar","SFSG_mtp_med","SFSG_mtp_demo", "SFSG_mtp_mrk","SFSG_mtp_jtac","SFSG_wdl_tl",
-"SFSG_wdl_op","SFSG_wdl_ar","SFSG_wdl_med","SFSG_wdl_demo","SFSG_wdl_mrk","SFSG_wdl_jtac","SFSG_mtpw_tl","SFSG_mtpw_op","SFSG_mtpw_ar","SFSG_mtpw_med", "SFSG_mtpw_demo","SFSG_mtpw_mrk","SFSG_mtpw_jtac", 
-"Sniper1_DZ","Navy_SEAL_TL","Navy_SEAL_GL","Navy_SEAL_MG","Navy_SEAL_AT","Navy_SEAL_Medic","Navy_SEAL_Marksman","Navy_SEAL_diver","Navy_SEAL_diver_medic","Navy_SEAL_diver_land","Navy_SEAL_AC", "Navy_SEAL_ACa",
-"Navy_SEAL_ACb","Navy_SEAL_Shotgun","Navy_SEAL_Sabot","Navy_SEAL_SD", "Soldier_TL_PMC_DZ","G_WDL_Mercenary_Default0","G_WDL_Mercenary_Default1","G_WDL_Mercenary_Default2","G_WDL_Mercenary_Default3",
-"G_WDL_Mercenary_Default4","G_WDL_Mercenary_Default5", "G_WDL_Mercenary_Default6","G_WDL_Mercenary_Default7","G_WDL_Mercenary_Default8","G_WDL_Mercenary_Default9","G_WDL_Mercenary_Default10",
-"G_WDL_Mercenary_Default11","G_WDL_Mercenary_Default12", "G_WDL_Mercenary_Default13","G_WDL_Mercenary_Default14","G_WDL_Mercenary_Default15","G_WDL_Mercenary_Default16", "GUE_Soldier_Sniper_DZ","UKSF_des_tl",
-"UKSF_des_op","UKSF_des_ar","UKSF_des_med","UKSF_des_demo","UKSF_des_mrk","UKSF_des_jtac","UKSF_wdl_tl","UKSF_wdl_op","UKSF_wdl_ar","UKSF_wdl_med","UKSF_wdl_demo", "UKSF_wdl_mrk","UKSF_wdl_jtac","UKSF_des_tl_l",
-"UKSF_des_op_l","UKSF_des_ar_l","UKSF_des_med_l","UKSF_des_demo_l","UKSF_des_mrk_l","UKSF_des_jtac_l","UKSF_wdl_tl_l","UKSF_wdl_op_l","UKSF_wdl_ar_l", "UKSF_wdl_med_l","UKSF_wdl_demo_l","UKSF_wdl_mrk_l",
-"UKSF_wdl_jtac_l", "TK_INS_Warlord_EP1_DZ","gsc_military_helmet_wdl","gsc_military_helmet_wdl_AT","gsc_military_helmet_grey_AT","gsc_military_helmet_wdlSNP","gsc_military_helmet_greySNP","gsc_military_helmet_grey", 
-"gsc_military_head_grey","gsc_military_head_greySNP","gsc_military_head_wdlSNP","gsc_military_head_wdl","gsc_military_head_wdl_AT","gsc_military_head_grey_AT","gsc_scientist1","gsc_scientist1_head", 
-"gsc_scientist2","gsc_scientist2_head","gsc_eco_stalker_mask_fred","gsc_eco_stalker_head_fred","gsc_eco_stalker_mask_camo","gsc_eco_stalker_head_camo1","gsc_cloth_loner_head","gsc_eco_stalker_mask_duty", 
-"gsc_eco_stalker_head_duty","gsc_eco_stalker_mask_neutral","gsc_eco_stalker_head_neutral","nof_fsk_tl","nof_fsk_marksman","nof_fsk_grenadier","nof_fsk_heavy","nof_fsk_corpsman","MVD_Soldier", "Bandit1_DZ",
-"Winter_SOF_Sabot","Winter_SOF_MG","Winter_SOF_TL","Winter_SOF_Medic","Winter_SOF_Marksman","Winter_SOF_GL","Winter_SOF_AT","Winter_SOF_AC","Winter_SOF_DA1","Winter_SOF_DA1a", "Winter_SOF_DA1b","Winter_SOF_DA1c",
-"Winter_OPFOR1","Winter_OPFOR2","Winter_OPFOR3","Winter_OPFOR4","Winter_OPFOR5","Winter_OPFOR6","Winter_OPFOR7","Winter_OPFOR8","Winter_OPFOR9","Winter_OPFOR10", "EWinter_OPFOR1","EWinter_OPFOR2","EWinter_OPFOR3",
-"EWinter_OPFOR4","EWinter_OPFOR5","EWinter_OPFOR6","EWinter_OPFOR7","EWinter_OPFOR8","EWinter_OPFOR9","EWinter_OPFOR10", "Bandit2_DZ","Gangsta_merc1","Gangsta_merc2","Gangsta_merc3","Gangsta_merc4","Gangsta_merc5",
-"Gangsta_merc6","Gangsta_merc7","Gangsta_merc8","Gangsta_merc9","Gangsta_merc10","EGangsta_merc1", "EGangsta_merc2","EGangsta_merc3","EGangsta_merc4","EGangsta_merc5","EGangsta_merc6","EGangsta_merc7",
-"EGangsta_merc8","EGangsta_merc9","EGangsta_merc10","Taliban1","Taliban2","Taliban3","Taliban4", "Taliban5","Taliban6","Taliban7","Taliban8","Taliban9","Taliban10","Taliban11","Taliban12","ETaliban1","ETaliban2",
-"ETaliban3","ETaliban4","ETaliban5","ETaliban6","ETaliban7","ETaliban8","ETaliban9", "ETaliban10","ETaliban11","ETaliban12","Terrorist1","Terrorist2","Terrorist3","Terrorist4","Terrorist5","Terrorist6","Terrorist7",
-"Terrorist8","Terrorist9","Terrorist10","Terrorist11","Terrorist12", "ETerrorist1","ETerrorist2","ETerrorist3","ETerrorist4","ETerrorist5","ETerrorist6","ETerrorist7","ETerrorist8","ETerrorist9","ETerrorist10",
-"ETerrorist11","ETerrorist12","BanditW1_DZ","BanditW2_DZ", "GUE_Commander_DZ","US_Army_Soldier_Light","US_Army_Soldier_GL","US_Army_Soldier2","US_Army_Soldier_Officer","US_Army_Soldier_SL","US_Army_Soldier_TL",
-"US_Army_Soldier_LAT","US_Army_Soldier_AT", "US_Army_Soldier_HAT","US_Army_Soldier_AA","US_Army_Soldier_Medic","US_Army_Soldier_AR","US_Army_Soldier_MG","US_Army_SoldierS_SniperH","US_Army_SoldierM_Marksman",
-"US_Army_SoldierS", "GUE_Soldier_2_DZ","Desert_SOF_TL","Desert_SOF_GL","Desert_SOF_MG","Desert_SOF_AT","Desert_SOF_Medic","Desert_SOF_Marksman","Desert_SOF_AC","Desert_SOF_Shotgun","Desert_SOF_Sabot", 
-"Desert_SOF_DA1","Desert_SOF_DA1a","Desert_SOF_DA1b","Desert_SOF_DA2","WDL_Mercenary_Default0","WDL_Mercenary_Default1","WDL_Mercenary_Default2","WDL_Mercenary_Default3","WDL_Mercenary_Default4", 
-"WDL_Mercenary_Default5","WDL_Mercenary_Default5a","G_WDL_Mercenary_Default5a","WDL_Mercenary_Default6","WDL_Mercenary_Default7","WDL_Mercenary_Default8","WDL_Mercenary_Default9","WDL_Mercenary_Default10", 
-"WDL_Mercenary_Default11","WDL_Mercenary_Default12","WDL_Mercenary_Default13","WDL_Mercenary_Default14","WDL_Mercenary_Default15","WDL_Mercenary_Default16", "GUE_Soldier_CO_DZ","G_Mercenary_Default9a",
-"G_Mercenary_Default9b","Mercenary_Default10","Mercenary_Default11","Mercenary_Default12","Mercenary_Default13","Mercenary_Default14","Mercenary_Default15", "Mercenary_Default16","Mercenary_Default17",
-"Mercenary_Default18","Mercenary_Default19","Mercenary_Default19a","G_Mercenary_Default19a","Mercenary_Default20","Mercenary_Default22","Mercenary_Default23", "Mercenary_Default24","Mercenary_Default25",
-"Mercenary_Default26","Mercenary_Default27","Mercenary_Default28","G_Mercenary_Default0","G_Mercenary_Default1","G_Mercenary_Default2","G_Mercenary_Default3", "G_Mercenary_Default4","G_Mercenary_Default5",
-"G_Mercenary_Default6","G_Mercenary_Default7","G_Mercenary_Default8","G_Mercenary_Default9","G_Mercenary_Default10","G_Mercenary_Default11", "G_Mercenary_Default12","G_Mercenary_Default13","G_Mercenary_Default14",
-"G_Mercenary_Default15","G_Mercenary_Default16","G_Mercenary_Default17","G_Mercenary_Default18","G_Mercenary_Default19", "G_Mercenary_Default20","G_Mercenary_Default20b","G_Mercenary_Default21",
-"G_Mercenary_Default22","G_Mercenary_Default23","G_Mercenary_Default24","G_Mercenary_Default25","G_Mercenary_Default26", "G_Mercenary_Default27","G_Mercenary_Default28"];
+AllPlayers = ["Survivor2_DZ","SurvivorWcombat_DZ","SurvivorWdesert_DZ","SurvivorWurban_DZ","SurvivorWsequishaD_DZ","SurvivorWsequisha_DZ","SurvivorWpink_DZ","SurvivorW3_DZ","SurvivorW2_DZ","Bandit1_DZ","Bandit2_DZ","BanditW1_DZ","BanditW2_DZ","Soldier_Crew_PMC","Sniper1_DZ","Camo1_DZ","Soldier1_DZ","Rocket_DZ","Rocker1_DZ","Rocker2_DZ","Rocker3_DZ","Rocker4_DZ","Priest_DZ","Functionary1_EP1_DZ","GUE_Commander_DZ","Ins_Soldier_GL_DZ","Haris_Press_EP1_DZ","Pilot_EP1_DZ","RU_Policeman_DZ","pz_policeman","pz_suit1","pz_suit2","pz_worker1","pz_worker2","pz_worker3","pz_doctor","pz_teacher","pz_hunter","pz_villager1","pz_villager2","pz_villager3","pz_priest","Soldier_TL_PMC_DZ","Soldier_Sniper_PMC_DZ","Soldier_Bodyguard_AA12_PMC_DZ","Drake_Light_DZ","CZ_Special_Forces_GL_DES_EP1_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","FR_OHara_DZ","FR_Rodriguez_DZ","CZ_Soldier_Sniper_EP1_DZ","Graves_Light_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_CO_DZ","GUE_Soldier_2_DZ","TK_Special_Forces_MG_EP1_DZ","TK_Soldier_Sniper_EP1_DZ","TK_Commander_EP1_DZ","RU_Soldier_Crew_DZ","INS_Lopotev_DZ","INS_Soldier_AR_DZ","INS_Soldier_CO_DZ","INS_Bardak_DZ","INS_Worker2_DZ"];
 
+Clothing1 = ["FR_Ohara_DZ","FR_Miles","FR_Cooper","FR_Rodriguez_DZ","FR_Sykes","FR_AC","FR_AR","FR_Assault_GL","FR_Assault_R","FR_Commander"];
+Clothing2 = ["Soldier1_DZ","USMC_Soldier","USMC_Soldier2","USMC_SoldierM_Marksman","USMC_SoldierS","USMC_SoldierS_Sniper","USMC_Soldier_AA","USMC_Soldier_Pilot"];
+Clothing3 = ["Ins_Soldier_GL_DZ","CDF_Soldier","CDF_Commander","CDF_Soldier_AR","CDF_Soldier_Crew","CDF_Soldier_Light","CDF_Soldier_Pilot"];
+Clothing4 = ["GUE_Soldier_Crew_DZ","RU_Soldier","RU_Soldier_Crew","RU_Soldier_Light","RU_Soldier_Pilot","RUS_Commander","RUS_Soldier1","MVD_Soldier_Sniper"];
+Clothing5 = ["Graves_Light_DZ","Drake","Graves","Herrera","Pierce","US_Delta_Force_Assault_EP1","US_Soldier_AR_EP1","US_Soldier_AT_EP1","US_Soldier_MG_EP1","US_Pilot_Light_EP1","US_Soldier_SL_EP1"];
+Clothing6 = ["CZ_Special_Forces_GL_DES_EP1_DZ","CZ_Soldier_AT_DES_EP1","CZ_Soldier_Light_DES_EP1","CZ_Special_Forces_DES_EP1","CZ_Special_Forces_TL_DES_EP1"];
+Clothing7 = ["Bandit2_DZ","MVD_Soldier_Sniper","GER_Soldier_EP1","GER_Soldier_MG_EP1","ER_Soldier_TL_EP1"];
+Clothing8 = ["Soldier_Bodyguard_AA12_PMC_DZ","CIV_Contractor2_BAF","BAF_crewman_DDPM","BAF_Soldier_FAC_DDPM","BAF_Soldier_N_DDPM","BAF_Soldier_Marksman_DDPM","BAF_Soldier_Officer_DDPM","BAF_Soldier_L_DDPM"];
+Clothing9 = ["TK_INS_Soldier_EP1_DZ","TK_Commander_EP1","TK_Soldier_Crew_EP1","TK_Soldier_MG_EP1","TK_Special_Forces_MG_EP1","TK_INS_Bonesetter_EP1"];
+Clothing10 = ["Survivor2_DZ"];
+Clothing11 = ["FR_Rodriguez_DZ","FR_Corpsman","FR_GL","FR_Light","FR_Marksman","FR_R","FR_Sapper","FR_TL"];
 
+// Overwatch
+
+//Hero
+Clothing12 = ["Drake_Light_DZ"];
+Clothing13 = ["Soldier_Sniper_PMC_DZ"];
+Clothing14 = ["CZ_Soldier_Sniper_EP1_DZ"];
+Clothing15 = ["Camo1_DZ"];
+Clothing16 = ["Rocket_DZ"];
+Clothing17 = ["Sniper1_DZ"];
+Clothing18 = ["Soldier_TL_PMC_DZ"];
+Clothing19 = ["GUE_Soldier_Sniper_DZ"];
+Clothing20 = ["TK_INS_Warlord_EP1_DZ"];
+//Bandit
+
+Clothing21 = ["Bandit1_DZ"];
+Clothing22 = ["Bandit2_DZ"];
+Clothing23 = ["BanditW1_DZ"];
+Clothing24 = ["BanditW2_DZ"];
+Clothing25 = ["GUE_Commander_DZ"];
+Clothing26 = ["GUE_Soldier_2_DZ"];
+Clothing27 = ["GUE_Soldier_CO_DZ"];
+
+AllPlayers = AllPlayers + Clothing1 + Clothing2 + Clothing3 + Clothing4 + Clothing5 + Clothing6 + Clothing7 + Clothing8 + Clothing9 + Clothing10 + Clothing11  + Clothing12  + Clothing13  + Clothing14  + Clothing15  + Clothing16  + Clothing17  + Clothing18  + Clothing19 + Clothing20 + Clothing21+ Clothing22+ Clothing23+ Clothing24+ Clothing25+ Clothing26+ Clothing27 ;
 				
 MeleeWeapons = ["MeleeFishingPole","MeleeCrowbar","MeleeBaseBallBatNails","MeleeBaseBallBatBarbed","MeleeBaseBallBat","Crossbow_DZ","MeleeSledge","MeleeMachete","MeleeHatchet_DZE"];
 gear_done = false;

@@ -25,6 +25,8 @@ if (!isDedicated) then {
 
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	
+	player_switchModel  = compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+	
 	//Admin reskin
 	"PVOZ_adminSkin" addPublicVariableEventHandler {
 		 _obj =  (_this select 1) select 0 ;
