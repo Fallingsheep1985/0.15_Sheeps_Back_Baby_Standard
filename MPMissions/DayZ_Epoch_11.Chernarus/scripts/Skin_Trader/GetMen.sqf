@@ -22,10 +22,6 @@ if (str _unittype == str _unittype)then{
 		if (Global_Price call player_checkItems) then {
 			_removed = Global_Price call player_removeItems;
 			systemchat format ["<System>: " + localize "You gave" + " %2 %1.",(Global_Price select 0)select 0,(Global_Price select 0)select 1];
-			if (!isNull (unitBackpack player)) then {
-	
-			cutText ["You cannot change your Skin while wearing a backpack", "PLAIN"];
-				}else{
 					if (player hasWeapon "ItemCompass") then {
 						_hasCompass = true;
 					};
@@ -77,7 +73,7 @@ if (str _unittype == str _unittype)then{
 				if (!_hasMap) then {
 					player removeWeapon "ItemMap";
 				};
-			};
+
 			}else{
 			systemchat format ["Not enough gold Need" + " %2 %1.",(Global_Price select 0)select 0,(Global_Price select 0)select 1];
 			};
