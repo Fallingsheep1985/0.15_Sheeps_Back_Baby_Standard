@@ -68,16 +68,16 @@ SheepsMenu =
 BriefcaseMenu =
 [
 ["",true],
-	["10oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase10oz.sqf"]]], "1", "1"],	
-	["20oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase20oz.sqf"]]], "1", "1"],	
-	["30oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase30oz.sqf"]]], "1", "1"],	
-	["40oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase40oz.sqf"]]], "1", "1"],	
-	["50oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase50oz.sqf"]]], "1", "1"],	
-	["60oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase60oz.sqf"]]], "1", "1"],	
-	["70oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase70oz.sqf"]]], "1", "1"],	
-	["80oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase80oz.sqf"]]], "1", "1"],	
-	["90oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase90oz.sqf"]]], "1", "1"],	
-	["100oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase100oz.sqf"]]], "1", "1"],	
+	["10oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add10ozbriefcase.sqf"]]], "1", "1"],	
+	["20oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add20ozbriefcase.sqf"]]], "1", "1"],	
+	["30oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add30ozbriefcase.sqf"]]], "1", "1"],	
+	["40oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add40ozbriefcase.sqf"]]], "1", "1"],	
+	["50oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add50ozbriefcase.sqf"]]], "1", "1"],	
+	["60oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add60ozbriefcase.sqf"]]], "1", "1"],	
+	["70oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add70ozbriefcase.sqf"]]], "1", "1"],	
+	["80oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add80ozbriefcase.sqf"]]], "1", "1"],	
+	["90oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add90ozbriefcase.sqf"]]], "1", "1"],	
+	["100oz briefcase", [],"", -5, [["expression", format[_EXECscript13,"add100ozbriefcase.sqf"]]], "1", "1"],	
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
