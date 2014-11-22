@@ -11,11 +11,13 @@ _pathtosheep = "admintools\sheep\";
 _pathtomaterials = "admintools\materials\";
 _pathtobuildkits = "admintools\buildingkits\";
 _pathtogems = "admintools\gems\";
+_pathtobriefs = "admintools\briefcases\";
 
 _EXECscript9 = 'player execVM "'+_pathtosheep+'%1"';
 _EXECscript10 = 'player execVM "'+_pathtomaterials+'%1"';
 _EXECscript11 = 'player execVM "'+_pathtobuildkits+'%1"';
 _EXECscript12 = 'player execVM "'+_pathtogems+'%1"';
+_EXECscript13 = 'player execVM "'+_pathtobriefs+'%1"';
 
 
 if ((getPlayerUID player) in AdminList) then { // Admins
@@ -25,6 +27,7 @@ if ((getPlayerUID player) in AdminList) then { // Admins
 		["Admin Menu >>", [], "#USER:AdminMenu", -5, [["expression", ""]], "1", "1"],
 		["Vehicle Menu >>",[],"#USER:VehicleMenu",-5,[["expression",""]],"1","1"],
 		["Crate Menu >>",[],"#USER:CrateMenu",-5,[["expression",""]],"1","1"],
+		["Briefcases", [], "#USER:BriefcaseMenu", -5, [["expression", ""]], "1", "1"],
 		["Sheep Menu >>", [], "#USER:SheepsMenu", -5, [["expression", ""]], "1", "1"],
 		["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"],
 		["Weapon/Item Kits >>", [], "#USER:WeaponMenu", -5, [["expression", ""]], "1", "1"],
@@ -55,11 +58,26 @@ SheepsMenu =
 	["Show Position", [],"", -5, [["expression", format[_EXECscript9,"showpostion.sqf"]]], "1", "1"],
 	["Show Position ATL", [],"", -5, [["expression", format[_EXECscript9,"showpostionATL.sqf"]]], "1", "1"],
 	["Locate Vehicles (need key + Map)", [],"", -5, [["expression", format[_EXECscript9,"locate_vehicle.sqf"]]], "1", "1"],
-	["Add NOS", [],"", -5, [["expression", format[_EXECscript9,"addNOS.sqf"]]], "1", "1"],
-	["Add 100oz Briefcase", [],"", -5, [["expression", format[_EXECscript9,"add100ozbriefcase.sqf"]]], "1", "1"],
+	["Add NOS", [],"", -5, [["expression", format[_EXECscript9,"addNOS.sqf"]]], "1", "1"],	
 	["Add Zombie Bait Parts", [],"", -5, [["expression", format[_EXECscript9,"addZombieBait.sqf"]]], "1", "1"],
 	["Add Zombie Bomb Parts", [],"", -5, [["expression", format[_EXECscript9,"addZombieBomb.sqf"]]], "1", "1"],
 	["Add Anti Zombie Emitter Parts", [],"", -5, [["expression", format[_EXECscript9,"addAntiZombieEmitter.sqf"]]], "1", "1"],	
+	["", [], "", -5, [["expression", ""]], "1", "0"],
+		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
+];
+BriefcaseMenu =
+[
+["",true],
+	["10oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase10oz.sqf"]]], "1", "1"],	
+	["20oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase20oz.sqf"]]], "1", "1"],	
+	["30oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase30oz.sqf"]]], "1", "1"],	
+	["40oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase40oz.sqf"]]], "1", "1"],	
+	["50oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase50oz.sqf"]]], "1", "1"],	
+	["60oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase60oz.sqf"]]], "1", "1"],	
+	["70oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase70oz.sqf"]]], "1", "1"],	
+	["80oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase80oz.sqf"]]], "1", "1"],	
+	["90oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase90oz.sqf"]]], "1", "1"],	
+	["100oz", [],"", -5, [["expression", format[_EXECscript13,"ItemBriefcase100oz.sqf"]]], "1", "1"],	
 	["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
 ];
