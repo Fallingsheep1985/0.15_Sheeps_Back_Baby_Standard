@@ -8,7 +8,7 @@ class E_Spawn_Dialog
 		class MapCherno: RscPicture
 		{
 			idc = 1200;
-			text = "spawn\map.paa";
+			text = "scripts\spawn\map.paa";
 			x = 0.340983 * safezoneW + safezoneX;
 			y = 0.23125 * safezoneH + safezoneY;
 			w = 0.30876 * safezoneW;
