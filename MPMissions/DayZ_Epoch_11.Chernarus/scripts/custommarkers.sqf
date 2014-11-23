@@ -124,7 +124,7 @@ while {_run} do
 	_oilrigMarker4 setMarkerBrush "Solid";
 	_oilrigMarker4 setMarkerSize [1, 1];
 	oilrig4 = _oilrigMarker4;
-		_oilrigMarker = createMarker ["oilrig5", [13188.821, 9750.667]];
+		_oilrigMarker5 = createMarker ["oilrig5", [13188.821, 9750.667]];
 	_oilrigMarker5 setMarkerText "Oil Rig";
 	_oilrigMarker5 setMarkerType "DOT";
 	_oilrigMarker5 setMarkerColor "ColorRed";
