@@ -212,6 +212,8 @@ _ismelee = (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
 if (_ismelee == "true") then {
 	call dayz_meleeMagazineCheck; 
 };
+//force west side again
+[player] joinSilent createGroup WEST;
 
 //reveal the same objects we do on login
 {player reveal _x} count (nearestObjects [getPosATL player, dayz_reveal, 50]);
