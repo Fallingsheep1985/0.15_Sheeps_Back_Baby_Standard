@@ -1,9 +1,10 @@
 /*------------------------------------*/
 /* JAEM                               */
-/* Just another Chopper-Evac Mod v1.4 */
+/* Just another Chopper-Evac Mod v1.6 */
 /* OtterNas3                          */
 /* 01/14/2014                         */
-/* Last update: 06/14/2014            */
+/* Last update: 11/03/2014            */
+/* Advanced by hellraver              */
 /*------------------------------------*/
 
 private ["_evacCallerID","_evacCallerUID","_evacFields","_evacFieldID"];
@@ -39,7 +40,7 @@ evac_AllowedChoppers = [
 	"Mi17_Civilian_DZ","Mi17_DZ","Mi17_Ins","Mi17_medevac_CDF","Mi17_medevac_INS",
 	"Mi17_medevac_RU","Mi17_rockets_RU","Mi17_TK_EP1","Mi17_UN_CDF_EP1","Mi171Sh_CZ_EP1",
 	"Mi171Sh_rockets_CZ_EP1","Mi24_D","Mi24_D_TK_EP1","Mi24_P","Mi24_V",
-	"MH60S","MH6J_DZ","MH6J_EP1","MV22","MV22_DZ",
+	"MH60S","MH60S_DZE","MH6J_DZ","MH6J_EP1","MV22","MV22_DZ",
 	"pook_H13_medevac","pook_H13_medevac_CDF","pook_H13_medevac_TAK","pook_H13_medevac_INS","pook_H13_medevac_UNO",
 	"pook_H13_medevac_PMC","pook_H13_medevac_GUE","pook_H13_medevac_CIV","pook_H13_medevac_CIV_RU","pook_H13_gunship",
 	"pook_H13_gunship_CDF","pook_H13_gunship_UNO","pook_H13_gunship_PMC","pook_H13_gunship_GUE","pook_H13_gunship_TAK",
@@ -48,7 +49,8 @@ evac_AllowedChoppers = [
 	"pook_H13_civ_slate","pook_H13_civ_black","pook_H13_civ_yellow","pook_H13_civ_ru","pook_H13_civ_ru_white",
 	"pook_H13_civ_ru_slate","pook_H13_civ_ru_black","pook_H13_civ_ru_yellow","UH1H_DZ","UH1H_DZE",
 	"UH1H_TK_EP1","UH1H_TK_GUE_EP1","UH1Y_DZ","UH1Y_DZE","UH60M_EP1",
-	"UH60M_EP1_DZ","UH60M_EP1_DZE","UH60M_MEV_EP1"
+	"UH60M_EP1_DZ","UH60M_EP1_DZE","UH60M_MEV_EP1",
+	"CH53_DZE","USEC_ch53_E"
 ];
 /////////////////////////////////////////////////
 /////////////// DONT EDIT BELOW ! ///////////////
@@ -78,8 +80,7 @@ ON_fnc_convertUID = {
 	private["_number_string","_string_array","_result","_num", "_playertemp"];   // Setup the local variables 
 
 	_playertemp = _this select 0;  // Grab the first parameter sent to the function.
-	//_number_string = getPlayerUID _playertemp ;
-	_number_string = getPlayerUIDOld _playertemp ;	
+	_number_string = getPlayerUIDOld _playertemp ; 
 	_string_array = toArray _number_string;  // Convert the PlayerUID string to a numberic unicode array.
 	_result = ""; 
 
@@ -105,7 +106,7 @@ waitUntil {!isNil "PVDZE_EvacChopperFields"};
 /* Store the current Evac-Fields into a local variable for checks */
 _evacFields = PVDZE_EvacChopperFields;
 
-/* Checking if player has a Evac-Chopper to decide if we show the Call-Evac action menu */
+/* Checking if player has a Evac-Chopper */
 _evacCallerID = (player getVariable ["CharacterID","0"]);
 _evacCallerUID = ([player] call ON_fnc_convertUID);
 playerHasEvacField = false;
@@ -122,230 +123,114 @@ if ((count _evacFields) > 0) then
 };
 
 /* Reset Action-Menu cvars */
-s_player_evacCall = -1;
-s_player_makeEvacChopper = -1;
+s_player_createEvacChopper = -1;
+s_player_changeEvacChopper = -1;
 s_player_clearEvacChopper = -1;
-evac_callfunctions = false;
-evacfunctions = false;
-
+s_player_callEvacChopper = -1;
+actionMenu = true;
+createEvac = false;
+changeEvac = false;
+clearEvac = false;
+callEvac = false;
 
 /* Starting the check loop */
-while{true} do {
-	sleep 3;
-
-	if ((vehicle player) == player) then {
-		
-		if (!isNull cursorTarget) then {
-
-			if (evac_callFunctions) then {
-				player removeAction s_player_evacCall;
-				s_player_evacCall = -1;
-				evac_callFunctions = false;
-			};
-
-			if ((typeOf cursorTarget) in evac_AllowedChoppers) then {
-
-				if (player distance cursorTarget <= 10) then {
-
-					if (!isEngineOn cursorTarget) then {
-						evac_cTarget = cursorTarget;
-						evac_vehicleKey = evac_cTarget getVariable ["CharacterID","0"];
-					
-						if (evac_vehicleKey != "0") then {
-							evac_key_colors = ["ItemKeyYellow","ItemKeyBlue","ItemKeyRed","ItemKeyGreen","ItemKeyBlack"];
-							evac_temp_keys = [];
-							evac_itemsPlayer = items player;
-						
-							{
-								
-								if (configName(inheritsFrom(configFile >> "CfgWeapons" >> _x)) in evac_key_colors) then {
-									evac_ownerKeyId = getNumber(configFile >> "CfgWeapons" >> _x >> "keyid");
-									evac_keyName = getText(configFile >> "CfgWeapons" >> _x >> "displayName");
-									evac_temp_keys set [count evac_temp_keys,str(evac_ownerKeyId)];
-								};
-							} forEach evac_itemsPlayer;
-						
-							evac_hasKey = evac_vehicleKey in evac_temp_keys;
-						
-							if (evac_hasKey) then {
-								evacFunctions = true;
-							
-								if (s_player_makeEvacChopper < 0) then {
-									s_player_makeEvacChopper = player addAction [("<t color=""#0000FF"">" + ("Set Evac-Chopper") + "</t>"),"scripts\JAEM\SetEvacChopper.sqf",evac_cTarget,-1000,false,false,"",""];
-								};
-					
-								if (playerHasEvacField) then {
-									
-									if ((evac_cTarget distance playersEvacField) <= 10) then {
-							
-										if (s_player_clearEvacChopper < 0) then {
-											s_player_clearEvacChopper = player addAction [("<t color=""#0000FF"">" + ("Clear Evac-Chopper") + "</t>"),"scripts\JAEM\ClearEvacChopper.sqf",evac_cTarget,-1001,false,false,"",""];
-										};
-								
-									} else {
-										player removeAction s_player_clearEvacChopper;
-										s_player_clearEvacChopper = -1;
-									};
-								
-								} else {
-									player removeAction s_player_clearEvacChopper;
-									s_player_clearEvacChopper = -1;
-								};
-							
-							} else {
-								player removeAction s_player_makeEvacChopper;
-								s_player_makeEvacChopper = -1;
-								player removeAction s_player_clearEvacChopper;
-								s_player_clearEvacChopper = -1;
-								evacFunctions = false;
-							};
-					
-						} else {
-							
-							if (evacFunctions) then {
-								player removeAction s_player_makeEvacChopper;
-								s_player_makeEvacChopper = -1;
-								player removeAction s_player_clearEvacChopper;
-								s_player_clearEvacChopper = -1;
-								evacFunctions = false;
-							};
-						};
-					
-					} else {
-						
-						if (evacFunctions) then {
-							player removeAction s_player_makeEvacChopper;
-							s_player_makeEvacChopper = -1;
-							player removeAction s_player_clearEvacChopper;
-							s_player_clearEvacChopper = -1;
-							evacFunctions = false;
-						};
-					};
-				
-				} else {
-					
-					if (evacFunctions) then {
-						player removeAction s_player_makeEvacChopper;
-						s_player_makeEvacChopper = -1;
-						player removeAction s_player_clearEvacChopper;
-						s_player_clearEvacChopper = -1;
-						evacFunctions = false;
-					};
-				};
-			} else {
-				
-				if (evacFunctions) then {
-					player removeAction s_player_makeEvacChopper;
-					s_player_makeEvacChopper = -1;
-					player removeAction s_player_clearEvacChopper;
-					s_player_clearEvacChopper = -1;
-					evacFunctions = false;
-				};
-			};
-		};
-	
-	
-		if (playerHasEvacField) then {
-	
-			if (isNull cursorTarget) then {
-				
-				if (evacFunctions) then {
-					player removeAction s_player_makeEvacChopper;
-					s_player_makeEvacChopper = -1;
-					player removeAction s_player_clearEvacChopper;
-					s_player_clearEvacChopper = -1;
-					evacFunctions = false;
-				};
-				
-				if (speed player < 1) then {
-					
-					if (vehicle player == player) then {
-						
-						if ((player distance playersEvacField) >= evac_MinDistance) then {
-							
-							if (evac_needRadio == 1) then {
-								evac_call_itemsPlayer = items player;
-								evac_call_hasRadio = "ItemRadio" in evac_call_itemsPlayer;
-								
-								if (evac_call_hasRadio) then {
-									evac_callFunctions = true;
-									
-									if (s_player_evacCall < 0) then {
-										s_player_evacCall = player addAction [("<t color=""#0000FF"">" + ("Call Evac-Chopper") + "</t>"),"scripts\JAEM\CallEvacChopper.sqf",[],-1000,false,false,"",""];
-									};
-								
-								} else {
-									evac_callFunctions = false;
-									player removeAction s_player_evacCall;
-									s_player_evacCall = -1;
-								};
-							
-							} else {
-								evac_callFunctions = true;
-								
-								if (s_player_evacCall < 0) then {
-									s_player_evacCall = player addAction [("<t color=""#0000FF"">" + ("Call Evac-Chopper") + "</t>"),"scripts\JAEM\CallEvacChopper.sqf",[],-1000,false,false,"",""];
-								};
-							};
-						
-						} else {
-							
-							if (evac_callFunctions) then {
-								player removeAction s_player_evacCall;
-								s_player_evacCall = -1;
-								evac_callFunctions = false;
-							};
-						};
-					
-					} else {
-						
-						if (evac_callFunctions) then {
-							player removeAction s_player_evacCall;
-							s_player_evacCall = -1;
-							evac_callFunctions = false;
-						};
-					};
-				
-				} else {
-					
-					if (evac_callFunctions) then {
-						player removeAction s_player_evacCall;
-						s_player_evacCall = -1;
-						evac_callFunctions = false;
-					};
-				};
-			
-			} else {
-				
-				if (evac_callFunctions) then {
-					player removeAction s_player_evacCall;
-					s_player_evacCall = -1;
-					evac_callFunctions = false;
-				};
-			};
-		
-		} else {
-			
-			if (evac_callFunctions) then {
-				player removeAction s_player_evacCall;
-				s_player_evacCall = -1;
-				evac_callFunctions = false;
-			};
+while {true} do {
+	if (createEvac) then {
+		if (s_player_createEvacChopper < 0) then {
+			s_player_createEvacChopper = player addAction [("<t color=""#0000FF"">" + ("Create Evac-Chopper") + "</t>"),"scripts\JAEM\SetEvacChopper.sqf",evac_cTarget,-1000,false,false,"",""];
 		};
 	} else {
-		
-		if (evac_callFunctions) then {
-			player removeAction s_player_evacCall;
-			s_player_evacCall = -1;
-			evac_callFunctions = false;
+		player removeAction s_player_createEvacChopper;
+		s_player_createEvacChopper = -1;
+	};
+	
+	if (changeEvac) then {
+		if (s_player_changeEvacChopper < 0) then {
+			s_player_changeEvacChopper = player addAction [("<t color=""#00FFFF"">" + ("Change Evac-Chopper") + "</t>"),"scripts\JAEM\SetEvacChopper.sqf",evac_cTarget,-1000,false,false,"",""];
 		};
-		
-		if (evacFunctions) then {
-			player removeAction s_player_makeEvacChopper;
-			s_player_makeEvacChopper = -1;
-			player removeAction s_player_clearEvacChopper;
-			s_player_clearEvacChopper = -1;
-			evacFunctions = false;
+	} else {
+		player removeAction s_player_changeEvacChopper;
+		s_player_changeEvacChopper = -1;
+	};
+
+	if (clearEvac) then {
+		if (s_player_clearEvacChopper < 0) then {
+			s_player_clearEvacChopper = player addAction [("<t color=""#c70000"">" + ("Clear Evac-Chopper") + "</t>"),"scripts\JAEM\ClearEvacChopper.sqf",[],-1001,false,false,"",""];
 		};
+	} else {
+		player removeAction s_player_clearEvacChopper;
+		s_player_clearEvacChopper = -1;
+	};
+
+	if (callEvac) then {
+		if (s_player_callEvacChopper < 0) then {
+			s_player_callEvacChopper = player addAction [("<t color=""#c70000"">" + ("Call Evac-Chopper") + "</t>"),"scripts\JAEM\CallEvacChopper.sqf",[],1001,false,true,"",""];
+		};
+	} else {
+		player removeAction s_player_callEvacChopper;
+		s_player_callEvacChopper = -1;
+	};
+
+
+	if (!isNull cursorTarget && (typeOf cursorTarget) in evac_AllowedChoppers && player distance cursorTarget <= 10 && !isEngineOn cursorTarget && actionMenu) then {
+		evac_cTarget = cursorTarget;
+		evac_vehicleKey = evac_cTarget getVariable ["CharacterID","0"];
+
+		if (evac_vehicleKey != "0") then {
+			evac_key_colors = ["ItemKeyYellow","ItemKeyBlue","ItemKeyRed","ItemKeyGreen","ItemKeyBlack"];
+			evac_temp_keys = [];
+			evac_itemsPlayer = items player;
+
+			{
+
+				if (configName(inheritsFrom(configFile >> "CfgWeapons" >> _x)) in evac_key_colors) then {
+					evac_ownerKeyId = getNumber(configFile >> "CfgWeapons" >> _x >> "keyid");
+					evac_keyName = getText(configFile >> "CfgWeapons" >> _x >> "displayName");
+					evac_temp_keys set [count evac_temp_keys,str(evac_ownerKeyId)];
+				};
+			} forEach evac_itemsPlayer;
+
+			evac_hasKey = evac_vehicleKey in evac_temp_keys;
+
+			if (evac_hasKey) then {
+				if (!playerHasEvacField) then {
+					createEvac = true;
+				} else {
+					createEvac = false;
+					if ((evac_cTarget distance playersEvacField) > 10) then {
+						changeEvac = true;
+					} else {
+						changeEvac = false;
+					};
+				};
+			} else {
+				createEvac = false;
+				changeEvac = false;
+			};
+		} else {
+			createEvac = false;
+			changeEvac = false;
+		};
+	} else {
+		createEvac = false;
+		changeEvac = false;
+	};
+
+
+	if (playerHasEvacField) then {
+		if ((player distance playersEvacField) <= 10) then {
+			clearEvac = true;
+		} else {
+			clearEvac = false;
+		};
+	} else {
+		clearEvac = false;
+	};
+
+
+	if (player distance cursorTarget >= 20 && speed player < 1 && actionMenu) then {
+		callEvac = true;
+	} else {
+		callEvac = false;
 	};
 };

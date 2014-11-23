@@ -1,38 +1,21 @@
 /*------------------------------------*/
 /* JAEM                               */
-/* Just another Chopper-Evac Mod v1.4 */
+/* Just another Chopper-Evac Mod v1.6 */
 /* OtterNas3                          */
 /* 01/14/2014                         */
-/* Last update: 06/14/2014            */
+/* Last update: 11/03/2014            */
+/* Advanced by hellraver              */
 /*------------------------------------*/
 
 private ["_cnt","_locationPlayer","_evacFieldID","_checkForChopper","_evacCallerID","_evacCallerUID","_evacFields","_heliHRescue","_routeFinished","_evacZone","_chopperStartPos","_getChopperStartPos","_evacZoneDistance","_startZoneWaypoint","_evacZoneWaypoint","_part","_damage","_hitpoints","_evacChopperFuel","_finishMarker","_evacZonePos","_dayTime"];
-player removeAction s_player_evacCall;
-s_player_evacCall = 1;
 
-/* 5 seconds timeout to cancel a call on accident */
-_cnt = 5;
-_locationPlayer = (([player] call ON_fnc_GetPos));
-for "_p" from 1 to 5 do
-{
-	systemChat(format ["Evac-Chopper get called in %1s - Move to cancel!",_cnt]);
-	if (player distance _locationPlayer > 0.2) then {
-		systemChat("Evac-Chopper call canceled!");
-		s_player_evacCall = -1;
-		breakOut "exit";
-	};
-	sleep 1;
-	_cnt = _cnt - 1;
-};
-systemChat ("Searching for your Evac-Chopper - Please wait...");
-sleep 5;
-
-//Setting needed variables to check which Evac-Field the player owns
-_evacCallerID = (player getVariable ["CharacterID","0"]);
-_evacCallerUID = ([player] call ON_fnc_convertUID);
+/* Remove the Action Menu entry */
+player removeAction s_player_callEvacChopper;
+s_player_callEvacChopper = 1;
+actionMenu = false;
 
 //If Player seems not to have a Evac-Chopper
-//we getting all HeliHRescue signs on Server and check if Player is owner
+//We getting all HeliHRescue signs on Server and check if Player is owner
 //This is just for the case the check on playerlogin failed
 if (!playerHasEvacField) then { 
 	_evacFields = PVDZE_EvacChopperFields;
@@ -47,12 +30,56 @@ if (!playerHasEvacField) then {
 	};
 };
 
+//Player has no Radio, exit
+call_evac_itemsPlayer = items player;
+call_evac_hasRadio = "ItemRadio" in call_evac_itemsPlayer;
+if (evac_needRadio == 1) then {
+	if (!call_evac_hasRadio) then {
+	cutText [format["Calling a Evac-Chopper needs a Radio - You dont have it!"], "PLAIN"];
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
+	breakOut "exit";
+	};
+};
+
 //Player has no evac field, exit
 if (!playerHasEvacField) then {
-	systemChat ("Sorry but you dont have a Evac-Chopper");
-	s_player_evacCall = -1;
+	cutText [format["Sorry but you dont have a Evac-Chopper!\n\n(You need %1 Full Briefcases for creating a Evac-Chopper)", evac_chopperPrice], "PLAIN"];
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
+
+//Player has doesn't the needed distance to a evacuation field
+_checkForChopper = nearestObjects [playersEvacField, evac_AllowedChoppers, 10];
+if ((count _checkForChopper) > 0 && (player distance playersEvacField) <= evac_MinDistance) then {
+	cutText [format["Calling a Evac-Chopper needs a distance of %1m to a Evac-Field!", evac_MinDistance], "PLAIN"];
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
+	breakOut "exit";
+};
+
+/* 5 seconds timeout to cancel a call on accident */
+_cnt = 5;
+_locationPlayer = (([player] call ON_fnc_GetPos));
+for "_p" from 1 to 5 do
+{
+	systemChat(format ["Calling of Evac-Chopper in %1s - Move to cancel!",_cnt]);
+	if (player distance _locationPlayer > 0.2) then {
+		systemChat("Calling of Evac-Chopper canceled!");
+		s_player_callEvacChopper = -1;
+		actionMenu = true;
+		breakOut "exit";
+	};
+	sleep 1;
+	_cnt = _cnt - 1;
+};
+systemChat ("Searching for your Evac-Chopper - Please wait...");
+sleep 5;
+
+//Setting needed variables to check which Evac-Field the player owns
+_evacCallerID = (player getVariable ["CharacterID","0"]);
+_evacCallerUID = ([player] call ON_fnc_convertUID);
 
 //Player has a evac field now check if a Chopper is on it
 _checkForChopper = nearestObjects [playersEvacField, evac_AllowedChoppers, 10];
@@ -60,7 +87,8 @@ if ((count _checkForChopper) > 0) then {
 	evacChopper = _checkForChopper select 0;
 } else {
 	systemChat ("Sorry but there is no Chopper on your Evac-Field");
-	s_player_evacCall = -1;
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
 
@@ -74,8 +102,8 @@ _evacChopperFuel = fuel evacChopper;
 if (_evacChopperFuel < 0.2) then {
 	systemChat("Sorry but the Fuel of your Evac-Chopper is to low to fly to you");
 	systemChat("Keep your Evac-Chopper refueled next time!");
-	sleep 30;
-	s_player_evacCall = -1;
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
 
@@ -100,8 +128,8 @@ _hitpoints = evacChopper call vehicle_getHitpoints;
 			systemChat("Sorry but the Main-Rotor of your Evac-Chopper is to damaged to fly");
 			systemChat("Keep your Evac-Chopper repaired next time!");
 		};
-		sleep 30;
-		s_player_evacCall = -1;
+		s_player_callEvacChopper = -1;
+		actionMenu = true;
 		breakOut "exit";
 	};
 } forEach _hitpoints;
@@ -212,7 +240,8 @@ if (!alive evacChopper) then {
 		<t size='1'		font='Bitstream'align='center' 	color='#00FF00'>----------------------</t>	<br/>
 		<t size='1.15'	font='Bitstream'align='center' 	color='#FFBF00'>!!! CRASHED !!!</t>			<br/>"
 	];
-	s_player_evacCall = -1;
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
 
@@ -234,7 +263,8 @@ if (!alive player) then {
 	waitUntil{sleep 5; count units group evacChopperPilot == 0};
 	deleteGroup evacChopperGroup;
 	evacChopper setVehicleLock "LOCKED";
-	s_player_evacCall = -1;
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
 
@@ -287,7 +317,8 @@ if (!alive player) then {
 	waitUntil{sleep 5; count units group evacChopperPilot == 0};
 	deleteGroup evacChopperGroup;
 	evacChopper setVehicleLock "LOCKED";
-	s_player_evacCall = -1;
+	s_player_callEvacChopper = -1;
+	actionMenu = true;
 	breakOut "exit";
 };
 
@@ -299,9 +330,9 @@ evacChopper setVehicleLock "UNLOCKED";
 //delete the Smoke/Flare marker
 deleteVehicle _finishMarker;
 
-//reset the action menu variable
-s_player_evacCall = -1;		
-
+/* Reset the action menu variables for a new run */
+s_player_callEvacChopper = -1;
+actionMenu = true;
 
 //Thats it for the Evacutaion process
 //Hope you enjoyed it :)
