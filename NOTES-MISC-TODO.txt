@@ -1,34 +1,26 @@
-FIX SCRIPTS
 
-Ai spawns at custom areas (new areas)
 
+
+BUGS
+skin trader buggy skins
+Infinite take clothes
 PAINT (test)
-
-FMission undefined variables 
-
-Test zombie hordes + add more hordes
-
+FMission undefined variable 
 fast rope causes delay
 
-nuke event
-
-neon lights (add in)
-
-dancing hookers(ProjectX)
-Re do loot for Casino killhouse
 
 
-test survivor hire
-add survivor recruit info to readme
-(how to change spawn amount, etc)
-
-
-oil rig (move to oil fileds)
-
+ENHANCEMENTS
 fishing area for fishing boat
 fish trader
-
-
+nuke event
+neon lights (add in)
+dancing hookers(ProjectX)
+Re do loot for Casino killhouse
+add survivor recruit info to readme
+(how to change spawn amount, etc)
+add more zombie hordes
+Ai spawns at custom areas (new areas)
 slot machine (do display base code should be good to go)
 black jack
 poker (maybe)
