@@ -9,7 +9,7 @@ startLoadingScreen ["","RscDisplayLoadCustom"];
 cutText ["","BLACK OUT"];
 enableSaving [false, false];
 //Load Configs
-[] execVM "scriptcontrol.sqf";
+call compile preprocessFileLineNumbers "scriptcontrol.sqf";
 //Load Markers
 [] execVM "scripts\custommarkers.sqf";
 //REALLY IMPORTANT VALUES
