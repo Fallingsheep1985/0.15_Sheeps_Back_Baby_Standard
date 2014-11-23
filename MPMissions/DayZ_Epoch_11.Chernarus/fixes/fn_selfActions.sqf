@@ -992,14 +992,14 @@ if(TentHealScript)then{
 //////////////////////////////////////////////////TAKE CLOTHES START/////////////////////////////////////
 if (TakeClothesScript) then {
 //Remove CLOTHES
-if (_isMan and !_isAlive and !_isZombie and !_isAnimal) then {
-if (s_clothes < 0) then {
-s_clothes = player addAction [("" + ("Take Clothes") + ""), "scripts\takeskin\Recoverskin.sqf",cursorTarget, 1, false, true, "",""];
-};
-} else {
-player removeAction s_clothes;
-s_clothes = -1;
-};
+	if (_isMan and !_isAlive and !_isZombie and !_isAnimal) then {
+		if (s_clothes < 0) then {
+		s_clothes = player addAction [("" + ("Take Clothes") + ""), "scripts\takeskin\Recoverskin.sqf",cursorTarget, 1, false, true, "",""];
+		};
+	} else {
+		player removeAction s_clothes;
+		s_clothes = -1;
+	};
 };
 //////////////////////////////////////////////////TAKE CLOTHES END/////////////////////////////////////
 	//Repairing Vehicles
