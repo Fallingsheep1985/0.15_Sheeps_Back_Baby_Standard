@@ -9,7 +9,7 @@ _zedPos = [6642.4,2439.6,0];//Position to spawn the Zed - Chernogorsk Central Ga
 _zedTarget = [5956,7960,0];//Give the poor zed somewhere to walk to - Somewhere near Stary Sobor
 
 _i = 1;
-for "_i" from 1 to 30 do // spawns between 1 and 30 zombies
+for "_i" from 1 to 10 do // spawns between 1 and 10 zombies
 {
 //random zed skin
 _zedType = _zedTypes call BIS_fnc_selectRandom;
