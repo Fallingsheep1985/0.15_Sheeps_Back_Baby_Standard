@@ -116,7 +116,6 @@ if(FMissionScript)then{
 	["any","any","any","any",15,"supply_drop"],
 	["any","any","any","any",50,"supply_drop"],
 	["any","any","any","any",15,"FMission_Launcher1"],
-	["any","any","any","any",35,"FMission_Launcher2"],
 	["any","any","any","any",45,"FMission_Launcher3"],
 	["any","any","any","any",10,"Military"], 
 	["any","any","any","any",25,"Treasure"], 
