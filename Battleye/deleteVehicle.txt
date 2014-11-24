@@ -1,2 +1,5 @@
 //new
 1 ""
+5 "FunctionsManager"
+5 "CinderWallDoorLocked_DZ"
+5 "CinderWallDoorSmallLocked_DZ"
