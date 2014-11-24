@@ -85,7 +85,7 @@ _evacFields = PVDZE_EvacChopperFields;
 
 /* Checking if player has a Evac-Chopper */
 _evacCallerID = (player getVariable ["CharacterID","0"]);
-_evacCallerUID = getPlayerUIDOld player;
+_evacCallerUID = getPlayerUID player;
 playerHasEvacField = false;
 playersEvacField = objNull;
 if ((count _evacFields) > 0) then
