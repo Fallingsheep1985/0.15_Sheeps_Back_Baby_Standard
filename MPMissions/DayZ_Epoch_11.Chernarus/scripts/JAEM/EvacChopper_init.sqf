@@ -72,30 +72,7 @@ ON_fnc_GetPos = {
 	};
 	_pos
 };
-
-/* This checks PlayerUID for having characters in it (Arma anniversary edition) */
-/* As i took this from RimBlock his scripts i gave Credits to him here */
-/* dont know who wrote it first */
-ON_fnc_convertUID = {
-	private["_number_string","_string_array","_result","_num", "_playertemp"];   // Setup the local variables 
-
-	_playertemp = _this select 0;  // Grab the first parameter sent to the function.
-	_number_string = getPlayerUIDOld _playertemp;
-	_string_array = toArray _number_string;  // Convert the PlayerUID string to a numberic unicode array.
-	_result = ""; 
-
-	for "_i" from 0 to ((count _string_array) - 1) step 1 do { // Step backwards through the array.
-		_num = ((_string_array select _i) - 48); // Subtract 48 (HEX 30) from the unicode value in the element.
-
-		if (_num > 9) then { // If the result is greater than 9 then change it to 9
-			_num = 9;
-		};
-
-		_result = _result + str(_num); // convert the number to a string and concatenate it to the result.
-	};
-	_result // Return the result.
-};
-  
+ 
 
 /* Wait for the player full ingame so we can do checks an add the action-menu entry */
 waitUntil {!isNil "dayz_animalCheck"};
@@ -108,7 +85,7 @@ _evacFields = PVDZE_EvacChopperFields;
 
 /* Checking if player has a Evac-Chopper */
 _evacCallerID = (player getVariable ["CharacterID","0"]);
-_evacCallerUID = ([player] call ON_fnc_convertUID);
+_evacCallerUID = getPlayerUIDOld player;
 playerHasEvacField = false;
 playersEvacField = objNull;
 if ((count _evacFields) > 0) then
