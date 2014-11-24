@@ -26,7 +26,7 @@ _show_name				= true;				// Add the crashname to the marker
 /* do not change below values if you do not know what you are doing */
 _plane					= false;
 _spawnMarker 			= "center";
-_heliModel				= ["AN2"] call BIS_fnc_selectRandom;
+_heliModel				= ["AN2_DZ"] call BIS_fnc_selectRandom;
 _crashModel				= "AN2Wreck";
 _spawnRadius			= HeliCrashArea;
 _heliStart				= [[1000.0,2.0],[3500.0,2.0],[5000.0,2.0],[7500.0,2.0],[9712.0,663.067],[12304.0,1175.07],[14736.0,2500.0],[16240.0,5000.0],[16240.0,7500.0],[16240.0,10000.0]] call BIS_fnc_selectRandom;
@@ -37,7 +37,7 @@ _spawnRoll				= round(random 100);
 
 _finder					= "";
 
-if(_heliModel == "AN2") then {
+if(_heliModel == "AN2_DZ") then {
 	_lootTable		= "MilitarySpecial";
 	_crashModel		= "AN2Wreck";
 	_plane			= true;
