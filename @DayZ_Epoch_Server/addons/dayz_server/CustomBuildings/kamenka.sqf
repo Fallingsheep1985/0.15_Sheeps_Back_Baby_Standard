@@ -4857,42 +4857,6 @@ if (true) then
   _this setPos [1216.786, 2476.9634, -2.4193063];
 };
 
-_soundSource_6 = objNull;
-if (true) then
-{
-  _soundSource_6 = createSoundSource ["Sound_BirdSinging", [1193.2329, 2385.5417, -4.2915344e-006], [], 20];
-};
-
-_soundSource_7 = objNull;
-if (true) then
-{
-  _soundSource_7 = createSoundSource ["Sound_Frogs", [1122.9955, 2246.9399, 1.5497208e-006], [], 10];
-};
-
-_soundSource_8 = objNull;
-if (true) then
-{
-  _soundSource_8 = createSoundSource ["Sound_Crickets1", [1113.0955, 2232.1138, 5.4836273e-006], [], 5];
-};
-
-_soundSource_9 = objNull;
-if (true) then
-{
-  _soundSource_9 = createSoundSource ["Sound_Crickets3", [1126.8936, 2253.2458, 1.6927719e-005], [], 5];
-};
-
-_soundSource_10 = objNull;
-if (true) then
-{
-  _soundSource_10 = createSoundSource ["Sound_Frogs", [1058.7688, 2272.6563, -5.9604645e-006], [], 5];
-};
-
-_soundSource_11 = objNull;
-if (true) then
-{
-  _soundSource_11 = createSoundSource ["Sound_Frogs", [1032.118, 2306.8152, -4.5537949e-005], [], 5];
-};
-
 _vehicle_788 = objNull;
 if (true) then
 {
@@ -6077,12 +6041,6 @@ if (true) then
   _vehicle_1470 = _this;
   _this setDir -580.56415;
   _this setPos [1338.1234, 2358.877, 4.7683716e-006];
-};
-
-_soundSource_12 = objNull;
-if (true) then
-{
-  _soundSource_12 = createSoundSource ["Sound_Frogs", [1351.4871, 2348.5728, 4.9114227e-005], [], 5];
 };
 
 _vehicle_1472 = objNull;

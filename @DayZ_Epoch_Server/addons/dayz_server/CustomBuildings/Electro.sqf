@@ -1427,23 +1427,7 @@ if (true) then
   _this setPos [9831.0781, 1965.9957, 2.8610229e-006];
 };
 
-_soundSource_5 = objNull;
-if (true) then
-{
-  _soundSource_5 = createSoundSource ["Sound_Alarm2", [10355.192, 2239.4751, 8.9985313], [], 0];
-};
 
-_soundSource_6 = objNull;
-if (true) then
-{
-  _soundSource_6 = createSoundSource ["Sound_Alarm2", [10482.709, 2358.7441, -6.4849854e-005], [], 0];
-};
-
-_soundSource_7 = objNull;
-if (true) then
-{
-  _soundSource_7 = createSoundSource ["Sound_Alarm2", [10427.074, 2566.6792, -7.1525574e-006], [], 0];
-};
 
 _vehicle_534 = objNull;
 if (true) then
@@ -3069,17 +3053,6 @@ if (true) then
   _this setPos [9864.9609, 1891.8367, -5.197525e-005];
 };
 
-_soundSource_9 = objNull;
-if (true) then
-{
-  _soundSource_9 = createSoundSource ["Sound_Music", [9956.8105, 1949.9165, -1.0490417e-005], [], 0];
-};
-
-_soundSource_10 = objNull;
-if (true) then
-{
-  _soundSource_10 = createSoundSource ["Sound_Chicken", [9934.6553, 1945.8604, 7.6293945e-006], [], 0];
-};
 
 _vehicle_995 = objNull;
 if (true) then
