@@ -261,6 +261,7 @@ if(GroundFogScript)then{
 };
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+endLoadingScreen; // Work around for loadscreen freeze
 //EVR Blow out
 if(EVRScript)then{
 if (isServer) then { _bul = [ns_blow_emp] execVM "scripts\blowout\module\blowout_server.sqf"; };
@@ -375,3 +376,4 @@ if(AdmintoolsScript)then{
 	_x setObjectTexture [0, "pictures\admin.jpg"];
 	};
 }forEach playableUnits; // if your antihack doesnt allow this use nearestObjects[player, ["Survivor2_DZ"],25000];
+endLoadingScreen; // Work around for loadscreen freeze
