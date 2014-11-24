@@ -80,8 +80,9 @@ _loot_lists = [
 ],
 [
 ["glock17_EP1"]
-["17Rnd_9x19_glock17","17Rnd_9x19_glock17","ItemBriefcase100oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemMorphine"]
+["17Rnd_9x19_glock17","17Rnd_9x19_glock17","ItemBriefcase100oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemMorphine"],
 [DZ_CivilBackpack_EP1]
+]
 ];
 
 //---------------------------------------------------------------------------------
@@ -154,12 +155,12 @@ sleep .5;
 // Add a one off custom AI?
 _attackgroup = createGroup east;
 
-_attacker1 = _attackgroup createUnit ["TK_INS_Soldier_3_EP1", _base, [], 0, "Form"];
+_attacker1 = _attackgroup createUnit ["TK_CIV_Takistani04_EP1", _base, [], 0, "Form"];
 _attacker1 setUnitPos "AUTO";
 [_attacker1] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Bandit.sqf";
 _attacker1 setUnitPos "Middle";
 
-_attacker2 = _attackgroup createUnit ["TK_Soldier_Medic_EP1", _base, [], 0, "Form"];
+_attacker2 = _attackgroup createUnit ["TK_GUE_Soldier_5_EP1", _base, [], 0, "Form"];
 _attacker2 setUnitPos "AUTO";
 _null = [_attacker2] execVM "\z\addons\dayz_server\addons\FMission\FLoot\FLoot_Medic.sqf";
 _attacker2 setUnitPos "Middle";
