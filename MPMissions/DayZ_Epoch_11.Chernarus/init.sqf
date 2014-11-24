@@ -2,6 +2,9 @@
 	For DayZ Epoch
 	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
 */
+//Fmission
+FMissionScript = true;
+
 //Recruit Survivors
 DBGroupsStarted = false;
 DBMaxSurvivors = 5; // change this to the number of survivors you want, the more you add the lower your server and client FPS

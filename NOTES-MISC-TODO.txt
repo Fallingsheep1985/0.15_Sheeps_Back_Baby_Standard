@@ -10,7 +10,7 @@ fast rope causes delay
 
 
 
-ENHANCEMENTS
+ENHANCEMENTS (may not make it in finall release!)
 fishing area for fishing boat
 fish trader
 nuke event

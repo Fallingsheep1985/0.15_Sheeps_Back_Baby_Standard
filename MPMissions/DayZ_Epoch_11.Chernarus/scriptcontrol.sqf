@@ -20,8 +20,6 @@ BaseJumpScript = true;
 BusRouteScript = true;
 //Show marker for AI bus on map
 BUSmarkerScript = true;
-//FMissions
-FMissionScript = true;
 //Custom Kill Message's
 KillMessageScript = true;
 //Weapon Mods
