@@ -48,7 +48,7 @@ Men_Clothing = [
 "INS_Soldier_AR_DZ", 
 "INS_Soldier_CO_DZ", 
 "INS_Bardak_DZ", 
-"INS_Worker2_DZ"
+"INS_Worker2_DZ",
 "Survivor2_DZ",
 "BAF_ASoldier_DDPM",
 "BAF_ASoldier_MTP",
