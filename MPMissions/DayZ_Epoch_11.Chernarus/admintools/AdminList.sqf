@@ -3,7 +3,7 @@
 //Super Admins
 SuperAdminList = [
 "76561198087015545", // <Your In-Game Name here>
-"999999999" // <S-Admin In-Game Name>
+"120958982" // <S-Admin In-Game Name>
 ];
 //Admins
 AdminList = [
