@@ -7,10 +7,11 @@ Infinite take clothes
 PAINT (test)
 FMission undefined variable 
 fast rope causes delay
+test fastrope works
 
 
 
-ENHANCEMENTS (may not make it in finall release!)
+ENHANCEMENTS (may not make it in final release!)
 fishing area for fishing boat
 fish trader
 nuke event
@@ -19,7 +20,7 @@ dancing hookers(ProjectX)
 Re do loot for Casino killhouse
 add survivor recruit info to readme
 (how to change spawn amount, etc)
-add more zombie hordes
+add more zombie hordes (not happening FPS drop is to much!)
 Ai spawns at custom areas (new areas)
 slot machine (do display base code should be good to go)
 black jack
