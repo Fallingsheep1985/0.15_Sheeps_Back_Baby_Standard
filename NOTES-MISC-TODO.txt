@@ -1,6 +1,4 @@
 
-
-
 BUGS
 skin trader  (use chamelon vars)
 PAINT (test)
