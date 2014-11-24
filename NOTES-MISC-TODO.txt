@@ -2,10 +2,8 @@
 
 
 BUGS
-skin trader buggy skins
-Infinite take clothes
+skin trader  (use chamelon vars)
 PAINT (test)
-FMission undefined variable 
 fast rope causes delay
 test fastrope works
 
