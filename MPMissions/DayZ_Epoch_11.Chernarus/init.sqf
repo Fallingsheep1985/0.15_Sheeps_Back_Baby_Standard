@@ -232,7 +232,7 @@ if (!isDedicated) then {
 	};
 };
 
-#include "\z\addons\dayz_code\system\REsec.sqf"
+#include "\z\addons\dayz_code\system\REsec.sqf";
 
 //Bus Route
 if (BusRouteScript)then{
@@ -260,7 +260,8 @@ if(GroundFogScript)then{
 	execVM "scripts\Weather\ground_fog.sqf"; //FPS HIT
 };
 
-#include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
+#include "\z\addons\dayz_code\system\BIS_Effects\init.sqf";
+
 endLoadingScreen; // Work around for loadscreen freeze
 //EVR Blow out
 if(EVRScript)then{
