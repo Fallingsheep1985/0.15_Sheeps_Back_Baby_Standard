@@ -79,7 +79,7 @@ _loot_lists = [
 ["DZ_ALICE_Pack_EP1"]
 ],
 [
-["glock17_EP1"]
+["glock17_EP1"],
 ["17Rnd_9x19_glock17","17Rnd_9x19_glock17","ItemBriefcase100oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemGoldBar10oz","ItemMorphine"],
 [DZ_CivilBackpack_EP1]
 ]
