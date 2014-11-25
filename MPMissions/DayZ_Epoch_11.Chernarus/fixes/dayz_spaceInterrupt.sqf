@@ -119,7 +119,7 @@ if (_dikCode in (actionKeys "GetOver")) then {
 //if (_dikCode == 57) then {_handled = true}; // space
 //if (_dikCode in actionKeys 'MoveForward' or _dikCode in actionKeys 'MoveBack') then {r_interrupt = true};
 if (_dikCode == 210) then {
-		//createDialog "horde_journal_front_cover";
+		createDialog "horde_journal_front_cover";
 };
 
 if (_dikCode in actionKeys "ForceCommandingMode") then {_handled = true};
@@ -141,7 +141,7 @@ if (_dikCode in actionKeys "Chat" and (diag_tickTime - dayz_lastCheckBit > 10)) 
 };
 if (_dikCode in actionKeys "User20" and (diag_tickTime - dayz_lastCheckBit > 5)) then {
 	dayz_lastCheckBit = diag_tickTime;
-	//createDialog "horde_journal_front_cover";
+	createDialog "horde_journal_front_cover";
 };
 
 // numpad 8 0x48 now pgup 0xC9 1
@@ -207,11 +207,15 @@ if (_dikCode == 0x9D) then {
 	 if (dialog) then {closeDialog 0;groupManagementActive = false;} else {execVM "scripts\dzgm\loadGroupManagement.sqf";};
 	};
 };
-if(JournalScript)then{
-//Journal
-if (_dikCode == 0x24) then {
-createDialog "horde_journal_front_cover";
+//punch
+if (_dikCode == 0x14) then {
+	execVM "scripts\punch\punch.sqf";
 };
+if(JournalScript)then{
+	//Journal
+	if (_dikCode == 0x24) then {
+	createDialog "horde_journal_front_cover";
+	};
 };
 
 //Debug Monitor
