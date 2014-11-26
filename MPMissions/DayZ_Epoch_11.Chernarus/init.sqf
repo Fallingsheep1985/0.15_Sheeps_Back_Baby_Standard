@@ -160,8 +160,14 @@ if (!isDedicated) then {
 	dayz_loadScreenMsg = (localize "STR_AUTHENTICATING");
 	
 	//Run the player monitor
-	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
+	if (IntroMusicScript) then {
+		 _id = player addEventHandler ["Respawn", {_id = [] spawn player_death; _nul = [] execVM "scripts\intromusic\intromusic.sqf";}];
+	}else{
+		_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
+	};
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
+	
+
 	
 	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then {
 		  [] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass

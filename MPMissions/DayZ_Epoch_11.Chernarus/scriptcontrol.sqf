@@ -4,6 +4,8 @@
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
 server_name = "0.15"; //Watermark Text
+//Intro Music
+IntroMusicScript = true;
 //Server Logo
 logoWatermark = true;
 //Zombie free bases

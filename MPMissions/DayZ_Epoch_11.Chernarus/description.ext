@@ -1555,7 +1555,14 @@ class CfgSounds
 		name="siren";
 		sound[]={sounds\siren.ogg,0.9,1};
 		titles[] = {};
-	};
+	};    
+	class introSong
+    {
+		name="introSong";
+		sound[]={sounds\introSong.ogg,0.9,1};
+		titles[] = {};
+    };
+	
 };
 
 //Snap Pro
