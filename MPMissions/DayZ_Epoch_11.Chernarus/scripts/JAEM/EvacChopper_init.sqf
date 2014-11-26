@@ -205,7 +205,7 @@ while {true} do {
 	};
 
 
-	if (player distance cursorTarget >= 20 && speed player < 1 && actionMenu) then {
+	if (player distance cursorTarget >= 20 && speed player < 1 && actionMenu && playerHasEvacField) then {
 		callEvac = true;
 	} else {
 		callEvac = false;
