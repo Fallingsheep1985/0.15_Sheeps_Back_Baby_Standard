@@ -2,8 +2,6 @@
 	For DayZ Epoch
 	Addons Credits: Jetski Yanahui by Kol9yN, Zakat, Gerasimow9, YuraPetrov, zGuba, A.Karagod, IceBreakr, Sahbazz
 */
-//Fmission
-FMissionScript = true;
 
 //Recruit Survivors
 DBGroupsStarted = false;
@@ -108,21 +106,6 @@ ELE_RequiredBuildItems = [["PartGeneric",4], "PartEngine", "ItemGenerator", "Ite
 ELE_RequiredBuildStopItems = [["PartGeneric",4]]; // required items to build an elevator stop
 ELE_StopClass = "MetalFloor_Preview_DZ";
 
-if(FMissionScript)then{
-	EpochEvents = [
-	["any","any","any","any",30,"crash_spawner"],
-	["any","any","any","any",0,"crash_spawner"],
-	["any","any","any","any",25,"crash_spawner"],
-	["any","any","any","any",15,"supply_drop"],
-	["any","any","any","any",50,"supply_drop"],
-	["any","any","any","any",15,"FMission_Launcher1"],
-	["any","any","any","any",45,"FMission_Launcher3"],
-	["any","any","any","any",10,"Military"], 
-	["any","any","any","any",25,"Treasure"], 
-	["any","any","any","any",40,"Supplyitems"], 
-	["any","any","any","any",55,"Construction"]
-	];
-}else{
 	EpochEvents = [
 	["any","any","any","any",30,"crash_spawner"],
 	["any","any","any","any",0,"crash_spawner"],
@@ -134,7 +117,6 @@ if(FMissionScript)then{
 	["any","any","any","any",40,"Supplyitems"], 
 	["any","any","any","any",55,"Construction"]
 	];
-};
 //snow
 snowchance = 5; //5% chance to snow on server start/restart
 
