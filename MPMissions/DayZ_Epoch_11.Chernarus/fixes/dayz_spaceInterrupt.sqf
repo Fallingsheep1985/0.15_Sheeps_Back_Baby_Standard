@@ -207,10 +207,7 @@ if (_dikCode == 0x9D) then {
 	 if (dialog) then {closeDialog 0;groupManagementActive = false;} else {execVM "scripts\dzgm\loadGroupManagement.sqf";};
 	};
 };
-//punch
-if (_dikCode == 0x14) then {
-	execVM "scripts\punch\punch.sqf";
-};
+
 if(JournalScript)then{
 	//Journal
 	if (_dikCode == 0x24) then {
