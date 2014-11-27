@@ -50,7 +50,7 @@ evac_AllowedChoppers = [
 	"pook_H13_civ_ru_slate","pook_H13_civ_ru_black","pook_H13_civ_ru_yellow","UH1H_DZ","UH1H_DZE",
 	"UH1H_TK_EP1","UH1H_TK_GUE_EP1","UH1Y_DZ","UH1Y_DZE","UH60M_EP1",
 	"UH60M_EP1_DZ","UH60M_EP1_DZE","UH60M_MEV_EP1",
-	"CH53_DZE","USEC_ch53_E"
+	"CH53_DZE","USEC_ch53_E","BAF_Merlin_DZE","Mi17_DZE","MH60S_EP1_DZE"
 ];
 /////////////////////////////////////////////////
 /////////////// DONT EDIT BELOW ! ///////////////
