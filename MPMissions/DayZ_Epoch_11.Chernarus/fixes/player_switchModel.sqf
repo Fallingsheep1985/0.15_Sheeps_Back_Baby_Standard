@@ -7,14 +7,8 @@ _currentAnim 	= animationState player;
 _tagSetting = player getVariable["DZE_display_name",false];
 _playerUID = getPlayerUID player;
 _weapons 	= weapons player;
-_zupaMags = magazines player;
 _countMags = call player_countMagazines; 
 _magazines = _countMags select 0;
-_cashMoney = player getVariable["cashMoney",0];
-_bankMoney = player getVariable["bankMoney",0];
-_cashMoney2 = player getVariable["headShots",0];
-_bankMoney2 = player getVariable["bank",0];
-_cId = player getVariable["CharacterID",0];
 
 if ((_playerUID == dayz_playerUID) && (count _magazines == 0) && (count (magazines player) > 0 )) exitWith {cutText [(localize "str_epoch_player_17"), "PLAIN DOWN"]};
 
@@ -49,7 +43,9 @@ player setPosATL dayz_spawnPos;
 
 //BackUp Player Object
 _oldUnit = player;
-_oldGroup = group player;
+//DZGM
+ _oldGroup = group player;
+
 
 /**********************************/
 //DONT USE player AFTER THIS POINT//
@@ -58,7 +54,7 @@ _oldGroup = group player;
 //Create New Character
 _group 		= createGroup west;
 _newUnit 	= _group createUnit [_class,dayz_spawnPos,[],0,"NONE"];
-[_newUnit] joinSilent createGroup WEST;
+
 _newUnit 	setPosATL _position;
 _newUnit 	setDir _dir;
 
@@ -110,36 +106,20 @@ if (_primweapon == "MeleeFishingPole") then {
 if(_secweapon != (secondaryWeapon _newUnit) && _secweapon != "") then {
 	_newUnit addWeapon _secweapon;		
 };
-
-if(isNil "_cashMoney")then{_cashMoney = 0;};
-if(isNil "_bankMoney")then{_bankMoney = 0;};
-if(isNil "_cashMoney2")then{_cashMoney2 = 0;};
-if(isNil "_bankMoney2")then{_bankMoney2 = 0;};
-
-_newUnit setVariable ["cashMoney",_cashMoney,true];
-_newUnit setVariable ["bankMoney",_bankMoney];
-
-_newUnit setVariable ["headShots",_cashMoney2,true];
-_newUnit setVariable ["bank",_bankMoney2];
-
-_newUnit setVariable["CharacterID",_cId,true];
-
 _switchUnit = {
 	addSwitchableUnit _newUnit;
 	setPlayable _newUnit;
 	selectPlayer _newUnit;
 	if ((count units _oldGroup > 1) && (!isNil "PVDZE_plr_LoginRecord")) then {[player] join _oldGroup;};
+	
 	removeAllWeapons _oldUnit;
 	{_oldUnit removeMagazine _x;} count  magazines _oldUnit;
 	deleteVehicle _oldUnit;
 	if(_currentWpn != "") then {_newUnit selectWeapon _currentWpn;};
 };
-
 //Add && Fill BackPack
-removeBackpack _newUnit;		
-
 if (!isNil "_newBackpackType") then {
-	if (_newBackpackType != "") then {	
+	if (_newBackpackType != "") then {
 		_newUnit addBackpack _newBackpackType;
 		dayz_myBackpack = unitBackpack _newUnit;
 		//Weapons
@@ -177,26 +157,8 @@ if (!isNil "_newBackpackType") then {
 [objNull, player, rSwitchMove,_currentAnim] call RE;
 player disableConversation true;
 
-{
-if( !(_x in _weapons))then {
-[_x] call player_checkAndRemoveItems;
-};
-}count (weapons player);
-{
-if( !(_x in _zupaMags))then {
-[_x] call player_checkAndRemoveItems;
-};
-}count (magazines player);
-
 //player setVariable ["bodyName",dayz_playerName,true]; //Outcommit (Issue #991) - Also removed in DayZ Mod 1.8
 
-
-
-player setVariable ["cashMoney",_cashMoney,true];
-player setVariable ["bankMoney",_bankMoney];
-player setVariable ["headShots",_cashMoney2,true];
-player setVariable ["bank",_bankMoney2];
-player setVariable ["CharacterID",_cId,true];
 if (_tagSetting) then {
 	DZE_ForceNameTags = true;
 };
@@ -212,8 +174,6 @@ _ismelee = (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
 if (_ismelee == "true") then {
 	call dayz_meleeMagazineCheck; 
 };
-//force west side again
-[player] joinSilent createGroup WEST;
 
 //reveal the same objects we do on login
 {player reveal _x} count (nearestObjects [getPosATL player, dayz_reveal, 50]);
