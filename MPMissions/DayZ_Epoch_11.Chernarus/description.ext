@@ -1580,9 +1580,6 @@ class CfgSounds
 #include "scripts\spawn\halo.hpp"
 #include "scripts\spawn\spawn.hpp"
 
-//Paint
-#include "scripts\Paint\vehiclecolour.hpp"
-
 //Door Mangement
 #include "scripts\doorManagement\doorUnlock.hpp"
 #include "scripts\doorManagement\doorManagement.hpp"
