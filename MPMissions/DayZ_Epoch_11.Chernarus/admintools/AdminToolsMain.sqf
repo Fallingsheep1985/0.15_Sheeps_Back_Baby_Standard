@@ -12,12 +12,14 @@ _pathtomaterials = "admintools\materials\";
 _pathtobuildkits = "admintools\buildingkits\";
 _pathtogems = "admintools\gems\";
 _pathtobriefs = "admintools\briefcases\";
+_pathtoslots = "scripts\gambling\slotmachine\";
 
 _EXECscript9 = 'player execVM "'+_pathtosheep+'%1"';
 _EXECscript10 = 'player execVM "'+_pathtomaterials+'%1"';
 _EXECscript11 = 'player execVM "'+_pathtobuildkits+'%1"';
 _EXECscript12 = 'player execVM "'+_pathtogems+'%1"';
 _EXECscript13 = 'player execVM "'+_pathtobriefs+'%1"';
+_EXECscript14 = 'player execVM "'+_pathtoslots+'%1"';
 
 
 if ((getPlayerUID player) in AdminList) then { // Admins
@@ -56,6 +58,7 @@ SheepsMenu =
 	["Materials Menu >>", [], "#USER:MaterialsMenu", -5, [["expression", ""]], "1", "1"],
 	["Gems Menu >>", [], "#USER:GemsMenu", -5, [["expression", ""]], "1", "1"],	
 	["Show Position", [],"", -5, [["expression", format[_EXECscript9,"showpostion.sqf"]]], "1", "1"],
+	["Slot Machine", [],"", -5, [["expression", format[_EXECscript14,"slots.sqf"]]], "1", "1"],
 	["Show Position ATL", [],"", -5, [["expression", format[_EXECscript9,"showpostionATL.sqf"]]], "1", "1"],
 	["Locate Vehicles (need key + Map)", [],"", -5, [["expression", format[_EXECscript9,"locate_vehicle.sqf"]]], "1", "1"],
 	["Add NOS", [],"", -5, [["expression", format[_EXECscript9,"addNOS.sqf"]]], "1", "1"],	
