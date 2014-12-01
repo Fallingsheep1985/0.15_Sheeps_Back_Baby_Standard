@@ -1416,21 +1416,3 @@ if(ZombieBombScript)then{
 		s_player_gamble = -1;
 	};
 	
-//Clothes menu men
-	if ((cursorTarget isKindOf "Rita_Ensler_EP1") || (cursorTarget isKindOf "RU_Functionary1")  || (cursorTarget isKindOf "GUE_Soldier_MG")  || (cursorTarget isKindOf "RU_WorkWoman1")  || (cursorTarget isKindOf "RU_WorkWoman5")) then {
-		if (s_player_clothesmenu < 0) then {
-            s_player_clothesmenu = player addAction [("<t color='#c30000'>")+("Mens Clothes")+("</t>"), "scripts\Skin_Trader\open_dialog.sqf","",5,false,true,"",""];
-		};
-	}else {
-	    player removeAction s_player_clothesmenu;
-		s_player_clothesmenu = -1;
-	};
-//Clothes menu women
-	if ((cursorTarget isKindOf "Rita_Ensler_EP1") || (cursorTarget isKindOf "RU_Functionary1")  || (cursorTarget isKindOf "GUE_Soldier_MG")  || (cursorTarget isKindOf "RU_WorkWoman1")  || (cursorTarget isKindOf "RU_WorkWoman5")) then {
-		if (s_player_clothesmenu2 < 0) then {
-            s_player_clothesmenu2 = player addAction [("<t color='#c30000'>")+("Womens Clothes")+("</t>"), "scripts\Skin_Trader\open_dialog2.sqf","",5,false,true,"",""];
-		};
-	}else {
-	    player removeAction s_player_clothesmenu2;
-		s_player_clothesmenu2 = -1;
-	};
