@@ -1,10 +1,7 @@
 
 BUGS
-skin trader  (use chamelon vars)
-PAINT (test)
-fast rope causes delay
-test fastrope works
-
+skin trader - fix skins
+remove - SearchLight_Gue from custom buildings (kill a hacker issue)
 
 
 ENHANCEMENTS (may not make it in final release!)
