@@ -2,6 +2,7 @@
 BUGS
 skin trader - fix skins
 remove - SearchLight_Gue from custom buildings (kill a hacker issue)
+Users stuck on loading screen
 
 
 ENHANCEMENTS (may not make it in final release!)
