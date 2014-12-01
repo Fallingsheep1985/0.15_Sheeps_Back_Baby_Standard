@@ -219,8 +219,8 @@ if (!isDedicated) then {
 		execVM "scripts\CustomKillMessage\kill_msg.sqf";
 	};
 };
-
-#include "\z\addons\dayz_code\system\REsec.sqf";
+//attempt fix loadscreen bug
+//#include "\z\addons\dayz_code\system\REsec.sqf";
 
 //Bus Route
 if (BusRouteScript)then{
