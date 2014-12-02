@@ -1,17 +1,11 @@
-/********************************************************************************************
-Usage:			|	[classname,position,(boolean),(direction)] call custom_publish;
-Parameters		|	classname:	Class or array of classnames of vehicle to spawn
-in brackets		|	position:	Position to spawn vehicle
-are optional	|	boolean:	true, or false by default to spawn vehicle static at position
-				|	direction:	Direction to face vehicle, random by default
-/********************************************************************************************/
 if (isServer) then {
 
-    private ["_hit","_classnames","_count","_vehpos","_max_distance","_vehicle","_position_fixed","_position","_dir","_class","_dam","_damage","_hitpoints","_selection","_fuel","_key"];
+    private ["_unit","_ailist","_keyid","_carkey","_hit","_classnames","_count","_vehpos","_max_distance","_vehicle","_position_fixed","_position","_dir","_class","_dam","_damage","_hitpoints","_selection","_fuel","_key"];
 
 	_count 			= count _this;
 	_classnames 	= _this select 0;
 	_position 		= _this select 1;
+	_mission 		= _this select 2;
 	_max_distance 	= 35;
 	_vehpos			= [];
 
@@ -21,12 +15,12 @@ if (isServer) then {
 		_class = _classnames;
 	};
 
-	if(_count > 2) then {
+	if(_count > 3) then {
 
-		_position_fixed = _this select 2;
+		_position_fixed = _this select 3;
 
-		if(_count > 3) then {
-			_dir = _this select 3;
+		if(_count > 4) then {
+			_dir = _this select 4;
 		} else {
 			_dir = floor(round(random 360));
 		};
@@ -51,7 +45,6 @@ if (isServer) then {
 	_vehicle setvelocity [0,0,1];
 	
 	_vehicle setVariable ["ObjectID","1",true];
-	_vehicle setVariable ["CharacterID","0",true];
 	
 	clearWeaponCargoGlobal _vehicle;
 	clearMagazineCargoGlobal _vehicle;
@@ -60,32 +53,62 @@ if (isServer) then {
 
 	if (getNumber(configFile >> "CfgVehicles" >> _class >> "isBicycle") != 1) then {
 
-		_damage 		= (wai_vehicle_damage select 0) / 100;
-		_vehicle 		setDamage _damage;
-		_hitpoints 		= _vehicle call vehicle_getHitpoints;
-
+		_hitpoints = _vehicle call vehicle_getHitpoints;
+		
+		if(debug_mode) then { diag_log(format["WAI: Spawned %1 at %2",str(_class),str(_position)]); };
+		
 		{
-			
-			_dam 		= ((wai_vehicle_damage select 0) + random((wai_vehicle_damage select 1) - (wai_vehicle_damage select 0))) / 100;
+			_dam 		= (random((wai_vehicle_damage select 1) - (wai_vehicle_damage select 0)) + (wai_vehicle_damage select 0)) / 100;
 			_selection	= getText(configFile >> "cfgVehicles" >> _class >> "HitPoints" >> _x >> "name");
 
 			if ((_selection in dayZ_explosiveParts) && _dam > 0.8) then {
 				_dam = 0.8
-			};			
+			};
 
-			_hit = [_vehicle,_selection,_dam] call object_setHitServer;
+			_isglass = ["glass", _selection] call KK_fnc_inString;
+
+			if(!_isglass && _dam > 0.1) then {
+				_hit = [_vehicle,_selection,_dam] call object_setHitServer;
+				if(debug_mode) then { diag_log(format["WAI: Calculated damage for %1 is %2",str(_selection),str(_dam)]); };
+			};
 
 		} count _hitpoints;
 
-		_fuel = ((wai_mission_fuel select 0) + random((wai_mission_fuel select 1) - (wai_mission_fuel select 0))) / 100;;
+		_fuel = ((wai_mission_fuel select 0) + random((wai_mission_fuel select 1) - (wai_mission_fuel select 0))) / 100;
+		_vehicle setFuel _fuel;
+
+		if(debug_mode) then { diag_log(format["WAI: Added %1 percent fuel to vehicle",str(_fuel)]); };
 
 	};
-
-	if(debug_mode) then { diag_log("WAI: Spawned " +str(_class) + " at " + str(_position) + " with " + str(_fuel) + " fuel and " + str(_damage) + " damage."); };
 	
-	_vehicle setFuel _fuel;
 	_vehicle addeventhandler ["HandleDamage",{ _this call vehicle_handleDamage } ];
 	
+	if (wai_lock_vehicles) then {
+		_keyid = ceil(random(12500));
+		_vehicle setVariable ["CharacterID",str(_keyid),true];
+
+		call {
+			if ((_keyid > 0) && (_keyid <= 2500)) 		exitWith {_carkey = format["ItemKeyGreen%1",_keyid];};
+			if ((_keyid > 2500) && (_keyid <= 5000))	exitWith {_carkey = format["ItemKeyRed%1",_keyid-2500];};
+			if ((_keyid > 5000) && (_keyid <= 7500)) 	exitWith {_carkey = format["ItemKeyBlue%1",_keyid-5000];};
+			if ((_keyid > 7500) && (_keyid <= 10000)) 	exitWith {_carkey = format["ItemKeyYellow%1",_keyid-7500];};
+			if ((_keyid > 10000) && (_keyid <= 12500)) 	exitWith {_carkey = format["ItemKeyBlack%1",_keyid-10000];};
+		};
+
+		_ailist = [];
+		{
+			if (_x getVariable ["mission",nil] == _mission) then {_ailist set [count _ailist, _x];};
+		} count allUnits;
+
+		_unit = _ailist select (floor(random(count _ailist)));
+		
+		_unit addWeapon _carkey;
+		
+		_vehicle setvehiclelock "locked";
+	} else {
+		_vehicle setVariable ["CharacterID","0",true];
+	};
+
 	PVDZE_serverObjectMonitor set [count PVDZE_serverObjectMonitor,_vehicle];
 
 	if(wai_keep_vehicles) then {
