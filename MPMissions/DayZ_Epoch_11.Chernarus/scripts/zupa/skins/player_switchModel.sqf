@@ -61,8 +61,6 @@ _newUnit 	= _group createUnit [_class,dayz_spawnPos,[],0,"NONE"];
 [_newUnit] joinSilent createGroup WEST;
 _newUnit 	setPosATL _position;
 _newUnit 	setDir _dir;
-//set friendly status
-_newUnit addRating 100000;
 
 //Clear New Character
 {_newUnit removeMagazine _x;} count  magazines _newUnit;

@@ -92,7 +92,9 @@ if (!isDedicated) then {
 	player_death =               	compile preprocessFileLineNumbers "fixes\player_death.sqf";
 	//player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";
 	
-	player_switchModel  = compile preprocessFileLineNumbers "fixes\player_switchModel.sqf";
+	FillSkinList  = compile preprocessFileLineNumbers "scripts\zupa\skins\getList.sqf";
+	ApplySkinList  = compile preprocessFileLineNumbers "scripts\zupa\skins\changeClothes.sqf";
+	player_switchModel  = compile preprocessFileLineNumbers "scripts\zupa\skins\player_switchModel.sqf";
 	//player_switchModel =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_switchModel.sqf";
 	
 	player_checkStealth =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_checkStealth.sqf";
@@ -155,7 +157,9 @@ if (!isDedicated) then {
 	player_build = 				compile preprocessFileLineNumbers "scripts\snap_pro\player_build.sqf";
 	//player_build =				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_build.sqf";
 	
-	player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
+	player_wearClothes =		compile preprocessFileLineNumbers "scripts\zupa\skins\player_wearClothes.sqf"; 
+	//player_wearClothes =		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_wearClothes.sqf";
+	
 	object_pickup = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\object_pickup.sqf";
 	player_flipvehicle = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_flipvehicle.sqf";
 	player_sleep = 				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_sleep.sqf";

@@ -1596,5 +1596,4 @@ class CfgSounds
 #include "scripts\gambling\slotmachine\slots.hpp"
 
 //Skin Trader
-#include "scripts\Skin_Trader\dialog\common.hpp"
-#include "scripts\Skin_Trader\dialog\SkinGui.hpp"
+#include "scripts\zupa\skins\SkinGui.hpp"
