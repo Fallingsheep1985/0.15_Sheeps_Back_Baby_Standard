@@ -344,6 +344,9 @@ if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
 	};
 };
 
+[]execVM "scripts\gambling\slotmachine\slots.sqf";
+
+
 if(WeaponModScript)then{
 	call compile preprocessFileLineNumbers "scripts\wmod\init.sqf";
 };
