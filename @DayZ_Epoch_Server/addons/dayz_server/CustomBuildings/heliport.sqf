@@ -38,15 +38,6 @@ if (true) then
   _this setPos [7148.2456, 3370.5313, -1.7166138e-005];
 };
 
-_vehicle_13 = objNull;
-if (true) then
-{
-  _this = createVehicle ["SearchLight_Gue", [7153.0234, 3368.1907, 3.2901764e-005], [], 0, "CAN_COLLIDE"];
-  _vehicle_13 = _this;
-  _this setDir -250.45769;
-  _this setPos [7153.0234, 3368.1907, 3.2901764e-005];
-};
-
 _vehicle_21 = objNull;
 if (true) then
 {
