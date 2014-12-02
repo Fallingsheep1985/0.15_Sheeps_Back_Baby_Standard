@@ -1,3 +1,17 @@
+
+class MyRscFrame
+{
+	type = 0;
+	idc = -1;
+	style = 64;
+	shadow = 2;
+	colorBackground[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	font = "Zeppelin32";
+	sizeEx = 0.02;
+	text = "";
+};
+
 class RscDisplaySlots
 {
    idd = SLOTS_DIALOG;
@@ -5,7 +19,7 @@ class RscDisplaySlots
 
    class Controls
    {
-     class RscFrame_1800: RscFrame
+     class RscFrame_1800: MyRscFrame
      {
        idc = 1800;
        x = 0.32375 * safezoneW + safezoneX;
