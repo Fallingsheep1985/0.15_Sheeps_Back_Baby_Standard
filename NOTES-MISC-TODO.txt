@@ -1,16 +1,22 @@
+BUGS
+teleport revert (random)
+WAI markers for missions
+BE filters overwatch clothes
+slotmachine test
 
 ENHANCEMENTS (may not make it in final release!)
 fishing area for fishing boat
 fish trader
+random radiation zones with markers and high value loot
 nuke event
 neon lights (add in)
 dancing hookers(ProjectX)
+more hookers at casino
 Re do loot for Casino killhouse
 add survivor recruit info to readme
 (how to change spawn amount, etc)
 add more zombie hordes (not happening FPS drop is to much!)
 Ai spawns at custom areas (new areas)
-slot machine (do display base code should be good to go)
 black jack
 poker (maybe)
 craps (maybe)
