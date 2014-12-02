@@ -1,6 +1,6 @@
 class RscDisplaySlots
 {
-   idd = 3000;
+   idd = SLOTS_DIALOG;
    movingenable = 0;
 
    class Controls
@@ -96,7 +96,7 @@ class RscDisplaySlots
        y = 0.5705 * safezoneH + safezoneY;
        w = 0.05875 * safezoneW;
        h = 0.0235 * safezoneH;
-       action = "closeDialog 3000;";
+       action = "closeDialog 0;";
      };
    };
 };

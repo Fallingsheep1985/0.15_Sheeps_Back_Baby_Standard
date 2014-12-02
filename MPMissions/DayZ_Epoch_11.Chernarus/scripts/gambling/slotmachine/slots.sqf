@@ -1,6 +1,4 @@
-//display the dialog screen
-createDialog= "RscDisplaySlots";
-waitUntil {!(isNull (findDisplay 3000))};
+
 //Variables
 _credits = 0;
 _reelArray = ["cherry","lemon","grape","watermelon","orange","bar","seven","diamond"];
@@ -21,7 +19,6 @@ fnc_add_1_credits = {
      //add credit
      _credits = _credits + 1;
      //Update credits display
-     waitUntil {!(isNull (findDisplay 3000))};
      ctrlSetText[1000, format ["%1" ,_credits]];
    }else{
      titleText ["You need 1x Goldbar to add 1 credit!","PLAIN DOWN"];
@@ -37,7 +34,6 @@ fnc_add_10_credits = {
      //add credits
      _credits = _credits + 10;
      //Update credits display
-     waitUntil {!(isNull (findDisplay 3000))};
      ctrlSetText[1000, format ["%1" ,_credits]];
    }else{
      titleText ["You need 1x 10oz Goldbar to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
@@ -121,7 +117,6 @@ fnc_spin  = {
      //remove credit
      _credits = _credits - 1;
      //update credits display     
-     waitUntil {!(isNull (findDisplay 3000))};
      ctrlSetText[1000, format ["%1" ,_credits]];
      //randomise reels
      call fnc_random_pictures;
