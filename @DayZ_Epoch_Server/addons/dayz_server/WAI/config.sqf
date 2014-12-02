@@ -35,9 +35,9 @@ if(isServer) then {
 
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
-		ai_add_humanity				= 50;			// amount of humanity gained for killing a bandit AI
-		ai_remove_humanity			= 50;			// amount of humanity lost for killing a hero AI
-		ai_special_humanity			= 150;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
+		ai_add_humanity				= 5;			// amount of humanity gained for killing a bandit AI
+		ai_remove_humanity			= 5;			// amount of humanity lost for killing a hero AI
+		ai_special_humanity			= 25;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
 		
 		ai_skill_extreme			= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["endurance",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Extreme
 		ai_skill_hard				= [["aimingAccuracy",0.80],["aimingShake",0.80],["aimingSpeed",0.80],["endurance",1.00],["spotDistance",0.80],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hard
@@ -101,7 +101,7 @@ if(isServer) then {
 		wai_players_online			= 1; 								// number of players online before mission starts
 		wai_server_fps				= 5; 								// missions only starts if server FPS is over wai_server_fps
 		
-		wai_kill_percent			= 30;								// percentage of AI players that must be killed at "crate" missions to be able to trigger completion
+		wai_kill_percent			= 50;								// percentage of AI players that must be killed at "crate" missions to be able to trigger completion
 
 		wai_high_value				= true;								// enable the possibility of finding a high value item (defined below crate_items_high_value) inside a crate
 		wai_high_value_chance		= 1;								// chance in percent you find above mentioned item
