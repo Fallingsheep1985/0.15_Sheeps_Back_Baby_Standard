@@ -22,3 +22,5 @@ DZMSConTools = ["ItemToolbox","ItemCrowbar","ItemKnife","ItemEtool","ItemHatchet
 DZMSConSupply = ["CinderBlocks","MortarBucket","ItemTankTrap","ItemPole","PartGeneric","PartPlywoodPack","PartPlankPack","ItemTentOld","ItemTentDomed","ItemTentDomed2","ItemSandbag","ItemWire","workbench_kit","ItemGenerator"];
 //Epoch Briefcases 
 DZMSBreifcase = ["ItemBriefcase100oz","ItemBriefcase90oz","ItemBriefcase80oz","ItemBriefcase70oz","ItemBriefcase60oz","ItemBriefcase50oz","ItemBriefcase40oz","ItemBriefcase30oz","ItemBriefcase20oz","ItemBriefcase10oz","ItemBriefcaseEmpty"];
+//NUTS
+DZMSNutSupply = ["FoodNutmix","FoodPistachio"];

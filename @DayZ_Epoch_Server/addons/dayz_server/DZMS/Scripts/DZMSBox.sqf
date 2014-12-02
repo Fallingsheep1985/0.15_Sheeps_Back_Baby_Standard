@@ -146,3 +146,15 @@ if (_type == "money") then {
 		_crate addMagazineCargoGlobal [_item,1];
 	};	
 };
+
+/////NUTS!/////////
+if (_type == "nuts") then {
+	// load nuts
+	_scount = count DZMSNutSupply;
+	for "_x" from 0 to 50 do {
+		_sSelect = floor(random _sCount);
+		_item = DZMSNutSupply select _sSelect;
+		_crate addMagazineCargoGlobal [_item,1];
+	};
+	
+};
