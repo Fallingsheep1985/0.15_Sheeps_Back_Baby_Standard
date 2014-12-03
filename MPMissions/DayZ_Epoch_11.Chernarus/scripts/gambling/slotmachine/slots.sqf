@@ -2,6 +2,7 @@
 //Variables
 PlayerCredits = 0;
 reelArray = ["cherry","lemon","grape","watermelon","orange","bar","seven","diamond"];
+pictures = ["pictures\image1.paa","pictures\image2.paa","pictures\image3.paa","pictures\image4.paa","pictures\image5.paa","pictures\image6.paa","pictures\image7.paa","pictures\image8.paa"];
 
 hasCredits = false;
 
@@ -35,30 +36,18 @@ fnc_add_10_credits = {
 };
 
 fnc_random_pictures = {
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
-	reel1 = reelArray call BIS_fnc_selectRandom;
-    reel2 = reelArray call BIS_fnc_selectRandom;
-    reel3 = reelArray call BIS_fnc_selectRandom;
-	call fnc_display_pictures;
+//loop thru random images on reels
+	_counter = 0;
+	while {_counter < 10} do
+	{
+	ReelImage1 = pictures call BIS_fnc_selectRandom;
+	ReelImage2 = pictures call BIS_fnc_selectRandom;
+	ReelImage3 = pictures call BIS_fnc_selectRandom;
+	ctrlSetText[1200, format ["%1" ,ReelImage]];
+	ctrlSetText[1201, format ["%1" ,ReelImage2]];
+	ctrlSetText[1202, format ["%1" ,ReelImage3]];
+		_counter = _counter + 1;
+	};
 };
 
 fnc_spin  = {
