@@ -1,6 +1,11 @@
 
-//Variables
-_credits = 0;
+//Set up credits
+_playerhascredits = player getVariable ["credits"];
+
+if (isNil _playerhascredits) then { 
+	_credits = 0;
+	player setVariable ["credits", _credits];
+};
 _reelArray = ["cherry","lemon","grape","watermelon","orange","bar","seven","diamond"];
 //prizes for payout
 _prize1 = "ItemGoldBar";
@@ -19,6 +24,8 @@ fnc_add_1_credits = {
      player removeMagazine "ItemGoldBar";
      //add credit
      _credits = _credits + 1;
+	 //save credits
+	 player setVariable ["credits", _credits];
      //Update credits display
      ctrlSetText[1000, format ["%1" ,_credits]];
    }else{
@@ -34,6 +41,8 @@ fnc_add_10_credits = {
      player removeMagazine "ItemGoldBar10oz";
      //add credits
      _credits = _credits + 10;
+	 //save credits
+	 player setVariable ["credits", _credits];
      //Update credits display
      ctrlSetText[1000, format ["%1" ,_credits]];
    }else{
@@ -42,7 +51,7 @@ fnc_add_10_credits = {
 };
 
 fnc_check_credits = {
-   if (_credits <= 0) then {
+   if (_playerhascredits <= 0) then {
      hasCredits = false;
      titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
    }else{
