@@ -369,3 +369,5 @@ if(AdmintoolsScript)then{
 	};
 }forEach playableUnits; // if your antihack doesnt allow this use nearestObjects[player, ["Survivor2_DZ"],25000];
 endLoadingScreen; // Work around for loadscreen freeze
+
+diag_log format ["REPACK VERSION: %1 - build %2", REPACKMOD, BUILDNUMBER];

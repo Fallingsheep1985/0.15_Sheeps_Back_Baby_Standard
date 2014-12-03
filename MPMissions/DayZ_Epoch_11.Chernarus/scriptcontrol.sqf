@@ -214,9 +214,17 @@ execVM  "\z\addons\dayz_server\CustomBuildings\Cherno.sqf";
 
 
 //DONT USE THE BELOW WITH PROJECTX!
+
 //road from dam to sector FNG
 //execVM  "\z\addons\dayz_server\CustomBuildings\roadpobeda.sqf";
 //Sector FNG inland
 //execVM "\z\addons\dayz_server\CustomBuildings\sectorfng\sectorfng_init.sqf";
 sectorfngMarker = false;
 };
+
+// DO NOT CHANGE THIS!!
+//Repack version 
+REPACKMOD = "Epoch"; 
+BUILDNUMBER = "482";
+
+
