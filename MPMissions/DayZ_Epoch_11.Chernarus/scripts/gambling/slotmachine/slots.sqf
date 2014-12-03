@@ -38,14 +38,15 @@ fnc_add_10_credits = {
 fnc_random_pictures = {
 //loop thru random images on reels
 	_counter = 0;
-	while {_counter < 10} do
+	while {_counter < 15} do
 	{
 	ReelImage1 = pictures call BIS_fnc_selectRandom;
 	ReelImage2 = pictures call BIS_fnc_selectRandom;
 	ReelImage3 = pictures call BIS_fnc_selectRandom;
-	ctrlSetText[1200, format ["%1" ,ReelImage]];
+	ctrlSetText[1200, format ["%1" ,ReelImage1]];
 	ctrlSetText[1201, format ["%1" ,ReelImage2]];
 	ctrlSetText[1202, format ["%1" ,ReelImage3]];
+	sleep 0.01;
 		_counter = _counter + 1;
 	};
 };
@@ -64,15 +65,12 @@ fnc_spin  = {
      ctrlSetText[1001, format ["%1" ,PlayerCredits]];
      //randomise reels
      call fnc_random_pictures;
-     //wait 5 seconds
-     sleep 3;
      reel1 = reelArray call BIS_fnc_selectRandom;
      reel2 = reelArray call BIS_fnc_selectRandom;
      reel3 = reelArray call BIS_fnc_selectRandom;
+	 sleep 0.1;
      //display pictures
      call fnc_display_pictures;
-     //wait
-     sleep 0.2;
      //check if win or lose
      call fnc_payout;
    };
