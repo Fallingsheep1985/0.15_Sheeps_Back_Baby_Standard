@@ -22,6 +22,7 @@ class RscDisplaySlots
      class RscFrame_1800: MyRscFrame
      {
        idc = 1800;
+	   colorBackground[] = {0,0,0,1};
        x = 0.32375 * safezoneW + safezoneX;
        y = 0.3355 * safezoneH + safezoneY;
        w = 0.367188 * safezoneW;
