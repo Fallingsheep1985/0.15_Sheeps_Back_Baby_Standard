@@ -20,7 +20,7 @@ fnc_add_1_credits = {
      //add credit
      _credits = _credits + 1;
      //Update credits display
-     ctrlSetText[1000, format ["%1" ,_credits]];
+     ctrlSetText[1001, format ["%1" ,_credits]];
    }else{
      titleText ["You need 1x Goldbar to add 1 credit!","PLAIN DOWN"];
      titleFadeOut 3;
@@ -35,18 +35,9 @@ fnc_add_10_credits = {
      //add credits
      _credits = _credits + 10;
      //Update credits display
-     ctrlSetText[1000, format ["%1" ,_credits]];
+     ctrlSetText[1001, format ["%1" ,_credits]];
    }else{
      titleText ["You need 1x 10oz Goldbar to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
-   };
-};
-
-fnc_check_credits = {
-   if (_credits <= 0) then {
-     hasCredits = false;
-     titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
-   }else{
-     hasCredits = true;
    };
 };
 
@@ -57,107 +48,112 @@ fnc_random_pictures = {
  ctrlSetText [1200, "pictures\image1.paa"];
  ctrlSetText [1201, "pictures\image5.paa"];
  ctrlSetText [1202, "pictures\image8.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image2.paa"];
  ctrlSetText [1201, "pictures\image6.paa"];
  ctrlSetText [1202, "pictures\image7.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image3.paa"];
  ctrlSetText [1201, "pictures\image7.paa"];
  ctrlSetText [1202, "pictures\image6.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image4.paa"];
  ctrlSetText [1201, "pictures\image8.paa"];
  ctrlSetText [1202, "pictures\image5.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image5.paa"];
  ctrlSetText [1201, "pictures\image1.paa"];
  ctrlSetText [1202, "pictures\image4.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image6.paa"];
  ctrlSetText [1201, "pictures\image2.paa"];
  ctrlSetText [1202, "pictures\image3.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image7.paa"];
  ctrlSetText [1201, "pictures\image3.paa"];
  ctrlSetText [1202, "pictures\image2.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image8.paa"];
  ctrlSetText [1201, "pictures\image4.paa"];
  ctrlSetText [1202, "pictures\image1.paa"]; 
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image6.paa"];
  ctrlSetText [1201, "pictures\image2.paa"];
  ctrlSetText [1202, "pictures\image3.paa"];
- 	sleep 0.1;
+ 	sleep 0.01;
  ctrlSetText [1200, "pictures\image2.paa"];
  ctrlSetText [1201, "pictures\image6.paa"];
  ctrlSetText [1202, "pictures\image7.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image5.paa"];
  ctrlSetText [1201, "pictures\image1.paa"];
  ctrlSetText [1202, "pictures\image4.paa"];
- 	sleep 0.1;
+ 	sleep 0.01;
  ctrlSetText [1200, "pictures\image4.paa"];
  ctrlSetText [1201, "pictures\image8.paa"];
  ctrlSetText [1202, "pictures\image5.paa"];
+  	sleep 0.01;
   ctrlSetText [1200, "pictures\image1.paa"];
  ctrlSetText [1201, "pictures\image5.paa"];
  ctrlSetText [1202, "pictures\image8.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image2.paa"];
  ctrlSetText [1201, "pictures\image6.paa"];
  ctrlSetText [1202, "pictures\image7.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image3.paa"];
  ctrlSetText [1201, "pictures\image7.paa"];
  ctrlSetText [1202, "pictures\image6.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image4.paa"];
  ctrlSetText [1201, "pictures\image8.paa"];
  ctrlSetText [1202, "pictures\image5.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image5.paa"];
  ctrlSetText [1201, "pictures\image1.paa"];
  ctrlSetText [1202, "pictures\image4.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image6.paa"];
  ctrlSetText [1201, "pictures\image2.paa"];
  ctrlSetText [1202, "pictures\image3.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image7.paa"];
  ctrlSetText [1201, "pictures\image3.paa"];
  ctrlSetText [1202, "pictures\image2.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image8.paa"];
  ctrlSetText [1201, "pictures\image4.paa"];
  ctrlSetText [1202, "pictures\image1.paa"]; 
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image6.paa"];
  ctrlSetText [1201, "pictures\image2.paa"];
  ctrlSetText [1202, "pictures\image3.paa"];
- 	sleep 0.1;
+ 	sleep 0.01;
  ctrlSetText [1200, "pictures\image2.paa"];
  ctrlSetText [1201, "pictures\image6.paa"];
  ctrlSetText [1202, "pictures\image7.paa"];
-	sleep 0.1;
+	sleep 0.01;
  ctrlSetText [1200, "pictures\image5.paa"];
  ctrlSetText [1201, "pictures\image1.paa"];
  ctrlSetText [1202, "pictures\image4.paa"];
- 	sleep 0.1;
+ 	sleep 0.01;
  ctrlSetText [1200, "pictures\image4.paa"];
  ctrlSetText [1201, "pictures\image8.paa"];
  ctrlSetText [1202, "pictures\image5.paa"];
 };
 
 fnc_spin  = {
-   call fnc_check_credits;
-   sleep 0.1;
+   if (_credits <= 0) then {
+     hasCredits = false;
+     titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
+   }else{
+     hasCredits = true;
+   };
    if (hasCredits) then {
      //remove credit
      _credits = _credits - 1;
      //update credits display     
-     ctrlSetText[1000, format ["%1" ,_credits]];
+     ctrlSetText[1001, format ["%1" ,_credits]];
      //randomise reels
      call fnc_random_pictures;
      //wait 5 seconds
