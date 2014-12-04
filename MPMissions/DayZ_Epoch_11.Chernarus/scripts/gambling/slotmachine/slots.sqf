@@ -70,6 +70,7 @@ fnc_spin  = {
 	   }else{
 		 hasSlotsCredits = true;
 	   };
+	   
 	   if (hasSlotsCredits) then {
 		 IsSpinning = true;
 		 //remove credit
@@ -78,9 +79,18 @@ fnc_spin  = {
 		 ctrlSetText[1001, format ["%1" ,SlotsPlayerCredits]];
 		 //randomise reels
 		 call fnc_random_pictures;
-		 reel1 = reelArray call BIS_fnc_selectRandom;
-		 reel2 = reelArray call BIS_fnc_selectRandom;
-		 reel3 = reelArray call BIS_fnc_selectRandom;
+		 //WIN CHANCE
+		 SlotsWinChance = random 100;
+		 
+		 if(SlotsWinChance > 90) then{
+			reel1 = reelArray call BIS_fnc_selectRandom;
+			reel2 = reel1;
+			reel3 = reel1;
+		 }else{
+			reel1 = reelArray call BIS_fnc_selectRandom;
+			reel2 = reelArray call BIS_fnc_selectRandom;
+			reel3 = reelArray call BIS_fnc_selectRandom;
+		 };
 		 sleep 0.1;
 		 //display pictures
 		 call fnc_display_pictures;
@@ -230,6 +240,7 @@ fnc_cash_out = {
 					SlotsPlayerCredits = SlotsPlayerCredits - 1;
 				};
 			};
+			titleText ["Credits refunded.","PLAIN DOWN"]; titleFadeOut 3;
 		};
 	};
 };
