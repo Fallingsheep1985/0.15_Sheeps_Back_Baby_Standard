@@ -1,17 +1,17 @@
 //variables
 HouseGuess = 0;
 GUESSBET = 0;
-BETTEXT = "0";
-BETPLACED = false;
+GUESSBETTEXT = "0";
+GUESSBETPLACED = false;
 GUESSPLACED = false;
 
 //bets
 fnc_bet10 = {
 	if ("ItemBriefcase10oz" in magazines player) then {
 		GUESSBET = "ItemBriefcase10oz";
-		BETTEXT = "10oz";
-		ctrlSetText[1007, format ["%1" ,BETTEXT]];
-		BETPLACED = true;
+		GUESSBETTEXT = "10oz";
+		ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+		GUESSBETPLACED = true;
 		player removeMagazine "ItemBriefcase10oz";
 	}else{
 		titleText ["You need 1x 10oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -20,9 +20,9 @@ fnc_bet10 = {
 fnc_bet20 = {
 	if ("ItemBriefcase20oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase20oz";
-	BETTEXT = "20oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "20oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase12oz";
 	}else{
 		titleText ["You need 1x 20oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -31,9 +31,9 @@ fnc_bet20 = {
 fnc_bet30 = {
 	if ("ItemBriefcase30oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase30oz";
-	BETTEXT = "30oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "30oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase30oz";
 	}else{
 		titleText ["You need 1x 30oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -42,9 +42,9 @@ fnc_bet30 = {
 fnc_bet40 = {
 	if ("ItemBriefcase40oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase40oz";
-	BETTEXT = "40oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "40oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase40oz";
 	}else{
 		titleText ["You need 1x 40oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -53,9 +53,9 @@ fnc_bet40 = {
 fnc_bet50 = {
 	if ("ItemBriefcase50oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase50oz";
-	BETTEXT = "50oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "50oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase50oz";
 	}else{
 		titleText ["You need 1x 50oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -64,9 +64,9 @@ fnc_bet50 = {
 fnc_bet60 = {
 	if ("ItemBriefcase60oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase60oz";
-	BETTEXT = "60oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "60oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase60oz";
 	}else{
 		titleText ["You need 1x 60oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -75,9 +75,9 @@ fnc_bet60 = {
 fnc_bet70 = {
 	if ("ItemBriefcase70oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase70oz";
-	BETTEXT = "70oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "70oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase70oz";
 	}else{
 		titleText ["You need 1x 70oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -86,9 +86,9 @@ fnc_bet70 = {
 fnc_bet80 = {
 	if ("ItemBriefcase80oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase80oz";
-	BETTEXT = "80oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "80oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase80oz";
 	}else{
 		titleText ["You need 1x 80oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -97,9 +97,9 @@ fnc_bet80 = {
 fnc_bet90 = {
 	if ("ItemBriefcase90oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase90oz";
-	BETTEXT = "90oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "90oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase90oz";
 	}else{
 		titleText ["You need 1x 90oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -108,9 +108,9 @@ fnc_bet90 = {
 fnc_bet100 = {
 	if ("ItemBriefcase100oz" in magazines player) then {
 	GUESSBET = "ItemBriefcase100oz";
-	BETTEXT = "100oz";
-	ctrlSetText[1007, format ["%1" ,BETTEXT]];
-	BETPLACED = true;
+	GUESSBETTEXT = "100oz";
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
+	GUESSBETPLACED = true;
 	player removeMagazine "ItemBriefcase100oz";
 	}else{
 		titleText ["You need 1x 100oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
@@ -171,14 +171,14 @@ fnc_guess10 = {
 fnc_reset = {
 	HouseGuess = 0;
 	GUESSBET = 0;
-	BETTEXT = "0";
-	BETPLACED = false;
+	GUESSBETTEXT = "0";
+	GUESSBETPLACED = false;
 	GUESSPLACED = false;
 };
 
 //playgame
 fnc_playgame = {
-	if (BETPLACED) then {
+	if (GUESSBETPLACED) then {
 		if (GUESSPLACED) then {
 		
 			HouseGuess = round((random 9) +1);
@@ -205,7 +205,7 @@ fnc_playgame = {
 
 //Exit game
 fnc_exitgame = {
-	if (BETPLACED) then {
+	if (GUESSBETPLACED) then {
 		player addMagazine GUESSBET;
 		titleText ["Bet refunded.","PLAIN DOWN"]; titleFadeOut 3;
 		call fnc_reset;
