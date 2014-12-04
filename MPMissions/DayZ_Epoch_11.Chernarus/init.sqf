@@ -345,6 +345,7 @@ if (!isDedicated && (dayzPlayerLogin2 select 2)) then {
 };
 
 []execVM "scripts\gambling\slotmachine\slots.sqf";
+[]execVM "scripts\gambling\guessinggame\guess.sqf";
 
 
 if(WeaponModScript)then{

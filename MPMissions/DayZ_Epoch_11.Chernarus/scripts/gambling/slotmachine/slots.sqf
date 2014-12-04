@@ -64,7 +64,6 @@ fnc_spin  = {
 	if(IsSpinning)then{
 		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
 	 } else {
-		IsSpinning = true;
 	   if (PlayerCredits <= 0) then {
 		 hasCredits = false;
 		 titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
@@ -72,6 +71,7 @@ fnc_spin  = {
 		 hasCredits = true;
 	   };
 	   if (hasCredits) then {
+		 IsSpinning = true;
 		 //remove credit
 		 PlayerCredits = PlayerCredits - 1;
 		 //update credits display     
@@ -216,17 +216,21 @@ fnc_payout = {
 };
 
 fnc_cash_out = {
-	if (PlayerCredits > 0) then {
-	while {PlayerCredits > 0} do
-	{
-		if (PlayerCredits > 10) then {
-			player addMagazine _prize2;
-			PlayerCredits = PlayerCredits - 10;
-		}else{
-			player addMagazine _prize1;
-			PlayerCredits = PlayerCredits - 1;
+	if (IsSpinning) then {
+		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
+	}else{
+		if (PlayerCredits > 0) then {
+		while {PlayerCredits > 0} do
+		{
+			if (PlayerCredits > 10) then {
+				player addMagazine _prize2;
+				PlayerCredits = PlayerCredits - 10;
+			}else{
+				player addMagazine _prize1;
+				PlayerCredits = PlayerCredits - 1;
+			};
 		};
+		sleep 0.1;
+		closeDialog "RscDisplaySlots";
 	};
-	sleep 0.1;
-	closeDialog 0;
 };

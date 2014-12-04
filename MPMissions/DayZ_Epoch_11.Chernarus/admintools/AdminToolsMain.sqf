@@ -12,7 +12,7 @@ _pathtomaterials = "admintools\materials\";
 _pathtobuildkits = "admintools\buildingkits\";
 _pathtogems = "admintools\gems\";
 _pathtobriefs = "admintools\briefcases\";
-_pathtoslots = "scripts\gambling\slotmachine\";
+_pathtoslots = "scripts\gambling\";
 
 _EXECscript9 = 'player execVM "'+_pathtosheep+'%1"';
 _EXECscript10 = 'player execVM "'+_pathtomaterials+'%1"';
@@ -29,8 +29,9 @@ if ((getPlayerUID player) in AdminList) then { // Admins
 		["Admin Menu >>", [], "#USER:AdminMenu", -5, [["expression", ""]], "1", "1"],
 		["Vehicle Menu >>",[],"#USER:VehicleMenu",-5,[["expression",""]],"1","1"],
 		["Crate Menu >>",[],"#USER:CrateMenu",-5,[["expression",""]],"1","1"],
-		["Briefcases", [], "#USER:BriefcaseMenu", -5, [["expression", ""]], "1", "1"],
+		["Briefcases >>", [], "#USER:BriefcaseMenu", -5, [["expression", ""]], "1", "1"],
 		["Sheep Menu >>", [], "#USER:SheepsMenu", -5, [["expression", ""]], "1", "1"],
+		["Gamble Menu >>", [], "#USER:GambleMenu", -5, [["expression", ""]], "1", "1"],
 		["Epoch Menu >>", [], "#USER:EpochMenu", -5, [["expression", ""]], "1", "1"],
 		["Weapon/Item Kits >>", [], "#USER:WeaponMenu", -5, [["expression", ""]], "1", "1"],
 		["Skin Change Menu >>", [], "#USER:AdminSkinsMenu", -5, [["expression", ""]], "1", "1"],
@@ -51,6 +52,14 @@ if ((getPlayerUID player) in AdminList) then { // Admins
 		];
 	};
 };
+GambleMenu =
+[
+["",true],
+	["Slot Machine", [],"", -5, [["expression", format[_EXECscript14,"slotmachine\open_dialog.sqf"]]], "1", "1"],
+	["Guessing Game", [],"", -5, [["expression", format[_EXECscript14,"guessinggame\open_dialog.sqf"]]], "1", "1"],
+	["", [], "", -5, [["expression", ""]], "1", "0"],
+		["Main Menu", [20], "#USER:epochmenustart", -5, [["expression", ""]], "1", "1"]
+];
 SheepsMenu =
 [
 ["",true],
@@ -58,7 +67,6 @@ SheepsMenu =
 	["Materials Menu >>", [], "#USER:MaterialsMenu", -5, [["expression", ""]], "1", "1"],
 	["Gems Menu >>", [], "#USER:GemsMenu", -5, [["expression", ""]], "1", "1"],	
 	["Show Position", [],"", -5, [["expression", format[_EXECscript9,"showpostion.sqf"]]], "1", "1"],
-	["Slot Machine", [],"", -5, [["expression", format[_EXECscript14,"open_dialog.sqf"]]], "1", "1"],
 	["Show Position ATL", [],"", -5, [["expression", format[_EXECscript9,"showpostionATL.sqf"]]], "1", "1"],
 	["Locate Vehicles (need key + Map)", [],"", -5, [["expression", format[_EXECscript9,"locate_vehicle.sqf"]]], "1", "1"],
 	["Add NOS", [],"", -5, [["expression", format[_EXECscript9,"addNOS.sqf"]]], "1", "1"],	
