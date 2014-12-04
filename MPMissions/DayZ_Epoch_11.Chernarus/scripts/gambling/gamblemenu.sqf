@@ -1,6 +1,5 @@
 _EXECscript1 = 'player execVM "scripts\gambling\numbergame\%1"';
 _EXECscript2 = 'player execVM "scripts\gambling\highestnumbergame\%1"';
-_EXECscript3 = 'player execVM "scripts\gambling\guessinggame\%1"';
 
 gamblemenu = [
 	["",true],
@@ -9,7 +8,6 @@ gamblemenu = [
 		["Highest Number - Pays 2-1", [], "#USER:HighestNumber", -5, [["expression", ""]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"]
 	];
-	
 Match = [
 	["",true],
 		["Match Number", [],"", -5, [["expression", ""]], "1", "0"],
@@ -41,6 +39,5 @@ HighestNumber = [
 		["Bet: 100oz", [],"", -5, [["expression", format[_EXECscript2,"100oz.sqf"]]], "1", "1"],
 		["", [], "", -5, [["expression", ""]], "1", "0"],
 		["Main Menu", [20], "#USER:gamblemenu", -5, [["expression", ""]], "1", "1"]
-	];
-	
+	];	
 showCommandingMenu "#USER:gamblemenu";

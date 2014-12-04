@@ -116,6 +116,7 @@ fnc_bet100 = {
 		titleText ["You need 1x 100oz briefcase to place this bet!","PLAIN DOWN"]; titleFadeOut 5;
 	};
 };
+
 //numbers
 fnc_guess1 = {
 	GUESS = 1;
@@ -174,6 +175,7 @@ fnc_reset = {
 	BETPLACED = false;
 	GUESSPLACED = false;
 };
+
 //playgame
 fnc_playgame = {
 	if (BETPLACED) then {
@@ -200,6 +202,7 @@ fnc_playgame = {
 		titleText ["No bet placed!","PLAIN DOWN"]; titleFadeOut 3;
 	};
 };
+
 //Exit game
 fnc_exitgame = {
 	if (BETPLACED) then {
