@@ -112,7 +112,7 @@ class RscDisplaySlots
        y = 0.5705 * safezoneH + safezoneY;
        w = 0.05875 * safezoneW;
        h = 0.0235 * safezoneH;
-       action = "closeDialog 0;";
+       action = "_nil=[]Spawn fnc_cash_out";
      };
    };
 };

@@ -52,28 +52,33 @@ fnc_random_pictures = {
 };
 
 fnc_spin  = {
-   if (PlayerCredits <= 0) then {
-     hasCredits = false;
-     titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
-   }else{
-     hasCredits = true;
-   };
-   if (hasCredits) then {
-     //remove credit
-     PlayerCredits = PlayerCredits - 1;
-     //update credits display     
-     ctrlSetText[1001, format ["%1" ,PlayerCredits]];
-     //randomise reels
-     call fnc_random_pictures;
-     reel1 = reelArray call BIS_fnc_selectRandom;
-     reel2 = reelArray call BIS_fnc_selectRandom;
-     reel3 = reelArray call BIS_fnc_selectRandom;
-	 sleep 0.1;
-     //display pictures
-     call fnc_display_pictures;
-     //check if win or lose
-     call fnc_payout;
-   };
+	if(IsSpinning)then{
+		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
+	 }else{
+		IsSpinning = true;
+	   if (PlayerCredits <= 0) then {
+		 hasCredits = false;
+		 titleText ["You have no credits!","PLAIN DOWN"]; titleFadeOut 3;
+	   }else{
+		 hasCredits = true;
+	   };
+	   if (hasCredits) then {
+		 //remove credit
+		 PlayerCredits = PlayerCredits - 1;
+		 //update credits display     
+		 ctrlSetText[1001, format ["%1" ,PlayerCredits]];
+		 //randomise reels
+		 call fnc_random_pictures;
+		 reel1 = reelArray call BIS_fnc_selectRandom;
+		 reel2 = reelArray call BIS_fnc_selectRandom;
+		 reel3 = reelArray call BIS_fnc_selectRandom;
+		 sleep 0.1;
+		 //display pictures
+		 call fnc_display_pictures;
+		 //check if win or lose
+		 call fnc_payout;
+	   };
+	};
 };
 fnc_display_pictures = {
 //reel 1
@@ -198,4 +203,21 @@ fnc_payout = {
    }else{
      titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 3;
    };
+   IsSpinning = false;
+};
+
+fnc_cash_out = {
+	if (PlayerCredits > 0) then {
+	while {PlayerCredits > 0} do
+	{
+		if (PlayerCredits < 9) then {
+			player addMagazine _prize1;
+			PlayerCredits = PlayerCredits - 1;
+		};
+		if (PlayerCredits > 10) then {
+			player addMagazine _prize2;
+			PlayerCredits = PlayerCredits - 10;
+		};
+	};
+	closeDialog 0;
 };
