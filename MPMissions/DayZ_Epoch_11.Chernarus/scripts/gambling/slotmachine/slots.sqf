@@ -205,8 +205,8 @@ fnc_payout = {
        player addMagazine _prize7;
      };
      if (reel1 == "diamond") then {
-       PlayerCredits = PlayerCredits + 5;
-       titleText ["You won 5 free credits!","PLAIN DOWN"]; titleFadeOut 3;
+       PlayerCredits = PlayerCredits + 10;
+       titleText ["You won 10 free credits!","PLAIN DOWN"]; titleFadeOut 3;
      };
    }else{
      titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 3;
