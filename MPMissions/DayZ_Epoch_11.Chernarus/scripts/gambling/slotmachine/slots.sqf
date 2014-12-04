@@ -7,31 +7,39 @@ pictures = ["pictures\image1.paa","pictures\image2.paa","pictures\image3.paa","p
 hasCredits = false;
 
 fnc_add_1_credits = {
-   //check if player has required item
-   if ("ItemGoldBar" in magazines player) then{
-     //remove cost
-     player removeMagazine "ItemGoldBar";
-     //add credit
-     PlayerCredits = PlayerCredits + 1;
-     //Update credits display
-     ctrlSetText[1001, format ["%1" ,PlayerCredits]];
-   }else{
-     titleText ["You need 1x Goldbar to add 1 credit!","PLAIN DOWN"];
-     titleFadeOut 3;
+if(IsSpinning)then{
+		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
+	 } else {
+	   //check if player has required item
+	   if ("ItemGoldBar" in magazines player) then{
+		 //remove cost
+		 player removeMagazine "ItemGoldBar";
+		 //add credit
+		 PlayerCredits = PlayerCredits + 1;
+		 //Update credits display
+		 ctrlSetText[1001, format ["%1" ,PlayerCredits]];
+	   }else{
+		 titleText ["You need 1x Goldbar to add 1 credit!","PLAIN DOWN"];
+		 titleFadeOut 3;
+	   };
    };
 };
 
 fnc_add_10_credits = {
-   //check if player has required item
-   if ("ItemGoldBar10oz" in magazines player) then{
-     //remove cost
-     player removeMagazine "ItemGoldBar10oz";
-     //add credits
-     PlayerCredits = PlayerCredits + 10;
-     //Update credits display
-     ctrlSetText[1001, format ["%1" ,PlayerCredits]];
-   }else{
-     titleText ["You need 1x 10oz Goldbar to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
+if(IsSpinning)then{
+		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
+	 } else {
+	   //check if player has required item
+	   if ("ItemGoldBar10oz" in magazines player) then{
+		 //remove cost
+		 player removeMagazine "ItemGoldBar10oz";
+		 //add credits
+		 PlayerCredits = PlayerCredits + 10;
+		 //Update credits display
+		 ctrlSetText[1001, format ["%1" ,PlayerCredits]];
+	   }else{
+		 titleText ["You need 1x 10oz Goldbar to add 10 credits!","PLAIN DOWN"]; titleFadeOut 3;
+	   };
    };
 };
 
@@ -54,7 +62,7 @@ fnc_random_pictures = {
 fnc_spin  = {
 	if(IsSpinning)then{
 		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
-	 }else{
+	 } else {
 		IsSpinning = true;
 	   if (PlayerCredits <= 0) then {
 		 hasCredits = false;
@@ -210,14 +218,14 @@ fnc_cash_out = {
 	if (PlayerCredits > 0) then {
 	while {PlayerCredits > 0} do
 	{
-		if (PlayerCredits < 9) then {
-			player addMagazine _prize1;
-			PlayerCredits = PlayerCredits - 1;
-		};
 		if (PlayerCredits > 10) then {
 			player addMagazine _prize2;
 			PlayerCredits = PlayerCredits - 10;
+		}else{
+			player addMagazine _prize1;
+			PlayerCredits = PlayerCredits - 1;
 		};
 	};
+	sleep 0.1;
 	closeDialog 0;
 };
