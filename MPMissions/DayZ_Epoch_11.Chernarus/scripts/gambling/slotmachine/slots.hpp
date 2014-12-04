@@ -19,6 +19,16 @@ class RscDisplaySlots
 
    class Controls
    {
+	 class RscBackground_5000: RscBackground
+     {
+       idc = 5000;
+	   colorBackground[] = {0,0,0,1};
+	   colorText[] = {1,1,1,1};
+       x = 0.32375 * safezoneW + safezoneX;
+       y = 0.3355 * safezoneH + safezoneY;
+       w = 0.367188 * safezoneW;
+       h = 0.3055 * safezoneH;
+     };
      class RscFrame_1800: MyRscFrame
      {
        idc = 1800;

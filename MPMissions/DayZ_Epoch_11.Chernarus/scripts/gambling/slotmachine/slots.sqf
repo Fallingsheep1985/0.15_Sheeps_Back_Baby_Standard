@@ -1,6 +1,7 @@
 
 //Variables
 PlayerCredits = 0;
+IsSpinning = false;
 reelArray = ["cherry","lemon","grape","watermelon","orange","bar","seven","diamond"];
 pictures = ["pictures\image1.paa","pictures\image2.paa","pictures\image3.paa","pictures\image4.paa","pictures\image5.paa","pictures\image6.paa","pictures\image7.paa","pictures\image8.paa"];
 
