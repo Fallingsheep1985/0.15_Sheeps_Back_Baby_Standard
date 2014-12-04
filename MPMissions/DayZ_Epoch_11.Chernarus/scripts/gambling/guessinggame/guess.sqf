@@ -1,5 +1,5 @@
 //variables
-HouseGuess = 0;
+HOUSEGUESS = 0;
 GUESSBET = 0;
 GUESSBETTEXT = "0";
 GUESSBETPLACED = false;
@@ -168,8 +168,8 @@ fnc_guess10 = {
 	ctrlSetText[1002, format ["%1" ,GUESS]];
 	GUESSPLACED = true;
 };
-fnc_reset = {
-	HouseGuess = 0;
+fnc_reset_guess = {
+	HOUSEGUESS = 0;
 	GUESSBET = 0;
 	GUESSBETTEXT = "0";
 	GUESSBETPLACED = false;
@@ -181,19 +181,19 @@ fnc_playgame = {
 	if (GUESSBETPLACED) then {
 		if (GUESSPLACED) then {
 		
-			HouseGuess = round((random 9) +1);
-			ctrlSetText[1003, format ["%1" ,HouseGuess]];
+			HOUSEGUESS = round((random 9) +1);
+			ctrlSetText[1003, format ["%1" ,HOUSEGUESS]];
 			//check if number match
-			if(HouseGuess == GUESS)then{
+			if(HOUSEGUESS == GUESS)then{
 				titleText [format["You win 2x %1 !", GUESSBET],"PLAIN DOWN"]; titleFadeOut 3;
 				//add winnings
 				player addMagazine GUESSBET;
 				player addMagazine GUESSBET;
 				//reset variables
-				call fnc_reset;
+				call fnc_reset_guess;
 			}else{
 				titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 3;
-				call fnc_reset;
+				call fnc_reset_guess;
 			};
 		}else{
 			titleText ["You have not guessed a number!","PLAIN DOWN"]; titleFadeOut 3;
@@ -208,8 +208,8 @@ fnc_exitgame = {
 	if (GUESSBETPLACED) then {
 		player addMagazine GUESSBET;
 		titleText ["Bet refunded.","PLAIN DOWN"]; titleFadeOut 3;
-		call fnc_reset;
+		call fnc_reset_guess;
 	}else{
-		call fnc_reset;
+		call fnc_reset_guess;
 	};
 };

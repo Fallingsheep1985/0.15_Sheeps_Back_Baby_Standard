@@ -225,6 +225,11 @@ fnc_payout = {
    IsSpinning = false;
 };
 
+fnc_reset_slots = {
+	SlotsPlayerCredits = 0;
+	IsSpinning = false;
+};
+
 fnc_cash_out = {
 	if (IsSpinning) then {
 		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
@@ -241,6 +246,8 @@ fnc_cash_out = {
 				};
 			};
 			titleText ["Credits refunded.","PLAIN DOWN"]; titleFadeOut 3;
+			sleep 0.01;
+			call fnc_reset_slots;
 		};
 	};
 };
