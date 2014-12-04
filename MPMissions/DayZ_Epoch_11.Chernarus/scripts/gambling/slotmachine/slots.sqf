@@ -169,41 +169,41 @@ fnc_display_pictures = {
 
 fnc_payout = {
 	//prizes for payout
-	_prize1 = "ItemGoldBar";
-	_prize2 = "ItemGoldBar10oz";
-	_prize3 = "ItemBriefcase20oz";
-	_prize4 = "ItemBriefcase40oz";
-	_prize5 = "ItemBriefcase60oz";
-	_prize6 = "ItemBriefcase80oz";
-	_prize7 = "ItemBriefcase100oz";
+	prize1 = "ItemGoldBar";
+	prize2 = "ItemGoldBar10oz";
+	prize3 = "ItemBriefcase20oz";
+	prize4 = "ItemBriefcase40oz";
+	prize5 = "ItemBriefcase60oz";
+	prize6 = "ItemBriefcase80oz";
+	prize7 = "ItemBriefcase100oz";
    if ((reel1 == reel2) && (reel2 == reel3)) then {
      if (reel1 == "cherry") then {
        titleText ["You won 1 gold bar!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize1;
+       player addMagazine prize1;
      };
      if (reel1 == "lemon") then {
        titleText ["You won 10oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize2;
+       player addMagazine prize2;
      };
      if (reel1 == "grape") then {
        titleText ["You won 20oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize3;
+       player addMagazine prize3;
      };
      if (reel1 == "watermelon") then {
        titleText ["You won 40oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize4;
+       player addMagazine prize4;
      };
      if (reel1 == "orange") then {
        titleText ["You won 60oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize5;
+       player addMagazine prize5;
      };
      if (reel1 == "bar") then {
        titleText ["You won 80oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize6;
+       player addMagazine prize6;
      };
      if (reel1 == "seven") then {
        titleText ["Jackpot! You won 100oz gold!","PLAIN DOWN"]; titleFadeOut 3;
-       player addMagazine _prize7;
+       player addMagazine prize7;
      };
      if (reel1 == "diamond") then {
        PlayerCredits = PlayerCredits + 10;
@@ -223,10 +223,10 @@ fnc_cash_out = {
 			while {PlayerCredits > 0} do
 			{
 				if (PlayerCredits > 10) then {
-					player addMagazine _prize2;
+					player addMagazine prize2;
 					PlayerCredits = PlayerCredits - 10;
 				}else{
-					player addMagazine _prize1;
+					player addMagazine prize1;
 					PlayerCredits = PlayerCredits - 1;
 				};
 			};
