@@ -1594,6 +1594,6 @@ class CfgSounds
 
 //slot machine
 #include "scripts\gambling\slotmachine\slots.hpp"
-
+#include "scripts\gambling\guessinggame\guess.hpp"
 //Skin Trader
 #include "scripts\zupa\skins\SkinGui.hpp"

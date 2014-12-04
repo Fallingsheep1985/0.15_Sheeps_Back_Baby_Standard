@@ -8,8 +8,8 @@ GUESSPLACED = false;
 //bets
 fnc_bet10 = {
 	if ("ItemBriefcase10oz" in magazines player) then {
-		GUESSBET = "ItemBriefcase10oz"
-		BETTEXT = "10oz"
+		GUESSBET = "ItemBriefcase10oz";
+		BETTEXT = "10oz";
 		ctrlSetText[1007, format ["%1" ,BETTEXT]];
 		BETPLACED = true;
 		player removeMagazine "ItemBriefcase10oz";
@@ -19,8 +19,8 @@ fnc_bet10 = {
 };
 fnc_bet20 = {
 	if ("ItemBriefcase20oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase20oz"
-	BETTEXT = "20oz"
+	GUESSBET = "ItemBriefcase20oz";
+	BETTEXT = "20oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase12oz";
@@ -30,8 +30,8 @@ fnc_bet20 = {
 };
 fnc_bet30 = {
 	if ("ItemBriefcase30oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase30oz"
-	BETTEXT = "30oz"
+	GUESSBET = "ItemBriefcase30oz";
+	BETTEXT = "30oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase30oz";
@@ -41,8 +41,8 @@ fnc_bet30 = {
 };
 fnc_bet40 = {
 	if ("ItemBriefcase40oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase40oz"
-	BETTEXT = "40oz"
+	GUESSBET = "ItemBriefcase40oz";
+	BETTEXT = "40oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase40oz";
@@ -52,8 +52,8 @@ fnc_bet40 = {
 };
 fnc_bet50 = {
 	if ("ItemBriefcase50oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase50oz"
-	BETTEXT = "50oz"
+	GUESSBET = "ItemBriefcase50oz";
+	BETTEXT = "50oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase50oz";
@@ -63,8 +63,8 @@ fnc_bet50 = {
 };
 fnc_bet60 = {
 	if ("ItemBriefcase60oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase60oz"
-	BETTEXT = "60oz"
+	GUESSBET = "ItemBriefcase60oz";
+	BETTEXT = "60oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase60oz";
@@ -74,8 +74,8 @@ fnc_bet60 = {
 };
 fnc_bet70 = {
 	if ("ItemBriefcase70oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase70oz"
-	BETTEXT = "70oz"
+	GUESSBET = "ItemBriefcase70oz";
+	BETTEXT = "70oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase70oz";
@@ -85,8 +85,8 @@ fnc_bet70 = {
 };
 fnc_bet80 = {
 	if ("ItemBriefcase80oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase80oz"
-	BETTEXT = "80oz"
+	GUESSBET = "ItemBriefcase80oz";
+	BETTEXT = "80oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase80oz";
@@ -96,8 +96,8 @@ fnc_bet80 = {
 };
 fnc_bet90 = {
 	if ("ItemBriefcase90oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase90oz"
-	BETTEXT = "90oz"
+	GUESSBET = "ItemBriefcase90oz";
+	BETTEXT = "90oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase90oz";
@@ -107,8 +107,8 @@ fnc_bet90 = {
 };
 fnc_bet100 = {
 	if ("ItemBriefcase100oz" in magazines player) then {
-	GUESSBET = "ItemBriefcase100oz"
-	BETTEXT = "100oz"
+	GUESSBET = "ItemBriefcase100oz";
+	BETTEXT = "100oz";
 	ctrlSetText[1007, format ["%1" ,BETTEXT]];
 	BETPLACED = true;
 	player removeMagazine "ItemBriefcase100oz";
@@ -209,9 +209,7 @@ fnc_exitgame = {
 		player addMagazine GUESSBET;
 		titleText ["Bet refunded.","PLAIN DOWN"]; titleFadeOut 3;
 		call fnc_reset;
-		closeDialog "RscDisplayGuess";
 	}else{
-	call fnc_reset;
-		closeDialog "RscDisplayGuess";
+		call fnc_reset;
 	};
 };

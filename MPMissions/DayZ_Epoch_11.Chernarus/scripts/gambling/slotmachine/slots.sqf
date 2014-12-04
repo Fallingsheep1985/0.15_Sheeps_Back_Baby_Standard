@@ -220,17 +220,16 @@ fnc_cash_out = {
 		titleText ["Please wait for current spin!","PLAIN DOWN"]; titleFadeOut 3;
 	}else{
 		if (PlayerCredits > 0) then {
-		while {PlayerCredits > 0} do
-		{
-			if (PlayerCredits > 10) then {
-				player addMagazine _prize2;
-				PlayerCredits = PlayerCredits - 10;
-			}else{
-				player addMagazine _prize1;
-				PlayerCredits = PlayerCredits - 1;
+			while {PlayerCredits > 0} do
+			{
+				if (PlayerCredits > 10) then {
+					player addMagazine _prize2;
+					PlayerCredits = PlayerCredits - 10;
+				}else{
+					player addMagazine _prize1;
+					PlayerCredits = PlayerCredits - 1;
+				};
 			};
 		};
-		sleep 0.1;
-		closeDialog "RscDisplaySlots";
 	};
 };
