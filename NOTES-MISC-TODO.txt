@@ -1,6 +1,5 @@
 BUGS
-teleport revert (random)
-WAI markers for missions
+mission (find out which ones are dodgey)
 BE filters overwatch clothes
 slotmachine test
 
