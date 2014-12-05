@@ -1,7 +1,7 @@
 class Category_622 {
 	class 100Rnd_762x51_M240 {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
 	class 200Rnd_556x45_M249 {
@@ -18,7 +18,7 @@ class Category_622 {
 class Category_481 {
 	class 100Rnd_762x51_M240 {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
 		sell[] = {1,"ItemGoldBar"};
 	};
 	class 200Rnd_556x45_M249 {

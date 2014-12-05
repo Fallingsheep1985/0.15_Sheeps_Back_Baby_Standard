@@ -11,7 +11,7 @@ class Category_675 {
 	};
 	class bulk_30Rnd_556x45_StanagSD {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
 	class bulk_30Rnd_9x19_MP5SD {
@@ -78,7 +78,7 @@ class Category_636 {
 	};
 	class bulk_30Rnd_556x45_StanagSD {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
 	class bulk_30Rnd_9x19_MP5SD {
@@ -145,7 +145,7 @@ class Category_555 {
 	};
 	class bulk_30Rnd_556x45_StanagSD {
 		type = "trade_items";
-		buy[] = {2,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar"};
 		sell[] = {2,"ItemGoldBar"};
 	};
 	class bulk_30Rnd_9x19_MP5SD {
