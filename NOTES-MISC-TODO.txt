@@ -1,7 +1,7 @@
 BUGS
 mission (find out which ones are dodgey)
 BE filters overwatch clothes
-hemp harvesting (can harvest alot)
+static hemp fields
 humanity when changing clothes
 
 ENHANCEMENTS (may not make it in final release!)
