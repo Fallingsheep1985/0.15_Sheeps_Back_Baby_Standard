@@ -174,6 +174,10 @@ fnc_reset_guess = {
 	GUESSBETTEXT = "0";
 	GUESSBETPLACED = false;
 	GUESSPLACED = false;
+	//reset texts
+	ctrlSetText[1003, format ["%1" ,HOUSEGUESS]];
+	ctrlSetText[1002, format ["%1" ,GUESS]];
+	ctrlSetText[1007, format ["%1" ,GUESSBETTEXT]];
 };
 
 //playgame
