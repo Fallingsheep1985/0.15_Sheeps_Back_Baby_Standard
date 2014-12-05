@@ -83,9 +83,6 @@ r_player_dead = true;
 "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 0.01],  [1, 1, 1, 0.0]];
 "colorCorrections" ppEffectCommit 1;
 
-// Begin adding skin to player body
-call compile preprocessFileLineNumbers "scripts\takeskin\Recoverskin.sqf";
-// End adding skin to player body
 
 //Player is Dead!
 3 fadeSound 0;
