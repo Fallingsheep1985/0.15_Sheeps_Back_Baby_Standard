@@ -4,6 +4,15 @@ SlotsPlayerCredits = 0;
 IsSpinning = false;
 reelArray = ["cherry","lemon","grape","watermelon","orange","bar","seven","diamond"];
 slotspictures = ["pictures\image1.paa","pictures\image2.paa","pictures\image3.paa","pictures\image4.paa","pictures\image5.paa","pictures\image6.paa","pictures\image7.paa","pictures\image8.paa"];
+	
+	//slots prizes for payout
+	slotsprize1 = "ItemGoldBar";
+	slotsprize2 = "ItemGoldBar10oz";
+	slotsprize3 = "ItemBriefcase20oz";
+	slotsprize4 = "ItemBriefcase40oz";
+	slotsprize5 = "ItemBriefcase60oz";
+	slotsprize6 = "ItemBriefcase80oz";
+	slotsprize7 = "ItemBriefcase100oz";
 
 hasSlotsCredits = false;
 
@@ -178,14 +187,6 @@ fnc_display_pictures = {
 };
 
 fnc_payout = {
-	//slotsprizes for payout
-	slotsprize1 = "ItemGoldBar";
-	slotsprize2 = "ItemGoldBar10oz";
-	slotsprize3 = "ItemBriefcase20oz";
-	slotsprize4 = "ItemBriefcase40oz";
-	slotsprize5 = "ItemBriefcase60oz";
-	slotsprize6 = "ItemBriefcase80oz";
-	slotsprize7 = "ItemBriefcase100oz";
    if ((reel1 == reel2) && (reel2 == reel3)) then {
      if (reel1 == "cherry") then {
        titleText ["You won 1 gold bar!","PLAIN DOWN"]; titleFadeOut 3;
