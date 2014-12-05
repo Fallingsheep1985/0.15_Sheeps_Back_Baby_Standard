@@ -194,9 +194,11 @@ fnc_playgame = {
 				player addMagazine GUESSBET;
 				player addMagazine GUESSBET;
 				//reset variables
+				sleep 5;
 				call fnc_reset_guess;
 			}else{
 				titleText ["You lost.","PLAIN DOWN"]; titleFadeOut 3;
+				sleep 5;
 				call fnc_reset_guess;
 			};
 		}else{
