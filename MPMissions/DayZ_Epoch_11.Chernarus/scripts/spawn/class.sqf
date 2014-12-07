@@ -19,6 +19,8 @@ if (!_isPZombie) then {
 	if (_model != _myModel) then {
 		[dayz_playerUID,dayz_characterID,_model] spawn player_humanityMorph;
 		waitUntil {typeOf player != _myModel};
+		//no ammo fix
+		uiSleep 1;
 	};
 
 	removeAllWeapons player;
