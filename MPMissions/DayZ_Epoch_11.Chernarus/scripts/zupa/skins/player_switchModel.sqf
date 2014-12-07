@@ -15,7 +15,8 @@ _bankMoney = player getVariable["bankMoney",0];
 _cashMoney2 = player getVariable["headShots",0];
 _bankMoney2 = player getVariable["bank",0];
 _cId = player getVariable["CharacterID",0];
-
+_humanity = player getVariable["humanity",0];
+ 
 if ((_playerUID == dayz_playerUID) && (count _magazines == 0) && (count (magazines player) > 0 )) exitWith {cutText [(localize "str_epoch_player_17"), "PLAIN DOWN"]};
 
 _primweapon	= primaryWeapon player;
@@ -123,6 +124,8 @@ _newUnit setVariable ["headShots",_cashMoney2,true];
 _newUnit setVariable ["bank",_bankMoney2];
 
 _newUnit setVariable["CharacterID",_cId,true];
+//set humanity back to what it was
+_newUnit setVariable["humanity",_humanity,true];
 
 _switchUnit = {
 	addSwitchableUnit _newUnit;
@@ -197,6 +200,8 @@ player setVariable ["bankMoney",_bankMoney];
 player setVariable ["headShots",_cashMoney2,true];
 player setVariable ["bank",_bankMoney2];
 player setVariable ["CharacterID",_cId,true];
+//set humanity back to what it was
+player setVariable["humanity",_humanity,true];
 if (_tagSetting) then {
 	DZE_ForceNameTags = true;
 };
