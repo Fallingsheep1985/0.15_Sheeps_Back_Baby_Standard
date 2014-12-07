@@ -4,28 +4,10 @@
 	It handles the humanity allocation and body cleanup.
 */
 
-private ["_unit","_player","_humanity","_banditkills","_skin","_bp","_okSkin","_result","_pos"];
+private ["_unit","_player","_humanity","_banditkills"];
 _unit = _this select 0;
 _player = _this select 1;
 
-//Script addition to add skin to units gear
-_skin = (typeOf _unit);
-_skin = "Skin_" + _skin;
-_okSkin = isClass (configFile >> "CfgMagazines" >> _skin);
-
-if (_okSkin) then {
-
- _result = [_unit,_skin] call BIS_fnc_invAdd;
-	if (_result) then {
-
-	} else {
-		
-		_bp = unitBackpack _unit;
-		_bp addMagazineCargoGlobal [_skin,1];
-		
-	};
-};
-//Script end
 //If the killer is a player, lets handle the humanity
 
 if (isPlayer _player) then {
@@ -62,7 +44,7 @@ if (isPlayer _player) then {
 	if (DZMSRunGear) then {
 		//Since a player ran them over, or they died from unknown causes
 		//Lets strip their gear
-		removeBackpack _unit;
+		if (!isNull (unitBackpack _unit)) then {removeBackpack _unit;};
 		removeAllWeapons _unit;
 		{
 			_unit removeMagazine _x

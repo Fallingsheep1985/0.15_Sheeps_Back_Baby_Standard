@@ -116,45 +116,15 @@ if (_type == "supply") then {
 		_crate addMagazineCargoGlobal [_item,1];
 	};
 };
-if (_type == "build") then {
-	// load construction
-	_scount = count DZMSConSupply;
-	for "_x" from 0 to 50 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSConSupply select _sSelect;
-		_crate addMagazineCargoGlobal [_item,1];
-	};
-	
-};
 
 ///////////////////////////////////////////////////////////////////
 // Epoch Money Crates
 if (_type == "money") then {
 	// load money
 	_scount = count _money;
-	for "_x" from 0 to 5 do {
+	for "_x" from 0 to 3 do {
 		_sSelect = floor(random _sCount);
 		_item = _money select _sSelect;
 		_crate addMagazineCargoGlobal [_item,1];
 	};
-	//Briefcases
-	_random = floor(random 4);//random amount of briefcases
-	_scount = count DZMSBreifcase;
-	for "_x" from 0 to _random do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSBreifcase select _sSelect;
-		_crate addMagazineCargoGlobal [_item,1];
-	};	
-};
-
-/////NUTS!/////////
-if (_type == "nuts") then {
-	// load nuts
-	_scount = count DZMSNutSupply;
-	for "_x" from 0 to 50 do {
-		_sSelect = floor(random _sCount);
-		_item = DZMSNutSupply select _sSelect;
-		_crate addMagazineCargoGlobal [_item,1];
-	};
-	
 };
