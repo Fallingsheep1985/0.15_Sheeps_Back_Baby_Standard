@@ -1,8 +1,12 @@
 BUGS
-mission (find out which ones are dodgey)
+mission - test (reverted mission code to default)
+
 BE filters overwatch clothes
 static hemp fields
-humanity when changing clothes
+
+humanity when changing clothes - test 
+(added check when changing clothes, should set it back to what it was before changing clothes)
+
 
 ENHANCEMENTS (may not make it in final release!)
 fishing area for fishing boat
@@ -20,3 +24,5 @@ Ai spawns at custom areas (new areas)
 black jack
 poker (maybe)
 craps (maybe)
+chess (if i can ever figure out how to port the API :P )
+admin tools dialog menu
