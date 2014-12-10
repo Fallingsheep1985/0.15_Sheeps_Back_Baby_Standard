@@ -1,12 +1,8 @@
 BUGS
-mission - test (reverted mission code to default)
 
+metal doors cant upgrade
 BE filters overwatch clothes
-static hemp fields
-
-humanity when changing clothes - test 
-(added check when changing clothes, should set it back to what it was before changing clothes)
-
+static hemp fields - need to reduce amount
 
 ENHANCEMENTS (may not make it in final release!)
 fishing area for fishing boat
