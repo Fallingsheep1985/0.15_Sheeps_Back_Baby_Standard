@@ -349,7 +349,7 @@ while {true} do {
 	};
 
 	_bul = [] spawn bl_preparations;
-
+	if (isNil("ns_blow_status")) then { ns_blow_status = false; };
 	waitUntil{ns_blow_status};
 
 	diag_log format["[NAC BLOWOUT CLIENT] :: ns_blow_status = %1 Blowout confirmation received.", ns_blow_status];
