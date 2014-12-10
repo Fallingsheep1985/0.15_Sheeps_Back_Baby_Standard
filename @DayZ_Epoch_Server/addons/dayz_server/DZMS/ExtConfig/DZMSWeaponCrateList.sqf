@@ -20,3 +20,7 @@ DZMSprimaryList = ["AK_47_M","AK_74","AKS_74_kobra","AKS_74_U","BAF_L85A2_RIS_Ho
 DZMSConTools = ["ItemToolbox","ItemCrowbar","ItemKnife","ItemEtool","ItemHatchet_DZE","ItemMatchbox_DZE"];
 
 DZMSConSupply = ["CinderBlocks","MortarBucket","ItemTankTrap","ItemPole","PartGeneric","PartPlywoodPack","PartPlankPack","ItemTentOld","ItemTentDomed","ItemTentDomed2","ItemSandbag","ItemWire","workbench_kit","ItemGenerator"];
+//Epoch Briefcases 
+DZMSBreifcase = ["ItemBriefcase100oz","ItemBriefcase90oz","ItemBriefcase80oz","ItemBriefcase70oz","ItemBriefcase60oz","ItemBriefcase50oz","ItemBriefcase40oz","ItemBriefcase30oz","ItemBriefcase20oz","ItemBriefcase10oz","ItemBriefcaseEmpty"];
+//NUTS
+DZMSNutSupply = ["FoodNutmix","FoodPistachio"];

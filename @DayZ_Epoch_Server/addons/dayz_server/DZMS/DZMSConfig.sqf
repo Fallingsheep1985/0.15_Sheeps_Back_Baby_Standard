@@ -8,7 +8,7 @@
 DZMSMissHumanity = true;
 
 // How Much Humanity?
-DZMSCntHumanity = 25;
+DZMSCntHumanity = 10;
 
 // Do You Want AI to use NVGs?
 //(They are deleted on death)
@@ -16,7 +16,7 @@ DZMSUseNVG = true;
 
 // Do you want AI to use RPG7V's?
 //(Only one unit per group spawn will have one)
-DZMSUseRPG = false;
+DZMSUseRPG = true;
 
 // Do you want AI kills to count as bandit kills?
 DZMSCntBanditKls = true;
@@ -61,7 +61,7 @@ DZMSStatLocs = [
 // Do you want vehicles from missions to save to the Database? (this means they will stay after a restart)
 // If False, vehicles will disappear on restart. It will warn a player who gets inside of a vehicle.
 // This is experimental, and off by default in this version.
-DZMSSaveVehicles = false;
+DZMSSaveVehicles = true;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // These are arrays of vehicle classnames for the missions.
@@ -71,10 +71,10 @@ DZMSSaveVehicles = false;
 DZMSChoppers = ["UH1H_DZ","Mi17_DZ"];
 
 //Small Vehicles (Humvees)
-DZMSSmallVic = ["hilux1_civil_3_open_EP1","SUV_TK_CIV_EP1","HMMWV_DZ","UAZ_Unarmed_UN_EP1"];
+DZMSSmallVic = ["hilux1_civil_3_open_EP1","SUV_TK_CIV_EP1","Ural_INS","HMMWV_DZ","UAZ_Unarmed_UN_EP1"];
 
 //Large Vehicles (Urals)
-DZMSLargeVic = ["Ural_TK_CIV_EP1","Ural_INS"];
+DZMSLargeVic = ["Ural_TK_CIV_EP1"];
 
 /*///////////////////////////////////////////////////////////////////////////////////////////
 There are two types of missions that run simultaneously on a the server.
@@ -86,8 +86,8 @@ Minor missions have less AI than Major missions, but have crates that reflect th
 Below is the array of mission file names and the minimum and maximum times they run.
 Do not edit the Arrays unless you know what you are doing.
 */
-DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
-DZMSMinorArray = ["SM1","SM2","SM3","SM4","SM5","SM6"];
+DZMSMajorArray = ["SM1","SM2","SM3","SM4","SM5","SM6","EM1"];
+DZMSMinorArray = ["SM1","SM2","SM3","SM4","SM5","SM6","SM7","SM8","SM9"];
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // The Minumum time in seconds before a major mission will run.
@@ -116,4 +116,4 @@ DZMSBlacklistZones = [
 /*=============================================================================================*/
 // Do Not Edit Below This Line
 /*=============================================================================================*/
-DZMSVersion = "1.1FIN";
+DZMSVersion = "RC1.1";
