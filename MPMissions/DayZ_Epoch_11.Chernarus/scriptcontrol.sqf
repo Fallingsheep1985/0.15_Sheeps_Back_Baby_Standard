@@ -225,6 +225,6 @@ sectorfngMarker = false;
 // DO NOT CHANGE THIS!!
 //Repack version 
 REPACKMOD = "Epoch"; 
-BUILDNUMBER = "518";
+BUILDNUMBER = "520";
 
 
