@@ -22,7 +22,7 @@ dayz_previousID = 0;
 //disable greeting menu 
 player setVariable ["BIS_noCoreConversations", true];
 //disable radio messages to be heard and shown in the left lower corner of the screen
-enableRadio false;
+enableRadio true;
 // May prevent "how are you civillian?" messages from NPC
 enableSentences false;
 
@@ -219,7 +219,7 @@ if (!isDedicated) then {
 		execVM "scripts\CustomKillMessage\kill_msg.sqf";
 	};
 };
-//attempt fix loadscreen bug
+//needs to be commented out for kill messages
 //#include "\z\addons\dayz_code\system\REsec.sqf";
 
 //Bus Route
