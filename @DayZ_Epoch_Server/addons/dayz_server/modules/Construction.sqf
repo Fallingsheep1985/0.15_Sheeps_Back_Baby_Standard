@@ -93,6 +93,7 @@ _debug_marker setMarkerShape "ICON";
 _debug_marker setMarkerType "mil_dot";
 _debug_marker setMarkerColor "ColorGreen";
 _debug_marker setMarkerAlpha 1;
+_debug_marker setMarkerText "Abandoned Supplies";
 };
  
 diag_log(format["Creating ammo box at %1", _loot_pos]);
