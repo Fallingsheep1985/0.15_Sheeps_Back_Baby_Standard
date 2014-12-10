@@ -73,6 +73,9 @@ bl_local_check_time =
 
 bl_local_anims = 
 {
+//undefined fix
+	_jednotka = 0;
+	
     _count_units = count AllUnits;
     for [{_c = 0}, {_c <= _count_units}, {_c = _c + 1}] do 
     {
@@ -89,6 +92,8 @@ bl_local_anims =
 
 bl_local_def_anim = 
 {
+//undefined fix
+	_jednotka = 0;
     _count_units = count AllUnits;
     for [{_c = 0}, {_c <= _count_units}, {_c = _c + 1}] do 
     {
