@@ -1420,4 +1420,4 @@ if(GambleingScript) then {
 		player removeAction s_player_gamble2;
 		s_player_gamble2 = -1;
 	};
-}:
+};
