@@ -22,11 +22,10 @@ dealerCard2val = 0;
 playerCard1val = 0;
 playerCard2val = 0;
 aces1 = false;
-HasAce = false;	
+blackjackBet = "";	
 //check if player has any Aces
 fnc_checkAces = {
 	if (playerCard1 == "AH") ||(playerCard1 == "AD") ||(playerCard1 == "AS") ||(playerCard1 == "AC") ||(playerCard2 == "AH") ||(playerCard2 == "AD") ||(playerCard2 == "AS") ||(playerCard2 == "AC") then {
-		HasAce = true;
 		//show aces choice dialog		
 	};
 };
@@ -54,16 +53,33 @@ fnc_deal_cards = {
 	call fnc_check_totals;
 	call fnc_WinLose;
 };
+//lose
+fnc_playerLose = {
+	call fnc_reset_cards;
+	titleText ["You lost!","PLAIN DOWN"]; titleFadeOut 3;
+};
+//Win
+fnc_playerWin = {
+	call fnc_reset_cards;
+	titleText ["You Won!","PLAIN DOWN"]; titleFadeOut 3;
+};
+//check if win or lose
 fnc_WinLose = {
-	if (dealerToatl == 21) then {
+	if (dealerTotal == 21) then {
 		call fnc_playerLose;
 	};
-	if (dealerToatl > 21) then {
-
+	if (dealerTotal < 21) && (playerTotal == 21)then {
+		call fnc_playerWin;
+	};
+	if (dealerTotal < playerTotal)then {
+		call fnc_playerLose;
+	};
+	if (dealerTotal > playerTotal)then {
+		call fnc_playerWin;
 	};
 };
 //remove cards from array
-fnc_remove_cards = {
+fnc_remove_card = {
 	cardArray = cardArray - dealerCard1;
 	cardArray = cardArray - dealerCard2;
 	cardArray = cardArray - playerCard1;
@@ -71,8 +87,8 @@ fnc_remove_cards = {
 };
 //Check totals
 fnc_check_totals = {
-	dealerToatl = dealerCard1val + dealerCard2val;
-	playerToatl = playerCard1val + playerCard2val;
+	dealerTotal = dealerCard1val + dealerCard2val;
+	playerTotal = playerCard1val + playerCard2val;
 };
 
 fnc_check_card_values = {
