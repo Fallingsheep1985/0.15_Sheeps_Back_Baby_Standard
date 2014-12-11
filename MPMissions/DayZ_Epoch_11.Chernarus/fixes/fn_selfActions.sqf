@@ -1405,7 +1405,7 @@ if(ZombieBombScript)then{
 	};
 };
 //Gambleing
-
+if(GambleingScript) then {
 //Random number game
 	if (cursorTarget isKindOf "Hooker4") then {
 		if (s_player_gamble < 0) then {
@@ -1420,4 +1420,4 @@ if(ZombieBombScript)then{
 		player removeAction s_player_gamble2;
 		s_player_gamble2 = -1;
 	};
-	
+}:
