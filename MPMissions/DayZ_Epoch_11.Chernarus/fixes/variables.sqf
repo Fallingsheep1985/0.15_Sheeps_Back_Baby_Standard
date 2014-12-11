@@ -328,6 +328,7 @@ dayz_resetSelfActions = {
 	s_player_bankrob = -1;
 	s_player_butcherz = -1;
 	s_player_gamble = -1;
+	s_player_gamble2 = -1;
 	s_player_plotManagement = -1;
     s_player_fillbarrel = -1;
 	s_player_clothesmenu = -1;
