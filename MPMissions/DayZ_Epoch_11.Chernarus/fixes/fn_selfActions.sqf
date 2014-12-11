@@ -1412,7 +1412,7 @@ if(GambleingScript) then {
             s_player_gamble = player addAction [("<t color='#c30000'>")+("Slots")+("</t>"), "scripts\gambling\slotmachine\slots.sqf","",5,false,true,"",""];
 		};
 		if (s_player_gamble2 < 0) then {
-            s_player_gamble2 = player addAction [("<t color='#c30000'>")+("Guessing Game")+("</t>"), "scripts\gambling\guessinggame\\guess.sqf","",5,false,true,"",""];
+            s_player_gamble2 = player addAction [("<t color='#c30000'>")+("Guessing Game")+("</t>"), "scripts\gambling\guessinggame\guess.sqf","",5,false,true,"",""];
 		};
 	}else {
 	    player removeAction s_player_gamble;
