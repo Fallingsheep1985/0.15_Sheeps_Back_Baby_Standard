@@ -90,7 +90,7 @@ fnc_spin  = {
 		 call fnc_random_pictures;
 		 //WIN CHANCE
 		 SlotsWinChance = random 100;
-		 
+		 //10% chance to win
 		 if(SlotsWinChance > 90) then{
 			reel1 = reelArray call BIS_fnc_selectRandom;
 			reel2 = reel1;
@@ -218,6 +218,8 @@ fnc_payout = {
      };
      if (reel1 == "diamond") then {
        SlotsPlayerCredits = SlotsPlayerCredits + 10;
+	   //update credits display     
+		ctrlSetText[1001, format ["%1" ,SlotsPlayerCredits]];
        titleText ["You won 10 free credits!","PLAIN DOWN"]; titleFadeOut 3;
      };
    }else{

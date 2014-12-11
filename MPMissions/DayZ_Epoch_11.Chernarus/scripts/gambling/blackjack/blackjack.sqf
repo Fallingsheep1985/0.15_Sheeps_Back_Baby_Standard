@@ -41,12 +41,16 @@ fnc_ace11 = {
 //Deal cards
 fnc_deal_cards = {
 	dealerCard1 = cardArray call BIS_fnc_selectRandom;
+	ctrlSetText[1001, format ["%1" ,dealerCard1]];
 	call fnc_remove_card;
 	dealerCard2 = cardArray call BIS_fnc_selectRandom;
+	ctrlSetText[1002, format ["%1" ,dealerCard2]];
 	call fnc_remove_card;
 	playerCard1 = cardArray call BIS_fnc_selectRandom;
+	ctrlSetText[1003, format ["%1" ,playerCard1]];
 	call fnc_remove_card;
 	playerCard2 = cardArray call BIS_fnc_selectRandom;
+	ctrlSetText[1004, format ["%1" ,playerCard2]];
 	call fnc_remove_card;
 	//Check for aces in players hand
 	call fnc_checkAces;
