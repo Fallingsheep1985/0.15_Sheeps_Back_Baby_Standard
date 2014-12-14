@@ -294,7 +294,7 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	_hasFuelE = 	"ItemJerrycanEmpty" in _magazinesPlayer;
 	_hasFuelBarrelE = 	"ItemFuelBarrelEmpty" in _magazinesPlayer;
 	_hasHotwireKit = 	"ItemHotwireKit" in _magazinesPlayer;
-	_itemsPlayer = items player;
+	_itemsPlayer = weapons player;
 	
 	_temp_keys = [];
 	_temp_keys_names = [];
@@ -1359,7 +1359,7 @@ if(DrinkWaterScript)then{
 /////////////////////////////////////////DRINK WATER END/////////////////////////////////////////
 if(AntiZombieEmitterScript)then{
 	// ZOMBIE SHIELD START
-	if (("TrashTinCan" in magazines player) && ("TrashJackDaniels" in magazines player) && ("PartEngine" in magazines player) && ("ItemJerrycan" in magazines player) && ("ItemToolbox" in items player)) then {
+	if (("TrashTinCan" in magazines player) && ("TrashJackDaniels" in magazines player) && ("PartEngine" in magazines player) && ("ItemJerrycan" in magazines player) && ("ItemToolbox" in weapons player)) then {
 		hasShield = true;
 	} else {
 		hasShield = false;
@@ -1409,10 +1409,10 @@ if(GambleingScript) then {
 //Random number game
 	if (cursorTarget isKindOf "Hooker4") then {
 		if (s_player_gamble < 0) then {
-            s_player_gamble = player addAction [("<t color='#c30000'>")+("Slots")+("</t>"), "scripts\gambling\slotmachine\slots.sqf","",5,false,true,"",""];
+            s_player_gamble = player addAction [("<t color='#c30000'>")+("Slots")+("</t>"), "scripts\gambling\slotmachine\open_dialog.sqf","",5,false,true,"",""];
 		};
 		if (s_player_gamble2 < 0) then {
-            s_player_gamble2 = player addAction [("<t color='#c30000'>")+("Guessing Game")+("</t>"), "scripts\gambling\guessinggame\guess.sqf","",5,false,true,"",""];
+            s_player_gamble2 = player addAction [("<t color='#c30000'>")+("Guessing Game")+("</t>"), "scripts\gambling\guessinggame\open_dialog.sqf","",5,false,true,"",""];
 		};
 	}else {
 	    player removeAction s_player_gamble;
