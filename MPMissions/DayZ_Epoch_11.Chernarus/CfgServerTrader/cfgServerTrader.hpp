@@ -87,4 +87,21 @@ class CfgTraderCategory {
 	#include "Category\Gems.hpp"
 	#include "Category\Misc.hpp"
 	#include "Category\FoodNuts.hpp"
+	#include "Category\Clothing.hpp"
+	#include "Category\OilBarrel.hpp"
+	
+	#include "Category\Overwatch416.hpp"
+	#include "Category\Overwatch417.hpp"
+	#include "Category\OverwatchACR.hpp"
+	#include "Category\OverwatchAK.hpp"
+	#include "Category\OverwatchAmmo.hpp"
+	#include "Category\OverwatchG3.hpp"
+	#include "Category\OverwatchLMG.hpp"
+	#include "Category\OverwatchMasada.hpp"
+	#include "Category\OverwatchPistols.hpp"
+	#include "Category\OverwatchScar.hpp"
+	#include "Category\OverwatchSniper.hpp"
+	
+	#include "Category\OverwatchCopCars.hpp"
+	#include "Category\OverwatchCivilianCars.hpp"
 };
