@@ -6,6 +6,8 @@ WaterMarkScript = true; //Watermark on/off
 server_name = "0.15"; //Watermark Text
 //Gambling ( Slotmachine, Guessing Game)
 GambleingScript = true;
+//No Voice Inside chat
+noVoicesidescript = true;
 //Intro Music
 IntroMusicScript = true;
 //Server Logo

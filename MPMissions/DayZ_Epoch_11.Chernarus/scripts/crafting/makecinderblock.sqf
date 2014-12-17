@@ -13,12 +13,12 @@ titleText ["You are crafting some Cinder Blocks.","PLAIN DOWN"]; titleFadeOut 5;
 
 	if (_chance > 25) then
 		{
-			_mypos = getposATL player;
+			_mypos = getPosASL player;
 			_dir = getdir player;
 			_mypos = [(_mypos select 0)+2*sin(_dir),(_mypos select 1)+2*cos(_dir), (_mypos select 2)];
 			_createCinder = createVehicle ["CinderBlocks", _mypos, [], 0, "CAN_COLLIDE"];
 			_createCinder setDir _dir;
-			_createCinder setposATL _mypos;
+			_createCinder setposASL _mypos;
 
 			sleep 1;
 		   

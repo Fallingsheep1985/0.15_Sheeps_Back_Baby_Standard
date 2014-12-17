@@ -5,6 +5,8 @@
 if (!isDedicated) then {
 
 	"filmic" setToneMappingParams [0.07, 0.31, 0.23, 0.37, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
+	///// Plot Pole vehicle damage
+    vehicle_handleDamage = compile preprocessFileLineNumbers "fixes\Plot_Veh_Damage.sqf";
 	
 	/*DoorManagement Zupa*/
 	DoorGetFriends 		= compile preprocessFileLineNumbers "scripts\doorManagement\doorGetFriends.sqf";

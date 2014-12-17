@@ -13,12 +13,12 @@ titleText ["You are crafting a Bandage.","PLAIN DOWN"]; titleFadeOut 5;
 
 	if (_chance > 15) then
 		{
-			_mypos = getposATL player;
+			_mypos = getPosASL player;
 			_dir = getdir player;
 			_mypos = [(_mypos select 0)+2*sin(_dir),(_mypos select 1)+2*cos(_dir), (_mypos select 2)];
 			_createBandage = createVehicle ["ItemBandage", _mypos, [], 0, "CAN_COLLIDE"];
 			_createBandage setDir _dir;
-			_createBandage setposATL _mypos;
+			_createBandage setposASL _mypos;
 			sleep 1;
 			player removeMagazine "ItemCanvas";
 			player removeMagazine "ItemTrashToiletpaper";

@@ -13,7 +13,7 @@ titleText ["You are crafting a hunting knife.","PLAIN DOWN"]; titleFadeOut 5;
 _dis=20;
 _sfx = "repair";
 [player,_sfx,0,false,_dis] call dayz_zombieSpeak;
-[player,_dis,true,(getPosATL player)] spawn player_alertZombies;
+[player,_dis,true,(getPosASL player)] spawn player_alertZombies;
  
 if (_chance > 25) then
     {

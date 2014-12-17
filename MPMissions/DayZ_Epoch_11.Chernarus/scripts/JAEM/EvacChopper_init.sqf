@@ -16,15 +16,15 @@ private ["_evacCallerID","_evacCallerUID","_evacFields","_evacFieldID"];
 /////////////////////////////////////////////////
 /// Amount of Briefcases a Evac-Chopper costs ///
 /////////// Any amount between 1-12 /////////////
-evac_chopperPrice = 3;
+evac_chopperPrice = 1;
 /////////////////////////////////////////////////
 ////// Need a Radio to call Evac-Chopper? ///////
 ////// 1 = Need Radio | 0 = No need Radio ///////
-evac_needRadio = 0;
+evac_needRadio = 1;
 /////////////////////////////////////////////////
 // Evac-Zone marker type Smoke or Landingpad? ///
 ////////// 0 = Landingpad | 1 = Smoke ///////////
-evac_zoneMarker = 0;
+evac_zoneMarker = 1;
 /////////////////////////////////////////////////
 /// Minimum Distance to call for Evac-Chopper ///
 ///////// Dont set this lower then 500! /////////

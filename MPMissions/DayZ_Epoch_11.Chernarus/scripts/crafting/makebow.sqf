@@ -13,7 +13,7 @@ titleText ["You are building a crossbow.","PLAIN DOWN"]; titleFadeOut 5;
 _dis=20;
 _sfx = "repair";
 [player,_sfx,0,false,_dis] call dayz_zombieSpeak;
-[player,_dis,true,(getPosATL player)] spawn player_alertZombies;
+[player,_dis,true,(getPosASL player)] spawn player_alertZombies;
  
 if (_chance > 45) then
     {
@@ -28,12 +28,12 @@ if (_chance > 45) then
 else
     {
 
-        _mypos = getposATL player;
+        _mypos = getPosASL player;
         _dir = getdir player;
         _mypos = [(_mypos select 0)+2*sin(_dir),(_mypos select 1)+2*cos(_dir), (_mypos select 2)];
         _createArrow = createVehicle ["WoodenArrow", _mypos, [], 0, "CAN_COLLIDE"];
         _createArrow setDir _dir;
-        _createArrow setposATL _mypos;
+        _createArrow setposASL _mypos;
         sleep 1;
 
     	player removeMagazine "TrashTinCan";

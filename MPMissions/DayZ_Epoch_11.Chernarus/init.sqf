@@ -31,7 +31,7 @@ enableSentences false;
 // DayZ Epoch config
 spawnShoremode = 0;
 spawnArea= 1500; // Default = 1500
-
+setTerrainGrid 50;    //Grass (Hi)12.5 or 25(Med/standard) or 50(Low/off)
 MaxVehicleLimit = 300; // Default = 50
 MaxDynamicDebris = 500; // Default = 100
 dayz_MapArea = 14000; // Default = 10000
@@ -361,6 +361,10 @@ If(ZombieFreeBaseScript)then{
 //Admin Tools
 if(AdmintoolsScript)then{
 	[] execVM "admintools\Activate.sqf";
+};
+
+if(noVoicesidescript)then{
+    call compile preprocessFileLineNumbers "scripts\noVoice.sqf";                              
 };
 //Admin skin
 {

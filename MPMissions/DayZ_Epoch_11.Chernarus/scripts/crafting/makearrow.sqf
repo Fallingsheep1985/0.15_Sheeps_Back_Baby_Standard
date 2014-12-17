@@ -13,18 +13,18 @@ titleText ["You are crafting some Arrows.","PLAIN DOWN"]; titleFadeOut 5;
 
 	if (_chance > 25) then
 		{
-			_mypos = getposATL player;
+			_mypos = getPosASL player;
 			_dir = getdir player;
 			_mypos = [(_mypos select 0)+2*sin(_dir),(_mypos select 1)+2*cos(_dir), (_mypos select 2)];
 			_createArrow = createVehicle ["WoodenArrowF", _mypos, [], 0, "CAN_COLLIDE"];
 			_createArrow setDir _dir;
-			_createArrow setposATL _mypos;
+			_createArrow setposASL _mypos;
 			_createArrow2 = createVehicle ["WoodenArrowF", _mypos, [], 0, "CAN_COLLIDE"];
 			_createArrow2 setDir _dir;
-			_createArrow2 setposATL _mypos;
+			_createArrow2 setposASL _mypos;
 			_createArrow3 = createVehicle ["WoodenArrowF", _mypos, [], 0, "CAN_COLLIDE"];
 			_createArrow3 setDir _dir;
-			_createArrow3 setposATL _mypos;
+			_createArrow3 setposASL _mypos;
 			sleep 1;
 		   
 			player removeMagazine "PartWoodPile";
