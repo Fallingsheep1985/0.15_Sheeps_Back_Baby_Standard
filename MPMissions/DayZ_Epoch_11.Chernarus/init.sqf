@@ -191,7 +191,7 @@ if (!isDedicated) then {
 		execVM "scripts\dzgm\init.sqf";
 	};
 	if (TradeFromVehicleScript) then {
-	[] execVM "scripts\TradeFromVehicle\init.sqf";
+	[] execVM "scripts\TradeFromVehicle Version 2.0\init.sqf";
 	};
 	if (ElevatorScript) then{
 		["elevator"] execVM "scripts\elevator\elevator_init.sqf";

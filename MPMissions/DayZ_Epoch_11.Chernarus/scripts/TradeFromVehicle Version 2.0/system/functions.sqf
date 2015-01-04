@@ -18,7 +18,7 @@ TFV_tradersGetTypeOfTIDSHumanity =
 
 TFV_traderGetWeaponsMagazinesPrices =
 {
-	private ["_trader","_traderData","_tids","_typeOfHumanityWeaponsMagazinesPrices","_typeOfHumanityWeaponsMagazinesPricesRAW","_physicalPrice","_intPrice","_currencyItem","_currencyItemWorth","_humanityNeed","_typeOfTrader","_badItems"];
+	private ["_trader","_traderData","_tids","_typeOfHumanityWeaponsMagazinesPrices","_typeOfHumanityWeaponsMagazinesPricesRAW","_physicalPrice","_intPrice","_currencyItem","_currencyItemWorth","_humanityNeed","_typeOfTrader","_badItems","_trader_id"];
 	_trader = _this select 0;
 	_intPrice = 0;
 	_traderData = call TFV_tradersGetTypeOfTIDSHumanity;
@@ -45,39 +45,83 @@ TFV_traderGetWeaponsMagazinesPrices =
 		};
 	} forEach _traderData;
 	
-	_typeOfHumanityWeaponsMagazinesPrices = [_typeOfTrader,_humanityNeed,[]];	
-
-	{
-	    PVDZE_plr_TradeMenuResult = nil;                     // Hive Traders.
-		PVDZE_plr_TradeMenu = [player,_x];
-		publicVariableServer "PVDZE_plr_TradeMenu";
-		waitUntil {!isNil "PVDZE_plr_TradeMenuResult"};
-		
-		if ((count(PVDZE_plr_TradeMenuResult)) > 0) then {
-		    _typeOfHumanityWeaponsMagazinesPricesRAW = PVDZE_plr_TradeMenuResult;
-		};
+	_typeOfHumanityWeaponsMagazinesPrices = [_typeOfTrader,_humanityNeed,[]];
 	
-		{
-		    if (!(((_x select 1) select 0) isKindOf 'AllVehicles') && !(((_x select 1) select 0) in _badItems)) then {
-				_physicalPrice = [];
-				_intPrice = 0;
-				for "_i" from 0 to (((_x select 4) select 0) - 1) do {
-					_physicalPrice set [(count _physicalPrice),((_x select 4) select 1)];
-				};			
-		
-				{
-					_currencyItem = (configFile >> "CfgMagazines" >> _x);
-					_currencyItemWorth = (_currencyItem >> "worth");
-					if (isNumber _currencyItemWorth) then {
-						_intPrice = (_intPrice + getNumber(_currencyItemWorth));
+	{
+		if(DZE_ConfigTrader) then {
+		// Conf Traders
+			_configtrader = [];		
+			_cfgTraderCategory = missionConfigFile >> "CfgTraderCategory" >> (format["Category_%1",_x]);	
+			for "_i" from 0 to ((count _cfgTraderCategory) - 1) do {
+				_data = [];
+				_class = configName (_cfgTraderCategory select _i);
+				_type  = getText ((_cfgTraderCategory select _i) >> "type");	
+				_buy  = getArray ((_cfgTraderCategory select _i) >> "buy");	
+				_sell = getArray ((_cfgTraderCategory select _i) >> "sell");
+				_buy set [2,1];
+				_sell set [2,1];
+				_typeNum = 1;
+				if (_type == "trade_weapons") then {
+					_typeNum = 3;
+				} else { 
+					if (_type in ["trade_backpacks", "trade_any_vehicle", "trade_any_vehicle_free", "trade_any_boat", "trade_any_bicycle"]) then {
+						_typeNum = 2;
 					};
-				} forEach _physicalPrice;
-			    
-				(_typeOfHumanityWeaponsMagazinesPrices select 2) set [(count (_typeOfHumanityWeaponsMagazinesPrices select 2)),[((_x select 1) select 0),((_x select 1) select 1),_intPrice]];
-		    };
+				};
+				_data = [[9999,[_class,_typeNum],50,_buy,_sell,0,_x,_type]];
+				_configtrader = _configtrader + _data;
+			};	
+		
+			if ((count(_configtrader)) > 0) then {
+				_typeOfHumanityWeaponsMagazinesPricesRAW = _configtrader;
+			};		
+		}else{
+			// Hive Traders
+			PVDZE_plr_TradeMenuResult = nil;
+			PVDZE_plr_TradeMenu = [player,_x];
+			publicVariableServer "PVDZE_plr_TradeMenu";
+			waitUntil {!isNil "PVDZE_plr_TradeMenuResult"};
+			
+			if ((count(PVDZE_plr_TradeMenuResult)) > 0) then {
+				_typeOfHumanityWeaponsMagazinesPricesRAW = PVDZE_plr_TradeMenuResult;
+			};		
+		};
+
+		if(TFV_DEBUG) then { diag_log format["[TFV] _typeOfHumanityWeaponsMagazinesPricesRAW %1",_typeOfHumanityWeaponsMagazinesPricesRAW]; };
+		
+		{
+			if(TFV_COINS) then {
+			// Conf Traders Price Coins
+				if (!(((_x select 1) select 0) isKindOf 'AllVehicles') && !(((_x select 1) select 0) in _badItems)) then {
+					_physicalPrice = [];
+					_intPrice = 0;
+					_intPrice = (_x select 4) select 0;
+					(_typeOfHumanityWeaponsMagazinesPrices select 2) set [(count (_typeOfHumanityWeaponsMagazinesPrices select 2)),[((_x select 1) select 0),((_x select 1) select 1),_intPrice]];
+				};
+				// Conf Traders Price Bars
+			}else{
+			// Hive Traders Price Loop
+				if (!(((_x select 1) select 0) isKindOf 'AllVehicles') && !(((_x select 1) select 0) in _badItems)) then {
+					_physicalPrice = [];
+					_intPrice = 0;
+					for "_i" from 0 to (((_x select 4) select 0) - 1) do {
+						_physicalPrice set [(count _physicalPrice),((_x select 4) select 1)];
+					};			
+
+					{
+						_currencyItem = (configFile >> "CfgMagazines" >> _x);
+						_currencyItemWorth = (_currencyItem >> "worth");
+						if (isNumber _currencyItemWorth) then {
+							_intPrice = (_intPrice + getNumber(_currencyItemWorth));
+						};
+					} forEach _physicalPrice;
+					(_typeOfHumanityWeaponsMagazinesPrices select 2) set [(count (_typeOfHumanityWeaponsMagazinesPrices select 2)),[((_x select 1) select 0),((_x select 1) select 1),_intPrice]];
+				};			
+			};
 		} forEach _typeOfHumanityWeaponsMagazinesPricesRaw;
 	} forEach _tids;
 
+	if(TFV_DEBUG) then { diag_log format["[TFV] _typeOfHumanityWeaponsMagazinesPrices %1",_typeOfHumanityWeaponsMagazinesPrices]; };
 	_typeOfHumanityWeaponsMagazinesPrices
 };
 
@@ -96,7 +140,6 @@ TFV_compileTraderData =
 		    _traderDataFinal set [(count _traderDataFinal),_x];
 		};
 	} forEach _traderDataFirstClean;
-	
 	_traderDataFinal
 };
 
@@ -141,10 +184,52 @@ TFV_countCurrencyItems =
 	_return
 };
 
+SC_fnc_addCoinsT = 
+{
+	private ["_player","_amount","_wealth","_newwealth", "_result"];			
+			_player =  _this select  0;
+			_amount =  _this select  1;
+			_result = false;	
+			_wealth = _player getVariable["cashMoney",0];
+			_player setVariable["cashMoney",_wealth + _amount, true];
+			PVDZE_plr_Save = [_player,(magazines _player),true,true] ;
+			publicVariableServer "PVDZE_plr_Save";
+			_player setVariable ["moneychanged",1,true];					
+			_newwealth = _player getVariable["cashMoney",0];		
+			if (_newwealth >= _wealth) then { _result = true; };			
+			_result
+};
+
+TFV_returnChangeCoins =
+{
+    private ["_amount","_return","_complete","_added","_object"];
+	_amount = _this select 0;
+	_object = _this select 1;
+	if(TFV_TAX) then {
+		if (_object == "vehicle") then {
+			_amount = _amount * TFV_TAXFV;
+		}else{
+			_amount = _amount * TFV_TAXFB;
+		};
+	};
+	_return = [];
+	_complete = false;
+	_added = [player, _amount] call SC_fnc_addCoinsT;
+	_added
+};
+
 TFV_returnChange =
 {
-    private ["_amount","_return","_complete"];
+    private ["_amount","_return","_complete","_object"];
 	_amount = _this select 0;
+	_object = _this select 1;
+	if(TFV_TAX) then {
+		if (_object == "vehicle") then {
+			if(TFV_TAXFV) then { _amount = _amount * TFV_TAXFV; };
+		}else{
+			if(TFV_TAXFB) then { _amount = _amount * TFV_TAXFB; };
+		};
+	};	
 	_return = [];
 	_complete = false;
 	

@@ -24,7 +24,7 @@ while {true} do {
 	
 	if (!TFV_INWORK) then {
 		if (([cursorTarget,TFV_TRADERDATA] call TFV_cursorTargetIsTrader) && ([TFV_TRADERDATA,cursorTarget] call TFV_humanityGetCanTrade) && ((player distance cursorTarget) < 5) && ((call TFV_getTotalCurrency) > 0) && (TFV_ACC) && ((call TFV_countCurrencyItems) > 1)) then {
-			if (TFV_ADDACTION_3 == -1) then {TFV_ADDACTION_3 = player addAction [TFV_STR_COMPACTCURRENCY,"scripts\TradeFromVehicle Version 2.0\system\cc.sqf","",9997,false,true]; TFV_TRADER = cursorTarget;};
+			if (TFV_ADDACTION_3 == -1) then {TFV_ADDACTION_3 = player addAction [TFV_STR_COMPACTCURRENCY,"scripts\scripts\TradeFromVehicle Version 2.0\system\cc.sqf","",9997,false,true]; TFV_TRADER = cursorTarget;};
 		};
 		
 		if ((vehicle player) != player) then {

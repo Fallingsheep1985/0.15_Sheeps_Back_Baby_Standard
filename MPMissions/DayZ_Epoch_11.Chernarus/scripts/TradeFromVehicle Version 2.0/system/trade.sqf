@@ -14,6 +14,17 @@ _startingPos = if (TFV_VEHICLE != objNull) then {getPos TFV_VEHICLE} else {0};
 _validWeapons = [];
 _validMagazines = [];
 
+_tooFar=false;
+if (TFV_VEHICLE != objNull) then {
+	if (_object == "vehicle") then {
+		if ((player distance TFV_VEHICLE) > 50) exitWith {_toofar=true;};
+	};
+};
+
+if(_tooFar) exitWith {
+	TFV_INWORK = false; systemChat "You're too far from your vehicle.";
+};
+
 switch (_object) do {
     case "vehicle": {
 	    _startingCargoCount = ((count([TFV_VEHICLE] call TFV_vehicleGetWeaponCargo)) + (count([TFV_VEHICLE] call TFV_vehicleGetMagazineCargo)));
@@ -28,6 +39,7 @@ switch (_object) do {
 					_tradeCount = (count([TFV_VEHICLE] call TFV_vehicleGetWeaponCargo));
 					_tradeCount = (_tradeCount - (count _keys));
 					_tradeWeapons = [TFV_VEHICLE] call TFV_vehicleGetWeaponCargo;
+//					diag_log format["[OGHF] _tradeWeapons %1", _tradeWeapons];
 					_tradeMagazines = [];
 					{
 					    if (([TFV_TRADERDATA,TFV_TRADER,_x] call TFV_weaponMagazineGetPrice) > 0) then {
@@ -313,8 +325,13 @@ if (_success) then {
 		};	
 	};
 	
-	_payment = [_tradeValueInt] call TFV_returnChange;
-  
+	if(TFV_COINS) then {
+		_payment = [_tradeValueInt,_object] call TFV_returnChangeCoins;
+	}else{
+		_payment = [_tradeValueInt,_object] call TFV_returnChange;
+	};
+	
+
 };
 
 if (_object == "vehicle") then {TFV_VEHICLE setVehicleLock "UNLOCKED";};
