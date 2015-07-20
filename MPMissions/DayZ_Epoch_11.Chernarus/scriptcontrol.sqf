@@ -1,5 +1,21 @@
 //Script Control - Allows you to customize the repack by turning certain scripts on or off - true = on /false = off
 
+//Super Admins
+SuperAdminList = [
+"76561198087015545", // <Your In-Game Name here>
+"120958982" // <S-Admin In-Game Name>
+];
+//Admins
+AdminList = [
+"76561198087015545", // <Admin In-Game Name>
+"999999999" // <Admin In-Game Name>
+];
+//Mods
+ModList = [
+"76561198087015545", // <Moderator In-Game Name>
+"999999999" // <Moderator In-Game Name>
+];
+
 
 //Server watermark
 WaterMarkScript = true; //Watermark on/off
@@ -227,8 +243,17 @@ sectorfngMarker = false;
 };
 
 // DO NOT CHANGE THIS!!
+
+//set adminlist to be all admins
+AdminList = AdminList + SuperAdminList; 
+//Manage Doors Admins
+DoorAdminList = AdminList;
+//ADMIN BUILD
+WG_adminBuild = AdminList;
+Admin_Crafting = AdminList;
+
 //Repack version 
 REPACKMOD = "Epoch"; 
-BUILDNUMBER = "548";
+BUILDNUMBER = "552";
 
 
